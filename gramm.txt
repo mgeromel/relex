@@ -1,0 +1,8 @@
+#_SEQ_# , <BOS> #_EXP_#
+#_EXP_# , <EOS>
+#_EXP_# , #_REL_# #_EXP_#
+#_REL_# , #_RID_# ( #_ARG_# )
+#_ARG_# , #_ENT_# , #_ARG_#
+#_ARG_# , #_ENT_#
+#_RID_# , <REL>
+#_ENT_# , <ENT>
