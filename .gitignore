@@ -5,8 +5,12 @@ __pycache__/
 
 # Folders
 models/
-data/
+# data/
 MNIST/
+*.out
+transformers/
+*.sbatch
+*.sh
 
 # C extensions
 *.so
