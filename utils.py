@@ -42,12 +42,12 @@ def extract(labels, sentence, gramm, vocab):
         entity_b = find(words[1], sentence, 0)
         relation = vocab[words[2]]
         
-        tuples.append( (3, 0, 0, 0) )
-        tuples.append( (4, relation, 0, 0) )
-        tuples.append( (5, 0, entity_a[0], entity_a[1]) )
-        tuples.append( (6, 0, entity_b[0], entity_b[1]) )
+        tuples.append( (3, -100, -100, -100) )
+        tuples.append( (4, relation, -100, -100) )
+        tuples.append( (5, -100, entity_a[0], entity_a[1]) )
+        tuples.append( (6, -100, entity_b[0], entity_b[1]) )
     
-    return [(1, 0, 0, 0)] + tuples + [(2, 0, 0, 0)]
+    return [(1, -100, -100, -100)] + tuples + [(2, -100, -100, -100)]
 
 #------------------------------------------------#
 

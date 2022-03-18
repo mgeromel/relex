@@ -65,7 +65,7 @@ vocab = dict(zip(vocab, range(len(vocab))))
 
 #-----------------------------------------------------------#
 
-EPOCHS = 1
+EPOCHS = 2
 
 train_size = 4000
 valid_size = 80
@@ -155,12 +155,12 @@ for epoch in range(EPOCHS):
     for i in range(15):
         print(f"labels: {labels[i]}\npredic: {predic[i]}\n")
     
-    import IPython ; IPython.embed() ; exit(1)
-    
     labels = []
     predic = []
 
 #-----------------------------------------------------------#
+
+import IPython ; IPython.embed() ; exit(1)
 
 exit(1)
 

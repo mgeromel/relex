@@ -72,20 +72,21 @@ class TestModel(torch.nn.Module):
                 point_logits_1 = log[:,-512:-256]
                 point_logits_2 = log[:,-256:    ]
                 
-                # FILTER for R
-                relat_logits = relat_logits[gramm_labels == 4]
-                relat_labels = relat_labels[gramm_labels == 4]
-                
-                # FILTER for P
-                point_mask = torch.where(gramm_labels == 5, 1, 0) + torch.where(gramm_labels == 6, 1, 0)     
-                point_logits_1 = point_logits_1[point_mask == 1]
-                point_labels_1 = point_labels_1[point_mask == 1]
-                point_logits_2 = point_logits_2[point_mask == 1]
-                point_labels_2 = point_labels_2[point_mask == 1]
-                
-                # FILTER for G
-                gramm_logits = gramm_logits[gramm_labels != 0]
-                gramm_labels = gramm_labels[gramm_labels != 0]
+                if (1 == 0):
+                    # FILTER for R
+                    relat_logits = relat_logits[gramm_labels == 4]
+                    relat_labels = relat_labels[gramm_labels == 4]
+
+                    # FILTER for P
+                    point_mask = torch.where(gramm_labels == 5, 1, 0) + torch.where(gramm_labels == 6, 1, 0)     
+                    point_logits_1 = point_logits_1[point_mask == 1]
+                    point_labels_1 = point_labels_1[point_mask == 1]
+                    point_logits_2 = point_logits_2[point_mask == 1]
+                    point_labels_2 = point_labels_2[point_mask == 1]
+
+                    # FILTER for G
+                    gramm_logits = gramm_logits[gramm_labels != 0]
+                    gramm_labels = gramm_labels[gramm_labels != 0]
                 
                 # COMPUTE the LOSS
                 gramm_loss = loss_func(gramm_logits, gramm_labels)
@@ -213,8 +214,6 @@ class TestModel(torch.nn.Module):
             ##################################################
             
             for i, (gv, rv, pv) in enumerate(zip(g_values, r_values, p_values)):
-                
-                print(f"({i}, ({gv}, {rv}, {pv}))")
                 
                 if undone[i]:
                     g_logits[i, gv] = 1     # RULE?

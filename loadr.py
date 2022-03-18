@@ -22,8 +22,11 @@ def convert(tup):
     pointer_1 = [0] * 256
     pointer_2 = [0] * 256
     
-    grammar[tup[0]] = 1
-    
+    if tup[0] == -100:
+        grammar[0] = 1
+    else:
+        grammar[tup[0]] = 1
+        
     if tup[0] == 4:
         relation[tup[1]] = 1
     
@@ -42,7 +45,7 @@ def build_model_input(batch):
     )
     
     decoder_inputs = [
-        crop_list(labels, decoder_max_length, (0,0,0,0)) for labels in batch["targets"]
+        crop_list(labels, decoder_max_length, (-100,-100,-100,-100)) for labels in batch["targets"]
     ]
     
     keys = ["input_ids", "attention_mask", "decoder_input_ids", "decoder_attention_mask", "labels"]
@@ -55,7 +58,7 @@ def build_model_input(batch):
     )
     
     batch[keys[3]] = torch.LongTensor(
-        [[ int( tup != (0,0,0,0) ) for tup in sample ] for sample in decoder_inputs ]
+        [[ int( tup != (-100,-100,-100,-100) ) for tup in sample ] for sample in decoder_inputs ]
     )
     batch[keys[4]] = torch.FloatTensor(decoder_inputs)
     
