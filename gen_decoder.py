@@ -95,7 +95,7 @@ class RelexEncoder(BertGenerationEncoder):
             encoder_extended_attention_mask = self.invert_attention_mask(encoder_attention_mask)
         else:
             encoder_extended_attention_mask = None
-
+        
         head_mask = self.get_head_mask(head_mask, self.config.num_hidden_layers)
 
         embedding_output = self.embeddings(
@@ -117,6 +117,7 @@ class RelexEncoder(BertGenerationEncoder):
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,
         )
+        
         sequence_output = encoder_outputs[0]
 
         if not return_dict:

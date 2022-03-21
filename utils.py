@@ -15,19 +15,7 @@ def read_file(filename):
             
     return lines
 
-def to_list(nums, size):
-    liste = [0] * size
-    
-    for n in nums:
-        if n in range(size):
-            liste[n] = 1
-        
-    return liste
-
-
 ##################################################
-
-tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
 
 # Extracting Relations
 def extract(labels, sentence, gramm, vocab):
@@ -50,6 +38,8 @@ def extract(labels, sentence, gramm, vocab):
     return [(1, -100, -100, -100)] + tuples + [(2, -100, -100, -100)]
 
 #------------------------------------------------#
+
+tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
 
 def find(word, sent, offset):
     w_tokens = tokenizer(word, add_special_tokens = False).input_ids
@@ -75,29 +65,7 @@ def compute(predic, labels):
 
     return precis, recall
 
-#------------------------------------------------#
-
-def compute_metrics(pred):
-    labels = pred.label_ids
-    predic = pred.predictions
-
-    recall = [0] * len(labels)
-    precis = [0] * len(labels)
-
-    for x in range(len(labels)):
-        precis[x], recall[x] = compute(predic[x], labels[x])
-
-    recall = sum(recall) / len(labels)
-    precis = sum(precis) / len(labels)
-    fscore = (2 * precis * recall) / (precis + recall)
-    
-    return {
-        "recall": round(recall, 4),
-        "precision": round(precis, 4),
-        "f_measure": round(fscore, 4),
-    }
-
-##################################################
+#-----------------------------------------------------------#
     
 def micro_compute(pred):
     
@@ -110,20 +78,6 @@ def micro_compute(pred):
         "micro_recall": round(micro_value[0], 4),
         "micro_precis": round(micro_value[1], 4),
         "micro_fscore": round(micro_value[2], 4),
-    }
-
-#-----------------------------------------------------------#
-
-def macro_compute(pred):
-    labels = pred.label_ids
-    predic = pred.predictions
-    
-    macro_value = macro_score(predic, labels)
-    
-    return {
-        "macro_recall": round(macro_value[0], 4),
-        "macro_precis": round(macro_value[1], 4),
-        "macro_fscore": round(macro_value[2], 4),
     }
 
 #-----------------------------------------------------------#
@@ -145,20 +99,4 @@ def micro_score(predic, labels):
         
     return (recall, precis, fscore)
 
-#-----------------------------------------------------------#
-
-def macro_score(predic, labels):
-    recall = [0] * len(labels)
-    precis = [0] * len(labels)
-    
-    for x in range(len(labels)):
-        p = [l for l in predic[x] if l > 8 and l <= 8 + 29]
-        l = [l for l in labels[x] if l > 8 and l <= 8 + 29]
-        
-        precis[x], recall[x] = compute(p, l)
-        
-    recall = sum(recall) / len(labels)
-    precis = sum(precis) / len(labels)
-    fscore = (2 * precis * recall) / (precis + recall)
-    
-    return (recall, precis, fscore)
+##################################################

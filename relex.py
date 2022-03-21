@@ -67,7 +67,7 @@ vocab = dict(zip(vocab, range(len(vocab))))
 
 EPOCHS = 2
 
-train_size = 4000
+train_size = 80
 valid_size = 80
 batch_size = 8
 
@@ -131,8 +131,6 @@ for epoch in range(EPOCHS):
             train_bar.write(f"loss: {l} \t rate: {r}")
     
     #------------------------------------------------------#
-    
-    optimizer.zero_grad()
     
     model.eval()
     for batch in valid_loader:

@@ -17,15 +17,9 @@ class TestModel(torch.nn.Module):
         self.config = BertGenerationConfig(
             vocab_size = self.gramm_size + self.relat_size + self.point_size,
             hidden_size = 768,
-            num_hidden_layers = 4,
+            num_hidden_layers = 12,
             add_cross_attention = True,
             is_decoder = True,
-            
-            decoder_start_token_id = 1,
-            
-            pad_token_id = 0,
-            bos_token_id = 1,
-            eos_token_id = 2,
         )
         
         self.encoder = BertGenerationEncoder.from_pretrained(
@@ -33,9 +27,6 @@ class TestModel(torch.nn.Module):
         )
         
         self.decoder = gen_decoder.RelexDecoder(self.config)
-        
-        #self.layer_1 = torch.nn.Linear(self.config.vocab_size, 1024)
-        #self.layer_2 = torch.nn.Linear(1024, self.config.vocab_size)
         
         self.gramm_head = torch.nn.Linear(self.config.vocab_size, self.gramm_size)
         self.relat_head = torch.nn.Linear(self.config.vocab_size, self.relat_size)
@@ -46,57 +37,41 @@ class TestModel(torch.nn.Module):
     def compute_loss(self, logits, labels):
         loss = None
         
-        # TODO !!
-        
         if labels != None:
-            loss = 0
-            
-            batch_size = labels.shape[0]
-        
             loss_func = torch.nn.CrossEntropyLoss()
 
-            logits = logits[:,:-1,:].contiguous()
-            labels = labels[:, 1 : ].contiguous()
+            logitx = logits[:, :-1].contiguous()
+            labelx = labels[:,1:  ].contiguous()
             
-            for log, lab in zip(logits, labels):
-                
-                gramm_labels = lab[:, 0].long()
-                relat_labels = lab[:, 1].long()
-                
-                gramm_logits = log[:,    :9   ]
-                relat_logits = log[:,   9:-512]
-                
-                point_labels_1 = lab[:,2].long()
-                point_labels_2 = lab[:,3].long()
-                
-                point_logits_1 = log[:,-512:-256]
-                point_logits_2 = log[:,-256:    ]
-                
-                if (1 == 0):
-                    # FILTER for R
-                    relat_logits = relat_logits[gramm_labels == 4]
-                    relat_labels = relat_labels[gramm_labels == 4]
-
-                    # FILTER for P
-                    point_mask = torch.where(gramm_labels == 5, 1, 0) + torch.where(gramm_labels == 6, 1, 0)     
-                    point_logits_1 = point_logits_1[point_mask == 1]
-                    point_labels_1 = point_labels_1[point_mask == 1]
-                    point_logits_2 = point_logits_2[point_mask == 1]
-                    point_labels_2 = point_labels_2[point_mask == 1]
-
-                    # FILTER for G
-                    gramm_logits = gramm_logits[gramm_labels != 0]
-                    gramm_labels = gramm_labels[gramm_labels != 0]
-                
-                # COMPUTE the LOSS
-                gramm_loss = loss_func(gramm_logits, gramm_labels)
-                relat_loss = loss_func(relat_logits, relat_labels)
-                point_loss_1 = loss_func(point_logits_1, point_labels_1)
-                point_loss_2 = loss_func(point_logits_2, point_labels_2)
-                
-                loss = loss + (gramm_loss + relat_loss + point_loss_1 + point_loss_2)
+            g_labels = labelx[:,:,0].view(-1).long()
+            r_labels = labelx[:,:,1].view(-1).long()
+            p_labels = labelx[:,:,2].view(-1).long()
+            q_labels = labelx[:,:,3].view(-1).long()
             
-            loss = loss / batch_size
+            g_logits = logitx[:,:,     :    9].reshape(-1, self.gramm_size)
+            r_logits = logitx[:,:,    9: -512].reshape(-1, self.relat_size)
+            p_logits = logitx[:,:, -512: -256].reshape(-1, self.point_size//2)
+            q_logits = logitx[:,:, -256:     ].reshape(-1, self.point_size//2)
+            
+            g_loss = loss_func(g_logits, g_labels)
+            r_loss = loss_func(r_logits, r_labels)
+            p_loss = loss_func(p_logits, p_labels)
+            q_loss = loss_func(q_logits, q_labels)
+            
+            loss = g_loss + r_loss + p_loss + q_loss
+            
+        return loss
+    
+    def compute_loss_alt(self, logits, labels):
+        loss = None
+        
+        if labels != None:
+            loss_func = torch.nn.MultiLabelSoftMarginLoss()
+
+            logitx = logits[:, :-1].contiguous()
+            labelx = labels[:,1:  ].contiguous()
+            
+            loss = loss_func(logitx, labelx)
             
         return loss
         
@@ -124,26 +99,25 @@ class TestModel(torch.nn.Module):
             return_dict = False
         )
         
-        logits = decoder_outputs[0] #.logits
+        logits = decoder_outputs[0]
+        logits = torch.nn.functional.relu(logits)
         
         # 3. FUNCTION HEADS 
-        #gramm_logits = self.gramm_head(logits)
-        #relat_logits = self.relat_head(logits)
-        #point_logits = self.point_head(logits)
+        gramm_logits = self.gramm_head(logits)
+        relat_logits = self.relat_head(logits)
+        point_logits = self.point_head(logits)
         
         # 4. LOGITS / LOSS
-        #logits = torch.cat(
-        #    [gramm_logits, relat_logits, point_logits], dim = 2
-        #)
+        logits = torch.cat(
+            [gramm_logits, relat_logits, point_logits], dim = 2
+        )
         
-        loss = self.compute_loss(logits, labels)
+        #loss = self.compute_loss(logits, labels)
+        loss = self.compute_loss_alt(logits, decoder_input_ids)
         
         return {
             "loss": loss,
-            "logits": logits,
-            "g_logits": logits[:,:,   :9 ], #gramm_logits,
-            "r_logits": logits[:,:,9  :29], #relat_logits,
-            "p_logits": logits[:,:, 29:  ], #point_logits
+            "logits": logits
         }
     
     ##################################################
@@ -192,9 +166,9 @@ class TestModel(torch.nn.Module):
             
             ##################################################
             
-            g_logits = decoder_outputs["g_logits"][:, -1, :].detach()
-            r_logits = decoder_outputs["r_logits"][:, -1, :].detach()
-            p_logits = decoder_outputs["p_logits"][:, -1, :].detach()
+            g_logits = decoder_outputs["logits"][:, -1,  :9].detach()
+            r_logits = decoder_outputs["logits"][:, -1, 9:-512].detach()
+            p_logits = decoder_outputs["logits"][:, -1, -512:].detach()
             
             g_values = torch.argmax(g_logits, dim =-1)
             r_values = torch.argmax(r_logits, dim =-1)
@@ -206,7 +180,7 @@ class TestModel(torch.nn.Module):
                 ],
                 dim=-1
             )
-            
+        
             g_logits = torch.zeros(size=g_logits.shape, out=g_logits)
             r_logits = torch.zeros(size=r_logits.shape, out=r_logits)
             p_logits = torch.zeros(size=p_logits.shape, out=p_logits)
@@ -227,7 +201,7 @@ class TestModel(torch.nn.Module):
 
                 else:
                     g_logits[i, 0] = 1
-            
+                    
             ##################################################
             
             next_tokens = torch.cat([g_logits, r_logits, p_logits], dim = 1)
