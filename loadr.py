@@ -14,28 +14,6 @@ decoder_max_length = 64
 def crop_list(vector, size, item):
      return vector[:size] + [item] * (size - len(vector))
     
-def convert(tup):
-    grammar = [0] * 9
-    
-    relation = [0] * 29
-    
-    pointer_1 = [0] * 256
-    pointer_2 = [0] * 256
-    
-    if tup[0] == -100:
-        grammar[0] = 1
-    else:
-        grammar[tup[0]] = 1
-        
-    if tup[0] == 4:
-        relation[tup[1]] = 1
-    
-    if tup[0] in [5, 6]:
-        pointer_1[tup[2]] = 1
-        pointer_2[tup[3]] = 1
-        
-    return grammar + relation + pointer_1 + pointer_2
-    
 def build_model_input(batch):
     encoder_inputs = tokenizer(
         batch["phrases"],
@@ -53,9 +31,9 @@ def build_model_input(batch):
     batch[keys[0]] = torch.LongTensor(encoder_inputs.input_ids)
     batch[keys[1]] = torch.LongTensor(encoder_inputs.attention_mask)
     
-    batch[keys[2]] = torch.FloatTensor(
-        [[ convert(tup) for tup in sample ] for sample in decoder_inputs]
-    )
+    #batch[keys[2]] = torch.FloatTensor(
+    #    [[ convert(tup) for tup in sample ] for sample in decoder_inputs]
+    #)
     
     batch[keys[3]] = torch.LongTensor(
         [[ int( tup != (-100,-100,-100,-100) ) for tup in sample ] for sample in decoder_inputs ]

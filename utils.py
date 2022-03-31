@@ -17,8 +17,32 @@ def read_file(filename):
 
 ##################################################
 
+non = 0
+
 # Extracting Relations
 def extract(labels, sentence, gramm, vocab):
+    
+    size = 1 + gramm.size() + len(vocab) + 512
+    tuples = []
+    
+    sorted_labels = labels.split("|")
+    sorted_labels.sort(key = lambda x : x.split(";")[2].strip())
+    
+    for label in sorted_labels:
+        words = [word.strip() for word in label.split(";")]
+        
+        entity_a = find(words[0], sentence, 0)
+        entity_b = find(words[1], sentence, 0)
+        relation = vocab[words[2]]
+        
+        tuples.append( (3, -100, -100, -100) )
+        tuples.append( (4, relation, -100, -100) )
+        tuples.append( (5, -100, entity_a[0], entity_a[1]) )
+        tuples.append( (6, -100, entity_b[0], entity_b[1]) )
+    
+    return [(1, -100, -100, -100)] + tuples + [(2, -100, -100, -100)]
+
+def extract_2(labels, sentence, gramm, vocab):
     
     size = 1 + gramm.size() + len(vocab) + 512
     tuples = []
@@ -31,9 +55,14 @@ def extract(labels, sentence, gramm, vocab):
         relation = vocab[words[2]]
         
         tuples.append( (3, -100, -100, -100) )
-        tuples.append( (4, relation, -100, -100) )
-        tuples.append( (5, -100, entity_a[0], entity_a[1]) )
-        tuples.append( (6, -100, entity_b[0], entity_b[1]) )
+        tuples.append( (4, -100, -100, -100) )
+        tuples.append( (-100, relation, -100, -100) )
+        tuples.append( (5, -100, -100, -100) )
+        tuples.append( (-100, -100, entity_a[0], -100) )
+        tuples.append( (-100, -100, -100, entity_a[1]) )
+        tuples.append( (6, -100, -100, -100) )
+        tuples.append( (-100, -100, entity_b[0], -100) )
+        tuples.append( (-100, -100, -100, entity_b[1]) )
     
     return [(1, -100, -100, -100)] + tuples + [(2, -100, -100, -100)]
 
@@ -55,6 +84,9 @@ def find(word, sent, offset):
 ##################################################
 
 def compute(predic, labels):
+    labels = [l for l in labels if l != 0]
+    predic = [p for p in predic if p != 0]
+    
     result = list((Counter(predic) & Counter(labels)).elements())
     
     if (len(predic) == 0):

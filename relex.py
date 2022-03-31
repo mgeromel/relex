@@ -23,39 +23,62 @@ def translate(batch):
         
         labels = []
         
-        temp_relation = None
-        temp_entity_a = None
-        temp_entity_b = None
+        relation, entity_a, entity_b = None, None, None
         
         for token in sample:
             rule = torch.argmax(token[:9])
             
-            if rule == 4 and not temp_relation:
-                temp_relation = torch.argmax(token[9 : 9 + 29]).item()
+            if rule == 4 and relation is None:
+                relation = torch.argmax(token[9 : 9 + 29]).item()
             
-            if rule == 5 and temp_entity_a is None:
-                temp_entity_a = (
+            if rule == 5 and entity_a is None:
+                entity_a = (
                     torch.argmax(token[-512:-256]).item(),
                     torch.argmax(token[-256:    ]).item()
                 )
             
-            if rule == 6 and temp_entity_b is None:
-                temp_entity_b = (
+            if rule == 6 and entity_b is None:
+                entity_b = (
                     torch.argmax(token[-512:-256]).item(),
                     torch.argmax(token[-256:    ]).item()
                 )
             
-            if rule == 2 or rule == 3 and temp_relation is not None:
-                
-                labels.append( (temp_relation, temp_entity_a, temp_entity_b) )
-                
-                temp_relation = None
-                temp_entity_a = None
-                temp_entity_b = None
+            if (rule == 2 or rule == 3) and not (None in [relation, entity_a, entity_b]):
+                labels.append( (relation, entity_a, entity_b) )
+                relation, entity_a, entity_b = None, None, None
         
         result.append(labels)
         
     return result
+
+def convert(values, g_size = 9, r_size = 29, p_size = 256):
+    
+    # FLOAT -> INT
+    values = values.int()
+    
+    # INITIALIZE
+    g_list = [0] * g_size
+    r_list = [0] * r_size
+    p_list = [0] * p_size
+    q_list = [0] * p_size
+    
+    # PADDING
+    g_list[0] = int(values[0] == -100)
+    
+    # SETTING VALUES
+    if values[0] != -100:
+        g_list[values[0]] = 1
+    
+    if values[1] != -100:
+        r_list[values[1]] = 1
+    
+    if values[2] != -100:
+        p_list[values[2]] = 1
+    
+    if values[3] != -100:
+        q_list[values[3]] = 1
+        
+    return g_list + r_list + p_list + q_list
 
 #-----------------------------------------------------------#
 
@@ -67,9 +90,9 @@ vocab = dict(zip(vocab, range(len(vocab))))
 
 EPOCHS = 2
 
-train_size = 80
-valid_size = 80
-batch_size = 8
+train_size = 800
+valid_size = 16
+batch_size = 16
 
 #-----------------------------------------------------------#
 
@@ -88,11 +111,11 @@ for param in model.encoder.parameters():
 
 model.to(device)
 
-optimizer = AdamW(model.parameters(), lr = 0.00005)
+optimizer = AdamW(model.parameters(), lr = 10e-5)
 scheduler = get_scheduler(
     "linear",
     optimizer = optimizer,
-    num_warmup_steps = 0,
+    num_warmup_steps = 500,
     num_training_steps = EPOCHS * len(train_loader),
 )
 
@@ -111,15 +134,17 @@ for epoch in range(EPOCHS):
     model.train()
     for batch in train_loader:
         
+        batch["decoder_input_ids"] = torch.Tensor(
+            [[ convert(tup) for tup in sample ] for sample in batch["labels"]]
+        ).float()
+        
         batch = {k: v.to(device) for k, v in batch.items()}
         
-        optimizer.zero_grad()
-        
         output = model.forward(**batch)
-		
         loss = output["loss"]
+        
+        optimizer.zero_grad()
         loss.backward()
-
         optimizer.step()
         scheduler.step()
         
@@ -134,11 +159,14 @@ for epoch in range(EPOCHS):
     
     model.eval()
     for batch in valid_loader:
-        batch = {k: v.to(device) for k, v in batch.items()}
+        
+        batch["decoder_input_ids"] = torch.Tensor(
+            [[ convert(tup) for tup in sample ] for sample in batch["labels"]]
+        ).float()
 
         with torch.no_grad():
             output = model.generate(
-                input_ids = batch["input_ids"],
+                input_ids = batch["input_ids"].to(device),
                 max_length = 64
             )
         
@@ -157,8 +185,6 @@ for epoch in range(EPOCHS):
     predic = []
 
 #-----------------------------------------------------------#
-
-import IPython ; IPython.embed() ; exit(1)
 
 exit(1)
 
