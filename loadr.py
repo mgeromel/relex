@@ -26,20 +26,15 @@ def build_model_input(batch):
         crop_list(labels, decoder_max_length, (-100,-100,-100,-100)) for labels in batch["targets"]
     ]
     
-    keys = ["input_ids", "attention_mask", "decoder_input_ids", "decoder_attention_mask", "labels"]
+    keys = ["input_ids", "attention_mask", "decoder_attention_mask", "labels"]
     
-    batch[keys[0]] = torch.LongTensor(encoder_inputs.input_ids)
-    batch[keys[1]] = torch.LongTensor(encoder_inputs.attention_mask)
-    
-    #batch[keys[2]] = torch.FloatTensor(
-    #    [[ convert(tup) for tup in sample ] for sample in decoder_inputs]
-    #)
-    
-    batch[keys[3]] = torch.LongTensor(
+    batch[keys[0]] = torch.IntTensor(encoder_inputs.input_ids)
+    batch[keys[1]] = torch.CharTensor(encoder_inputs.attention_mask)
+    batch[keys[2]] = torch.ShortTensor(
         [[ int( tup != (-100,-100,-100,-100) ) for tup in sample ] for sample in decoder_inputs ]
     )
-    batch[keys[4]] = torch.FloatTensor(decoder_inputs)
-    
+    batch[keys[3]] = torch.HalfTensor(decoder_inputs)
+
     del batch["phrases"]
     del batch["targets"]
     
