@@ -9,7 +9,7 @@ import torch
 class RelexEmbedding(BertGenerationEmbeddings):
 	def __init__(self, config):
 		super().__init__(config)
-		self.word_embeddings = torch.nn.Linear(550, config.hidden_size)
+		self.word_embeddings = torch.nn.Linear(config.vocab_size, config.hidden_size)
 	
 	def forward(
 		self, input_ids = None, position_ids = None,
@@ -43,7 +43,7 @@ class RelexDecoder(BertGenerationDecoder):
 class RelexEncoder(BertGenerationEncoder):
 	def __init__(self, config):
 		super().__init__(config)
-		self.embeddingx = RelexEmbedding(config)
+		self.embeddings = RelexEmbedding(config)
 	
 	def forward(
 		self, input_ids=None, attention_mask=None, position_ids=None, head_mask=None,
@@ -98,7 +98,7 @@ class RelexEncoder(BertGenerationEncoder):
 		
 		head_mask = self.get_head_mask(head_mask, self.config.num_hidden_layers)
 		
-		embedding_output = self.embeddingx(
+		embedding_output = self.embeddings(
 			input_ids=input_ids,
 			position_ids=position_ids,
 			inputs_embeds=inputs_embeds,

@@ -58,14 +58,11 @@ def find(word, sent, offset):
 ##################################################
 
 def compute(predic, labels):
-	labels = [l for l in labels if l != 0]
-	predic = [p for p in predic if p != 0]
-	
 	result = list((Counter(predic) & Counter(labels)).elements())
 	
 	if (len(predic) == 0):
 		return 1, 0
-
+	
 	precis = len(result) / len(predic)
 	recall = len(result) / len(labels)
 
@@ -73,22 +70,22 @@ def compute(predic, labels):
 
 #-----------------------------------------------------------#
 	
-def micro_compute(pred):
+def compute_metrics(pred):
 	
 	labels = pred["label_ids"]
 	predic = pred["predicted"]
 	
-	micro_value = micro_score(predic, labels)
+	micro_value = compute_scores(predic, labels)
 	
 	return {
-		"micro_recall": round(micro_value[0], 4),
-		"micro_precis": round(micro_value[1], 4),
-		"micro_fscore": round(micro_value[2], 4),
+		"R": round(micro_value[0], 4),
+		"P": round(micro_value[1], 4),
+		"F": round(micro_value[2], 4),
 	}
 
 #-----------------------------------------------------------#
 
-def micro_score(predic, labels):
+def compute_scores(predic, labels):
 	recall = [0] * len(labels)
 	precis = [0] * len(labels)
 	

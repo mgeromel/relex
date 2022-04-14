@@ -28,6 +28,7 @@ class TestModel(torch.nn.Module):
 				vocab_size = self.vocab_size,
 				add_cross_attention = True,
 				is_decoder = True, 
+				use_cache = False,
 				pad_token_id = 0, #?
 				bos_token_id = 1, #?
 				eos_token_id = 2, #?
@@ -42,6 +43,9 @@ class TestModel(torch.nn.Module):
 		self.gramm_head = torch.nn.Linear(self.vocab_size, self.gramm_size)
 		self.relat_head = torch.nn.Linear(self.vocab_size, self.relat_size)
 		self.point_head = torch.nn.Linear(           1024, self.point_size)
+		#self.point_head = torch.nn.Linear( 12 * 256 + 768, self.point_size)
+		
+		self.dropout_logits = torch.nn.Dropout(0.15)
 		
 	##################################################
 	
@@ -64,10 +68,10 @@ class TestModel(torch.nn.Module):
 			p_logits = shifted_logits[:,:, -512: -256].reshape(-1, self.point_size//2)
 			q_logits = shifted_logits[:,:, -256:     ].reshape(-1, self.point_size//2)
 			
-			g_loss = loss_func(g_logits, g_labels) * 2.5 / 8.0
-			r_loss = loss_func(r_logits, r_labels) * 1.5 / 8.0
-			p_loss = loss_func(p_logits, p_labels) * 2.0 / 8.0
-			q_loss = loss_func(q_logits, q_labels) * 2.0 / 8.0
+			g_loss = loss_func(g_logits, g_labels) * 1/6
+			r_loss = loss_func(r_logits, r_labels) * 1/6
+			p_loss = loss_func(p_logits, p_labels) * 2/6
+			q_loss = loss_func(q_logits, q_labels) * 2/6
 			
 			loss = g_loss + r_loss + p_loss + q_loss
 			
@@ -99,12 +103,16 @@ class TestModel(torch.nn.Module):
 			return_dict = True
 		)
 		
-		logits = decoder_outputs["logits"]
+		logits = self.dropout_logits(decoder_outputs["logits"])
 		
 		# CROSS_ATTENTIONS: batch_size x num_attention_heads x decoder_sequence_length x encoder_seqence_length
 		last_cross_attentions = decoder_outputs["cross_attentions"][-1]
 		decoder_hidden_states = decoder_outputs["hidden_states"][-1]
 		last_cross_attentions = last_cross_attentions.sum(dim = 1)
+		#last_cross_attentions = torch.cat(
+		#	[last_cross_attentions[:, i] for i in range( last_cross_attentions.size(1) )],
+		#	dim = -1
+		#)
 		
 		# 3. FUNCTION HEAD: GRAMM / RELAT
 		gramm_logits = self.gramm_head(logits)
@@ -112,8 +120,6 @@ class TestModel(torch.nn.Module):
 		
 		# 4. FUNCTION HEAD: POINTER-NETWORK
 		point_values = torch.cat([last_cross_attentions, decoder_hidden_states], dim = -1)
-		#point_values = torch.tanh(last_cross_attentions)
-		
 		point_logits = self.point_head(point_values)
 		
 		# 4. PREDICTION: LOGITS / LOSS
