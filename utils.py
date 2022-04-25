@@ -17,41 +17,48 @@ def read_file(filename):
 
 ##################################################
 
-# Extracting Relations
-def extract(labels, sentence, gramm, vocab):
+def extract(labels, sentence, vocab):
+	result = []
 	
-	size = 1 + gramm.size() + len(vocab) + 512
-	tuples = []
+	tables = labels.split(" || ")
+	tables.sort(key = lambda x : x.split(" ;; ")[-1])
 	
-	sorted_labels = labels.split("|")
-	sorted_labels.sort(key = lambda x : x.split(";")[2].strip())
-	
-	for label in sorted_labels:
-		words = [word.strip() for word in label.split(";")]
+	for table in tables:
 		
-		entity_a = find(words[0], sentence, 0)
-		entity_b = find(words[1], sentence, 0)
-		relation = vocab[words[2]]
+		lines = table.split(" ;; ")
 		
-		tuples.append( (3, -100, -100, -100) )
-		tuples.append( (4, relation, -100, -100) )
-		tuples.append( (5, -100, entity_a[0], entity_a[1]) )
-		tuples.append( (6, -100, entity_b[0], entity_b[1]) )
+		result.append( (3, vocab[lines[-1].strip()], -100, -100) )
+		
+		for line in lines[:-1]:
+			
+			tokens = line.split(" == ")
+			
+			if len(tokens) > 1: # DISTINCTION REQUIRED ?
+				result.append( (4, vocab[tokens[0].strip()], -100, -100) ) 
+			
+			tokens = tokens[-1].split(" ^^ ")
+			
+			for token in tokens:
+				result.append( (5, -100) + tuple(find(token, sentence)) )
 	
-	return [(1, -100, -100, -100)] + tuples + [(2, -100, -100, -100)]
+	result = [ (1, -100, -100, -100) ] + result + [ (2, -100, -100, -100) ]
+	
+	return result
 
-#------------------------------------------------#
+##################################################
 
 tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
 
-def find(word, sent, offset):
+def find(word, sent, offset = 0):
 	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
 	s_tokens = tokenizer(sent, add_special_tokens = True).input_ids
 	
 	# Find W_TOKENS in S_TOKENS 
 	for i in range(len(s_tokens) - len(w_tokens)):
 		if w_tokens == s_tokens[i : i + len(w_tokens)]:
-			return [i + offset, i + offset + len(w_tokens)]
+			return (i + offset, i + offset + len(w_tokens))
+	
+	import IPython ; IPython.embed() ; exit(1)
 	
 	return (-1, -1)
 
@@ -78,9 +85,9 @@ def compute_metrics(pred):
 	micro_value = compute_scores(predic, labels)
 	
 	return {
-		"R": round(micro_value[0], 4),
-		"P": round(micro_value[1], 4),
-		"F": round(micro_value[2], 4),
+		"R": f"{100 * micro_value[0]:.2f}",
+		"P": f"{100 * micro_value[1]:.2f}",
+		"F": f"{100 * micro_value[2]:.2f}",
 	}
 
 #-----------------------------------------------------------#

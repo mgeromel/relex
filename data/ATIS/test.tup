@@ -1,0 +1,893 @@
+fromloc.city_name == charlotte ;; stoploc.city_name == st. louis ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_number == first ;; depart_date.month_name == april ;; depart_time.time == 7 am ;; depart_time.time_relative == before ;; fromloc.city_name == tacoma ;; toloc.city_name == san jose ;; atis_airfare
+depart_date.day_number == first ;; depart_date.month_name == april ;; fromloc.city_name == phoenix ;; toloc.city_name == san diego ;; atis_flight
+depart_date.day_number == first ;; depart_date.month_name == april ;; fromloc.city_name == phoenix ;; round_trip == one way ;; toloc.city_name == san diego ;; atis_flight
+airline_name == delta airlines ;; depart_date.day_number == first ;; depart_date.month_name == april ;; fromloc.city_name == orlando ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == toronto ;; round_trip == one way ;; toloc.city_name == newark ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == columbus ;; toloc.city_name == indianapolis ;; atis_flight
+depart_date.day_name == wednesday ;; depart_date.day_number == sixth ;; depart_date.month_name == april ;; depart_time.time == 3 pm ;; depart_time.time_relative == after ;; fromloc.city_name == long beach ;; toloc.city_name == columbus ;; atis_flight
+depart_date.day_name == wednesday ;; depart_date.day_number == sixth ;; depart_date.month_name == april ;; depart_time.time == 12 pm ;; depart_time.time_relative == after ;; fromloc.city_name == long beach ;; toloc.city_name == columbus ;; atis_flight
+depart_date.day_name == wednesday ;; depart_date.day_number == sixth ;; depart_date.month_name == april ;; fromloc.city_name == long beach ;; toloc.city_name == columbus ;; atis_flight
+fromloc.city_name == memphis ;; meal_description == dinner ;; toloc.city_name == tacoma ;; atis_flight
+arrive_time.time == 7 pm ;; arrive_time.time_relative == around ;; depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == kansas city ;; return_date.day_name == thursday ;; toloc.city_name == chicago ;; atis_flight
+arrive_time.time == 7 pm ;; arrive_time.time_relative == by ;; depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == kansas city ;; toloc.city_name == chicago ;; atis_flight#atis_airfare
+airline_name == american ;; arrive_time.time == 5 pm ;; arrive_time.time_relative == about ;; fromloc.city_name == miami ;; toloc.city_name == chicago ;; atis_flight
+arrive_date.date_relative == next ;; arrive_date.day_name == saturday ;; toloc.city_name == new york city ;; atis_flight
+depart_date.day_name == saturday ;; depart_date.day_number == ninth ;; depart_date.month_name == april ;; flight_stop == nonstop ;; fromloc.city_name == salt lake city ;; toloc.city_name == new york ;; atis_flight
+depart_date.today_relative == today ;; fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.today_relative == tomorrow ;; depart_time.period_of_day == evening ;; fromloc.city_name == milwaukee ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == evening ;; fromloc.city_name == st. louis ;; toloc.city_name == burbank ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == burbank ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == milwaukee ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == st. louis ;; toloc.city_name == burbank ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == los angeles ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == los angeles ;; atis_flight
+depart_date.day_number == ninth ;; depart_date.month_name == april ;; fromloc.city_name == kansas city ;; toloc.city_name == los angeles ;; atis_flight
+arrive_date.day_number == ninth ;; arrive_date.month_name == april ;; arrive_time.end_time == 5 pm ;; arrive_time.start_time == 4 ;; fromloc.city_name == las vegas ;; toloc.city_name == los angeles ;; toloc.state_name == california ;; atis_flight
+airline_name == us air ;; fromloc.city_name == orlando ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.day_number == fifth ;; depart_date.month_name == april ;; fromloc.city_name == cleveland ;; toloc.city_name == indianapolis ;; atis_flight
+depart_date.day_number == fifth ;; depart_date.month_name == april ;; fromloc.city_name == indianapolis ;; toloc.city_name == san diego ;; atis_flight
+depart_date.day_number == fifth ;; depart_date.month_name == april ;; fromloc.city_name == cleveland ;; toloc.city_name == indianapolis ;; atis_flight
+fromloc.city_name == nashville ;; toloc.city_name == tacoma ;; atis_flight
+airport_name == tacoma airport ;; atis_ground_service
+fromloc.city_name == tacoma ;; toloc.city_name == san jose ;; atis_flight
+fromloc.city_name == nashville ;; toloc.city_name == tacoma ;; atis_day_name
+fromloc.city_name == tacoma ;; toloc.city_name == san jose ;; atis_flight
+fromloc.city_name == san jose ;; toloc.city_name == nashville ;; atis_day_name
+fromloc.city_name == tacoma ;; toloc.city_name == san jose ;; atis_flight
+fromloc.city_name == boston ;; toloc.city_name == orlando ;; atis_flight
+connect == connecting ;; fromloc.city_name == boston ;; stoploc.city_name == new york ;; toloc.city_name == orlando ;; atis_flight
+connect == connecting ;; fromloc.city_name == boston ;; stoploc.city_name == columbus ;; toloc.city_name == orlando ;; atis_flight
+meal_description == dinner ;; atis_flight
+fromloc.city_name == charlotte ;; toloc.city_name == miami ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == miami ;; toloc.city_name == toronto ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == toronto ;; toloc.city_name == st. louis ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == st. louis ;; atis_flight
+fromloc.city_name == st. louis ;; toloc.city_name == charlotte ;; atis_flight
+airline_name == united airlines ;; fromloc.airport_name == la guardia ;; toloc.city_name == san jose ;; atis_flight
+fromloc.city_name == tampa ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == seattle ;; atis_flight
+airline_name == american ;; flight_number == 811 ;; fromloc.city_name == tampa ;; meal == meals ;; toloc.city_name == milwaukee ;; atis_meal
+airline_name == american ;; flight_number == 665 673 ;; fromloc.city_name == milwaukee ;; meal == meals ;; toloc.city_name == seattle ;; atis_meal
+fromloc.city_name == memphis ;; toloc.city_name == las vegas ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == ontario ;; atis_flight
+fromloc.city_name == ontario ;; toloc.city_name == memphis ;; atis_flight
+fromloc.city_name == milwaukee ;; stoploc.city_name == nashville ;; toloc.city_name == tampa ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == saturday ;; depart_time.period_of_day == noon ;; depart_time.time_relative == after ;; fromloc.city_name == newark ;; toloc.city_name == los angeles ;; atis_flight
+arrive_time.time == 9 am ;; arrive_time.time_relative == around ;; fromloc.city_name == detroit ;; toloc.city_name == st. petersburg ;; atis_flight
+airline_name == northwest airline ;; fromloc.city_name == detroit ;; toloc.city_name == st. petersburg ;; atis_flight
+arrive_time.time == 6 pm ;; arrive_time.time_relative == around ;; depart_date.date_relative == next ;; depart_date.day_name == tuesday ;; fromloc.city_name == chicago ;; toloc.city_name == detroit ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == tuesday ;; fromloc.city_name == chicago ;; return_date.date_relative == day after ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == tuesday ;; depart_time.time == 6 pm ;; depart_time.time_relative == around ;; fromloc.city_name == chicago ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_flight
+arrive_time.time == 6 pm ;; arrive_time.time_relative == around ;; depart_date.date_relative == next ;; depart_date.day_name == tuesday ;; fromloc.city_name == chicago ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_flight
+arrive_time.period_of_day == morning ;; depart_date.day_name == monday ;; fromloc.city_name == montreal ;; toloc.city_name == chicago ;; atis_flight
+arrive_time.period_of_day == morning ;; depart_date.day_number == twelfth ;; depart_date.month_name == april ;; fromloc.city_name == chicago ;; toloc.city_name == indianapolis ;; atis_flight
+arrive_time.period_of_day == morning ;; depart_date.day_name == wednesday ;; depart_date.day_number == thirteenth ;; depart_date.month_name == april ;; fromloc.city_name == indianapolis ;; toloc.city_name == montreal ;; atis_flight
+arrive_time.time == 10 pm ;; arrive_time.time_relative == around ;; depart_date.day_number == twelfth ;; depart_date.month_name == april ;; fromloc.city_name == indianapolis ;; toloc.city_name == montreal ;; atis_flight
+fromloc.city_name == long beach ;; meal_description == lunch ;; stoploc.city_name == dallas ;; toloc.city_name == st. louis ;; atis_flight
+arrive_time.time == 7 pm ;; arrive_time.time_relative == around ;; depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == kansas city ;; toloc.city_name == chicago ;; atis_flight
+depart_time.time == 7 pm ;; depart_time.time_relative == around ;; fromloc.city_name == chicago ;; toloc.city_name == kansas city ;; atis_flight
+airline_name == american ;; depart_date.today_relative == this ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == cincinnati ;; toloc.city_name == burbank ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.period_of_day == evening ;; fromloc.city_name == montreal ;; fromloc.state_name == quebec ;; toloc.city_name == san diego ;; toloc.state_name == california ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == montreal ;; fromloc.state_name == quebec ;; toloc.city_name == san diego ;; toloc.state_name == california ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == san diego ;; fromloc.state_name == california ;; toloc.city_name == indianapolis ;; toloc.state_name == indiana ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == morning ;; flight_stop == nonstop ;; fromloc.city_name == indianapolis ;; toloc.city_name == toronto ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == morning ;; fromloc.city_name == toronto ;; toloc.city_name == montreal ;; atis_flight
+depart_date.today_relative == today ;; depart_time.period_of_day == early morning ;; fromloc.city_name == los angeles ;; toloc.city_name == charlotte ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == night ;; fromloc.city_name == charlotte ;; toloc.city_name == newark ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == night ;; fromloc.city_name == newark ;; toloc.city_name == los angeles ;; atis_flight
+fromloc.city_name == tampa ;; stoploc.city_name == new york ;; toloc.city_name == montreal ;; atis_flight
+arrive_time.time == 4 o'clock pm ;; arrive_time.time_relative == before ;; fromloc.city_name == miami ;; fromloc.state_name == florida ;; toloc.city_name == las vegas ;; toloc.state_name == nevada ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.state_name == michigan ;; atis_flight
+arrive_time.time == 10 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == detroit ;; fromloc.state_name == michigan ;; toloc.city_name == st. petersburg ;; atis_flight
+depart_date.day_name == thursday ;; fromloc.city_name == st. petersburg ;; toloc.city_name == miami ;; atis_flight
+airline_name == alaska airlines ;; fromloc.city_name == san diego ;; toloc.city_name == toronto ;; atis_flight
+depart_date.today_relative == tomorrow ;; fromloc.city_name == columbus ;; stoploc.city_name == nashville ;; toloc.city_name == houston ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == nashville ;; meal_description == dinner ;; toloc.city_name == houston ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == newark ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == newark ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == newark ;; atis_flight
+fromloc.city_name == newark ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == orlando ;; toloc.city_name == kansas city ;; atis_flight
+depart_time.period_of_day == afternoon ;; fromloc.city_name == columbus ;; stoploc.city_name == cincinnati ;; toloc.city_name == phoenix ;; atis_flight
+city_name == los angeles ;; atis_airport
+fromloc.city_name == kansas city ;; toloc.city_name == burbank ;; atis_flight
+arrive_date.day_name == saturdays ;; arrive_time.period_of_day == afternoon ;; fromloc.city_name == kansas city ;; toloc.city_name == burbank ;; atis_flight
+depart_date.day_name == saturday ;; depart_date.day_number == twenty third ;; depart_date.month_name == april ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == las vegas ;; toloc.city_name == burbank ;; atis_flight
+arrive_time.time == 10 pm ;; arrive_time.time_relative == around ;; fromloc.city_name == orlando ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.day_number == twenty first ;; depart_date.month_name == april ;; depart_time.period_of_day == late afternoon ;; fromloc.city_name == indianapolis ;; toloc.city_name == san diego ;; atis_flight
+depart_date.day_number == twenty first ;; depart_date.month_name == april ;; depart_time.period_of_day == morning ;; fromloc.city_name == cleveland ;; toloc.city_name == indianapolis ;; atis_flight
+depart_date.day_number == twenty first ;; depart_date.month_name == april ;; depart_time.period_of_day == morning ;; fromloc.city_name == nashville ;; toloc.city_name == tacoma ;; atis_flight
+depart_date.day_number == twenty second ;; depart_date.month_name == april ;; depart_time.period_of_day == morning ;; fromloc.city_name == tacoma ;; toloc.city_name == san jose ;; atis_flight
+depart_date.day_number == twenty three ;; depart_date.month_name == april ;; depart_time.period_of_day == morning ;; fromloc.city_name == san jose ;; toloc.city_name == nashville ;; atis_flight
+cost_relative == most expensive ;; fromloc.city_name == detroit ;; round_trip == one way ;; toloc.city_name == westchester county ;; atis_airfare
+fromloc.city_name == detroit ;; toloc.city_name == westchester county ;; atis_airline
+flight_time == departure times ;; fromloc.city_name == detroit ;; toloc.city_name == westchester county ;; atis_flight_time
+flight_mod == latest ;; fromloc.city_name == baltimore ;; meal_description == dinner ;; toloc.city_name == oakland ;; atis_flight
+flight_mod == earliest ;; fromloc.city_name == baltimore ;; meal_description == breakfast ;; toloc.city_name == oakland ;; atis_flight
+airline_name == america west ;; class_type == first class ;; fromloc.city_name == boston ;; atis_city
+fromloc.city_name == boston ;; toloc.city_name == san diego ;; atis_airline
+flight_mod == latest ;; fromloc.city_name == dallas ;; meal_description == breakfast ;; toloc.city_name == tampa ;; atis_flight
+airline_name == lufthansa ;; fromloc.city_name == seattle ;; stoploc.city_name == minneapolis ;; toloc.city_name == boston ;; atis_flight
+fromloc.city_name == seattle ;; stoploc.city_name == minneapolis ;; toloc.city_name == boston ;; atis_flight
+fromloc.city_name == philadelphia ;; stoploc.city_name == dallas ;; toloc.city_name == san francisco ;; atis_flight
+connect == connecting ;; fromloc.city_name == boston ;; toloc.city_name == denver ;; atis_flight
+depart_time.period_of_day == morning ;; fromloc.city_name == philadelphia ;; toloc.city_name == fort worth ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == st. paul ;; atis_flight
+airline_name == northwest ;; flight_number == 608 ;; fromloc.city_name == kansas city ;; toloc.city_name == st. paul ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == indianapolis ;; toloc.city_name == charlotte ;; atis_flight
+airport_name == charlotte airport ;; city_name == charlotte airport charlotte ;; atis_ground_service
+depart_date.day_name == monday ;; depart_time.time == 2 pm ;; depart_time.time_relative == later ;; fromloc.city_name == charlotte ;; toloc.city_name == minneapolis ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == morning ;; fromloc.city_name == charlotte ;; toloc.city_name == minneapolis ;; atis_flight
+connect == direct ;; depart_date.day_name == tuesday ;; depart_time.period_of_day == morning ;; fromloc.city_name == charlotte ;; toloc.city_name == minneapolis ;; atis_flight
+airline_code == us ;; depart_date.day_name == monday ;; flight_number == 1500 ;; fromloc.city_name == charlotte ;; toloc.city_name == minneapolis ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.time == 2 pm ;; depart_time.time_relative == after ;; fromloc.city_name == minneapolis ;; toloc.city_name == indianapolis ;; atis_flight
+fromloc.city_name == minneapolis ;; toloc.state_name == indiana ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == minneapolis ;; toloc.city_name == indianapolis ;; atis_flight
+airline_code == us ;; depart_date.day_name == monday ;; flight_number == 1207 ;; fromloc.city_name == indianapolis ;; toloc.city_name == charlotte ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == new york city ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == new york city ;; atis_airline
+airline_code == twa ;; airline_name == america west ;; depart_date.day_name == friday ;; fromloc.city_name == las vegas ;; toloc.airport_code == jfk ;; atis_flight
+depart_date.today_relative == tomorrow ;; depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == tacoma ;; toloc.city_name == miami ;; atis_flight
+depart_date.day_number == tenth ;; depart_date.month_name == june ;; fromloc.city_name == san diego ;; toloc.city_name == houston ;; atis_flight
+airline_name == american airlines ;; depart_date.day_number == tenth ;; depart_date.month_name == june ;; depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == houston ;; toloc.city_name == newark ;; atis_flight
+airline_name == american airlines ;; depart_date.day_number == tenth ;; depart_date.month_name == june ;; depart_time.time == 3 pm ;; depart_time.time_relative == after ;; fromloc.city_name == houston ;; toloc.city_name == newark ;; atis_flight
+arrive_date.day_number == sixth ;; arrive_date.month_name == june ;; arrive_time.time == 6 pm ;; arrive_time.time_relative == by ;; fromloc.city_name == cincinnati ;; toloc.city_name == denver ;; atis_flight
+city_name == denver ;; atis_ground_service
+city_name == denver ;; transport_type == taxi ;; atis_ground_fare
+city_name == denver ;; atis_ground_fare
+depart_date.day_number == seventh ;; depart_date.month_name == june ;; depart_time.time == 3 pm ;; depart_time.time_relative == after ;; fromloc.city_name == denver ;; toloc.city_name == westchester county ;; atis_flight
+city_name == westchester county ;; atis_ground_service
+airline_name == united airlines ;; depart_date.day_number == eighth ;; depart_date.month_name == june ;; depart_time.time == 3 pm ;; depart_time.time_relative == after ;; fromloc.city_name == westchester county ;; toloc.city_name == cincinnati ;; atis_flight
+airline_name == united airlines ;; depart_date.day_number == eighth ;; depart_date.month_name == june ;; fromloc.city_name == westchester county ;; toloc.city_name == cincinnati ;; atis_flight
+depart_date.day_number == eighth ;; depart_date.month_name == june ;; fromloc.city_name == westchester county ;; toloc.city_name == cincinnati ;; atis_flight
+airline_name == us air ;; depart_date.day_number == sixth ;; depart_date.month_name == june ;; fromloc.city_name == cincinnati ;; toloc.city_name == denver ;; atis_flight
+depart_date.day_number == sixth ;; depart_date.month_name == june ;; fromloc.city_name == cincinnati ;; toloc.city_name == denver ;; atis_flight
+depart_date.day_number == seventh ;; depart_date.month_name == june ;; fromloc.city_name == denver ;; toloc.city_name == westchester county ;; atis_flight
+depart_date.day_number == eighth ;; depart_date.month_name == june ;; fromloc.city_name == westchester county ;; toloc.city_name == cincinnati ;; atis_flight
+depart_date.day_number == sixth ;; depart_date.month_name == june ;; fromloc.city_name == cincinnati ;; toloc.city_name == westchester county ;; atis_flight
+depart_date.day_number == seventh ;; depart_date.month_name == june ;; fromloc.city_name == westchester county ;; toloc.city_name == denver ;; atis_flight
+depart_date.day_number == eighth ;; depart_date.month_name == june ;; fromloc.city_name == denver ;; toloc.city_name == cincinnati ;; atis_flight
+depart_date.day_number == sixth ;; depart_date.month_name == june ;; depart_time.time == 4 pm ;; depart_time.time_relative == after ;; fromloc.city_name == denver ;; toloc.city_name == cincinnati ;; atis_flight
+depart_date.day_number == seventh ;; depart_date.month_name == june ;; fromloc.city_name == cincinnati ;; toloc.city_name == westchester county ;; atis_flight
+depart_date.day_number == seventh ;; depart_date.month_name == june ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == westchester county ;; toloc.city_name == cincinnati ;; atis_flight
+depart_date.day_number == sixth ;; depart_date.month_name == june ;; depart_time.end_time == 10 am ;; depart_time.start_time == 6 ;; fromloc.airport_name == love field ;; atis_airline
+arrive_date.day_number == sixth ;; arrive_date.month_name == june ;; toloc.airport_name == love field ;; atis_flight
+depart_time.time == 9 am ;; depart_time.time_relative == before ;; fromloc.city_name == montreal ;; toloc.city_name == philly ;; atis_flight
+fromloc.city_name == cleveland ;; toloc.city_name == memphis ;; atis_flight
+fromloc.city_name == memphis ;; toloc.city_name == cleveland ;; atis_flight
+arrive_date.day_number == first ;; arrive_date.month_name == july ;; fromloc.city_name == denver ;; toloc.city_name == baltimore ;; atis_flight
+arrive_date.day_number == first ;; arrive_date.month_name == july ;; fromloc.city_name == dallas ;; toloc.city_name == baltimore ;; atis_flight
+arrive_date.day_number == first ;; arrive_date.month_name == july ;; fromloc.city_name == pittsburgh ;; toloc.city_name == baltimore ;; atis_flight
+airline_name == canadian airlines international ;; atis_flight
+aircraft_code == j31 ;; airline_name == canadian airlines international ;; atis_quantity
+aircraft_code == 320 ;; airline_name == canadian airlines international ;; atis_quantity
+aircraft_code == dh8 ;; airline_name == canadian airlines ;; atis_quantity
+airline_name == american airlines ;; fromloc.city_name == st. petersburg ;; stoploc.city_name == st. louis ;; toloc.city_name == ontario ;; toloc.country_name == canada ;; atis_flight
+airline_name == american airlines ;; fromloc.city_name == st. petersburg ;; stoploc.city_name == st. louis ;; toloc.city_name == ontario ;; toloc.state_name == california ;; atis_flight
+city_name == ontario ;; mod == closest ;; state_name == california ;; atis_airport
+fromloc.city_name == houston ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == orlando ;; toloc.city_name == houston ;; atis_flight
+fromloc.city_name == detroit ;; toloc.city_name == las vegas ;; atis_flight
+class_type == coach ;; cost_relative == cheapest ;; fromloc.city_name == las vegas ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_airfare
+airline_code == twa ;; class_type == coach ;; cost_relative == cheapest ;; fromloc.city_name == las vegas ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_airfare
+airline_name == delta ;; compartment == coach ;; meal_description == snack ;; atis_flight
+meal_code == sb ;; atis_abbreviation
+airline_code == dl ;; arrive_time.time == 950 am ;; flight_number == 468 ;; meal == meals ;; toloc.city_name == san francisco ;; atis_meal
+airline_name == delta ;; fromloc.city_name == tampa ;; toloc.city_name == san francisco ;; atis_flight
+airline_name == delta ;; flight_number == 486 ;; atis_flight
+airline_name == tower air ;; day_name == mondays ;; atis_flight
+airline_name == tower air ;; meal == meals ;; atis_flight
+fromloc.city_name == baltimore ;; atis_flight
+arrive_date.day_name == friday ;; fromloc.city_name == baltimore ;; toloc.city_name == san francisco ;; atis_flight
+depart_time.period_of_day == morning ;; fromloc.city_name == cincinnati ;; toloc.city_name == tampa ;; atis_flight
+arrive_time.period_of_day == evening ;; fromloc.city_name == tampa ;; toloc.city_name == cincinnati ;; atis_flight
+depart_time.period_of_day == early evening ;; fromloc.city_name == tampa ;; toloc.city_name == cincinnati ;; atis_flight
+fromloc.city_name == philadelphia ;; toloc.city_name == atlanta ;; atis_flight
+fromloc.city_name == atlanta ;; toloc.city_name == toronto ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+arrive_time.time == 10 am ;; arrive_time.time_relative == after ;; fromloc.city_name == new york ;; toloc.city_name == los angeles ;; atis_flight
+airport_name == la guardia ;; city_name == new york's ;; atis_distance
+airport_name == toronto international ;; atis_distance
+airport_name == los angeles international ;; atis_distance
+airport_name == san francisco international ;; atis_distance
+city_name == boston ;; transport_type == limousine ;; atis_ground_fare
+airport_name == la guardia ;; transport_type == limousine ;; atis_ground_fare
+airport_name == toronto international ;; transport_type == limousine ;; atis_ground_fare
+city_name == los angeles ;; transport_type == limousine ;; atis_ground_fare
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == columbus ;; toloc.state_name == ohio ;; atis_airline
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == columbus ;; toloc.state_name == ohio ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == columbus ;; toloc.state_name == ohio ;; atis_flight
+fromloc.city_name == washington ;; toloc.city_name == columbus ;; atis_airfare
+airline_name == us air ;; city_name == charlotte airport ;; atis_aircraft
+airline_name == us air ;; arrive_date.day_name == saturday ;; arrive_time.time == 1 pm ;; toloc.city_name == charlotte ;; atis_flight
+class_type == first class ;; fromloc.city_name == indianapolis ;; round_trip == round trip ;; toloc.city_name == memphis ;; atis_airfare
+fromloc.city_name == memphis ;; toloc.city_name == miami ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == indianapolis ;; toloc.city_name == memphis ;; atis_flight#atis_airfare
+depart_date.day_name == wednesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == memphis ;; toloc.city_name == miami ;; atis_flight#atis_airfare
+fromloc.city_name == miami ;; toloc.city_name == indianapolis ;; atis_flight#atis_airfare
+depart_date.day_name == monday ;; fromloc.city_name == cleveland ;; toloc.city_name == kansas city ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == cleveland ;; atis_flight
+fromloc.city_name == cleveland ;; toloc.city_name == nashville ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == nashville ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == cleveland ;; toloc.city_name == nashville ;; atis_flight#atis_airfare
+fromloc.city_name == baltimore ;; atis_airline
+fromloc.city_name == baltimore ;; toloc.city_name == san francisco ;; atis_airline
+fromloc.city_name == baltimore ;; toloc.city_name == san francisco ;; atis_distance
+depart_date.day_name == monday ;; depart_time.period_mod == early ;; depart_time.period_of_day == morning ;; fromloc.city_name == kansas city ;; toloc.city_name == atlanta ;; atis_flight
+arrive_date.day_name == tuesday ;; arrive_time.time == 230 pm ;; arrive_time.time_relative == close ;; fromloc.city_name == atlanta ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == morning ;; depart_time.time == 10 am ;; depart_time.time_relative == after ;; fromloc.city_name == st. louis ;; toloc.city_name == st. paul ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == evening ;; fromloc.city_name == st. paul ;; meal == meal ;; toloc.city_name == kansas city ;; atis_flight
+depart_time.period_of_day == early morning ;; fromloc.city_name == cincinnati ;; toloc.city_name == tampa ;; atis_flight
+depart_time.period_of_day == early evening ;; fromloc.city_name == tampa ;; toloc.city_name == cincinnati ;; atis_flight
+depart_time.period_of_day == evening ;; fromloc.city_name == tampa ;; toloc.city_name == cincinnati ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == am ;; fromloc.city_name == philadelphia ;; toloc.city_name == atlanta ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == atlanta ;; toloc.city_name == toronto ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == am ;; fromloc.city_name == toronto ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == pm ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == philadelphia ;; atis_flight
+connect == direct ;; depart_time.time == 10 am ;; depart_time.time_relative == after ;; fromloc.city_name == new york city ;; toloc.city_name == los angeles ;; atis_flight
+airline_name == american airlines ;; flight_number == 19 ;; fromloc.airport_code == jfk ;; toloc.airport_code == lax ;; atis_airfare#atis_flight
+fare_basis_code == m ;; atis_abbreviation
+city_name == boston ;; fromloc.airport_name == boston airport ;; atis_distance
+city_name == new york city ;; fromloc.airport_name == la guardia airport ;; fromloc.city_name == new york's ;; atis_distance
+city_name == toronto ;; fromloc.airport_name == toronto international airport ;; atis_distance
+fromloc.airport_name == san francisco international airport ;; toloc.city_name == san francisco ;; atis_distance
+city_name == city of boston ;; transport_type == limousine ;; atis_ground_fare
+airline_name == american airlines ;; depart_date.day_name == friday ;; depart_time.period_of_day == pm ;; fromloc.city_name == houston ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == pm ;; fromloc.city_name == houston ;; toloc.city_name == milwaukee ;; atis_flight
+airline_name == american airlines ;; depart_date.day_name == wednesday ;; fromloc.city_name == milwaukee ;; toloc.city_name == san jose ;; atis_flight
+airline_name == american airlines ;; depart_date.day_name == friday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == san jose ;; toloc.city_name == dallas ;; atis_flight
+arrive_date.day_name == sunday ;; arrive_time.period_of_day == afternoon ;; fromloc.city_name == dallas ;; toloc.city_name == houston ;; atis_flight
+fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_airline
+aircraft_code == l10 ;; atis_capacity
+aircraft_code == be1 ;; airline_name == delta ;; atis_capacity
+aircraft_code == l10 ;; airline_name == delta ;; fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_flight
+aircraft_code == be1 ;; airline_name == delta ;; fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_flight
+flight_days == daily ;; fromloc.city_name == boston ;; toloc.city_name == pittsburgh ;; atis_flight
+flight_days == daily ;; fromloc.city_name == pittsburgh ;; toloc.city_name == newark ;; atis_flight
+flight_days == daily ;; fromloc.city_name == newark ;; toloc.city_name == boston ;; atis_flight
+airline_name == us air ;; depart_date.day_name == saturday ;; depart_time.time == 1 pm ;; fromloc.airport_name == charlotte airport ;; atis_flight
+airline_name == us air ;; depart_date.day_name == saturday ;; depart_time.time == 1 pm ;; depart_time.time_relative == around ;; fromloc.airport_name == charlotte airport ;; atis_flight
+class_type == first class ;; fromloc.city_name == indianapolis ;; round_trip == round trip ;; toloc.city_name == memphis ;; atis_airfare
+fare_basis_code == f ;; atis_abbreviation
+depart_date.day_name == wednesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == memphis ;; toloc.city_name == miami ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == miami ;; toloc.city_name == indianapolis ;; atis_flight
+fromloc.city_name == ontario ;; fromloc.state_name == california ;; toloc.city_name == orlando ;; toloc.state_name == florida ;; atis_flight
+fromloc.city_name == ontario ;; fromloc.state_name == california ;; toloc.city_name == salt lake city ;; toloc.state_name == utah ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == ontario ;; fromloc.state_name == california ;; toloc.city_name == salt lake city ;; toloc.state_name == utah ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == salt lake city ;; fromloc.state_name == utah ;; toloc.city_name == phoenix ;; toloc.state_name == arizona ;; atis_flight
+depart_date.day_name == tuesday ;; fromloc.city_name == salt lake city ;; toloc.city_name == phoenix ;; toloc.state_name == arizona ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == phoenix ;; fromloc.state_name == arizona ;; toloc.city_name == ontario ;; toloc.state_name == california ;; atis_flight
+fromloc.city_name == baltimore ;; toloc.city_name == san francisco ;; atis_airline
+class_type == first class ;; fromloc.city_name == detroit ;; round_trip == round trip ;; toloc.city_name == st. petersburg ;; atis_airfare
+class_type == first class ;; fromloc.city_name == detroit ;; round_trip == round trip ;; toloc.city_name == st. petersburg ;; atis_airfare
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == kansas city ;; toloc.city_name == atlanta ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == atlanta ;; toloc.city_name == kansas city ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == kansas city ;; toloc.city_name == atlanta ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.time == 230 pm ;; depart_time.time_relative == before ;; fromloc.city_name == atlanta ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.time == 10 am ;; depart_time.time_relative == after ;; fromloc.city_name == st. louis ;; toloc.city_name == st. paul ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == night ;; fromloc.city_name == st. paul ;; toloc.city_name == kansas city ;; atis_flight
+arrive_date.day_name == monday ;; arrive_time.time == 3 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == cleveland ;; toloc.city_name == kansas city ;; atis_flight
+arrive_date.day_name == wednesday ;; arrive_time.time == 5 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == kansas city ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == morning ;; fromloc.city_name == cleveland ;; toloc.city_name == nashville ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.time == 9 ;; depart_time.time_relative == before ;; fromloc.city_name == nashville ;; toloc.city_name == cleveland ;; atis_flight
+class_type == first class ;; depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == pittsburgh ;; toloc.city_name == newark ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == morning ;; fromloc.city_name == newark ;; toloc.city_name == los angeles ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == los angeles ;; toloc.city_name == minneapolis ;; atis_flight
+fromloc.city_name == minneapolis ;; toloc.city_name == pittsburgh ;; atis_flight
+class_type == first class ;; fromloc.city_name == minneapolis ;; toloc.city_name == pittsburgh ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == orlando ;; atis_flight
+airline_code == hp ;; atis_abbreviation
+fromloc.city_name == ontario ;; toloc.city_name == tacoma ;; atis_flight
+fromloc.city_name == minneapolis ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == salt lake city ;; toloc.city_name == cincinnati ;; atis_flight
+fromloc.city_name == cincinnati ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == new york ;; toloc.city_name == miami ;; atis_flight
+fromloc.city_name == miami ;; toloc.city_name == new york ;; atis_flight
+fromloc.city_name == san francisco ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == san diego ;; toloc.city_name == las vegas ;; atis_flight
+fromloc.city_name == san diego ;; toloc.city_name == las vegas ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == san francisco ;; atis_flight
+fare_basis_code == bn ;; atis_abbreviation
+fromloc.city_name == toronto ;; toloc.city_name == detroit ;; atis_airline
+fromloc.city_name == toronto ;; toloc.city_name == detroit ;; atis_flight
+fromloc.city_name == detroit ;; toloc.city_name == st. louis ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == st. louis ;; atis_flight
+fromloc.city_name == san francisco ;; toloc.city_name == long beach ;; atis_flight
+fromloc.city_name == san francisco ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == san francisco ;; toloc.city_name == st. petersburg ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == afternoon ;; depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+class_type == first class ;; depart_time.time == 10 am ;; depart_time.time_relative == before ;; fromloc.city_name == columbus ;; toloc.city_name == chicago ;; atis_flight
+arrive_time.time == 7 pm ;; arrive_time.time_relative == before ;; cost_relative == cheapest ;; fromloc.city_name == st. petersburg ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == kansas city ;; toloc.city_name == phoenix ;; atis_flight
+airline_code == wn ;; atis_airline
+class_type == first class ;; cost_relative == cheapest ;; fromloc.city_name == new york ;; round_trip == round trip ;; toloc.city_name == miami ;; atis_flight
+fromloc.city_name == new york ;; round_trip == round trips ;; toloc.city_name == miami ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == san francisco ;; round_trip == one way ;; toloc.city_name == houston ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == houston ;; round_trip == one way ;; toloc.city_name == boston ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == houston ;; round_trip == round trip ;; toloc.city_name == boston ;; atis_airfare
+cost_relative == cheapest ;; fromloc.city_name == san francisco ;; round_trip == round trip ;; toloc.city_name == houston ;; atis_airfare
+cost_relative == cheapest ;; depart_date.day_number == twenty eighth ;; depart_date.month_name == february ;; depart_date.year == 1994 ;; fromloc.city_name == san francisco ;; round_trip == round trip ;; toloc.city_name == houston ;; atis_airfare
+cost_relative == cheapest ;; depart_date.day_number == twenty eighth ;; depart_date.month_name == february ;; depart_date.year == 1994 ;; fromloc.city_name == san francisco ;; round_trip == one way ;; toloc.city_name == houston ;; atis_airfare
+city_name == houston ;; day_name == monday ;; period_of_day == afternoon ;; atis_ground_service
+fromloc.city_name == houston ;; round_trip == one way ;; toloc.city_name == boston ;; atis_flight
+city_name == boston ;; period_of_day == late night ;; atis_ground_service
+fromloc.city_name == toronto ;; toloc.city_name == detroit ;; atis_airline
+airline_name == delta northwest us air ;; fromloc.city_name == toronto ;; round_trip == round trip ;; toloc.city_name == detroit ;; atis_airfare
+airline_name == delta northwest us air ;; fromloc.city_name == detroit ;; toloc.city_name == st. louis ;; atis_flight
+fromloc.city_name == montreal ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == montreal ;; toloc.city_name == orlando ;; atis_flight
+depart_date.day_name == friday ;; depart_date.month_name == june ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == new york ;; toloc.city_name == cleveland ;; atis_flight
+airline_name == us air ;; depart_date.day_name == saturday ;; depart_time.period_of_day == evening ;; fromloc.city_name == new york ;; toloc.city_name == los angeles ;; atis_flight
+airline_name == us air ;; depart_date.day_name == saturday ;; depart_time.period_of_day == evening ;; flight_mod == red eye ;; fromloc.city_name == new york ;; toloc.city_name == los angeles ;; atis_flight
+airline_name == us air ;; depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == new york ;; toloc.city_name == los angeles ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == san francisco ;; toloc.city_name == milwaukee ;; atis_flight
+airline_code == ua ;; atis_abbreviation
+depart_date.day_name == monday ;; depart_time.period_of_day == night ;; fromloc.city_name == milwaukee ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == mornings ;; fromloc.city_name == milwaukee ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == morning ;; flight_number == 382 ;; fromloc.city_name == milwaukee ;; meal == meals ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_meal
+city_name == washington ;; state_code == dc ;; transport_type == car ;; atis_ground_service
+depart_date.day_name == tuesday ;; depart_time.period_of_day == night ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == oakland ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == morning ;; fromloc.state_code == dc ;; toloc.city_name == oakland ;; atis_flight
+airline_code == twa ;; fromloc.city_name == columbus ;; toloc.city_name == milwaukee ;; atis_airfare
+fare_basis_code == q ;; atis_abbreviation
+airline_code == twa ;; fromloc.city_name == columbus ;; round_trip == round trip ;; toloc.city_name == st. louis ;; atis_airfare
+airline_code == twa ;; cost_relative == cheapest ;; fromloc.city_name == columbus ;; round_trip == round trip ;; toloc.city_name == st. louis ;; atis_flight
+airline_code == twa ;; cost_relative == cheapest ;; fromloc.city_name == columbus ;; round_trip == round trip ;; toloc.city_name == st. paul ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == los angeles ;; atis_flight
+flight_mod == shortest ;; fromloc.city_name == milwaukee ;; toloc.city_name == orlando ;; atis_flight
+flight_mod == shortest ;; fromloc.city_name == milwaukee ;; toloc.city_name == long beach ;; atis_flight
+fare_basis_code == m ;; atis_abbreviation
+restriction_code == ap 57 ;; atis_abbreviation
+flight_mod == shortest ;; fromloc.city_name == milwaukee ;; toloc.city_name == st. petersburg ;; atis_flight
+flight_mod == shortest ;; fromloc.city_name == milwaukee ;; toloc.city_name == long beach ;; atis_flight
+flight_mod == shortest ;; fromloc.city_name == milwaukee ;; toloc.city_name == san diego ;; atis_flight
+restriction_code == ap 20 ;; atis_abbreviation
+depart_date.today_relative == today ;; fromloc.city_name == san francisco ;; toloc.city_name == detroit ;; toloc.state_name == michigan ;; atis_flight
+cost_relative == cheapest ;; depart_date.today_relative == today ;; fromloc.city_name == san francisco ;; toloc.city_name == detroit ;; atis_flight
+fromloc.city_name == san francisco ;; toloc.city_name == milwaukee ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == san francisco ;; toloc.city_name == milwaukee ;; atis_flight
+city_name == milwaukee ;; transport_type == car ;; atis_ground_service
+cost_relative == cheapest ;; depart_date.today_relative == tomorrow ;; fromloc.city_name == milwaukee ;; toloc.city_name == denver ;; atis_flight
+city_name == denver ;; atis_ground_service
+cost_relative == cheapest ;; fromloc.city_name == san francisco ;; toloc.city_name == denver ;; atis_flight
+fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == st. petersburg ;; toloc.city_name == charlotte ;; atis_flight
+airline_code == us ;; atis_airline
+fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+airport_code == phl ;; atis_abbreviation
+airport_code == mci ;; atis_abbreviation
+fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+days_code == sa ;; mod == not ;; atis_abbreviation
+flight_days == daily ;; flight_mod == earliest ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+airline_code == dl ;; atis_airline
+flight_days == daily ;; flight_mod == latest ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == los angeles ;; toloc.city_name == dallas ;; atis_flight
+airport_name == dallas fort worth airport ;; city_name == dallas ;; atis_ground_service
+aircraft_code == l1011 ;; atis_capacity
+aircraft_code == dc9 ;; atis_capacity
+fromloc.city_name == dallas ;; toloc.city_name == phoenix ;; atis_flight
+airport_name == phoenix airport ;; city_name == phoenix ;; atis_ground_service
+aircraft_code == m80 ;; atis_capacity
+aircraft_code == dc10 ;; fromloc.city_name == dallas ;; toloc.city_name == phoenix ;; atis_flight
+airline_code == aa ;; atis_airline
+fromloc.city_name == milwaukee ;; toloc.state_name == indiana ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == pittsburgh ;; atis_flight
+airport_name == pittsburgh airport ;; city_name == pittsburgh ;; atis_ground_service
+fromloc.city_name == pittsburgh ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+airport_code == dca ;; city_name == washington ;; atis_ground_service
+airport_code == dca ;; city_name == milwaukee ;; atis_flight
+airport_name == milwaukee airport ;; city_name == milwaukee ;; atis_ground_service
+depart_time.period_of_day == noon ;; depart_time.time_relative == before ;; fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_aircraft
+arrive_time.time == 5 pm ;; arrive_time.time_relative == after ;; depart_time.period_of_day == afternoon ;; flight_stop == nonstop ;; fromloc.city_name == st. petersburg ;; toloc.city_name == charlotte ;; atis_flight
+airline_name == delta airlines ;; fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+airline_name == american airlines ;; fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 1700 ;; depart_time.time_relative == after ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == midnight ;; depart_time.time_relative == after ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == las vegas ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == denver ;; atis_flight
+depart_time.time == 1200 ;; depart_time.time_relative == before ;; fromloc.city_name == milwaukee ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+depart_time.time == 1800 ;; depart_time.time_relative == after ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == pittsburgh ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == pittsburgh ;; atis_flight
+fromloc.city_name == pittsburgh ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == phoenix ;; toloc.state_name == arizona ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == atlanta ;; atis_flight
+fromloc.city_name == atlanta ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == san diego ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == orlando ;; toloc.city_name == kansas city ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == minneapolis ;; atis_flight
+fromloc.city_name == san diego ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == san diego ;; round_trip == round trip ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight#atis_airfare
+depart_time.period_of_day == morning ;; fromloc.city_name == atlanta ;; round_trip == round trip ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight#atis_airfare
+depart_time.period_of_day == morning ;; fromloc.city_name == phoenix ;; round_trip == round trip ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight#atis_airfare
+cost_relative == lowest ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == boston ;; atis_airfare
+cost_relative == lowest ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == montreal ;; atis_airfare
+cost_relative == lowest ;; fromloc.city_name == toronto ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_airfare
+fromloc.city_name == montreal ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+arrive_time.time == 3 pm ;; arrive_time.time_relative == no later than ;; fromloc.city_name == nashville ;; toloc.city_name == seattle ;; atis_flight
+arrive_time.time == 3 pm ;; arrive_time.time_relative == no later than ;; fromloc.city_name == memphis ;; toloc.city_name == seattle ;; atis_flight
+arrive_time.time == 1205 pm ;; fromloc.city_name == indianapolis ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == memphis ;; round_trip == round trip ;; toloc.city_name == seattle ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == nashville ;; round_trip == round trip ;; toloc.city_name == seattle ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == memphis ;; round_trip == round trip ;; toloc.city_name == seattle ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == indianapolis ;; round_trip == round trip ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == orlando ;; toloc.city_name == philadelphia ;; atis_flight
+fromloc.city_name == san francisco ;; toloc.city_name == charlotte ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == philadelphia ;; atis_flight
+fromloc.city_name == philadelphia ;; toloc.city_name == san francisco ;; atis_flight
+city_name == milwaukee ;; atis_ground_service
+fromloc.city_name == san francisco ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == denver ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == phoenix ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == houston ;; atis_flight
+fromloc.city_name == newark ;; toloc.city_name == houston ;; atis_flight
+fromloc.city_name == denver ;; toloc.city_name == houston ;; atis_flight
+fromloc.city_name == st. petersburg ;; toloc.city_name == charlotte ;; atis_flight
+fromloc.city_name == orlando ;; toloc.city_name == kansas city ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == minneapolis ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == minneapolis ;; toloc.city_name == kansas city ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == boston ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == montreal ;; atis_airfare
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == montreal ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == toronto ;; atis_airfare
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == boston ;; atis_airfare
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == montreal ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == toronto ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == dallas ;; toloc.city_name == phoenix ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == salt lake city ;; atis_flight
+flight_mod == early ;; fromloc.city_name == milwaukee ;; toloc.city_name == denver ;; atis_flight
+city_name == denver ;; atis_ground_service
+depart_date.day_name == tuesday ;; depart_time.period_of_day == morning ;; fromloc.city_name == denver ;; toloc.city_name == st. louis ;; atis_flight
+city_name == st. louis ;; atis_ground_service
+depart_date.day_name == wednesday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == st. louis ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == washington ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == atlanta ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == san diego ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == denver ;; atis_flight
+fromloc.city_name == salt lake city ;; toloc.city_name == phoenix ;; atis_flight
+fromloc.city_name == pittsburgh ;; toloc.city_name == phoenix ;; atis_flight
+fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == denver ;; atis_flight
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == boston ;; atis_flight
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == montreal ;; atis_flight
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == toronto ;; atis_airfare
+depart_date.day_name == saturday ;; fromloc.city_name == boston ;; toloc.city_name == washington ;; atis_flight
+depart_time.time == noon ;; depart_time.time_relative == before ;; fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_flight
+fromloc.city_name == washington ;; toloc.city_name == boston ;; atis_airfare
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == boston ;; atis_airfare
+fromloc.city_name == washington ;; toloc.city_name == montreal ;; atis_airfare
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == montreal ;; atis_airfare
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == toronto ;; atis_airfare
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == toronto ;; atis_airfare
+depart_date.day_name == saturday ;; fromloc.city_name == washington ;; toloc.city_name == boston ;; atis_flight
+depart_date.day_name == saturday ;; fromloc.city_name == boston ;; toloc.city_name == washington ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.airport_code == dtw ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == detroit ;; atis_flight
+fromloc.city_name == detroit ;; toloc.city_name == toronto ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == wednesday ;; flight_mod == last ;; fromloc.city_name == oakland ;; or == or ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == thursday ;; flight_mod == first ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == wednesday ;; flight_mod == last ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == wednesday ;; flight_mod == last ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == toronto ;; stoploc.airport_code == dtw ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == st. petersburg ;; toloc.city_name == charlotte ;; atis_flight
+depart_date.day_name == monday ;; depart_time.time == 9 am ;; depart_time.time_relative == before ;; fromloc.city_name == milwaukee ;; toloc.city_name == indianapolis ;; atis_flight
+depart_date.day_name == monday ;; depart_time.time == 8 am ;; depart_time.time_relative == before ;; fromloc.city_name == milwaukee ;; toloc.city_name == indianapolis ;; atis_flight
+airport_name == indianapolis airport ;; atis_ground_service
+depart_date.day_name == tuesday ;; depart_time.period_of_day == noon ;; fromloc.city_name == indianapolis ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == cleveland ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == cleveland ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == cleveland ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == cleveland ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == denver ;; toloc.city_name == salt lake city ;; atis_flight
+airport_name == denver airport ;; atis_ground_service
+depart_date.day_name == monday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == denver ;; toloc.city_name == salt lake city ;; atis_flight#atis_airline
+airport_name == salt lake city airport ;; atis_ground_service
+depart_date.day_name == wednesday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == salt lake city ;; toloc.city_name == phoenix ;; atis_flight
+airport_name == phoenix airport ;; atis_ground_service
+depart_date.day_name == wednesday ;; depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.time == 9 am ;; depart_time.time_relative == prior to ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight#atis_airfare
+depart_date.day_name == thursday ;; depart_time.time == 8 am ;; depart_time.time_relative == before ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight#atis_airfare
+depart_date.day_name == thursday ;; depart_time.time == 8 am ;; depart_time.time_relative == before ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight_no#atis_airline
+depart_date.day_name == thursday ;; depart_time.time == 8 am ;; depart_time.time_relative == before ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight_no
+state_name == arizona nevada ;; atis_airport
+state_name == california nevada arizona ;; atis_airport
+state_name == arizona ;; atis_airport
+state_name == california ;; atis_airport
+fromloc.city_name == las vegas ;; toloc.city_name == phoenix ;; atis_flight
+state_name == california ;; atis_airport
+atis_airport
+depart_date.day_name == wednesday ;; depart_time.period_of_day == night ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == morning ;; depart_time.time == 6 am ;; depart_time.time_relative == before ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_airline
+depart_time.period_of_day == afternoon ;; fromloc.city_name == st. petersburg ;; toloc.city_name == charlotte ;; atis_flight
+airport_code == tpa ;; atis_abbreviation
+fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_flight
+depart_time.period_of_day == noon ;; depart_time.time_relative == before ;; fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_flight
+depart_time.period_of_day == noon ;; depart_time.time_relative == before ;; fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_aircraft
+fromloc.city_name == indianapolis ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == memphis ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == nashville ;; toloc.city_name == seattle ;; atis_airfare
+fromloc.city_name == nashville ;; fromloc.state_name == tennessee ;; toloc.city_name == seattle ;; atis_airfare
+fromloc.city_name == milwaukee ;; toloc.city_name == tampa ;; atis_flight
+city_name == tampa ;; transport_type == car ;; atis_ground_service
+flight_days == daily ;; fromloc.city_name == st. louis ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == st. petersburg ;; toloc.city_name == charlotte ;; atis_flight
+fromloc.city_name == cleveland ;; toloc.city_name == dallas ;; atis_flight_no
+fromloc.city_name == new york ;; toloc.city_name == miami ;; atis_flight
+fare_basis_code == qo ;; atis_abbreviation
+fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+airline_code == us ;; atis_abbreviation
+depart_date.day_name == wednesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == milwaukee ;; or == or ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_airfare
+fromloc.city_name == milwaukee ;; toloc.city_name == orlando ;; atis_flight
+fare_basis_code == f ;; atis_abbreviation
+fare_basis_code == h ;; atis_abbreviation
+fare_basis_code == y ;; atis_abbreviation
+restriction_code == ap 57 ;; atis_abbreviation
+class_type == first class ;; depart_time.time == 10 am ;; depart_time.time_relative == before ;; fromloc.city_name == indianapolis ;; round_trip == one way ;; toloc.city_name == memphis ;; atis_flight
+arrive_time.time == 7 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == burbank ;; round_trip == round trip ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == orlando ;; round_trip == round trip ;; toloc.city_name == montreal ;; atis_flight
+airline_code == dl ;; atis_airline
+airline_name == delta airlines ;; fromloc.city_name == montreal ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == orlando ;; toloc.city_name == montreal ;; atis_flight
+airline_code == kw ;; atis_airline
+fromloc.city_name == new york ;; toloc.city_name == miami ;; atis_flight
+fare_basis_code == bh ;; atis_abbreviation
+fromloc.city_name == miami ;; round_trip == return ;; toloc.airport_code == jfk ;; atis_flight
+fare_basis_code == bh ;; atis_abbreviation
+fare_basis_code == bh ;; atis_abbreviation
+fare_basis_code == bh ;; atis_abbreviation
+fare_basis_code == bh ;; atis_abbreviation
+depart_date.day_name == wednesday ;; depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == indianapolis ;; toloc.city_name == memphis ;; atis_flight
+fromloc.city_name == burbank ;; round_trip == round trip ;; toloc.city_name == seattle ;; atis_flight
+fromloc.city_name == orlando ;; round_trip == round trip ;; toloc.city_name == montreal ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == montreal ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == montreal ;; round_trip == round trips ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == montreal ;; round_trip == round trip ;; toloc.city_name == orlando ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == montreal ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == orlando ;; round_trip == one way ;; toloc.city_name == montreal ;; atis_flight
+cost_relative == cheapest ;; economy == economy ;; fromloc.city_name == miami ;; toloc.city_name == new york ;; atis_flight
+economy == economy ;; fromloc.city_name == kansas city ;; toloc.city_name == las vegas ;; atis_flight
+economy == economy ;; fromloc.city_name == kansas city ;; toloc.city_name == las vegas ;; atis_flight
+airline_code == hp ;; atis_airline
+city_name == las vegas ;; atis_ground_service
+city_name == las vegas ;; atis_ground_service
+economy == economy ;; fromloc.city_name == las vegas ;; toloc.city_name == baltimore ;; atis_flight
+economy == economy ;; fromloc.city_name == las vegas ;; toloc.city_name == baltimore ;; atis_flight
+economy == economy ;; fromloc.city_name == baltimore ;; toloc.city_name == kansas city ;; atis_flight
+airline_code == us ;; atis_airline
+airline_code == us ;; atis_airline
+airline_code == us ;; atis_airline
+airline_code == us ;; atis_airline
+airline_code == us ;; atis_airline
+depart_time.time == 10 am ;; depart_time.time_relative == before ;; fromloc.city_name == columbus ;; round_trip == one way ;; toloc.city_name == chicago ;; atis_flight
+airline_code == hp ;; atis_airline
+fromloc.city_name == st. petersburg ;; toloc.city_name == detroit ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+depart_time.time == 10 am ;; depart_time.time_relative == before ;; flight_days == daily ;; fromloc.city_name == milwaukee ;; toloc.city_name == atlanta ;; atis_flight
+airline_code == yx ;; atis_airline
+fromloc.city_name == san jose ;; toloc.city_name == phoenix ;; atis_flight
+fromloc.city_name == san jose ;; toloc.city_name == phoenix ;; atis_flight
+airline_code == hp ;; atis_airline
+city_name == phoenix ;; atis_ground_service
+fromloc.city_name == phoenix ;; toloc.city_name == fort worth ;; atis_flight
+city_name == fort worth ;; atis_ground_service
+fromloc.city_name == fort worth ;; toloc.city_name == san jose ;; atis_flight
+class_type == first class ;; fromloc.city_name == new york ;; round_trip == round trip ;; toloc.city_name == miami ;; atis_flight
+class_type == first class ;; fromloc.city_name == new york ;; round_trip == round trip ;; toloc.city_name == miami ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == new york ;; round_trip == round trip ;; toloc.city_name == miami ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == miami ;; round_trip == round trip ;; toloc.city_name == new york ;; atis_flight
+depart_time.time == 10 am ;; depart_time.time_relative == before ;; fromloc.city_name == indianapolis ;; round_trip == one way ;; toloc.city_name == memphis ;; atis_flight
+fare_basis_code == f ;; atis_abbreviation
+fromloc.city_name == burbank ;; round_trip == round trip ;; toloc.city_name == tacoma ;; atis_flight
+restriction_code == ap58 ;; atis_abbreviation
+fare_basis_code == h ;; atis_abbreviation
+airline_code == as ;; atis_airline
+airline_code == as ;; atis_airline
+airline_code == as ;; atis_airline
+airline_code == as ;; atis_airline
+flight_stop == nonstop ;; fromloc.city_name == st. petersburg ;; toloc.city_name == toronto ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == toronto ;; toloc.city_name == st. petersburg ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == toronto ;; toloc.city_name == st. petersburg ;; atis_flight#atis_airfare
+flight_stop == nonstop ;; fromloc.city_name == toronto ;; toloc.city_name == st. petersburg ;; atis_flight
+flight_mod == weekday ;; fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+flight_mod == weekday ;; fromloc.city_name == milwaukee ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_flight
+airline_code == hp ;; atis_airline
+fromloc.city_name == chicago ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == chicago ;; toloc.city_name == san diego ;; atis_flight
+fromloc.city_name == kansas city ;; toloc.city_name == denver ;; atis_flight
+fromloc.city_name == denver ;; toloc.city_name == phoenix ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == las vegas ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == san diego ;; atis_flight
+depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; toloc.city_name == kansas city ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == san jose ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == milwaukee ;; toloc.city_name == san jose ;; atis_flight
+depart_date.day_name == friday ;; fromloc.city_name == san jose ;; toloc.city_name == dallas ;; atis_flight
+fromloc.city_name == dallas ;; toloc.city_name == houston ;; atis_flight
+city_name == new york ;; atis_distance
+city_name == new york ;; atis_airport
+city_name == new york ;; atis_airport
+city_name == la ;; atis_airport
+atis_airport
+city_name == la ;; atis_airport
+city_name == la ;; atis_airport
+city_name == la ;; atis_airport
+city_name == la ;; atis_city
+city_name == la ;; atis_city
+fromloc.city_name == new york ;; toloc.city_name == la ;; atis_flight
+fromloc.airport_name == la guardia ;; toloc.city_name == burbank ;; atis_flight
+fromloc.city_name == la ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == ontario ;; fromloc.state_name == california ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == ontario ;; fromloc.state_name == california ;; toloc.city_name == orlando ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == indianapolis ;; toloc.city_name == memphis ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == indianapolis ;; toloc.city_name == memphis ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == memphis ;; toloc.city_name == miami ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == miami ;; toloc.city_name == indianapolis ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == charlotte ;; atis_flight
+fromloc.city_name == charlotte ;; atis_aircraft
+depart_date.day_name == saturday ;; fromloc.city_name == tacoma ;; return_date.date_relative == next ;; return_date.day_name == saturday ;; round_trip == round trip ;; toloc.city_name == orlando ;; atis_flight#atis_airfare
+booking_class == q ;; atis_abbreviation
+depart_date.day_name == saturday ;; fare_basis_code == q ;; fromloc.city_name == orlando ;; toloc.city_name == tacoma ;; atis_flight
+class_type == first class ;; fromloc.city_name == detroit ;; round_trip == round trip ;; toloc.city_name == st. petersburg ;; atis_airfare
+class_type == coach ;; fromloc.city_name == detroit ;; round_trip == round trip ;; toloc.city_name == st. petersburg ;; atis_airfare
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == pittsburgh ;; toloc.city_name == newark ;; atis_flight
+depart_date.day_name == friday ;; fromloc.city_name == minneapolis ;; toloc.city_name == pittsburgh ;; atis_flight
+depart_time.time == 9 am ;; depart_time.time_relative == before ;; fromloc.city_name == cincinnati ;; toloc.city_name == tampa ;; atis_flight
+depart_time.period_of_day == noon ;; depart_time.time_relative == before ;; fromloc.city_name == cincinnati ;; toloc.city_name == tampa ;; atis_flight
+depart_time.time == 3 pm ;; depart_time.time_relative == after ;; fromloc.city_name == tampa ;; toloc.city_name == cincinnati ;; atis_flight
+fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_airline
+airline_name == delta ;; fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_flight
+airline_name == delta ;; fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_capacity
+airline_name == delta ;; fromloc.city_name == seattle ;; toloc.city_name == salt lake city ;; atis_flight
+city_name == baltimore ;; atis_ground_service
+city_name == baltimore ;; atis_ground_service
+depart_date.day_name == friday ;; fromloc.city_name == baltimore ;; toloc.city_name == san francisco ;; atis_flight
+depart_date.day_name == tuesday ;; fromloc.city_name == los angeles ;; toloc.city_name == pittsburgh ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == evening ;; fromloc.city_name == pittsburgh ;; toloc.city_name == los angeles ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == cleveland ;; round_trip == round trip ;; toloc.city_name == miami ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == cleveland ;; round_trip == round trip ;; toloc.city_name == miami ;; atis_airfare
+depart_date.day_name == wednesday ;; fromloc.city_name == miami ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == sunday ;; fromloc.city_name == miami ;; toloc.city_name == cleveland ;; atis_airfare
+airline_name == american airlines ;; depart_date.day_name == saturday ;; fromloc.city_name == milwaukee ;; or == or ;; toloc.city_name == phoenix ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == evening ;; fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight
+airline_name == american airlines ;; depart_date.day_name == wednesday ;; fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight
+airline_name == american airlines ;; fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_mod == early ;; depart_time.period_of_day == morning ;; flight_stop == nonstop ;; fromloc.city_name == chicago ;; meal == meal ;; toloc.city_name == seattle ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; meal == meals ;; toloc.city_name == seattle ;; atis_flight
+airline_name == continental ;; fromloc.city_name == seattle ;; meal == meals ;; toloc.city_name == chicago ;; atis_flight
+airline_name == continental ;; depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == seattle ;; meal == meals ;; toloc.city_name == chicago ;; atis_flight
+airline_name == continental ;; depart_date.day_name == saturday ;; depart_time.period_mod == early ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; meal == meals ;; toloc.city_name == seattle ;; atis_flight
+airline_name == continental ;; depart_date.day_name == saturday ;; depart_time.period_mod == early ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; meal == meals ;; toloc.city_name == seattle ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; meal == meals ;; toloc.city_name == minneapolis ;; atis_flight
+airline_name == continental ;; depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; meal == meals ;; toloc.city_name == minneapolis ;; atis_flight
+airline_name == continental ;; depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; meal == meals ;; toloc.city_name == st. paul ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == new york ;; toloc.city_name == las vegas ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == memphis ;; toloc.city_name == las vegas ;; atis_flight
+cost_relative == cheapest ;; depart_date.day_number == twenty fifth ;; depart_date.month_name == december ;; depart_time.time_relative == around ;; fromloc.city_name == indianapolis ;; round_trip == round trip ;; toloc.city_name == orlando ;; atis_flight
+depart_date.day_name == friday ;; fromloc.city_name == newark ;; toloc.city_name == tampa ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == tampa ;; toloc.city_name == charlotte ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == morning ;; fromloc.city_name == charlotte ;; toloc.city_name == baltimore ;; atis_flight
+depart_time.period_of_day == morning ;; fromloc.city_name == baltimore ;; toloc.city_name == newark ;; atis_flight
+cost_relative == cheapest ;; depart_date.day_number == twenty fifth ;; depart_date.month_name == december ;; fromloc.city_name == indianapolis ;; round_trip == round trip ;; toloc.city_name == orlando ;; atis_airfare
+cost_relative == cheapest ;; depart_date.day_number == twenty seventh ;; depart_date.month_name == december ;; fromloc.city_name == indianapolis ;; round_trip == one way ;; toloc.city_name == orlando ;; atis_airfare
+fromloc.city_name == dallas ;; toloc.city_name == houston ;; atis_flight_no
+fromloc.city_name == houston ;; toloc.city_name == dallas ;; atis_flight_no
+airline_name == american airlines ;; depart_date.day_name == saturday ;; fromloc.city_name == milwaukee ;; toloc.city_name == phoenix ;; atis_flight
+airline_name == american airlines ;; fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight_no
+fromloc.city_name == chicago ;; toloc.city_name == seattle ;; atis_flight_no
+airline_name == continental ;; fromloc.city_name == chicago ;; toloc.city_name == seattle ;; atis_flight_no
+airline_name == continental ;; fromloc.city_name == seattle ;; toloc.city_name == chicago ;; atis_flight_no
+cost_relative == under ;; fare_amount == 200 dollars ;; fromloc.city_name == pittsburgh ;; toloc.city_name == cleveland ;; atis_airfare
+class_type == coach ;; fromloc.city_name == pittsburgh ;; toloc.city_name == atlanta ;; atis_airfare
+depart_date.day_name == friday ;; fromloc.city_name == newark ;; toloc.city_name == tampa ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.period_of_day == morning ;; fromloc.city_name == tampa ;; toloc.city_name == charlotte ;; atis_flight
+depart_date.day_name == tuesday ;; fromloc.city_name == charlotte ;; toloc.city_name == baltimore ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.period_of_day == morning ;; fromloc.city_name == baltimore ;; toloc.city_name == newark ;; atis_flight
+depart_time.time == 1201 am ;; depart_time.time_relative == after ;; fromloc.city_name == dallas ;; toloc.city_name == houston ;; atis_flight
+depart_time.period_of_day == midnight ;; depart_time.time_relative == before ;; fromloc.city_name == houston ;; toloc.city_name == dallas ;; atis_flight
+depart_date.day_number == twenty seventh ;; depart_date.month_name == december ;; fromloc.city_name == indianapolis ;; toloc.city_name == orlando ;; atis_flight
+cost_relative == cheapest ;; depart_date.day_number == twenty seventh ;; depart_date.month_name == december ;; fromloc.city_name == indianapolis ;; toloc.city_name == orlando ;; atis_airfare
+cost_relative == cheapest ;; depart_date.day_number == twenty seventh ;; depart_date.month_name == december ;; fromloc.city_name == indianapolis ;; round_trip == round trip ;; toloc.city_name == orlando ;; atis_airfare
+arrive_time.time == 4 pm ;; arrive_time.time_relative == before ;; depart_date.day_name == wednesday ;; fromloc.city_name == cleveland ;; toloc.city_name == miami ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == miami ;; toloc.city_name == cleveland ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == new york city ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == new york city ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == new york ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == memphis ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_name == sunday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == new york ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; toloc.city_name == seattle ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.period_of_day == morning ;; fromloc.city_name == chicago ;; toloc.city_name == las vegas ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == los angeles ;; toloc.city_name == pittsburgh ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == los angeles ;; toloc.city_name == pittsburgh ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == evening ;; fromloc.city_name == pittsburgh ;; toloc.city_name == los angeles ;; atis_flight
+depart_date.day_name == saturday ;; fromloc.city_name == milwaukee ;; toloc.city_name == phoenix ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == phoenix ;; toloc.city_name == milwaukee ;; atis_flight
+arrive_time.end_time == 8 pm ;; arrive_time.start_time == 5 ;; flight == flight ;; fromloc.city_name == baltimore ;; toloc.city_name == san francisco ;; atis_flight
+airline_name == northwest ;; fromloc.city_name == st. paul ;; atis_flight
+airline_name == northwest ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; atis_flight
+airline_name == northwest ;; fromloc.airport_name == dulles ;; atis_flight
+airline_name == northwest ;; atis_city
+airline_name == northwest ;; atis_city
+airline_name == northwest ;; atis_city
+connect == connecting ;; depart_time.time == 4 o'clock ;; depart_time.time_relative == after ;; fromloc.city_name == dallas ;; toloc.city_name == san francisco ;; atis_flight
+fromloc.city_name == dallas ;; toloc.city_name == san francisco ;; atis_flight
+airline_name == american airlines ;; depart_time.period_of_day == morning ;; fromloc.city_name == philadelphia ;; toloc.city_name == dallas ;; atis_flight
+fromloc.city_name == philadelphia ;; toloc.city_name == dallas ;; atis_flight
+aircraft_code == d9s ;; atis_abbreviation
+aircraft_code == d9s ;; atis_aircraft
+aircraft_code == d9s ;; atis_abbreviation
+airline_name == tower air ;; atis_airport
+class_type == first class ;; fromloc.airport_code == jfk ;; toloc.city_name == orlando ;; atis_flight
+class_type == first class ;; fromloc.airport_name == kennedy airport ;; toloc.city_name == miami ;; atis_flight
+class_type == first class ;; fromloc.airport_code == jfk ;; toloc.city_name == miami ;; atis_flight
+airline_name == tower air ;; meal == meals ;; atis_meal
+airline_name == tower air ;; meal_description == snacks ;; atis_meal
+airline_name == delta airlines ;; fromloc.airport_code == jfk ;; toloc.city_name == miami ;; atis_flight
+airline_name == delta airlines ;; fromloc.city_name == boston ;; toloc.city_name == salt lake ;; atis_flight
+airline_name == delta airlines ;; fromloc.city_name == boston ;; toloc.city_name == salt lake ;; atis_flight
+airline_name == delta airlines ;; fromloc.city_name == boston ;; toloc.city_name == salt lake city ;; atis_flight
+fromloc.city_name == boston ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_airfare
+cost_relative == least expensive ;; fromloc.city_name == boston ;; toloc.city_name == salt lake city ;; atis_airfare
+cost_relative == lowest ;; fromloc.city_name == washington ;; fromloc.state_code == dc ;; toloc.city_name == salt lake city ;; atis_airfare
+cost_relative == lowest ;; fromloc.airport_code == bwi ;; toloc.city_name == salt lake city ;; atis_airfare
+class_type == first class ;; fromloc.city_name == detroit ;; round_trip == back ;; toloc.city_name == las vegas ;; atis_airfare
+flight_mod == earliest arriving ;; fromloc.city_name == boston ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+flight_mod == earliest arriving ;; fromloc.city_name == boston ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+flight_mod == earliest arriving ;; fromloc.city_name == boston ;; toloc.city_name == washington ;; toloc.state_code == dc ;; atis_flight
+flight_mod == earliest arriving ;; fromloc.city_name == houston ;; toloc.city_name == orlando ;; atis_flight
+flight_mod == earliest arriving ;; fromloc.city_name == houston ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == orlando ;; atis_flight
+fromloc.city_name == houston ;; toloc.city_name == orlando ;; atis_flight
+depart_time.end_time == 9 pm ;; depart_time.start_time == 8 pm ;; fromloc.city_name == denver ;; atis_flight
+aircraft_code == 733 ;; atis_capacity
+aircraft_code == 72s ;; atis_capacity
+aircraft_code == 72s ;; atis_capacity
+aircraft_code == m80 ;; atis_capacity
+aircraft_code == m80 ;; atis_capacity
+aircraft_code == m80 ;; atis_capacity
+city_name == denver ;; atis_airline
+city_name == denver ;; atis_airline
+toloc.city_name == denver ;; atis_airline
+arrive_time.end_time == 9 pm ;; arrive_time.start_time == 8 ;; toloc.city_name == denver ;; atis_flight
+aircraft_code == 73s ;; atis_capacity
+aircraft_code == 73s ;; atis_abbreviation
+aircraft_code == 73s ;; atis_capacity
+aircraft_code == 757 ;; atis_capacity
+aircraft_code == 757 ;; atis_capacity
+aircraft_code == 757 ;; atis_capacity
+arrive_time.end_time == 9 pm ;; arrive_time.start_time == 8 ;; flight_days == daily ;; toloc.city_name == denver ;; atis_flight
+arrive_time.end_time == 9 pm ;; arrive_time.start_time == 8 ;; flight_days == daily ;; toloc.city_name == denver ;; atis_flight
+arrive_time.end_time == 9 pm ;; arrive_time.start_time == 8 pm ;; flight_days == daily ;; toloc.city_name == denver ;; atis_flight
+aircraft_code == 757 ;; atis_capacity
+aircraft_code == m80 ;; atis_aircraft
+aircraft_code == m80 ;; atis_aircraft
+aircraft_code == m80 ;; atis_aircraft
+aircraft_code == 733 ;; atis_capacity
+aircraft_code == m80 ;; atis_capacity
+aircraft_code == m80 ;; atis_capacity
+city_name == denver ;; depart_time.end_time == 9 pm ;; depart_time.start_time == 8 ;; atis_flight
+arrive_time.end_time == 9 pm ;; arrive_time.start_time == 8 ;; toloc.city_name == denver ;; atis_flight
+arrive_time.end_time == 9 pm ;; arrive_time.start_time == 8 ;; toloc.city_name == denver ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == nashville ;; toloc.city_name == memphis ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == nashville ;; toloc.city_name == memphis ;; atis_flight
+airport_name == memphis airport ;; period_of_day == morning ;; atis_ground_service
+depart_date.day_name == monday ;; depart_time.period_of_day == night ;; fromloc.city_name == memphis ;; toloc.city_name == new york city ;; atis_flight
+airport_code == cvg ;; atis_abbreviation
+airport_name == la guardia airport ;; city_name == new york city ;; atis_ground_service
+airport_code == lga ;; city_name == new york city ;; atis_ground_service
+airport_code == lga ;; city_name == new york city ;; atis_ground_service
+airport_code == ewr ;; city_name == new york city ;; atis_ground_service
+depart_time.period_of_day == morning ;; fromloc.city_name == memphis ;; toloc.city_name == new york city ;; atis_flight
+depart_date.day_name == wednesday ;; depart_time.time == 5 pm ;; depart_time.time_relative == after ;; fromloc.city_name == new york city ;; toloc.city_name == nashville ;; atis_flight
+airport_name == nashville airport ;; atis_ground_service
+arrive_time.time == 7 pm ;; arrive_time.time_relative == before ;; depart_time.period_of_day == noon ;; depart_time.time_relative == after ;; flight_stop == nonstop ;; fromloc.city_name == cincinnati ;; toloc.city_name == charlotte ;; atis_flight
+airline_name == alaska airlines ;; toloc.city_name == burbank ;; atis_flight
+airline_name == alaska airline ;; fromloc.city_name == burbank ;; atis_flight
+airline_name == alaska airline ;; fromloc.city_name == burbank ;; atis_flight
+airline_code == as ;; atis_airline
+airline_name == alaska airlines ;; toloc.city_name == burbank ;; atis_flight
+airline_name == alaska airlines ;; fromloc.city_name == burbank ;; atis_flight
+airline_name == alaska airlines ;; atis_flight
+fromloc.city_name == seattle ;; atis_flight
+depart_time.period_of_day == noon ;; depart_time.time_relative == before ;; fromloc.city_name == indianapolis ;; toloc.city_name == memphis ;; atis_flight
+cost_relative == cheapest ;; fromloc.city_name == charlotte ;; toloc.city_name == las vegas ;; atis_airfare
+depart_time.period_mod == early ;; depart_time.period_of_day == morning ;; fromloc.city_name == los angeles ;; toloc.city_name == charlotte ;; atis_flight
+depart_time.period_of_day == morning ;; fromloc.city_name == charlotte ;; toloc.city_name == newark ;; atis_flight
+depart_time.period_of_day == morning ;; fromloc.city_name == newark ;; toloc.city_name == los angeles ;; atis_flight
+depart_time.period_of_day == evening ;; fromloc.city_name == newark ;; toloc.city_name == los angeles ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == montreal ;; fromloc.state_name == quebec ;; toloc.city_name == san diego ;; toloc.state_name == california ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == san diego ;; toloc.city_name == indianapolis ;; toloc.state_name == indiana ;; atis_flight
+depart_date.day_name == thursday ;; depart_time.period_of_day == morning ;; fromloc.city_name == indianapolis ;; toloc.city_name == toronto ;; atis_flight
+depart_date.day_name == friday ;; depart_time.period_of_day == morning ;; fromloc.city_name == toronto ;; toloc.city_name == montreal ;; atis_flight
+airline_name == american ;; fromloc.city_name == cincinnati ;; toloc.city_name == burbank ;; atis_flight
+airline_name == american ;; depart_time.time == 419 pm ;; atis_aircraft
+depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == kansas city ;; return_date.date_relative == the following day ;; toloc.city_name == chicago ;; atis_flight
+fromloc.city_name == long beach ;; toloc.city_name == st. louis ;; atis_flight
+fromloc.city_name == memphis ;; toloc.city_name == las vegas ;; atis_flight
+fromloc.city_name == las vegas ;; toloc.city_name == ontario ;; atis_flight
+fromloc.city_name == ontario ;; toloc.city_name == memphis ;; atis_flight
+airport_name == las vegas airport ;; atis_ground_service
+airport_name == ontario airport ;; transport_type == taxi service ;; atis_ground_service
+fromloc.city_name == tampa ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == milwaukee ;; toloc.city_name == seattle ;; atis_flight
+airline_name == united ;; fromloc.airport_name == la guardia ;; toloc.city_name == san jose ;; atis_flight
+depart_date.day_name == mondays ;; fromloc.city_name == charlotte ;; fromloc.state_name == north carolina ;; toloc.city_name == phoenix ;; toloc.state_name == arizona ;; atis_flight
+depart_date.day_name == tuesday ;; fromloc.city_name == phoenix ;; fromloc.state_name == arizona ;; toloc.city_name == st. paul ;; toloc.state_name == minnesota ;; atis_flight
+depart_date.day_name == thursday ;; fromloc.city_name == st. paul ;; fromloc.state_name == minnesota ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == friday ;; fromloc.city_name == st. louis ;; toloc.city_name == charlotte ;; toloc.state_name == north carolina ;; atis_flight
+fromloc.city_name == boston ;; stoploc.city_name == new york ;; toloc.city_name == orlando ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == monday ;; depart_time.period_of_day == morning ;; fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == night ;; fromloc.city_name == milwaukee ;; toloc.city_name == st. louis ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == afternoon ;; fromloc.city_name == st. louis ;; toloc.city_name == burbank ;; atis_flight
+depart_date.day_name == tuesday ;; depart_time.period_of_day == night ;; fromloc.city_name == st. louis ;; toloc.city_name == burbank ;; atis_flight
+arrive_date.day_name == saturday ;; arrive_time.time == 6 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == salt lake ;; toloc.airport_name == newark airport ;; atis_flight
+arrive_date.day_name == saturday ;; arrive_time.time == 6 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == cincinnati ;; toloc.airport_name == newark airport ;; atis_flight
+airline_name == american airlines ;; arrive_time.time == 5 pm ;; arrive_time.time_relative == around ;; fromloc.city_name == miami ;; toloc.city_name == chicago ;; atis_flight
+fromloc.city_name == memphis ;; stoploc.city_name == los angeles ;; toloc.city_name == tacoma ;; atis_flight
+depart_time.time == 6 pm ;; depart_time.time_relative == after ;; fromloc.city_name == cincinnati ;; toloc.city_name == san jose ;; toloc.state_name == california ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == san jose ;; toloc.city_name == houston ;; toloc.state_name == texas ;; atis_flight
+flight_stop == nonstop ;; fromloc.city_name == houston ;; toloc.city_name == memphis ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == memphis ;; toloc.city_name == cincinnati ;; atis_flight
+airline_name == american ;; fromloc.city_name == newark ;; toloc.city_name == nashville ;; atis_flight
+fromloc.city_name == ontario ;; stoploc.city_name == chicago ;; toloc.city_name == westchester ;; atis_flight
+fromloc.city_name == los angeles ;; toloc.city_name == charlotte ;; atis_flight
+fromloc.city_name == charlotte ;; toloc.city_name == newark ;; atis_flight
+fromloc.city_name == newark ;; toloc.city_name == los angeles ;; atis_flight
+airline_name == american airlines ;; fromloc.city_name == cincinnati ;; toloc.city_name == burbank ;; atis_flight
+depart_date.day_number == sixteenth ;; depart_date.month_name == june ;; fromloc.city_name == kansas city ;; toloc.city_name == chicago ;; atis_flight
+depart_date.day_number == seventeenth ;; depart_date.month_name == june ;; fromloc.city_name == chicago ;; toloc.city_name == kansas city ;; atis_flight
+depart_date.day_number == sixteenth ;; depart_date.month_name == june ;; fromloc.city_name == kansas city ;; toloc.city_name == chicago ;; atis_flight
+depart_date.day_number == seventeenth ;; depart_date.month_name == june ;; fromloc.city_name == chicago ;; toloc.city_name == kansas city ;; atis_flight
+fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_flight
+arrive_time.time == 6 pm ;; arrive_time.time_relative == before ;; depart_date.date_relative == next ;; depart_date.day_name == saturday ;; fromloc.city_name == salt lake city ;; toloc.city_name == new york city ;; atis_flight
+depart_date.day_name == saturday ;; depart_time.time == 6 pm ;; depart_time.time_relative == before ;; fromloc.city_name == cincinnati ;; toloc.city_name == new york ;; atis_flight
+airline_name == delta ;; arrive_time.time == 6 pm ;; arrive_time.time_relative == before ;; depart_date.date_relative == next ;; depart_date.day_name == saturday ;; fromloc.city_name == salt lake city ;; toloc.city_name == new york ;; atis_flight
+airline_name == american airlines ;; arrive_time.time == 5 pm ;; arrive_time.time_relative == around ;; fromloc.city_name == miami ;; toloc.city_name == chicago ;; atis_flight
+depart_date.date_relative == next ;; depart_date.day_name == wednesday ;; fromloc.city_name == kansas city ;; toloc.city_name == chicago ;; atis_flight
+arrive_time.time == 7 pm ;; depart_date.day_name == wednesday ;; depart_date.day_number == twenty sixth ;; depart_date.month_name == may ;; fromloc.city_name == kansas city ;; round_trip == round trip ;; toloc.city_name == chicago ;; atis_flight
+fromloc.city_name == memphis ;; stoploc.city_name == los angeles ;; toloc.city_name == tacoma ;; atis_flight
+depart_date.day_name == monday ;; depart_time.period_of_day == am ;; fromloc.city_name == san diego ;; toloc.city_name == phoenix ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == phoenix ;; toloc.city_name == detroit ;; atis_flight
+depart_date.day_name == tuesday ;; fromloc.city_name == detroit ;; toloc.city_name == san diego ;; atis_flight
+depart_date.day_name == monday ;; fromloc.city_name == cincinnati ;; toloc.city_name == san jose ;; atis_flight
+depart_date.day_name == wednesday ;; fromloc.city_name == san jose ;; toloc.city_name == houston ;; atis_flight
+depart_date.day_name == friday ;; fromloc.city_name == houston ;; toloc.city_name == memphis ;; atis_flight
+depart_date.day_name == sunday ;; fromloc.city_name == memphis ;; toloc.city_name == cincinnati ;; atis_flight
+airline_name == american ;; depart_time.time == 630 pm ;; depart_time.time_relative == around ;; fromloc.city_name == newark ;; toloc.city_name == nashville ;; atis_flight
+cost_relative == not exceeding ;; depart_date.day_number == tenth ;; depart_date.month_name == june ;; depart_date.year == 1993 ;; fare_amount == 300 dollars ;; fromloc.city_name == los angeles ;; round_trip == round trip ;; stoploc.city_name == san francisco ;; toloc.city_name == tacoma ;; toloc.state_name == washington ;; atis_flight
+depart_date.day_number == tenth ;; depart_date.month_name == june ;; fromloc.city_name == burbank ;; toloc.city_name == tacoma ;; atis_flight
+depart_date.day_number == seventeenth ;; depart_date.month_name == may ;; fromloc.city_name == ontario ;; meal_description == dinner ;; round_trip == one way ;; stoploc.city_name == chicago ;; toloc.city_name == westchester ;; atis_flight
+fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_flight
+fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_flight
+city_name == st. louis ;; fromloc.city_name == milwaukee ;; atis_flight
+city_name == st. louis ;; toloc.city_name == burbank ;; atis_flight
+fromloc.city_name == burbank ;; toloc.city_name == milwaukee ;; atis_airline
+fromloc.city_name == burbank ;; round_trip == round trip ;; stoploc.city_name == st. louis ;; toloc.city_name == milwaukee ;; atis_flight
+toloc.city_name == westchester county ;; atis_flight
+fromloc.city_name == salt lake city ;; toloc.city_name == westchester county ;; atis_flight
+city_name == westchester county ;; atis_airport
+airline_name == united airlines ;; depart_date.date_relative == next ;; depart_date.day_name == saturday ;; fromloc.city_name == cincinnati ;; toloc.city_name == new york city ;; atis_flight
+city_name == new york city ;; atis_airport
+arrive_date.date_relative == next ;; arrive_date.day_name == saturday ;; arrive_time.time == 6 pm ;; arrive_time.time_relative == before ;; fromloc.city_name == cincinnati ;; toloc.city_name == new york city ;; atis_flight
+fromloc.city_name == cincinnati ;; toloc.city_name == new york city ;; atis_flight
+airline_name == american airlines ;; fromloc.city_name == miami ;; toloc.city_name == chicago ;; atis_flight
+fromloc.city_name == kansas city ;; round_trip == round trip ;; toloc.city_name == chicago ;; atis_flight
+fromloc.city_name == memphis ;; toloc.city_name == tacoma ;; atis_flight

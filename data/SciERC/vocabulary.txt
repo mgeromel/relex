@@ -1,0 +1,13 @@
+COMPARE
+CONJUNCTION
+EVALUATE-FOR
+FEATURE-OF
+HYPONYM-OF
+PART-OF
+USED-FOR
+Generic
+Material
+Method
+Metric
+OtherScientificTerm
+Task

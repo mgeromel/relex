@@ -9,19 +9,21 @@ from gramm import GRAMMAR
 ##################################################
 
 class TestModel(torch.nn.Module):
-	def __init__(self, gramm = None, vocab = None):
+	def __init__(self, gramm = None, vocab = None, point_size = 256):
 		super(TestModel, self).__init__()
 		
 		self.gramm_size = gramm.size() + 1
 		self.relat_size = len(vocab)
-		self.point_size = 512
-		self.vocab_size = self.gramm_size + self.relat_size + self.point_size
+		self.point_size = point_size
+		self.vocab_size = self.gramm_size + self.relat_size + 2 * self.point_size
 		
 		self.encoder = BertGenerationEncoder.from_pretrained(
 			"bert-base-uncased",
 			bos_token_id = 101, 
 			eos_token_id = 102
 		)
+		
+		self.encoder.encoder.gradient_checkpointing = True
 		
 		self.decoder = gen_decoder.RelexDecoder(
 			BertGenerationConfig(
@@ -40,17 +42,23 @@ class TestModel(torch.nn.Module):
 			)
 		)
 		
-		self.gramm_head = torch.nn.Linear(self.vocab_size, self.gramm_size)
-		self.relat_head = torch.nn.Linear(self.vocab_size, self.relat_size)
-		self.point_head = torch.nn.Linear(           1024, self.point_size)
-		#self.point_head = torch.nn.Linear( 12 * 256 + 768, self.point_size)
+		self.decoder.bert.encoder.gradient_checkpointing = True
+		
+		self.gramm_head = torch.nn.Linear(      self.vocab_size,     self.gramm_size)
+		self.relat_head = torch.nn.Linear(      self.vocab_size,     self.relat_size)
+		self.point_head = torch.nn.Linear(768 + self.point_size, 2 * self.point_size)
 		
 		self.dropout_logits = torch.nn.Dropout(0.15)
-		
+
 	##################################################
 	
 	def compute_loss(self, logits, labels):
 		loss = None
+		
+		bound_a = self.gramm_size
+		bound_b = self.gramm_size + self.relat_size
+		bound_c = self.point_size
+		
 		
 		if labels != None:
 			loss_func = torch.nn.CrossEntropyLoss()
@@ -63,10 +71,10 @@ class TestModel(torch.nn.Module):
 			p_labels = shifted_labels[:,:,2].view(-1).long()
 			q_labels = shifted_labels[:,:,3].view(-1).long()
 			
-			g_logits = shifted_logits[:,:,     :    9].reshape(-1, self.gramm_size)
-			r_logits = shifted_logits[:,:,    9: -512].reshape(-1, self.relat_size)
-			p_logits = shifted_logits[:,:, -512: -256].reshape(-1, self.point_size//2)
-			q_logits = shifted_logits[:,:, -256:     ].reshape(-1, self.point_size//2)
+			g_logits = shifted_logits[:,:,         : bound_a].reshape(-1, self.gramm_size)
+			r_logits = shifted_logits[:,:, bound_a : bound_b].reshape(-1, self.relat_size)
+			p_logits = shifted_logits[:,:, bound_b :-bound_c].reshape(-1, self.point_size)
+			q_logits = shifted_logits[:,:,-bound_c :        ].reshape(-1, self.point_size)
 			
 			g_loss = loss_func(g_logits, g_labels) * 1/6
 			r_loss = loss_func(r_logits, r_labels) * 1/6
@@ -109,10 +117,6 @@ class TestModel(torch.nn.Module):
 		last_cross_attentions = decoder_outputs["cross_attentions"][-1]
 		decoder_hidden_states = decoder_outputs["hidden_states"][-1]
 		last_cross_attentions = last_cross_attentions.sum(dim = 1)
-		#last_cross_attentions = torch.cat(
-		#	[last_cross_attentions[:, i] for i in range( last_cross_attentions.size(1) )],
-		#	dim = -1
-		#)
 		
 		# 3. FUNCTION HEAD: GRAMM / RELAT
 		gramm_logits = self.gramm_head(logits)
@@ -180,16 +184,16 @@ class TestModel(torch.nn.Module):
 			
 			##################################################
 			
-			g_logits = decoder_outputs["logits"][:, -1,     :   9].detach()
-			r_logits = decoder_outputs["logits"][:, -1,    9:-512].detach()
-			p_logits = decoder_outputs["logits"][:, -1, -512:    ].detach()
+			g_logits = decoder_outputs["logits"][:, -1,                   :   self.gramm_size].detach()
+			r_logits = decoder_outputs["logits"][:, -1,   self.gramm_size :-2*self.point_size].detach()
+			p_logits = decoder_outputs["logits"][:, -1,-2*self.point_size :                  ].detach()
 
 			g_values = torch.argmax(g_logits, dim =-1)
 			r_values = torch.argmax(r_logits, dim =-1)
 			p_values = torch.stack(
 				[
-					torch.argmax(p_logits[:, :256], dim=-1),
-					torch.argmax(p_logits[:, 256:], dim=-1) + 256
+					torch.argmax(p_logits[:, : self.point_size ], dim=-1),
+					torch.argmax(p_logits[:, self.point_size : ], dim=-1) + self.point_size
 				],
 				dim=-1
 			)
@@ -205,10 +209,10 @@ class TestModel(torch.nn.Module):
 					g_logits[i, gv] = 1     # RULE?
 					undone[i] = gv != 2
 
-					if gv in [4]:
+					if gv in [3, 4]:
 						r_logits[i, rv] = 1 # RELATION?
 
-					if gv in [5, 6]:
+					if gv in [5]:
 						p_logits[i, pv] = 1 # ENTITY?
 				else:
 					g_logits[i, 0] = 1
