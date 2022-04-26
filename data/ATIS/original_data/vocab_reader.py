@@ -20,7 +20,7 @@ vocabulary = []
 for label in labels:
 	if label not in vocabulary:
 		vocabulary.append(label)
-
+		
 #print("vocab_size:", len(vocabulary))
 for word in sorted(vocabulary):
 	print(word)
@@ -33,6 +33,22 @@ for output in seq_out:
 		if tag not in vocabulary:
 			vocabulary.append(tag)
 
+seq_out = read_file("test/seq.out")
+
+for output in seq_out:
+	for tag in output.split():
+		tag = tag[tag.find("-")+1:]
+		if tag not in vocabulary:
+			vocabulary.append(tag)
+			
+seq_out = read_file("valid/seq.out")
+
+for output in seq_out:
+	for tag in output.split():
+		tag = tag[tag.find("-")+1:]
+		if tag not in vocabulary:
+			vocabulary.append(tag)
+			
 #print("vocab_size:", len(vocabulary))
 for word in sorted(vocabulary):
 	print(word)

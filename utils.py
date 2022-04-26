@@ -47,6 +47,34 @@ def extract(labels, sentence, vocab):
 
 ##################################################
 
+def extract_results(results):
+	all_entities = []
+	all_table_id = []
+	
+	for labels in results:
+		
+		slot_labels = []
+		tabs_labels = []
+		
+		for label in labels:
+			temp = label.split(" ;; ")
+			tabs_labels.append(temp[-1])
+
+			temp = [ X.split(" == ")[1] for X in temp[:-1] ]
+			
+			slot = []
+			for t in temp:
+				slot.extend(t.split(" ^^ "))
+
+			slot_labels.extend(slot)
+		
+		all_entities.append(slot_labels)
+		all_table_id.append(tabs_labels)
+		
+	return all_table_id, all_entities
+
+##################################################
+
 tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
 
 def find(word, sent, offset = 0):
@@ -85,9 +113,9 @@ def compute_metrics(pred):
 	micro_value = compute_scores(predic, labels)
 	
 	return {
-		"R": f"{100 * micro_value[0]:.2f}",
-		"P": f"{100 * micro_value[1]:.2f}",
-		"F": f"{100 * micro_value[2]:.2f}",
+		"R": micro_value[0],
+		"P": micro_value[1],
+		"F": micro_value[2],
 	}
 
 #-----------------------------------------------------------#

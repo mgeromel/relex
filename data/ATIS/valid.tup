@@ -165,7 +165,6 @@ fare_basis_code == k ;; atis_quantity
 cost_relative == least expensive ;; depart_date.day_number == twentieth ;; depart_date.month_name == april ;; depart_time.period_of_day == morning ;; depart_time.time == 5 o'clock ;; depart_time.time_relative == around ;; fromloc.city_name == washington ;; toloc.city_name == denver ;; atis_flight
 connect == direct ;; depart_time.time == noon ;; depart_time.time_relative == before ;; fromloc.city_name == san francisco ;; toloc.city_name == boston ;; atis_flight
 depart_date.day_name == thursday ;; depart_time.time == 8 am ;; depart_time.time_relative == before ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
-atis_aircraft
 airline_name == continental ;; fromloc.city_name == boston ;; toloc.city_name == san francisco ;; atis_flight
 fromloc.city_name == pittsburgh ;; toloc.city_name == san francisco ;; atis_flight
 airport_code == mco ;; atis_city
@@ -271,7 +270,6 @@ depart_date.day_number == twenty ninth ;; depart_date.month_name == july ;; from
 arrive_time.time == noon ;; arrive_time.time_relative == after ;; flight_stop == nonstop ;; fromloc.city_name == nashville ;; toloc.city_name == st. louis ;; atis_flight
 flight_time == flight times ;; fromloc.city_name == boston ;; toloc.city_name == pittsburgh ;; atis_flight_time
 fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
-atis_flight
 fromloc.airport_name == boston airport ;; toloc.city_name == boston ;; atis_ground_service
 city_name == denver ;; atis_ground_service
 depart_time.period_of_day == morning ;; fromloc.city_name == atlanta ;; toloc.city_name == dallas ;; atis_airfare

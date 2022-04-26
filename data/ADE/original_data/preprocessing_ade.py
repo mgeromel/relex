@@ -24,7 +24,7 @@ with open("DRUG-AE.rel", "r") as file:
 		columns = line.strip().split("|")
 		
 		sentence = columns[1].strip()
-		relation = columns[2].strip() + " ; " + columns[5].strip() + " ; adverse_effect | "
+		relation = columns[2].strip() + " ;; " + columns[5].strip() + " ;; adverse_effect || "
 		
 		if sentence not in sentences_effect:
 			sentences_effect.append(sentence)
@@ -51,7 +51,7 @@ with open("DRUG-DOSE.rel", "r") as file:
 		columns = line.strip().split("|")
 		
 		sentence = columns[1].strip()
-		relation = columns[2].strip() + " ; " + columns[5].strip() + " ; dose | "
+		relation = columns[2].strip() + " ; " + columns[5].strip() + " ; dose || "
 		
 		if sentence not in sentences_dose:
 			sentences_dose.append(sentence)

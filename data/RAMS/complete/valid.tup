@@ -1,0 +1,924 @@
+place == Iraq ;; victim == opponents ;; trigger == exterminated ;; life.die.n/a
+attacker == Fans ;; instrument == bottles , chairs and other objects ;; place == French port city of Marseille ;; target == Fans ;; trigger == skirmish ;; conflict.attack.selfdirectedbattle
+trigger == win elections ;; personnel.elect.winelection
+yielder == Japan ;; trigger == surrendered ;; conflict.yield.n/a
+artifact == appointment ;; giver == commodities trader ;; trigger == bought ;; transaction.transferownership.n/a
+participant == Obama administration ^^ Ukraine ;; trigger == agreement ;; government.agreements.acceptagreementcontractceasefire
+crime == drug - related crimes ;; defendant == 6,267 inmates ;; place == Klong Prem ;; trigger == convicted ;; justice.judicialconsequences.n/a
+destination == the Trump Tower ;; transporter == we ;; trigger == walked ;; movement.transportperson.selfmotion
+crime == pay - for - play campaign finance scheme ;; defendant == Magliocchetti ;; trigger == guilty ;; justice.judicialconsequences.n/a
+beneficiary == hackers ;; giver == the Shadow Brokers ;; place == the U.S. ;; recipient == cyber - spying tools ;; trigger == auction ;; transaction.transferownership.purchase
+killer == Muslims ;; place == a society ;; trigger == homicide ;; life.die.deathcausedbyviolentevents
+artifact == cargo ;; destination == ports ;; origin == the North ;; transporter == the North ;; vehicle == cargo ship ;; trigger == shipments ;; movement.transportartifact.bringcarryunload
+employee == We ;; placeofemployment == state council for nature conservation ;; trigger == sacked ;; personnel.endposition.n/a
+attacker == three countries ;; place == Syria ;; target == Sunni groups ;; trigger == assaults ;; conflict.attack.selfdirectedbattle
+injurer == Muslim ;; place == world ;; trigger == violent ;; life.injure.injurycausedbyviolentevents
+communicator == Clinton ;; place == presidential debate ;; trigger == misleading ;; contact.prevarication.broadcast
+killer == Saddam Hussein ;; place == Iraq ;; victim == opponents ;; trigger == exterminated ;; life.die.deathcausedbyviolentevents
+passenger == status as a war hero ;; preventer == Trump ;; transporter == McCain ;; trigger == captured ;; movement.transportperson.preventexit
+participant == EU 's leaders ^^ UK ;; trigger == negotiating ;; contact.negotiate.n/a
+participant == Iraqi ^^ US ;; trigger == agreement ;; government.agreements.n/a
+crashobject == Polish patrol boat ;; driverpassenger == Russian submarine Krasnodar ;; vehicle == submarine ;; trigger == collision ;; disaster.accidentcrash.accidentcrash
+artifact == information ;; beneficiary == WikiLeaks ;; giver == computer network ;; trigger == acquires ;; transaction.transferownership.n/a
+trigger == made ;; manufacture.artifact.createmanufacture
+trigger == homicides ;; life.die.n/a
+communicator == Russian television ;; place == Russia ;; recipient == civilians ;; trigger == broadcast ;; contact.mediastatement.broadcast
+participant == The director of the European Centre , Ina Kirsch ^^ Manafort ;; trigger == met ;; contact.discussion.meet
+giver == countries ;; recipient == United States ;; trigger == reimbursed ;; transaction.transfermoney.n/a
+communicator == Joe Biden ;; recipient == Russia ;; trigger == threatened ;; contact.threatencoerce.broadcast
+instrument == atomic bomb ;; place == Hiroshima ;; target == those ;; trigger == blast ;; conflict.attack.bombing
+communicator == an army of government shills and trolls ;; place == US ;; recipient == the public ;; trigger == deceive ;; contact.prevarication.correspondence
+place == Chicago ;; trigger == homicides ;; life.die.deathcausedbyviolentevents
+victim == Lind ;; trigger == surgery ;; life.injure.illnessdegradationphysical
+giver == the average family watching tonight ;; recipient == taxes ;; trigger == paying ;; transaction.transfermoney.payforservice
+participant == John Kerry ^^ Sergey V. Lavrov ;; trigger == agreement ;; government.agreements.n/a
+place == West ;; trigger == slaughter ;; life.die.n/a
+participant == Clinton ;; trigger == email ;; contact.collaborate.correspondence
+attacker == us ;; target == humankind ;; trigger == annihilating ;; conflict.attack.n/a
+victim == voters ;; trigger == deceased ;; life.die.nonviolentdeath
+employee == Comey ;; place == Washington ;; trigger == firing ;; personnel.endposition.n/a
+attacker == Syrian hackers ;; target == The Associated Press ’ Twitter account ;; trigger == hijacked ;; conflict.attack.n/a
+origin == Moscow ;; passenger == Mr Roslovtsev ;; preventer == Russian authorities ;; trigger == detained ;; movement.transportperson.preventexit
+crime == Russian meddling ;; defendant == Obama DHS chief ;; trigger == testify ;; justice.initiatejudicialprocess.n/a
+beneficiary == refugees ;; giver == United States ;; place == countries ;; recipient == refugees ;; trigger == provide aid ;; transaction.transfermoney.giftgrantprovideaid
+attacker == group ;; target == ISIS ;; trigger == battling ;; conflict.attack.selfdirectedbattle
+communicator == Russia ’s prosecutor general ;; recipient == law enforcement agencies ;; trigger == urged ;; contact.requestadvise.broadcast
+participant == Tahir Javed ;; place == Alabama ;; trigger == confiscated ;; transaction.transaction.n/a
+artifact == homes and positions ;; giver == his family , advisers and allies ;; trigger == acquiring ;; transaction.transferownership.purchase
+place == Brussels ;; victim == places including Brussels ;; trigger == attacks ;; life.injure.injurycausedbyviolentevents
+trigger == Treaty ;; government.agreements.n/a
+participant == Bannon ;; place == Political Vindication Radio ;; trigger == interview ;; contact.discussion.meet
+crime == copying ;; defendant == Naryshkin ;; trigger == guilty ;; justice.judicialconsequences.convict
+attacker == coalition ;; instrument == air strike ;; place == Abu Kamal ;; target == Abu Kamal ;; trigger == strike ;; conflict.attack.bombing
+destination == FBI ;; origin == place of employment ;; transporter == Mateen ;; trigger == roamed ;; movement.transportperson.selfmotion
+giver == the Palestine solidarity ;; place == Paris ;; preventer == prominent intellectuals ;; recipient == Israeli goods ;; trigger == boycott ;; transaction.transaction.embargosanction
+inspectedentity == Klong Prem high - security prison ;; place == Bangkok ;; trigger == inspection ;; inspection.sensoryobserve.physicalinvestigateinspect
+injurer == sickness ;; trigger == sickness ;; life.injure.n/a
+killer == self - professed Islamic State jihadi Omar Mir Seddique Mateen ;; place == a gay nightclub in Orlando , Fla. ;; victim == 49 people ;; trigger == slaughtered ;; life.die.deathcausedbyviolentevents
+communicator == us ;; place == the city ;; recipient == them ;; trigger == urging ;; contact.commandorder.meet
+employee == him ;; placeofemployment == government ;; trigger == appointing ;; personnel.startposition.hiring
+place == Oklahoma ;; trigger == voting ;; government.vote.n/a
+attacker == the Senate ;; instrument == impeachment proceedings ;; place == the Senate ;; target == Rousseff ;; trigger == coup ;; conflict.attack.selfdirectedbattle
+defendant == He ;; place == South Korea ;; trigger == testified ;; justice.initiatejudicialprocess.trialhearing
+artifact == drug ;; origin == Nigeria ;; transporter == country ;; trigger == trafficking ;; movement.transportartifact.n/a
+surrenderer == Japan ;; trigger == surrendered ;; conflict.yield.surrender
+communicator == Mr. Trump ;; trigger == vow ;; contact.commitmentpromiseexpressintent.meet
+passenger == Mateen ;; trigger == roamed ;; movement.transportperson.n/a
+trigger == violent ;; life.injure.n/a
+artifact == department store ;; destroyer == Mr. Trump ;; instrument == 200 unauthorized Polish laborers ;; place == Midtown Manhattan ;; trigger == demolish ;; artifactexistence.damagedestroy.destroy
+crime == helped the US ;; defendant == Shahran Amiri ;; judgecourt == Iranians ;; place == Iran ;; trigger == executed ;; justice.judicialconsequences.n/a
+giver == hackers ;; recipient == highest bidder ;; trigger == auction ;; transaction.transfermoney.n/a
+candidate == suspend Russia 's athletics team ;; result == Russia 's national athletics federation have been suspended from competition ;; voter == IAAF ;; trigger == voted ;; government.vote.castvote
+otherparticipant == the country ;; violator == Snowden ;; trigger == violated ;; government.agreements.violateagreement
+injurer == They ;; victim == me ;; trigger == mutilate ;; life.injure.n/a
+beneficiary == swimmers ;; money == $ 42,000 ;; place == Rio ;; recipient == swimmers ;; trigger == stipends ;; transaction.transfermoney.payforservice
+passenger == Guccifer ;; trigger == imprisoned ;; movement.transportperson.preventexit
+preventer == police ;; transporter == Saidov 's attacker ;; trigger == arrest ;; movement.transportperson.preventexit
+giver == Russia ;; preventer == embargo ;; recipient == trade ;; trigger == embargo ;; transaction.transferownership.embargosanction
+participant == Trump ^^ Clinton ;; place == it ;; trigger == debate ;; contact.negotiate.meet
+participant == FBI officials ^^ Abedin ;; trigger == interview ;; contact.discussion.meet
+communicator == Trump ;; recipient == put American workers first ;; trigger == pledged ;; contact.commitmentpromiseexpressintent.correspondence
+artifact == glory ;; recipient == United States ;; trigger == borrowed ;; transaction.transferownership.n/a
+transporter == members ;; trigger == escaped ;; movement.transportperson.evacuationrescue
+beneficiary == 4-H Fdn ;; place == WI ;; recipient == meat ;; trigger == auction ;; transaction.transferownership.purchase
+employee == Barbara Boxer ;; placeofemployment == seat ;; trigger == retiring ;; personnel.endposition.quitretire
+attacker == ISIL leader ;; instrument == bombs ;; place == Turkey ;; trigger == bombs ;; conflict.attack.n/a
+communicator == the country ;; recipient == people ;; trigger == deceive ;; contact.prevarication.broadcast
+injurer == tormentors ;; victim == girl ;; trigger == rape ;; life.injure.injurycausedbyviolentevents
+attacker == it ;; place == Aleppo ;; target == Aleppo – the last major rebel stronghold ;; trigger == battle ;; conflict.attack.selfdirectedbattle
+communicator == Clinton ;; trigger == blackmail ;; contact.threatencoerce.n/a
+communicator == he ;; recipient == Obama ;; trigger == demanded ;; contact.commandorder.broadcast
+artifact == nuclear arsenals ;; manufacturer == two countries ;; place == two countries ;; trigger == building ;; manufacture.artifact.build
+communicator == FBI ;; trigger == recommend ;; contact.requestadvise.correspondence
+attacker == the Russian army ;; instrument == Russian war planes ;; place == Aleppo , Syria ;; target == two hospitals ;; trigger == airstrikes ;; conflict.attack.airstrikemissilestrike
+giver == council member from Russia ;; recipient == vote ;; trigger == sanction ;; transaction.transaction.embargosanction
+artifact == US products ;; destination == China ;; origin == US ;; transporter == China ;; trigger == imports ;; movement.transportartifact.grantentry
+communicator == Putin ;; recipient == Trump ;; trigger == blackmailed ;; contact.threatencoerce.correspondence
+injurer == he ;; victim == women ;; trigger == assault ;; life.injure.injurycausedbyviolentevents
+place == Aleppo ;; victim == people ;; trigger == starve ;; life.injure.illnessdegradationhungerthirst
+instrument == firearms ;; place == America ;; trigger == shooting ;; conflict.attack.firearmattack
+beneficiary == rowers ;; giver == US Rowing ;; money == $ 500 to $ 1,700 ;; place == US ;; recipient == $ 500 to $ 1,700 ;; trigger == stipends ;; transaction.transfermoney.payforservice
+communicator == He ;; recipient == charity ;; trigger == pledged ;; contact.commitmentpromiseexpressintent.meet
+participant == I ^^ NFL ;; place == debates ;; trigger == debates ;; contact.discussion.n/a
+trigger == voting ;; government.legislate.legislate
+participant == Israeli ^^ Palestinians ;; trigger == convene ;; contact.discussion.correspondence
+communicator == the Middle East peace quartet – the US , Russia , the EU and the UN ;; recipient == Israel ;; trigger == recommended ;; contact.requestadvise.broadcast
+giver == North Korea ;; place == Demilitarized Zone ;; recipient == Ripley and his team ;; trigger == granted ;; transaction.transaction.giftgrantprovideaid
+victim == Americans ;; trigger == assault ;; life.injure.injurycausedbyviolentevents
+communicator == " false flag " operations ;; place == Russia ;; recipient == people ;; trigger == deceive ;; contact.prevarication.meet
+place == Singapore ;; victim == 25,000 Chinese ;; trigger == slaughtering ;; life.die.n/a
+place == north Yemen governorate of Saada ;; victim == Moroccan pilot ;; trigger == died ;; life.die.nonviolentdeath
+place == Paris ;; recipient == German troops ;; yielder == France ;; trigger == capitulate ;; conflict.yield.n/a
+artifact == people ;; trigger == captured ;; movement.transportartifact.preventexit
+artifact == armored ground vehicles , ground attack munitions , light air support aircraft ” and “ maritime patrol ships and aircraft ;; recipient == buyers ;; trigger == acquiring ;; transaction.transferownership.purchase
+artifact == helmet ;; beneficiary == charity ;; giver == He ;; recipient == charity organization ;; trigger == purchase ;; transaction.transferownership.purchase
+communicator == President Hassan Rouhani ;; recipient == Iran and China ;; trigger == broadcast ;; contact.mediastatement.n/a
+destination == east side of the Euphrates ;; retreater == YPG fighters ;; trigger == retreating ;; conflict.yield.retreat
+inspectedentity == civil defense ;; inspector == we ;; trigger == inspected ;; inspection.sensoryobserve.physicalinvestigateinspect
+place == Washington ;; yielder == Isik ;; trigger == retreat ;; conflict.yield.n/a
+beneficiary == rowers ;; money == $ 20,000 ;; recipient == rowers ;; trigger == stipends ;; transaction.transfermoney.n/a
+attacker == coalition ;; instrument == airstrikes ;; target == ISIS ;; trigger == airstrikes ;; conflict.attack.n/a
+communicator == Project Veritas videos ;; trigger == misleading ;; contact.prevarication.correspondence
+destination == town ;; origin == Friedrichsfeld ;; passenger == German prisoners ;; preventer == U.S. 9th Army ;; trigger == captured ;; movement.transportperson.preventexit
+attacker == you ;; instrument == chemical weapons ;; target == people ;; trigger == massacre ;; conflict.attack.selfdirectedbattle
+place == Syria ;; placeofemployment == ISIS ;; trigger == recruit ;; personnel.startposition.n/a
+beneficiary == Muslims in Russia ;; giver == brothers ;; place == Russia ;; recipient == a territory ;; territoryorfacility == a territory ;; trigger == seize ;; transaction.transaction.transfercontrol
+communicator == Russia ;; place == Russia ;; recipient == neighbors ;; trigger == intimidating ;; contact.threatencoerce.meet
+artifactmoney == France ;; giver == Israel ;; place == France ;; preventer == government ;; recipient == Israeli goods ;; trigger == boycott ;; transaction.transaction.embargosanction
+communicator == I ;; trigger == misleading ;; contact.prevarication.correspondence
+communicator == Bashar al - Assad ;; place == Syria ;; recipient == the country ;; trigger == vowed ;; contact.commitmentpromiseexpressintent.correspondence
+place == Paris ;; recipient == German troops ;; surrenderer == France ;; trigger == capitulate ;; conflict.yield.surrender
+injurer == sick ;; victim == entry - level floor sweepers ;; trigger == sick ;; life.injure.n/a
+communicator == she ;; place == Fox News Sunday ” interview ;; recipient == her ;; trigger == misled ;; contact.prevarication.broadcast
+defendant == gays ;; executioner == countries ;; trigger == execute ;; justice.judicialconsequences.execute
+employee == every commander ;; placeofemployment == Baltic fleet ;; trigger == sacked ;; personnel.endposition.firinglayoff
+attacker == Assange ;; place == Sweden ;; trigger == assault ;; conflict.attack.selfdirectedbattle
+observedentity == a man ’s anus ;; trigger == inspecting ;; inspection.sensoryobserve.n/a
+crime == prejudicing investigations ;; defendant == the President ;; judgecourt == Constitutional law ;; trigger == trials ;; justice.initiatejudicialprocess.trialhearing
+trigger == Slaughter ;; conflict.attack.n/a
+observedentity == foreign leaders and diplomats ;; place == 2009 G20 summit ;; spy == US and the UK ;; trigger == spied ;; government.spy.spy
+employee == Debbie Wasserman Schultz ;; trigger == resigned ;; personnel.endposition.n/a
+attacker == gunman ;; instrument == assault weapons ;; place == Orlando ;; trigger == attack ;; conflict.attack.n/a
+participant == Soviet ^^ Japan ;; trigger == treaty ;; government.agreements.acceptagreementcontractceasefire
+communicator == an army of government shills and trolls ;; recipient == public ;; trigger == deceive ;; contact.prevarication.broadcast
+artifact == monument ;; destroyer == neo - Nazi group ;; instrument == demolition ;; place == a Latvian town ;; trigger == demolished ;; artifactexistence.damagedestroy.destroy
+instrument == poisoning ;; killer == Putin ;; place == London hotel ;; victim == former KGB officer ;; trigger == fatal ;; life.die.deathcausedbyviolentevents
+attacker == us ;; target == humankind ;; trigger == annihilating ;; conflict.attack.selfdirectedbattle
+artifact == Donald Trump campaign sign ;; damager == she ;; instrument == spray painted ;; place == Andover ;; trigger == vandalized ;; artifactexistence.damagedestroy.damage
+target == ISIS ;; trigger == annihilated ;; conflict.attack.n/a
+communicator == Pence ;; trigger == vowed ;; contact.commitmentpromiseexpressintent.broadcast
+victim == 1.5 million people ;; trigger == massacre ;; life.die.n/a
+giver == it ;; money == $ 85 billion in Treasury bonds ;; recipient == $ 85 billion ;; trigger == purchased ;; transaction.transfermoney.purchase
+artifact == bank note validation technology ;; manufacturer == Levitan ;; trigger == creating ;; manufacture.artifact.createmanufacture
+beneficiary == Iran ;; giver == Iran ;; money == $ 1.7 billion ;; place == Iran ;; recipient == $ 1.7 billion ;; trigger == acquire ;; transaction.transfermoney.purchase
+injurer == black people ;; trigger == violent ;; life.injure.n/a
+place == North Little Rock , Arkansas ;; victim == Becky ;; trigger == murdered ;; life.die.n/a
+communicator == Wada ;; recipient == IOC ;; trigger == recommended ;; contact.requestadvise.correspondence
+communicator == he ;; place == address in 2000 ;; recipient == the point in his final foreign policy ;; trigger == reiterated ;; contact.publicstatementinperson.n/a
+place == Chicago ;; trigger == homicides ;; life.die.deathcausedbyviolentevents
+instrument == shooting ;; killer == Police officer Timothy Loehmann ;; place == Cleveland ;; victim == Tamir Rice ;; trigger == fatal ;; life.die.deathcausedbyviolentevents
+instrument == a blast ;; killer == a blast ;; place == Flower Branch Apartments ;; victim == residents ;; trigger == fatalities ;; life.die.deathcausedbyviolentevents
+participant == they ^^ wives and mistresses ;; trigger == telephone ;; contact.collaborate.n/a
+beneficiary == Carly Fiorina ;; giver == Peter Thiel ;; recipient == a group ;; trigger == donated ;; transaction.transaction.giftgrantprovideaid
+trigger == telephone ;; contact.collaborate.n/a
+artifact == Wikileaks founder ;; origin == Ecuadorian Embassy ;; trigger == imprisoned ;; movement.transportartifact.n/a
+artifact == Islamic State group ;; destroyer == Trump ;; place == Syria ;; trigger == eradicate ;; artifactexistence.damagedestroy.destroy
+beneficiary == al - Qaeda ;; giver == Hadhramaut ;; recipient == oil ;; territoryorfacility == Hadhramaut ;; trigger == confiscated ;; transaction.transaction.transfercontrol
+destination == Tajikistan ;; origin == Russia ;; passenger == three to four of his countrymen ;; transporter == he ;; vehicle == a coffin ;; trigger == transport ;; movement.transportperson.disperseseparate
+crime == fiscal laws ;; defendant == Rousseff ;; prosecutor == the Senate ;; trigger == trial ;; justice.initiatejudicialprocess.trialhearing
+place == Syria ;; victim == people ;; trigger == starve ;; life.injure.illnessdegradationhungerthirst
+giver == John Quincy Adams ;; place == America ;; recipient == monsters ;; trigger == injunction ;; transaction.transferownership.embargosanction
+beneficiary == refugees ;; giver == State Department ;; recipient == refugees ;; trigger == provide aid ;; transaction.transfermoney.n/a
+beneficiary == candidate ;; giver == U.S. banks ;; recipient == real estate empire ;; trigger == borrow ;; transaction.transferownership.n/a
+artifact == food or clothes ;; beneficiary == Russian families ;; giver == Russian families ;; trigger == buy ;; transaction.transferownership.n/a
+beneficiary == Right to Rise ;; giver == wealthy individuals ;; money == $ 2,700 to his campaign and $ 25,000 ;; recipient == donations ;; trigger == donating ;; transaction.transfermoney.giftgrantprovideaid
+communicator == forces ;; recipient == human liberty ;; trigger == threaten ;; contact.threatencoerce.n/a
+participant == non - nuclear countries ;; trigger == agreements ;; government.agreements.acceptagreementcontractceasefire
+candidate == center - left and leftist governments ;; place == Latin America ;; voter == Latin America ;; trigger == won elections ;; personnel.elect.winelection
+communicator == experts ;; trigger == recommended ;; contact.requestadvise.n/a
+attacker == Europe and the United States ;; instrument == warships ;; trigger == assaults ;; conflict.attack.selfdirectedbattle
+origin == Greek airspace ;; vehicle == plane ;; trigger == plunging ;; movement.transportartifact.n/a
+governmentbody == cities and states ;; law == intolerance and taking away individuals ’ right to use bathrooms consistent with their gender identity ;; place == cities and states ;; trigger == legislating ;; government.legislate.legislate
+place == America ;; preventer == John Quincy Adams ;; trigger == injunction ;; transaction.transfermoney.embargosanction
+artifact == Cuba ;; giver == His employees ;; place == Cuba ;; preventer == U.S. ;; recipient == commercial activities ;; trigger == embargo ;; transaction.transferownership.embargosanction
+beneficiary == government ;; observedentity == People ;; spy == NSA ;; trigger == surveillance ;; government.spy.spy
+giver == South Sudan ;; preventer == U.N. Security Council ;; recipient == arms ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+beneficiary == Google ;; observedentity == world ’s population ;; spy == it ;; trigger == surveillance ;; government.spy.spy
+attacker == it ;; place == Paris ;; target == Paris ;; trigger == massacre ;; conflict.attack.selfdirectedbattle
+artifact == Russia ;; giver == European Union , the United States , Canada , Australia and Norway ;; place == Russia ;; preventer == Russia ;; recipient == food ;; trigger == embargo ;; transaction.transferownership.embargosanction
+victim == Elie Wiesel ;; trigger == passed away ;; life.die.nonviolentdeath
+communicator == Donald Trump ;; recipient == Russia ;; trigger == urges ;; contact.commandorder.broadcast
+giver == U.S. ;; money == arms ;; place == South Sudan ;; preventer == U.S. ;; recipient == South Sudan ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+artifact == monument ;; damagerdestroyer == A neo - Nazi group , including former Latvian Nazi Waffen SS veterans ;; place == Latvian town ;; trigger == demolished ;; artifactexistence.damagedestroy.n/a
+communicator == He and his allies ;; recipient == the media ;; trigger == vowing ;; contact.commitmentpromiseexpressintent.correspondence
+trigger == emails ;; contact.collaborate.n/a
+artifactmoney == Russia ;; giver == Valio dairy company ;; place == Russia ;; preventer == Russia ;; recipient == milk ;; trigger == sanctions ;; transaction.transaction.embargosanction
+communicator == Trump ;; recipient == Hillary Clinton ;; trigger == reiterated ;; contact.publicstatementinperson.broadcast
+crime == violated government policy ;; defendant == Mrs Clinton or her aides ;; investigator == The State Department ;; trigger == investigation ;; justice.investigate.investigatecrime
+giver == Albania , Montenegro , Iceland and Liechtenstein ;; money == food ;; preventer == Russian ;; recipient == Russian ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+communicator == he ;; trigger == recommend ;; contact.requestadvise.broadcast
+destination == overseas ;; transporter == Air Force ;; vehicle == a Lockheed C-5 Galaxie ;; trigger == transport ;; movement.transportperson.disperseseparate
+place == Warm Springs , Georgia ;; victim == Roosevelt ;; trigger == died ;; life.die.nonviolentdeath
+fireexplosionobject == It ;; instrument == bomb ;; place == Japanese city ;; trigger == exploded ;; disaster.fireexplosion.fireexplosion
+communicator == Mr. Trump ;; trigger == oath ;; contact.commitmentpromiseexpressintent.broadcast
+attacker == sucicde bomber ;; instrument == explosion ;; place == Tartus ;; target == people ;; trigger == detonated ;; conflict.attack.n/a
+place == the police state ;; recipient == citizens ;; trigger == promised ;; contact.commitmentpromiseexpressintent.broadcast
+attacker == Boris ;; place == Russia ;; target == Chechnya ;; trigger == war ;; conflict.attack.selfdirectedbattle
+artifact == nominee ;; preventer == Republicans ;; transporter == president ;; trigger == obstructing ;; movement.transportartifact.prevententry
+instrument == an atomic bomb ;; place == Nagasaki ;; target == Nagasaki ;; trigger == blast ;; conflict.attack.bombing
+artifact == buildings ;; destroyer == Japanese ;; instrument == air forces ;; place == U.S. Navy base on Midway Atoll ;; trigger == demolished ;; artifactexistence.damagedestroy.destroy
+attacker == Russia ;; instrument == bombing ;; place == Aleppo ;; target == Aleppo ;; trigger == bombing ;; conflict.attack.n/a
+employee == Janet Yellen ;; placeofemployment == Obama ;; trigger == appointed ;; personnel.startposition.hiring
+artifact == oil ;; destination == United States ;; origin == Mideast and elsewhere ;; transporter == United States ;; trigger == imports ;; movement.transportartifact.receiveimport
+communicator == head of US intelligence ;; recipient == the Senate committee responsible for intelligence oversight ;; trigger == lying ;; contact.prevarication.meet
+defendant == UBS ;; place == U.S. ;; prosecutor == IRS ;; trigger == charges ;; justice.initiatejudicialprocess.chargeindict
+place == Bataclan concert hall ;; victim == 89 people ;; trigger == massacre ;; life.die.n/a
+beneficiary == outside groups ;; giver == big money donors ;; trigger == fund ;; transaction.transferownership.giftgrantprovideaid
+participant == Blackmun ;; trigger == discussed ;; contact.discussion.meet
+communicator == a senator from Wisconsin ;; place == TV ;; recipient == young man ;; trigger == threatened ;; contact.threatencoerce.meet
+beneficiary == VanBuskirk ;; giver == tax vehicle ;; money == funding ;; recipient == We ;; trigger == funding ;; transaction.transfermoney.giftgrantprovideaid
+communicator == the administration ;; recipient == his group and others ;; trigger == pledge ;; contact.commitmentpromiseexpressintent.meet
+communicator == CNAS ;; recipient == Congress ;; trigger == urges ;; contact.requestadvise.meet
+artifact == relations ;; damager == The growing rift with the West ;; instrument == fears over Syria and economic concerns ;; place == Moscow ;; trigger == wrecked ;; artifactexistence.damagedestroy.damage
+demonstrator == he ;; trigger == protesting ;; conflict.demonstrate.marchprotestpoliticalgathering
+monitor == We ;; monitoredentity == the candidate ;; trigger == election ;; inspection.sensoryobserve.monitorelection
+artifact == their homes and land ;; place == Aleppo ;; trigger == destroyed ;; artifactexistence.damagedestroy.destroy
+giver == WI 4-H Fdn ;; place == @WIStateFair ;; trigger == auction ;; transaction.transfermoney.n/a
+participant == 196 nations ;; trigger == treaty ;; government.agreements.acceptagreementcontractceasefire
+beneficiary == you or your wife or girlfriend ;; place == bury ;; recipient == parents ;; trigger == borrow ;; transaction.transferownership.borrowlend
+artifact == nuclear weapons ;; recipient == Japan ;; trigger == acquire ;; transaction.transferownership.purchase
+place == the neighbourhood ;; target == he ;; trigger == robberies ;; conflict.attack.stealrobhijack
+attacker == uprising and Crimea 's voluntary crossover ;; place == Russia ;; target == Russia ;; trigger == coup ;; conflict.attack.selfdirectedbattle
+artifact == Turkish foods ;; destination == Turkey ;; origin == Russians ;; transporter == Moscow ;; trigger == import ;; movement.transportartifact.n/a
+communicator == Cruz ;; place == on stage ;; recipient == supporters ;; trigger == vowed ;; contact.commitmentpromiseexpressintent.broadcast
+trigger == Voting ;; government.vote.n/a
+communicator == leader ;; place == Senate floor ;; recipient == Cruz ;; trigger == deceiving ;; contact.prevarication.meet
+instrument == car bombing ;; place == Iraq ;; victim == an Army captain ;; trigger == killed ;; life.die.deathcausedbyviolentevents
+preventer == Kenya ’s government ;; trigger == obstruction ;; movement.transportperson.prevententry
+communicator == He ;; place == Iowa ;; recipient == supporters ;; trigger == vowed ;; contact.commitmentpromiseexpressintent.meet
+participant == I ^^ White House ;; trigger == met ;; contact.collaborate.n/a
+beneficiary == Ronald Reagan Presidential Foundation and Institute ;; money == The proceeds ;; place == New York City ;; recipient == Christie ’s , the esteemed New York City auction house ;; trigger == AUCTION ;; transaction.transfermoney.purchase
+crime == suspected hack ;; defendant == Russian intelligence agencies ;; investigator == CrowdStrike ;; trigger == investigate ;; justice.investigate.investigatecrime
+communicator == Clinton ;; recipient == you ;; trigger == deceived ;; contact.prevarication.n/a
+governmentbody == broad parties ;; trigger == legislate ;; government.legislate.legislate
+injurer == superpredators ;; victim == teenage ;; trigger == violent ;; life.injure.n/a
+victim == victim ;; trigger == rape ;; life.injure.injurycausedbyviolentevents
+communicator == Secretary General Ban Ki - moon ;; place == United Nations ;; trigger == announced ;; contact.publicstatementinperson.broadcast
+artifact == them ;; damagerdestroyer == they ;; trigger == punctured ;; artifactexistence.damagedestroy.n/a
+artifactmoney == Palestine ;; giver == the Palestine solidarity movement ;; place == France ;; preventer == his government ;; recipient == free speech ;; trigger == boycott ;; transaction.transaction.embargosanction
+crime == treason ;; defendant == Armenians ;; judgecourt == Ottoman Empire ;; place == Ottoman Empire ;; trigger == guilty ;; justice.judicialconsequences.convict
+participant == Lord Coe ^^ council ;; trigger == convened ;; contact.discussion.n/a
+communicator == FBI ;; recipient == indictments ;; trigger == recommend ;; contact.requestadvise.correspondence
+participant == Lord Coe ^^ council ;; place == London ;; trigger == convened ;; contact.discussion.meet
+artifact == several films ;; manufacturer == Manafort joined VanBuskirk and others ;; trigger == produce ;; manufacture.artifact.createmanufacture
+artifactmoney == Islamic Republic ;; giver == other countries ;; place == Iran ;; preventer == UN Security Council ;; recipient == business ;; trigger == sanctions ;; transaction.transaction.embargosanction
+attacker == Assad ;; target == civilian areas in places like Aleppo ;; trigger == airstrikes ;; conflict.attack.airstrikemissilestrike
+candidate == IOC members ;; voter == 115 ;; trigger == elected ;; personnel.elect.n/a
+communicator == Mr Powell ;; recipient == Mrs Clinton ;; trigger == advised ;; contact.requestadvise.n/a
+attacker == government ;; target == people ;; trigger == bombarding ;; conflict.attack.n/a
+participant == WHO ^^ independent group ;; trigger == convene ;; contact.discussion.meet
+employee == Weiner ;; trigger == resign ;; personnel.endposition.n/a
+artifact == the film ;; instrument == $ 4 million ;; manufacturer == George VanBuskirk ;; trigger == produce ;; manufacture.artifact.createintellectualproperty
+place == Cuba ;; recipient == Cuba ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+trigger == rape ;; life.injure.n/a
+communicator == Max Boot ;; recipient == Marco Rubio ;; trigger == advising ;; contact.requestadvise.n/a
+destination == stage ;; transporter == Democratic Nominee for Vice President Tim Kaine ;; trigger == walks ;; movement.transportperson.selfmotion
+inspectedentity == Balloon operators ;; place == a facility in the UK ;; trigger == inspection ;; inspection.sensoryobserve.inspectpeopleorganization
+attacker == self - radicalized terrorists ;; instrument == weapons ;; place == San Bernardino and Orlando ;; target == mass ;; trigger == slaughter ;; conflict.attack.selfdirectedbattle
+trigger == genocide ;; life.die.deathcausedbyviolentevents
+giver == family ;; trigger == paying ;; transaction.transfermoney.n/a
+attacker == guys ;; instrument == bomb ;; place == Syria and Iraq ;; target == them ;; trigger == detonating ;; conflict.attack.bombing
+victim == husband ;; trigger == passes away ;; life.die.nonviolentdeath
+participant == Iran ^^ Americans ;; place == meeting ;; trigger == negotiate ;; contact.negotiate.meet
+artifact == man - portable systems ;; destination == Syria ;; trigger == shipments ;; movement.transportartifact.n/a
+detainee == she ;; jailer == the rebels ;; place == the area ;; trigger == captured ;; justice.arrestjaildetain.arrestjaildetain
+participant == IOC ^^ IOC ;; place == Rio ;; trigger == convened ;; contact.discussion.meet
+beneficiary == Trump ;; giver == Trump ;; recipient == former models ;; trigger == rent ;; transaction.transferownership.borrowlend
+artifact == The shield ;; place == New Jersey ;; trigger == assembled ;; manufacture.artifact.build
+communicator == Trump ;; recipient == NATO allies ;; trigger == pledge ;; contact.commitmentpromiseexpressintent.meet
+injurer == traveling supporters ;; instrument == racial abuse ;; place == Poland ;; victim == black player from Czech Republic ;; trigger == violent ;; life.injure.injurycausedbyviolentevents
+attacker == Kremlin ;; target == Islamic State and other militant groups ;; trigger == strikes ;; conflict.attack.bombing
+communicator == Yahoo ;; place == Tumblr ;; recipient == customers ;; trigger == announced ;; contact.publicstatementinperson.broadcast
+crime == lying ;; defendant == Hillary Clinton ;; place == the nation ;; trigger == indicted ;; justice.initiatejudicialprocess.chargeindict
+attacker == we ;; trigger == coup ;; conflict.attack.selfdirectedbattle
+attacker == We ;; instrument == every available military , economic , ideological , diplomatic , cyber and religious lever ;; target == it ;; trigger == annihilated ;; conflict.attack.selfdirectedbattle
+crime == violating fiscal laws ;; defendant == the suspended president ;; judgecourt == the Senate ;; place == Brazil ;; prosecutor == the Senate ;; trigger == charges ;; justice.initiatejudicialprocess.chargeindict
+beneficiary == apparatus ;; observedentity == the country ;; place == the country ;; spy == apparatus ;; trigger == surveillance ;; government.spy.spy
+communicator == One victim ;; trigger == oath ;; contact.commitmentpromiseexpressintent.meet
+preventer == John Quincy Adams ;; trigger == injunction ;; transaction.transaction.embargosanction
+destination == Russia ;; origin == them ;; retreater == Russia ;; trigger == withdraw ;; conflict.yield.retreat
+trigger == Holocaust ;; life.die.deathcausedbyviolentevents
+communicator == Russia ;; recipient == its citizens ;; trigger == broadcast ;; contact.mediastatement.broadcast
+participant == Trump ^^ Fox & Friends ;; trigger == telephone ;; contact.collaborate.correspondence
+victim == people ;; trigger == illnesses ;; life.injure.illnessdegradationphysical
+beneficiary == Sweden ;; giver == migrant ;; recipient == assets ;; territoryorfacility == Sweden ;; trigger == confiscate ;; transaction.transaction.transfercontrol
+injurer == He ;; place == church ;; victim == I ;; trigger == whipped ;; life.injure.n/a
+artifact == candidacy ;; manufacturer == Trump ;; trigger == built ;; manufacture.artifact.n/a
+giver == history ;; preventer == John Quincy ;; trigger == injunction ;; transaction.transaction.embargosanction
+participant == Many people working on Syria ^^ Assad government ;; place == State Department ;; trigger == negotiated ;; contact.negotiate.correspondence
+beneficiary == International Telecommunication Union ;; giver == They ;; recipient == domain names ;; trigger == transferring control ;; transaction.transaction.transfercontrol
+communicator == Obama ;; place == Laos ;; recipient == international environment ;; trigger == professed ;; contact.publicstatementinperson.broadcast
+place == Orlando ;; trigger == massacre ;; life.die.n/a
+place == region ;; trigger == skirmishes ;; conflict.attack.selfdirectedbattle
+communicator == Trump ;; trigger == deceiving ;; contact.prevarication.correspondence
+artifact == the current presentation ;; trigger == assembled ;; manufacture.artifact.createmanufacture
+inspectedentity == an honor guard ;; inspector == Laotian President Bounnhang Vorachit and President Barack Obama ;; place == the Presidential Palace in Vientiane , Laos ;; trigger == inspect ;; inspection.sensoryobserve.inspectpeopleorganization
+artifact == designer clothing ;; beneficiary == friends and colleagues ;; place == Los Angeles ;; recipient == friends and colleagues ;; trigger == purchasing ;; transaction.transferownership.n/a
+giver == U.S. ;; recipient == South Sudan ;; trigger == embargo ;; transaction.transfermoney.n/a
+destination == Congress ;; preventer == Republican ;; transporter == a progressive agenda ;; trigger == obstruction ;; movement.transportperson.prevententry
+communicator == Mike Pence ;; trigger == threaten ;; contact.threatencoerce.n/a
+attacker == She ;; target == Libya ;; trigger == invade ;; conflict.attack.n/a
+communicator == Mr. Blair ;; recipient == Mrs. Clinton ;; trigger == suggested ;; contact.requestadvise.correspondence
+deceased == Mark Weiner ;; participant == Clinton ;; place == Rhode Island ;; trigger == funeral ;; contact.funeralvigil.meet
+communicator == protesters ;; place == Shaar ;; recipient == permanent end to the shelling ;; trigger == demand ;; contact.commandorder.n/a
+attacker == Turks ;; place == Smyrna ;; target == Smyrna ;; trigger == invaded ;; conflict.attack.invade
+beneficiary == Polish laborers ;; giver == demolition contractor ;; money == $ 4 ;; place == Manhattan ;; recipient == Polish laborers ;; trigger == wages ;; transaction.transfermoney.n/a
+victim == children and kids ;; trigger == starved ;; life.injure.n/a
+place == Chicago ;; trigger == homicides ;; life.die.deathcausedbyviolentevents
+artifactmoney == food ;; giver == European Union , the United States , Canada , Australia and Norway ;; place == Russia ;; preventer == Russia ;; recipient == Russia ;; trigger == embargo ;; transaction.transaction.embargosanction
+otherparticipant == government agencies ;; place == the Hill ;; violator == high - profile insiders ;; trigger == violating ;; government.agreements.violateagreement
+crime == 20 methamphetamine pills ;; detainee == she ;; place == Thailand ;; trigger == jailed ;; justice.arrestjaildetain.arrestjaildetain
+attacker == Ottoman Turks ;; target == 1.5 million people ;; trigger == massacre ;; conflict.attack.selfdirectedbattle
+employee == We ;; placeofemployment == government ;; trigger == sacked ;; personnel.endposition.firinglayoff
+instrument == terrorism ;; trigger == combat ;; conflict.attack.n/a
+artifact == cocaine ;; trigger == trafficking ;; movement.transportartifact.n/a
+attacker == United States and France ;; instrument == airstrikes ;; place == Syria ;; target == hospital ;; trigger == airstrikes ;; conflict.attack.n/a
+injurer == robbery or assault ;; victim == 40 percent ;; trigger == injured ;; life.injure.injurycausedbyviolentevents
+place == Iranian ;; trigger == sanctions ;; transaction.transaction.embargosanction
+injurer == regime ;; trigger == starvation ;; life.injure.n/a
+injurer == fighting ;; place == Turkey ;; victim == people ;; trigger == injured ;; life.injure.n/a
+instrument == gun ;; killer == He ;; place == Kiev ;; victim == He ;; trigger == died ;; life.die.deathcausedbyviolentevents
+trigger == torture ;; life.injure.injurycausedbyviolentevents
+artifact == nuclear device ;; beneficiary == terrorist group ;; recipient == terrorist group ;; trigger == obtaining ;; transaction.transferownership.purchase
+killer == Officer Jason Van Dyke ;; place == Chicago ;; victim == 17-year - old Laquan McDonald ;; trigger == fatal ;; life.die.deathcausedbyviolentevents
+communicator == experts ;; recipient == him ;; trigger == advise ;; contact.requestadvise.meet
+communicator == two agents ;; place == Manhattan ;; recipient == McCombs ;; trigger == demanded ;; contact.commandorder.meet
+preventer == Republicans ;; trigger == obstructing ;; movement.transportartifact.prevententry
+beneficiary == Google X ;; giver == Google X ;; recipient == Makani Power ;; trigger == buys ;; transaction.transferownership.purchase
+artifact == solid support system ;; manufacturer == we ;; trigger == build ;; manufacture.artifact.n/a
+victim == Clinton ;; trigger == illness ;; life.injure.illnessdegradationphysical
+injurer == Obama ;; place == Orlando ;; trigger == shooting ;; life.injure.n/a
+injurer == coalition aircraft ;; place == strike area ;; trigger == strike ;; life.injure.n/a
+attacker == U.S. troops ;; place == Normandy ;; target == Omaha Beach ;; trigger == assault ;; conflict.attack.n/a
+beneficiary == The coach ;; giver == USA Rowing women ’s team ;; money == 237,000 ;; recipient == The coach ;; trigger == stipends ;; transaction.transfermoney.payforservice
+trigger == voting ;; government.vote.castvote
+beneficiary == Ted ;; giver == Goldman Sachs ;; recipient == Ted ;; trigger == loan ;; transaction.transfermoney.borrowlend
+artifact == cyber weapons ;; recipient == WikiLeaks ;; trigger == acquired ;; transaction.transferownership.n/a
+employee == she ;; placeofemployment == Army ;; trigger == discharged ;; personnel.endposition.firinglayoff
+communicator == Harry S. Truman ;; trigger == oath ;; contact.commitmentpromiseexpressintent.meet
+communicator == God ;; recipient == us ;; trigger == promised ;; contact.commitmentpromiseexpressintent.correspondence
+origin == POW camp ;; passenger == he ;; trigger == captured ;; movement.transportperson.preventexit
+artifact == doors ;; trigger == flung ;; movement.transportartifact.nonviolentthrowlaunch
+communicator == We ;; place == Portugal ;; recipient == Countries ;; trigger == urged ;; contact.requestadvise.broadcast
+crime == sermons in which he criticized the government ;; defendant == Nimr al - Nimr , a revered Shi’ite cleric ;; executioner == Saudi Arabia ;; trigger == execution ;; justice.judicialconsequences.execute
+communicator == Colin Powell ;; recipient == Clinton ;; trigger == advised ;; contact.requestadvise.meet
+participant == Al Qaeda ^^ bases ;; place == Yemen ;; trigger == confiscated ;; transaction.transaction.n/a
+participant == Mr. Putin ^^ the United States ;; place == Russia ;; trigger == treaty ;; government.agreements.acceptagreementcontractceasefire
+artifact == weapons ;; destination == Yemen ;; transporter == Americans ;; trigger == supplied ;; movement.transportartifact.sendsupplyexport
+communicator == Devin Stewart ;; recipient == apology could “ open a can of worms on many , many issues ;; trigger == suggests ;; contact.requestadvise.n/a
+beneficiary == Saudi Arabia ;; giver == he ;; trigger == purchases ;; transaction.transfermoney.purchase
+attacker == the government ;; instrument == shelling ;; place == eastern Aleppo ;; target == a number of areas ;; trigger == bombarding ;; conflict.attack.airstrikemissilestrike
+participant == Clinton ^^ Trump ;; place == Hofstra University ;; trigger == debate ;; contact.discussion.meet
+candidate == Trump ;; trigger == voting ;; government.vote.n/a
+injurer == The men ;; instrument == beating ;; place == wooden shack ;; victim == them ;; trigger == kicking ;; life.injure.injurycausedbyviolentevents
+defendant == five innocent children ;; trigger == death penalty ;; justice.judicialconsequences.execute
+giver == The American state ;; recipient == financial assets ;; trigger == confiscates ;; transaction.transaction.transfercontrol
+crime == hysteria ;; defendant == Clinton ;; trigger == accused ;; justice.initiatejudicialprocess.chargeindict
+artifact == drug ;; destination == a country ;; trigger == trafficking ;; movement.transportartifact.smuggleextract
+ballot == presidential election ;; place == Florida ;; result == Romney lost ;; voter == Hispanic voters ;; trigger == vote ;; government.vote.castvote
+artifact == women ;; origin == Thailand ;; preventer == Thailand ;; trigger == imprisoned ;; movement.transportartifact.preventexit
+place == Istanbul airport ;; victim == People ;; trigger == attacked ;; life.injure.injurycausedbyviolentevents
+attacker == Confederate ;; place == their state ;; trigger == battle ;; conflict.attack.selfdirectedbattle
+communicator == U.S. special operations forces ;; recipient == Kurdish and Syrian rebel groups ;; trigger == advise ;; contact.requestadvise.meet
+attacker == American and French soldiers ;; place == Burkina Faso ;; target == terrorists ;; trigger == assault ;; conflict.attack.n/a
+crime == criminal wrongdoing ;; defendant == Hillary Clinton ;; investigator == FBI ;; trigger == investigation ;; justice.investigate.investigatecrime
+placeofemployment == Border Patrol ;; trigger == hire ;; personnel.startposition.n/a
+participant == donors ^^ donors ;; place == Goldman Sachs ;; trigger == convene ;; contact.discussion.meet
+communicator == Bill Clinton ;; trigger == announced ;; contact.publicstatementinperson.broadcast
+artifact == water , food and medical ;; destination == the besieged city ;; transporter == west ;; trigger == supplies ;; movement.transportartifact.sendsupplyexport
+passenger == people ;; preventer == US ;; trigger == incarcerates ;; movement.transportperson.preventexit
+injurer == sickness ;; place == U.S. ;; trigger == sickness ;; life.injure.n/a
+beneficiary == systems in the U.S. ;; giver == three U.S.-Israeli missile defense programs ;; recipient == Iron Dome systems ;; trigger == purchases ;; transaction.transferownership.purchase
+communicator == he ;; place == South Korea ;; trigger == advocated ;; contact.requestadvise.broadcast
+surrenderer == Franco Modigliani ;; trigger == surrender ;; conflict.yield.surrender
+employee == workers ;; placeofemployment == jobs ;; trigger == layoffs ;; personnel.endposition.firinglayoff
+origin == the eastern part of the city ;; passenger == sick and wounded ;; transporter == World Health Organisation ( WHO ) ;; trigger == evacuate ;; movement.transportperson.evacuationrescue
+communicator == Mr. Trump ;; recipient == his view ;; trigger == reiterated ;; contact.publicstatementinperson.n/a
+fireexplosionobject == methane gas ;; instrument == higher global temperatures ;; trigger == explosion ;; disaster.fireexplosion.fireexplosion
+trigger == manufacturing ;; manufacture.artifact.createmanufacture
+giver == youth ;; recipient == debt ;; trigger == pay ;; transaction.transfermoney.n/a
+employee == employees ;; trigger == firings ;; personnel.endposition.firinglayoff
+participant == Reuters ^^ Trump ;; trigger == interview ;; contact.discussion.n/a
+instrument == air strikes ;; place == Aleppo ;; target == rebel ;; trigger == airstrike ;; conflict.attack.airstrikemissilestrike
+giver == Thailand ;; place == Thailand ;; recipient == Paiboon ;; territoryorfacility == power ;; trigger == seized ;; transaction.transaction.transfercontrol
+artifact == cocaine ;; trigger == smuggling ;; movement.transportartifact.n/a
+recipient == The United States ;; trigger == intimidated ;; contact.threatencoerce.correspondence
+defendant == she ;; trigger == proceedings ;; justice.initiatejudicialprocess.n/a
+attacker == UAE ;; instrument == bombing ;; place == south Yemen ;; target == AQAP ;; trigger == war ;; conflict.attack.selfdirectedbattle
+artifact == South Sudan ;; place == South Sudan ;; preventer == U.N. Security Council ;; recipient == arms ;; trigger == embargo ;; transaction.transferownership.embargosanction
+victim == Muslim soldier ;; trigger == slain ;; life.die.deathcausedbyviolentevents
+participant == we ;; trigger == discussing ;; contact.discussion.correspondence
+artifact == $ 100 million ;; giver == legislation ;; recipient == schools ;; trigger == grants ;; transaction.transferownership.n/a
+crime == directing the artillery fire ;; defendant == her ;; judgecourt == judge ;; place == eastern Ukraine ;; trigger == guilty ;; justice.judicialconsequences.convict
+communicator == Clinton ;; place == Washington , DC ;; recipient == investigations ;; trigger == misled ;; contact.prevarication.correspondence
+beneficiary == his campaign ;; giver == Trump ;; trigger == funding ;; transaction.transfermoney.giftgrantprovideaid
+beneficiary == Hillary ;; giver == wealthy individuals ;; trigger == donating ;; transaction.transferownership.giftgrantprovideaid
+place == country ;; victim == apostates ;; trigger == kill ;; life.die.n/a
+participant == his ^^ President of South Korea ;; trigger == conferring ;; contact.discussion.meet
+destination == in ;; passenger == you ;; transporter == you ;; trigger == smuggle ;; movement.transportperson.smuggleextract
+crime == the plot ;; defendant == GOP presidential nominee Donald Trump ;; prosecutor == Hillary Clinton 's campaign ;; trigger == accusing ;; justice.initiatejudicialprocess.chargeindict
+origin == Iran ;; trigger == unloaded ;; movement.transportperson.n/a
+victim == sources ;; trigger == deceased ;; life.die.n/a
+communicator == Clinton ;; recipient == you ;; trigger == deceived ;; contact.prevarication.broadcast
+victim == Maria Haley ;; trigger == deceased ;; life.die.nonviolentdeath
+preventer == Soviet soldiers ;; transporter == German soldiers ;; trigger == captured ;; movement.transportartifact.preventexit
+attacker == America ;; instrument == nuclear holocaust ;; target == Russia ;; trigger == war ;; conflict.attack.selfdirectedbattle
+artifact == orphanage ;; place == Pyongyang ;; trigger == constructed ;; manufacture.artifact.build
+origin == besieged areas ;; passenger == civilians or fighters ;; trigger == evacuate ;; movement.transportperson.evacuationrescue
+beneficiary == me ;; giver == anyone ;; recipient == foundation ;; trigger == donating ;; transaction.transaction.giftgrantprovideaid
+place == Daraya ;; recipient == Syrian regime ;; surrenderer == Daraya ;; trigger == surrender ;; conflict.yield.surrender
+injurer == surgery ;; victim == Mr Spiridinov ;; trigger == surgery ;; life.injure.n/a
+victim == she ;; trigger == illness ;; life.injure.illnessdegradationphysical
+communicator == Hillary ;; place == Here ;; recipient == the people ;; trigger == deceive ;; contact.prevarication.meet
+crime == illegal reentry ;; defendant == aliens ;; judgecourt == Congress ;; trigger == convicted ;; justice.judicialconsequences.n/a
+injurer == starve ;; place == Aleppo ;; victim == people ;; trigger == starve ;; life.injure.n/a
+communicator == Clinton ;; recipient == Bulgarian officials ;; trigger == urged ;; contact.commandorder.meet
+beneficiary == U.S. Olympic athletes ;; money == 20,000 ;; recipient == U.S. Olympic athletes ;; trigger == stipend ;; transaction.transfermoney.payforservice
+recipient == government ;; surrenderer == people ;; trigger == surrender ;; conflict.yield.surrender
+inspector == team ;; trigger == inspection ;; inspection.sensoryobserve.inspectpeopleorganization
+attacker == IS militants ;; instrument == car bomb and then blown up explosive belts ;; place == Sayyida Zeinab ;; trigger == detonated ;; conflict.attack.n/a
+placeofemployment == agencies ;; trigger == recruits ;; personnel.startposition.hiring
+artifact == signs ;; damagerdestroyer == Bryant ;; trigger == vandalizing ;; artifactexistence.damagedestroy.n/a
+giver == Department of Labor ;; place == the United States ;; recipient == Palmer ;; trigger == granted ;; transaction.transaction.giftgrantprovideaid
+communicator == political parties ;; trigger == blackmail ;; contact.threatencoerce.n/a
+artifact == goods ;; place == Israeli ;; recipient == Israeli ;; trigger == boycott ;; transaction.transferownership.embargosanction
+artifact == weapons ;; destination == the Gulf states ;; origin == the Gulf states ;; transporter == Hezbollah ;; trigger == smuggling ;; movement.transportartifact.smuggleextract
+place == Ukraine and southern Russia ;; victim == more than 1 million people ;; trigger == starvation ;; life.injure.illnessdegradationhungerthirst
+attacker == Clinton ;; target == Trump ’s fitness for the office ;; trigger == bombarding ;; conflict.attack.selfdirectedbattle
+preventer == agents ;; transporter == migrants ;; trigger == roadblocks ;; movement.transportartifact.prevententry
+detainee == people ;; jailer == US ;; place == US ;; trigger == incarcerates ;; justice.arrestjaildetain.arrestjaildetain
+beneficiary == digital privacy advocacy groups ;; participant == corporations ^^ digital privacy advocacy groups ;; trigger == funding ;; transaction.transaction.n/a
+origin == city on the Volga River ( present - day Volgograd ) ;; passenger == German soldiers ;; preventer == Soviet soldiers ;; trigger == captured ;; movement.transportperson.preventexit
+communicator == Jones ;; recipient == viewers and listeners ;; trigger == broadcast ;; contact.mediastatement.broadcast
+employee == Machar ;; place == South Sudan ;; placeofemployment == deputy ;; trigger == sacking ;; personnel.endposition.firinglayoff
+attacker == US - led coalition ;; instrument == air strikes ;; place == Iraq and Syria ;; target == IS ;; trigger == assault ;; conflict.attack.selfdirectedbattle
+participant == Russia ^^ Barack Obama ;; place == US ;; trigger == dialogue ;; contact.discussion.correspondence
+crime == corruption ;; defendant == Mrs. Clinton ’s tenure as Secretary of State ;; investigator == FBI ;; trigger == investigation ;; justice.investigate.investigatecrime
+artifact == hundreds of items from the very private collection of Ronald Reagan ;; place == Christie ’s ;; trigger == AUCTION ;; transaction.transferownership.purchase
+candidate == Trump or Clinton or Gary Johnson or Jill Stein ;; voter == people ;; trigger == voting ;; government.vote.castvote
+victim == one and a half million Armenian people ;; trigger == massacred ;; life.die.deathcausedbyviolentevents
+attacker == She ;; target == Iraq and Syria ;; trigger == war ;; conflict.attack.selfdirectedbattle
+participant == independent group ^^ it and the International Olympic Committee ;; trigger == convene ;; contact.discussion.correspondence
+communicator == ISIS ;; place == the desert ;; recipient == Vladimir Putin and Russia ;; trigger == threatened ;; contact.threatencoerce.correspondence
+giver == Valio ;; place == Russia ;; preventer == EU ;; recipient == cheese ;; trigger == embargo ;; transaction.transaction.embargosanction
+beneficiary == it ;; place == U.S. ;; trigger == rent ;; transaction.transferownership.borrowlend
+artifact == dairy and cheese ;; origin == his home state ;; trigger == exports ;; movement.transportartifact.sendsupplyexport
+employee == He ;; placeofemployment == Democratic platform committee ;; trigger == appointed ;; personnel.startposition.n/a
+instrument == mass killings ;; victim == Armenian ;; trigger == genocide ;; life.die.deathcausedbyviolentevents
+passenger == Clinton ;; trigger == escaped ;; movement.transportperson.n/a
+beneficiary == I ;; giver == I ;; money == $ 20 ;; recipient == you ;; trigger == pay ;; transaction.transfermoney.payforservice
+communicator == she and French President Francois Hollande ;; place == RND ;; recipient == Ukraine and Russia ;; trigger == urge ;; contact.commandorder.broadcast
+injurer == Assange ;; place == Sweden ;; trigger == rape ;; life.injure.injurycausedbyviolentevents
+instrument == homicide ;; place == United States ;; trigger == homicide ;; life.die.deathcausedbyviolentevents
+attacker == Italy and Germany ;; place == Greece and North Africa ;; target == Britain and France ;; trigger == War ;; conflict.attack.selfdirectedbattle
+killer == People 's Liberation Army ;; place == Tiananmen Square ;; victim == hundreds of protesters ;; trigger == Massacre ;; life.die.deathcausedbyviolentevents
+communicator == Iran 's Foreign Ministry ;; place == Iran ;; recipient == Azerbaijan and Armenia ;; trigger == urged ;; contact.requestadvise.broadcast
+participant == delegates ^^ delegates ;; place == Cleveland ;; trigger == convene ;; contact.discussion.meet
+communicator == Rep. Mark Sanford ;; recipient == Trump ;; trigger == professed ;; contact.publicstatementinperson.n/a
+destination == here ;; origin == Mexico ;; passenger == Mexicans ;; trigger == migrate ;; movement.transportperson.n/a
+place == Homs province ;; victim == Anton Erygin ;; trigger == fatal ;; life.die.n/a
+passenger == full effects ;; preventer == Lobbyist ;; transporter == we ;; trigger == obstruction ;; movement.transportperson.prevententry
+killer == Muslim ;; place == the Muslim world ;; victim == Muslim ;; trigger == homicide ;; life.die.deathcausedbyviolentevents
+employee == director ;; placeofemployment == CIA ;; trigger == retired ;; personnel.endposition.n/a
+place == Darfur region ;; trigger == genocide ;; life.die.n/a
+artifact == the world ;; damager == United States ;; instrument == bombing ;; place == a safe distance ;; trigger == wreck ;; artifactexistence.damagedestroy.damage
+artifact == materials ;; trigger == smuggled ;; movement.transportartifact.n/a
+communicator == models ;; place == United States ;; recipient == customs officials ;; trigger == deceive ;; contact.prevarication.broadcast
+attacker == Russia ;; target == terrorism ;; trigger == combat ;; conflict.attack.selfdirectedbattle
+attacker == U.S. Navy ;; place == Pacific ;; target == Japanese aircraft carriers ;; trigger == battle ;; conflict.attack.n/a
+place == the region ;; victim == hundreds of thousands of people ;; trigger == starvation ;; life.injure.illnessdegradationhungerthirst
+beneficiary == we ;; money == $ 24 ;; recipient == we ;; trigger == auction ;; transaction.transfermoney.purchase
+artifact == X6 SUV ;; attacker == mugger ;; place == Avenida das Americas ;; target == X6 SUV ;; trigger == robbery ;; conflict.attack.stealrobhijack
+artifact == cars ;; damager == gang ;; place == the beach ;; trigger == battered ;; artifactexistence.damagedestroy.damage
+employee == Manafort ;; placeofemployment == government ;; trigger == ousted ;; personnel.endposition.firinglayoff
+participant == Glen Caplin ;; place == email ;; trigger == email ;; contact.collaborate.n/a
+trigger == shooting ;; life.die.n/a
+observedentity == Americans ’ call records ;; spy == NSA ;; trigger == surveillance ;; government.spy.spy
+victim == Elie Wiesel ;; trigger == passed away ;; life.die.nonviolentdeath
+injurer == corporate greed ;; trigger == illnesses ;; life.injure.n/a
+crime == Russian meddling ;; defendant == DHS chief ;; trigger == testify ;; justice.initiatejudicialprocess.trialhearing
+employee == Caroline Lind ;; place == USA ;; placeofemployment == USA Rowing women ’s team ;; trigger == retired ;; personnel.endposition.quitretire
+injurer == supporters ;; place == rallies ;; victim == people of color ;; trigger == punch ;; life.injure.injurycausedbyviolentevents
+place == Palestinian ;; victim == boy ;; trigger == died ;; life.die.n/a
+origin == the pogroms in Ukraine ;; passenger == Lev Winogradsky ;; transporter == Lev Winogradsky ;; trigger == escaped ;; movement.transportperson.evacuationrescue
+place == here ;; victim == loved ones ;; trigger == homicide ;; life.die.deathcausedbyviolentevents
+attacker == following of Donald Trump ;; instrument == hanged ;; target == Snowden ;; trigger == hanged ;; conflict.attack.n/a
+killer == he ;; victim == families of terrorists ;; trigger == slaughter ;; life.die.deathcausedbyviolentevents
+beneficiary == Manafort ;; giver == Ukraine president and pro - Russia ally , Viktor Yanukovych ;; money == $ 12.7 million ;; recipient == Manafort ;; trigger == payments ;; transaction.transfermoney.n/a
+communicator == he ;; recipient == people ;; trigger == misled ;; contact.prevarication.meet
+artifact == South Sudan 's leaders ;; giver == United States ;; place == South Sudan ;; preventer == United States ;; recipient == arms ;; trigger == embargo ;; transaction.transferownership.embargosanction
+communicator == models ;; place == them ;; recipient == customs officials ;; trigger == deceive ;; contact.prevarication.correspondence
+inspectedentity == them and to their children ;; inspector == we ;; place == our country ;; trigger == immigration ;; inspection.sensoryobserve.inspectpeopleorganization
+communicator == he ;; place == Congress ;; recipient == Congress ;; trigger == recommend ;; contact.requestadvise.broadcast
+beneficiary == rent ;; giver == Trump ;; place == Trump ’s agency ;; recipient == Blais and her roommates ;; trigger == rent ;; transaction.transferownership.borrowlend
+killer == Azerbaijani troops ;; place == Nagorno - Karabakh ;; victim == Armenian soldier ;; trigger == decapitated ;; life.die.deathcausedbyviolentevents
+communicator == Kerry ;; trigger == intimidated ;; contact.threatencoerce.n/a
+artifact == battleships ;; destroyer == attack ;; place == Hawaii ;; trigger == destroyed ;; artifactexistence.damagedestroy.destroy
+participant == White House ^^ White House ;; trigger == conferring ;; contact.discussion.correspondence
+communicator == Trump ;; recipient == Moscow ;; trigger == suggesting ;; contact.requestadvise.broadcast
+beneficiary == USA triathletes ;; money == 20,000 to $ 40,000 ;; recipient == USA triathletes ;; trigger == stipends ;; transaction.transfermoney.payforservice
+communicator == Nigel Farage ;; place == Good Morning Britain ;; trigger == professing ;; contact.publicstatementinperson.broadcast
+place == Syria ;; victim == Syrians ;; trigger == starving ;; life.injure.illnessdegradationhungerthirst
+attacker == Syria ;; instrument == Civil wars ;; place == Syria ;; target == Syria ;; trigger == war ;; conflict.attack.selfdirectedbattle
+founder == court of last resort ;; gpe == ICC ;; trigger == established ;; government.formation.n/a
+communicator == Wikileaks ;; trigger == promised ;; contact.commitmentpromiseexpressintent.meet
+detainee == Guccifer ;; trigger == imprisoned ;; justice.arrestjaildetain.arrestjaildetain
+giver == U.S. government ;; place == Radio Free Europe / Radio Liberty ;; recipient == broadcaster ;; trigger == funded ;; transaction.transferownership.giftgrantprovideaid
+participant == Senator Robert Taft ;; trigger == treaty ;; government.agreements.n/a
+beneficiary == it ;; recipient == it ;; trigger == auction ;; transaction.transfermoney.purchase
+crime == hack ;; defendant == Guccifer ;; destination == Alexandria , Virginia ;; extraditer == FBI ;; origin == Romania ;; trigger == extradited ;; justice.judicialconsequences.extradite
+victim == Maria Haley ;; trigger == deceased ;; life.die.nonviolentdeath
+communicator == Putin ;; recipient == Russian people ;; trigger == broadcast ;; contact.mediastatement.broadcast
+victim == Sulaimon Saidov ;; trigger == surgery ;; life.injure.illnessdegradationphysical
+injurer == cyber incident ;; victim == national security interests ;; trigger == harm ;; life.injure.n/a
+giver == banks ;; place == United States ;; recipient == banks ;; trigger == lend ;; transaction.transfermoney.n/a
+participant == Rubio ^^ Kasich ;; place == Cleveland ;; trigger == negotiating ;; contact.discussion.correspondence
+injurer == AQI ;; place == Iraq ;; victim == Sunni tribal leaders ;; trigger == violent ;; life.injure.injurycausedbyviolentevents
+beneficiary == We ;; giver == various countries ;; place == various countries ;; trigger == reimbursed ;; transaction.transfermoney.payforservice
+crime == soliciting a minor for prostitution ;; defendant == Epstein ;; trigger == guilty ;; justice.judicialconsequences.convict
+artifact == rhetorical concoctions ;; manufacturer == Cohen ;; trigger == producing ;; manufacture.artifact.n/a
+killer == Saddam ;; place == prisons ;; victim == Iraqis ;; trigger == executed ;; life.die.deathcausedbyviolentevents
+beneficiary == clients ;; giver == company ;; trigger == rent ;; transaction.transfermoney.n/a
+beneficiary == Iron Dome ;; money == $ 319.9 million ;; recipient == Iron Dome ;; trigger == purchases ;; transaction.transfermoney.purchase
+artifact == assault rifle ;; beneficiary == terrorists ;; place == America ;; recipient == would - be terrorists ;; trigger == obtain ;; transaction.transferownership.n/a
+participant == donors ^^ donors ;; place == Goldman Sachs ;; trigger == convene ;; contact.discussion.correspondence
+spy == New Zealand ;; trigger == surveillance ;; government.spy.spy
+passenger == Intelligence officials ;; trigger == imprisoned ;; movement.transportperson.n/a
+giver == regime ;; trigger == sanctions ;; transaction.transferownership.embargosanction
+artifact == homes ;; damagerdestroyer == Muslim mob ;; place == Egypt ;; trigger == ransacked ;; artifactexistence.damagedestroy.n/a
+injurer == Russia or its ally ;; place == Damascus ;; victim == a civilian target ;; trigger == strike ;; life.injure.injurycausedbyviolentevents
+participant == EU 's leaders ^^ Britain ;; place == Brussels ;; trigger == negotiating ;; contact.discussion.meet
+attacker == warriors ;; instrument == spear ;; place == Teotihuacán ;; target == city - states ;; trigger == clashes ;; conflict.attack.selfdirectedbattle
+recipient == Russia and Putin ;; yielder == Donald Trump ;; trigger == surrender ;; conflict.yield.n/a
+trigger == homicides ;; life.die.n/a
+instrument == robbery or assault ;; target == 40 percent ;; trigger == robbery ;; conflict.attack.n/a
+communicator == More than 100 prominent physicians , bioethicists and scientists from around the world ;; recipient == World Health Organization Director - General Margaret Chan ;; trigger == urging ;; contact.requestadvise.correspondence
+attacker == United States ;; instrument == drones and warplanes ;; place == Iraq and Syria ;; target == Islamic State ;; trigger == bombing ;; conflict.attack.bombing
+crime == the release of any emails from state department servers ;; defendant == Amiri ;; trigger == execution ;; justice.judicialconsequences.execute
+place == Yemen ;; victim == Yemen ;; trigger == starvation ;; life.injure.illnessdegradationhungerthirst
+employee == workers ;; trigger == layoffs ;; personnel.endposition.n/a
+crime == espionage ;; defendant == he ;; judgecourt == government ;; place == United States ;; trigger == guilty ;; justice.judicialconsequences.convict
+killer == an illegal ;; victim == He ;; trigger == murdered ;; life.die.deathcausedbyviolentevents
+victim == Armenian ;; trigger == Genocide ;; life.die.n/a
+beneficiary == charity ;; giver == He ;; money == profits ;; recipient == profits ;; trigger == donate ;; transaction.transfermoney.giftgrantprovideaid
+artifact == a car ;; beneficiary == American ;; recipient == a car ;; trigger == rent ;; transaction.transferownership.borrowlend
+artifact == Saudi embassy ;; destroyer == Shi’ite protesters ;; place == Iran ;; trigger == ransacked ;; artifactexistence.damagedestroy.destroy
+artifact == hundreds of millions of dollars ;; beneficiary == Clintons ;; giver == George Soros’ ;; recipient == hundreds of millions of dollars ;; trigger == funding ;; transaction.transferownership.giftgrantprovideaid
+beneficiary == Manafort ;; giver == secret ledgers ;; money == $ 12.7 million ;; recipient == Manafort ;; trigger == payments ;; transaction.transfermoney.payforservice
+participant == moderator ^^ Trump ;; trigger == debate ;; contact.negotiate.meet
+artifact == Seven Christian homes ;; destroyer == Muslim mob ;; trigger == ransacked ;; artifactexistence.damagedestroy.destroy
+instrument == Head transplantation ;; victim == patient ;; trigger == decapitating ;; life.die.deathcausedbyviolentevents
+place == Syria ;; victim == Russian generals ;; trigger == slain ;; life.die.n/a
+communicator == Trump ;; trigger == promising ;; contact.commitmentpromiseexpressintent.correspondence
+place == Aleppo ;; victim == hundreds of wounded ;; trigger == wounded ;; life.injure.injurycausedbyviolentevents
+participant == I ^^ two brave American doctors ;; place == American ;; trigger == met ;; contact.collaborate.n/a
+attacker == Russian and Syrian government ;; instrument == planes ;; target == city ;; trigger == bombarding ;; conflict.attack.selfdirectedbattle
+destination == Ecuador ;; granter == country ;; transporter == Assange ;; trigger == asylum ;; movement.transportperson.grantentryasylum
+crime == cyberintrusions ;; investigator == the bureau ;; place == two state election websites ;; trigger == investigating ;; justice.investigate.investigatecrime
+beneficiary == us ;; giver == They ;; money == a fair price ;; recipient == us ;; trigger == paying ;; transaction.transfermoney.payforservice
+participant == we ^^ them ;; trigger == negotiating ;; contact.negotiate.correspondence
+injurer == Kenya ;; instrument == a practice ;; place == Kenya ;; victim == men ;; trigger == Torture ;; life.injure.injurycausedbyviolentevents
+giver == European Union ;; preventer == European Union ;; recipient == Russia ;; trigger == sanctions ;; transaction.transaction.embargosanction
+communicator == men ;; place == her small wooden shack ;; recipient == them ;; trigger == demanding ;; contact.commandorder.broadcast
+communicator == them ;; trigger == suggesting ;; contact.requestadvise.correspondence
+recipient == Yuri Nagornykh ;; trigger == advised ;; contact.requestadvise.n/a
+origin == Ukraine ;; passenger == Yanukovych ;; transporter == Yanukovych ;; trigger == fled ;; movement.transportperson.evacuationrescue
+communicator == key players in Washington ’s foreign policy and military establishment ;; place == Washington ;; recipient == think tank ;; trigger == advised ;; contact.requestadvise.correspondence
+participant == Jeh Johnson ^^ state election officials ;; trigger == convene ;; contact.discussion.meet
+destination == our streets ;; origin == our streets ;; transporter == thousands of criminal aliens ;; trigger == walk ;; movement.transportperson.selfmotion
+instrument == allowing the killing to continue ;; killer == Moscow ;; place == Aleppo ;; trigger == slaughter ;; life.die.deathcausedbyviolentevents
+killer == the political world ;; victim == Christians ;; trigger == massacre ;; life.die.deathcausedbyviolentevents
+attacker == Fethullah Gülen Terrorist Organization ;; place == Turkey ;; target == President Erdogan ;; trigger == coup ;; conflict.attack.n/a
+communicator == Hillary Clinton ;; recipient == progressive and young voters ;; trigger == deceive ;; contact.prevarication.meet
+communicator == FBI ;; trigger == recommend ;; contact.requestadvise.broadcast
+giver == a dozen Palestine solidarity activists ;; place == the Court of Cassation ;; preventer == France ’s highest court ;; recipient == Israeli goods ;; trigger == boycott ;; transaction.transferownership.embargosanction
+attacker == 46 people ;; place == multi - state ;; trigger == arson ;; conflict.attack.setfire
+fireexplosionobject == the weather ;; instrument == Siberian pristine Boreal forests ;; place == the Arctic Yamal Peninsula ;; trigger == blaze ;; disaster.fireexplosion.fireexplosion
+attacker == he ;; target == Iraq , Libya , and Syria ;; trigger == conflicts ;; conflict.attack.n/a
+communicator == Hillary Clinton ;; recipient == amnesty ;; trigger == pledged ;; contact.commitmentpromiseexpressintent.n/a
+instrument == Ukrainian snipers ;; killer == Russia ;; place == Maidan ;; victim == protesters ;; trigger == slaughtered ;; life.die.deathcausedbyviolentevents
+artifact == capability ;; trigger == acquired ;; transaction.transferownership.n/a
+injurer == all ;; place == Syria ;; victim == its people ;; trigger == harm ;; life.injure.injurycausedbyviolentevents
+artifact == drug ;; destination == Russia ;; trigger == trafficking ;; movement.transportartifact.smuggleextract
+trigger == supply ;; movement.transportartifact.sendsupplyexport
+trigger == sickness ;; life.injure.illnessdegradationphysical
+participant == Trump ;; place == ABC ;; trigger == interview ;; contact.discussion.meet
+preventer == Trump campaign ;; trigger == voter intimidation ;; government.vote.violationspreventvote
+artifact == interview ;; beneficiary == Russian - funded news network ;; giver == GOP opponent ;; recipient == Russian - funded news network ;; trigger == granting ;; transaction.transferownership.n/a
+communicator == Justin Trudeau ;; place == Canada ;; trigger == promise ;; contact.commitmentpromiseexpressintent.correspondence
+place == Damascus ;; trigger == war ;; conflict.attack.selfdirectedbattle
+communicator == Trump ;; recipient == political opponent ;; trigger == threatening ;; contact.threatencoerce.correspondence
+artifact == material and other resources ;; destination == regions ;; transporter == The Emergency Ministry ;; trigger == transport ;; movement.transportartifact.bringcarryunload
+killer == Muslims ;; place == a society ;; trigger == homicide ;; life.die.deathcausedbyviolentevents
+employee == Trump - Russia special counsel ;; trigger == Firing ;; personnel.endposition.firinglayoff
+communicator == Nigerian - born doctor Bennet Omalu ;; trigger == suggested ;; contact.requestadvise.correspondence
+driverpassenger == Sergeant Brandon Mendoza ;; place == Mesa ;; trigger == collision ;; disaster.accidentcrash.accidentcrash
+artifact == Clinton - Kaine sign ;; damager == one ;; trigger == tore ;; artifactexistence.damagedestroy.damage
+artifact == oil ;; destination == United States ;; origin == Mideast and elsewhere ;; transporter == United States ;; trigger == imports ;; movement.transportartifact.grantentry
+place == Iran ;; trigger == inspections ;; inspection.sensoryobserve.inspectpeopleorganization
+communicator == administration ;; recipient == country ;; trigger == misled ;; contact.prevarication.broadcast
+artifact == The monument to fallen Soviet sailors ;; destroyer == activists from neo - Nazi group Daugavas Vanagi ;; place == Limbazi ;; trigger == demolished ;; artifactexistence.damagedestroy.destroy
+crime == violating fiscal laws ;; defendant == Rousseff ;; place == Brazil ;; prosecutor == the Senate ;; trigger == proceedings ;; justice.initiatejudicialprocess.trialhearing
+communicator == Russian media ;; place == Russia ;; trigger == broadcast ;; contact.mediastatement.broadcast
+artifact == signs ;; damager == Bryant ;; place == the property ;; trigger == vandalizing ;; artifactexistence.damagedestroy.damage
+place == Istanbul and Ankara ;; victim == about 20 of those who planned the overnight coup ;; trigger == killed ;; life.die.deathcausedbyviolentevents
+communicator == Donald Trump ;; recipient == local control in education Press ;; trigger == promise ;; contact.commitmentpromiseexpressintent.meet
+killer == illegal immigrants and other non - citizens ;; place == our country ;; trigger == homicide ;; life.die.deathcausedbyviolentevents
+monitor == the state ’s 1,854 municipal clerks ;; monitoredentity == machines ;; place == state ’s 72 counties ;; trigger == voting ;; inspection.sensoryobserve.monitorelection
+employee == democratically elected president ;; place == Honduras ;; trigger == ousted ;; personnel.endposition.n/a
+artifact == Aleppo ;; trigger == destroyed ;; artifactexistence.damagedestroy.destroy
+injurer == rape ;; victim == public ;; trigger == rape ;; life.injure.n/a
+origin == Aleppo ;; passenger == people in need of medical attention ;; transporter == the agency ’s humanitarian wing ;; trigger == evacuate ;; movement.transportperson.evacuationrescue
+beneficiary == Hillary Clinton ;; giver == Granoff ;; recipient == Hillary Clinton ;; trigger == donated ;; transaction.transferownership.giftgrantprovideaid
+communicator == Trump ;; recipient == voters ;; trigger == misleading ;; contact.prevarication.meet
+defendant == an alleged Russian intelligence agent ;; executioner == one of the militants ;; place == the Muslim - dominated North Caucasus region ;; trigger == execution ;; justice.judicialconsequences.execute
+communicator == Russian internet trolls ;; recipient == the American public ;; trigger == deceive ;; contact.prevarication.correspondence
+giver == Medicare ;; trigger == purchase ;; transaction.transfermoney.purchase
+place == Syria ;; trigger == battle ;; conflict.attack.selfdirectedbattle
+communicator == Clinton ;; recipient == you ;; trigger == deceived ;; contact.prevarication.meet
+participant == Clinton ^^ Democratic Party ;; trigger == emails ;; contact.collaborate.correspondence
+spy == Vietnam ;; trigger == surveillance ;; government.spy.spy
+attacker == They ;; instrument == bomb ;; place == base of the tomb ;; target == base of the tomb ;; trigger == detonate ;; conflict.attack.n/a
+crime == anti - free - speech laws ;; defendant == an academic ;; place == France ;; prosecutor == France ;; trigger == trial ;; justice.initiatejudicialprocess.trialhearing
+beneficiary == US Navy ;; giver == US Navy ;; place == US ;; trigger == Buy ;; transaction.transfermoney.purchase
+killer == Putin ;; victim == enemies ;; trigger == killing ;; life.die.deathcausedbyviolentevents
+beneficiary == Russia ;; giver == Russian banks ;; recipient == Trump ;; trigger == loans ;; transaction.transfermoney.borrowlend
+attacker == dozens of armed groups ;; place == Syria ;; target == one another ;; trigger == battle ;; conflict.attack.selfdirectedbattle
+communicator == false flag " operations ;; place == the country ;; recipient == people ;; trigger == deceive ;; contact.prevarication.correspondence
+instrument == bombs ;; place == Aleppo ;; trigger == bombs ;; conflict.attack.n/a
+giver == Russia ;; money == countries ;; recipient == trade ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+giver == US ;; money == Vietnam ;; place == Vietnam ;; preventer == US ;; recipient == arms ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+participant == Trump ^^ Clinton ;; place == debate ;; trigger == debate ;; contact.negotiate.meet
+artifact == Donald Trump campaign sign ;; damagerdestroyer == woman ;; trigger == vandalized ;; artifactexistence.damagedestroy.n/a
+injurer == ambush ;; victim == Aidar fighters ;; trigger == wounded ;; life.injure.n/a
+destination == east of the Euphrates ;; origin == Turkey ;; retreater == PYD ;; trigger == retreat ;; conflict.yield.retreat
+employee == Creamer , as well as Foval ;; trigger == ousted ;; personnel.endposition.firinglayoff
+participant == U.S. Secretary of State Hillary Clinton ^^ Russia 's President Vladimir Putin ;; place == Vladivostok ;; trigger == meets ;; contact.collaborate.n/a
+beneficiary == Bank Hapoalim ;; place == Panamanian ;; trigger == funds ;; transaction.transfermoney.giftgrantprovideaid
+participant == they ^^ him ;; place == Moscow ;; trigger == meet ;; contact.discussion.meet
+instrument == cutting agents such as detergents ;; place == South Africa ;; trigger == poisons ;; conflict.attack.biologicalchemicalpoisonattack
+beneficiary == Ascenta ;; giver == Facebook ;; place == the UK ;; trigger == acquired ;; transaction.transfermoney.purchase
+artifact == them ;; damager == they ;; place == Bely Island ;; trigger == punctured ;; artifactexistence.damagedestroy.damage
+injurer == illness ;; victim == her ;; trigger == illness ;; life.injure.n/a
+crime == not taking responsibility and of concealing the true nature of agreements they had struck ;; defendant == German Chancellor Angela Merkel , French President Francois Hollande , and U.S. President Barack Obama ;; judgecourt == Roldugin ;; trigger == guilty ;; justice.judicialconsequences.convict
+beneficiary == Sea Change Foundation ;; giver == Klein ;; recipient == Sea Change Foundation ;; trigger == funds ;; transaction.transaction.giftgrantprovideaid
+preventer == Republicans ;; transporter == nominee ;; trigger == obstructing ;; movement.transportperson.prevententry
+inspector == We ;; place == border ;; trigger == immigration ;; inspection.sensoryobserve.physicalinvestigateinspect
+crime == overthrow him and introduce reform ;; defendant == him ;; judgecourt == Kim Jong - un ;; trigger == execution ;; justice.judicialconsequences.n/a
+place == 9/11 memorial ceremony ;; victim == Hillary Clinton ;; trigger == dehydrated ;; life.injure.illnessdegradationhungerthirst
+injurer == They 'll ;; victim == me ;; trigger == mutilate ;; life.injure.injurycausedbyviolentevents
+participant == He ^^ Bounnhang Vorachit ;; trigger == met ;; contact.discussion.meet
+defendant == those who pose a threat in cyberspace ;; investigator == FBI ;; trigger == investigate ;; justice.investigate.n/a
+trigger == election ;; inspection.sensoryobserve.monitorelection
+employee == nominee ;; placeofemployment == White House ;; trigger == appointing ;; personnel.startposition.hiring
+place == Syria , Iraq and elsewhere ;; trigger == conflicts ;; conflict.attack.selfdirectedbattle
+injurer == Australia ;; instrument == waterboarding , another method of torture called “ zipping ” in which people are tied to a bed that is then thrown into the air , sexual assault and exploitation , and child abuse ;; place == detention centres ;; victim == asylum seekers ;; trigger == torturing ;; life.injure.injurycausedbyviolentevents
+artifact == protection ;; beneficiary == refugees ;; recipient == protection ;; trigger == provide aid ;; transaction.transferownership.giftgrantprovideaid
+participant == wives and mistresses ^^ criminals ;; place == Kyrgyzstan ;; trigger == telephone ;; contact.collaborate.correspondence
+communicator == Clinton ;; recipient == her and another Benghazi family ;; trigger == misled ;; contact.prevarication.correspondence
+communicator == Clinton ;; trigger == misleading ;; contact.prevarication.meet
+attacker == government ;; target == people ;; trigger == massacring ;; conflict.attack.selfdirectedbattle
+giver == Israel ;; preventer == the BDS movement ;; recipient == Israeli goods ;; trigger == boycott ;; transaction.transferownership.embargosanction
+passenger == human ;; trigger == trafficking ;; movement.transportperson.smuggleextract
+participant == Trump ;; place == interview ;; trigger == telephone ;; contact.collaborate.n/a
+instrument == torture technique ;; killer == CIA ;; place == Guantanamo bay ;; victim == individual ;; trigger == drowning ;; life.die.deathcausedbyviolentevents
+beneficiary == Democrats , and to Clinton ;; giver == he ;; trigger == donate ;; transaction.transferownership.giftgrantprovideaid
+artifact == money ;; beneficiary == him ;; giver == banks ;; place == America ;; recipient == him ;; trigger == lending ;; transaction.transferownership.n/a
+participant == Powell ;; trigger == email ;; contact.collaborate.correspondence
+participant == They ;; trigger == telephone ;; contact.collaborate.n/a
+victim == Richard Holbrooke ;; trigger == died ;; life.die.nonviolentdeath
+destination == streets ;; origin == stadium ;; passenger == panicked fans ;; transporter == panicked fans ;; trigger == fled ;; movement.transportperson.evacuationrescue
+place == United States ;; trigger == homicide ;; life.die.n/a
+place == Dagestan province ;; trigger == broadcast ;; contact.mediastatement.broadcast
+artifact == man - portable missiles ;; destination == the city ;; origin == Qatar and Saudi Arabia ;; transporter == the two Gulf states ;; trigger == shipments ;; movement.transportartifact.disperseseparate
+crime == email hacking ;; investigator == we ;; place == White House ;; trigger == investigations ;; justice.investigate.investigatecrime
+participant == Iran ^^ France , the UK , Germany , and the rest of the West ;; trigger == agreement ;; government.agreements.acceptagreementcontractceasefire
+attacker == Palestinian terrorist ;; place == her home ;; target == Israeli - American Jew ;; trigger == stabbed ;; conflict.attack.stabbing
+giver == domestic abusers and those with serious mental health issues ;; trigger == acquiring ;; transaction.transferownership.purchase
+employee == his cronies ;; place == Iraq ;; placeofemployment == Prime Minister Nouri al - Maliki ;; trigger == appointed ;; personnel.startposition.hiring
+giver == I 'm ;; trigger == buying ;; transaction.transfermoney.n/a
+attacker == Vladimir Putin and Donald Trump ;; target == Hillary Clinton ;; trigger == poison ;; conflict.attack.biologicalchemicalpoisonattack
+victim == people ;; trigger == starve ;; life.injure.illnessdegradationhungerthirst
+artifact == man - portable systems ;; destination == Syria ;; origin == US ;; transporter == US ;; trigger == shipments ;; movement.transportartifact.bringcarryunload
+candidate == Hillary Clinton ;; trigger == win elections ;; personnel.elect.n/a
+communicator == Cornel West ;; recipient == Obama ;; trigger == urges ;; contact.commandorder.n/a
+participant == Trump ;; trigger == debate ;; contact.negotiate.meet
+place == New Zealand ;; trigger == testify ;; justice.initiatejudicialprocess.trialhearing
+giver == Israel ;; place == world ;; preventer == BDS ) movement ;; recipient == Israeli goods ;; trigger == boycott ;; transaction.transferownership.embargosanction
+victim == Elie Wiesel ;; trigger == passed away ;; life.die.n/a
+artifact == a hotel ;; manufacturer == he ;; place == Mosul ;; trigger == built ;; manufacture.artifact.n/a
+killer == Azerbaijani special forces ;; place == Talish ;; victim == villagers ;; trigger == shot ;; life.die.deathcausedbyviolentevents
+attacker == three attackers ;; instrument == explosives ;; place == Ataturk airport ;; target == people ;; trigger == detonated ;; conflict.attack.bombing
+crime == “ legitimate ” freedom of expression online ;; detainee == those ;; place == member states ;; trigger == imprisoned ;; justice.arrestjaildetain.arrestjaildetain
+attacker == U.S. ;; target == hundreds of thousands of Filipinos ;; trigger == slaughter ;; conflict.attack.selfdirectedbattle
+communicator == Sanders ;; place == AIPAC ;; recipient == AIPAC ;; trigger == advocate ;; contact.requestadvise.meet
+governmentbody == Kenya ;; law == the practice ;; place == Kenya ;; trigger == abolishing ;; government.legislate.legislate
+attacker == Fans ;; place == Marseille ;; trigger == skirmish ;; conflict.attack.n/a
+giver == government ;; place == Russian ;; trigger == funded ;; transaction.transfermoney.giftgrantprovideaid
+artifact == mobile devices ;; destroyer == staff ;; instrument == hammer and BleachBit software ;; trigger == destroyed ;; artifactexistence.damagedestroy.destroy
+participant == EU 's leaders ;; place == Brussels ;; trigger == negotiating ;; contact.negotiate.meet
+communicator == Mr Wang ;; recipient == US ;; trigger == urged ;; contact.requestadvise.meet
+destination == U.S. ;; passenger == those in the country illegally ;; preventer == agents ;; trigger == roadblocks ;; movement.transportperson.prevententry
+beneficiary == Polish laborers ;; giver == demolition contractor ;; money == $ 4 ;; place == Midtown Manhattan ;; recipient == $ 4 ;; trigger == paying ;; transaction.transfermoney.payforservice
+employee == Democrats ;; placeofemployment == Clinton ;; trigger == recruiting ;; personnel.startposition.hiring
+attacker == Russian and Syrian aircraft ;; instrument == bombs ;; place == Aleppo ;; trigger == detonating ;; conflict.attack.n/a
+artifact == air defense system ;; manufacturer == Russia ;; place == Russia ;; trigger == constructed ;; manufacture.artifact.n/a
+artifact == the living area ;; damagerdestroyer == they ;; trigger == tear ;; artifactexistence.damagedestroy.n/a
+instrument == gun ;; place == Orlando ;; trigger == massacre ;; conflict.attack.n/a
+communicator == Putin ;; recipient == Trump ;; trigger == blackmail ;; contact.threatencoerce.correspondence
+candidate == Obama ;; voter == they ;; trigger == voted ;; government.vote.n/a
+communicator == memo ;; trigger == blackmail ;; contact.threatencoerce.broadcast
+attacker == the two - party system ;; target == government ;; trigger == hijacked ;; conflict.attack.stealrobhijack
+crime == mishandled classified information ;; defendant == she ;; judgecourt == Justice Department ;; prosecutor == Republicans ;; trigger == indicted ;; justice.initiatejudicialprocess.n/a
+governmentbody == factions ;; trigger == legislate ;; government.legislate.legislate
+communicator == Hillary Clinton ;; recipient == progressive and young voters ;; trigger == deceive ;; contact.prevarication.n/a
+participant == the Assad government ^^ the State Department ;; place == Syria ;; trigger == negotiate ;; contact.discussion.correspondence
+place == North Korea ;; victim == leaders of North Korea ;; trigger == deceased ;; life.die.nonviolentdeath
+crime == attacks ;; defendant == member states ;; investigator == UN ;; trigger == investigating ;; justice.investigate.investigatecrime
+destination == Ukraine ;; granter == Ukraine ;; origin == Belarus ;; passenger == Roman Roslovtsev ;; trigger == asylum ;; movement.transportperson.grantentryasylum
+beneficiary == Team USA triathletes ;; money == $ 20,000 to $ 40,000 ;; recipient == Team USA triathletes ;; trigger == stipends ;; transaction.transfermoney.n/a
+inspectedentity == new federation ;; inspector == team ;; trigger == inspection ;; inspection.sensoryobserve.physicalinvestigateinspect
+giver == South Sudan ;; place == South Sudan ;; preventer == The United States ;; recipient == arms ;; trigger == embargo ;; transaction.transfermoney.embargosanction
+origin == country ;; preventer == American Action Forum ;; transporter == everyone ;; trigger == detaining ;; movement.transportartifact.preventexit
+killer == Syrian opposition ;; place == Turkmen Mountain ;; victim == military officials ;; trigger == slain ;; life.die.deathcausedbyviolentevents
+communicator == Pope ;; place == Sarajevo ;; trigger == urges ;; contact.commandorder.broadcast
+victim == six million victims ;; trigger == Holocaust ;; life.die.deathcausedbyviolentevents
+employee == Yanukovych ;; place == Ukraine ;; trigger == ousted ;; personnel.endposition.firinglayoff
+passenger == Snowden ;; trigger == captured ;; movement.transportperson.n/a
+trigger == violent ;; life.injure.n/a
+origin == a building ;; transporter == woman ;; trigger == walks ;; movement.transportperson.selfmotion
+judgecourt == Saudi Arabia ;; place == Saudi Arabia ;; trigger == execution ;; justice.judicialconsequences.n/a
+target == THE SENATE ;; trigger == BATTLE ;; conflict.attack.selfdirectedbattle
+participant == Assad government ^^ State Department ;; trigger == negotiated ;; contact.negotiate.meet
+origin == Darayya ;; passenger == civilians ;; trigger == evacuated ;; movement.transportperson.n/a
+communicator == She ;; recipient == Silicon Valley ;; trigger == urged ;; contact.requestadvise.broadcast
+attacker == coup ;; place == Honduras ;; target == José Manuel Zelaya ;; trigger == coup ;; conflict.attack.n/a
+giver == Myanmar ( Burma ) , Russia , China or Mexico ;; preventer == Organizations ;; trigger == boycotts ;; transaction.transferownership.embargosanction
+communicator == Snowden ;; trigger == oath ;; contact.commitmentpromiseexpressintent.meet
+employee == she ;; place == the convention ;; placeofemployment == the convention ;; trigger == quitting ;; personnel.endposition.quitretire
+artifact == aircraft ;; destroyer == Russia ;; instrument == Buk missile ;; place == Ukraine ;; trigger == destroyed ;; artifactexistence.damagedestroy.destroy
+killer == genocide ;; place == LA ;; victim == Armenian ;; trigger == genocide ;; life.die.deathcausedbyviolentevents
+inspector == Britain ;; place == Britain ;; trigger == immigration ;; inspection.sensoryobserve.inspectpeopleorganization
+communicator == IS ;; recipient == creation of a caliphate stretching across Syria and Iraq ;; trigger == proclaimed ;; contact.publicstatementinperson.n/a
+communicator == Clinton ;; trigger == oath ;; contact.commitmentpromiseexpressintent.meet
+communicator == Sweden ;; recipient == World War II ;; trigger == professed ;; contact.publicstatementinperson.n/a
+defendant == he ;; judgecourt == congressional committee ;; prosecutor == congressional committee ;; trigger == testifying ;; justice.initiatejudicialprocess.trialhearing
+passenger == she ;; transporter == she ;; trigger == escape ;; movement.transportperson.evacuationrescue
+candidate == I ;; voter == people ;; trigger == elected ;; personnel.elect.winelection
+beneficiary == tide borrowers ;; giver == microfinance industry ;; trigger == loans ;; transaction.transferownership.borrowlend
+place == Orlando ;; victim == 49 people ;; trigger == killed ;; life.die.n/a
+observedentity == Hillary Clinton ’s email access ;; place == abroad ;; spy == foreign intelligence snoops ;; trigger == spies ;; government.spy.spy
+yielder == Japan ;; trigger == surrender ;; conflict.yield.n/a
+giver == it ;; trigger == obtained ;; transaction.transfermoney.purchase
+defendant == these ties ;; investigator == Reporters ;; trigger == investigate ;; justice.investigate.investigatecrime
+employee == top cop ;; place == Chicago ;; placeofemployment == Chicago police ;; trigger == firing ;; personnel.endposition.firinglayoff
+spy == government ;; trigger == spying ;; government.spy.spy
+attacker == us ;; instrument == ground troops ;; place == Syria ;; trigger == war ;; conflict.attack.selfdirectedbattle
+giver == Manafort ;; place == the United States ;; recipient == $ 11 million ;; trigger == purchase ;; transaction.transfermoney.purchase
+victim == who ;; trigger == raped ;; life.injure.n/a
+destination == Białowieża forest ;; transporter == Lynx or bisons or three - toed woodpeckers ;; trigger == roam ;; movement.transportperson.selfmotion
+beneficiary == Trump ;; observedentity == Clinton ;; spy == Putin ;; trigger == spies ;; government.spy.spy
+injurer == Assange ;; trigger == assault ;; life.injure.n/a
+communicator == internet trolls ;; place == highly coordinated campaigns ;; recipient == American public ;; trigger == deceive ;; contact.prevarication.n/a
+employee == terrorists ;; place == Gulf states ;; placeofemployment == Hezbollah ;; trigger == recruiting ;; personnel.startposition.hiring
+injurer == Wi - Fi ;; victim == students ;; trigger == harming ;; life.injure.n/a
+place == Iraq ;; recipient == U.S. warplanes ;; yielder == Iraqi troops ;; trigger == retreating ;; conflict.yield.n/a
+communicator == Putin ;; recipient == Trump ;; trigger == blackmail ;; contact.threatencoerce.n/a
+injurer == I ;; instrument == shot ;; victim == looting ;; trigger == shoot ;; life.injure.injurycausedbyviolentevents
+attacker == Russia ;; instrument == military aircraft ;; place == Syria ;; target == Syria ;; trigger == clashes ;; conflict.attack.selfdirectedbattle
+destination == embassy in London ;; granter == Ecuador ;; origin == Sweden ;; passenger == Assange ;; trigger == asylum ;; movement.transportperson.grantentryasylum
+communicator == our ;; recipient == DCCC ;; trigger == demand ;; contact.commandorder.broadcast
+place == United States ;; trigger == voting ;; government.vote.n/a
+demonstrator == Democrats ;; place == the streets ;; trigger == protest ;; conflict.demonstrate.marchprotestpoliticalgathering
+instrument == assault rifles ;; place == Orlando ;; trigger == massacre ;; life.die.deathcausedbyviolentevents
+employee == people ;; placeofemployment == Trump events ;; trigger == ousted ;; personnel.endposition.n/a
+crashobject == the ' babies ' ;; place == India ;; vehicle == mothership ;; trigger == collide ;; disaster.accidentcrash.accidentcrash
+communicator == Soros ;; recipient == Clinton ;; trigger == recommended ;; contact.requestadvise.correspondence
+participant == U.S. ^^ Russia ;; place == U.S. ;; trigger == dialogue ;; contact.discussion.correspondence
+attacker == he ;; target == duopoly ;; trigger == invade ;; conflict.attack.n/a
+instrument == bombing ;; target == civilian ;; trigger == massacres ;; conflict.attack.n/a
+participant == these parties ^^ their [ subscribers ] , donors , budgets , polling , call centres and direct mail campaigns ;; trigger == fax ;; contact.collaborate.correspondence
+attacker == Putin and Trump ;; instrument == poison ;; target == Hillary Clinton ;; trigger == poisoned ;; conflict.attack.biologicalchemicalpoisonattack
+place == North Korea ;; preventer == UN ;; recipient == North Korea ;; trigger == sanctions ;; transaction.transaction.embargosanction
+instrument == bombing ;; place == Hiroshima and Nagasaki ;; victim == civilian ;; trigger == massacres ;; life.die.deathcausedbyviolentevents
+trigger == death penalty ;; justice.judicialconsequences.execute
+artifact == it ;; destination == 9,000 feet ;; origin == 37,000 ;; trigger == plunging ;; movement.transportartifact.fall
+founder == a woman ;; trigger == inaugurated ;; government.formation.startgpe
+artifact == cheese ;; place == Russia ;; recipient == Russia ;; trigger == embargo ;; transaction.transferownership.embargosanction
+communicator == political parties ;; place == Russia ;; trigger == blackmail ;; contact.threatencoerce.meet
+governmentbody == a man ;; place == America ;; trigger == abolishing ;; government.legislate.legislate
+beneficiary == refugees ;; giver == United States ;; place == Syria ;; recipient == refugees ;; trigger == provide aid ;; transaction.transaction.giftgrantprovideaid
+place == Vietnam ;; trigger == War ;; conflict.attack.n/a
+giver == Schmidt ;; money == $ 100k ;; recipient == Holbrooke Forum ;; trigger == donated ;; transaction.transfermoney.n/a
+communicator == Hillary Clinton ;; place == America ;; trigger == lies ;; contact.prevarication.broadcast
+governmentbody == president ;; law == tough - on - crime " laws ;; trigger == enacted ;; government.legislate.legislate
+injurer == immigrants ;; trigger == violent ;; life.injure.injurycausedbyviolentevents
+deceased == mother ;; participant == Clinton ;; trigger == funeral ;; contact.funeralvigil.n/a
+beneficiary == hackers ;; giver == highest bidder ;; money == Bitcoin ;; recipient == hackers ;; trigger == auction ;; transaction.transfermoney.purchase
+beneficiary == DNC ;; giver == they ;; recipient == DNC ;; trigger == donated ;; transaction.transfermoney.giftgrantprovideaid
+place == Istanbul airport ;; victim == two Iraqis , one Tunisian , one Chinese , one Iranian , one Ukrainian , one Jordanian and one person from Uzbekistan ;; trigger == fatalities ;; life.die.n/a
+place == Middle East ;; trigger == skirmishes ;; conflict.attack.n/a
+beneficiary == Trump ;; giver == Trump ;; place == Florida ;; recipient == Lee Iacocca ;; trigger == purchases ;; transaction.transfermoney.n/a
+communicator == his ;; place == U.S. ;; trigger == promise ;; contact.commitmentpromiseexpressintent.n/a
+destination == abroad ;; origin == Syria ;; passenger == refugees ;; transporter == refugees ;; trigger == fled ;; movement.transportperson.evacuationrescue
+giver == his ;; place == Florida ;; recipient == Lee Iacocca ;; trigger == buy ;; transaction.transfermoney.purchase
+injurer == ISIS and Kurdish militants ;; instrument == bombing campaigns ;; place == Turkey ;; victim == Turkey ;; trigger == attacks ;; life.injure.injurycausedbyviolentevents
+crime == appeals not to buy Israeli goods ;; detainee == boycott supporters ;; jailer == Israel ;; place == Israel ;; trigger == jailed ;; justice.arrestjaildetain.arrestjaildetain
+injurer == starvation ;; place == Russia ;; victim == civilian ;; trigger == starvation ;; life.injure.n/a
+participant == secretary of state ^^ foreign leaders ;; trigger == meeting ;; contact.discussion.correspondence
+communicator == Jason D. Meister ;; trigger == broadcasts ;; contact.mediastatement.n/a
+beneficiary == She ;; giver == kiosk ;; money == $ 75 ;; place == Iskitim ;; recipient == $ 75 ;; trigger == borrowed ;; transaction.transfermoney.borrowlend
+attacker == She ;; place == trailer court ;; target == tenant ’s pet ;; trigger == shoot ;; conflict.attack.firearmattack
+preventer == U.S. authorities ;; transporter == Mafia members ;; trigger == arrested ;; movement.transportartifact.preventexit
+communicator == liberal critics ;; trigger == suggested ;; contact.requestadvise.broadcast
+beneficiary == she ;; giver == financial institutions ;; money == donations ;; place == Wall Street ;; recipient == donations ;; trigger == payments ;; transaction.transfermoney.payforservice
+artifact == money and anti - tank missiles ;; origin == U.S ;; transporter == U.S government ;; trigger == supplied ;; movement.transportartifact.sendsupplyexport
+beneficiary == Hillary Clinton ;; giver == banks ;; recipient == real estate empire ;; trigger == borrow ;; transaction.transfermoney.n/a
+communicator == Trump ;; recipient == Russia recover and release Hillary Clinton ’s private emails ;; trigger == urging ;; contact.requestadvise.n/a
+crime == rape ;; defendant == he ;; destination == Sweden ;; extraditer == Sweden ;; origin == London ;; trigger == extradition ;; justice.judicialconsequences.extradite
+communicator == He ;; place == Washington , DC ;; recipient == the federal government ;; trigger == urged ;; contact.requestadvise.meet
+killer == Turkey ;; place == over the Syrian border ;; trigger == shot ;; life.die.deathcausedbyviolentevents
+crime == terror cases ;; defendant == 380 foreign born individuals ;; judgecourt == Senate Subcommittee on Immigration ;; place == the United States ;; trigger == convicted ;; justice.judicialconsequences.convict
+giver == Three members of Mueller 's team ;; recipient == Democrats ;; trigger == donated ;; transaction.transferownership.n/a
+communicator == We ;; recipient == social change ;; trigger == demand ;; contact.commandorder.n/a
+victim == terrorism suspects ;; trigger == torture ;; life.injure.injurycausedbyviolentevents
+victim == them ;; trigger == tortured ;; life.injure.n/a
+victim == Helen Mirren ;; trigger == Holocaust ;; life.die.deathcausedbyviolentevents
+artifact == social problems ;; instrument == model democracy ;; manufacturer == Scandinavians ;; place == Sweden ;; trigger == created ;; manufacture.artifact.n/a
+communicator == Donald Trump ;; place == Doral , Florida ;; recipient == the foreign government ;; trigger == urged ;; contact.requestadvise.correspondence
+communicator == Bill Clinton ;; trigger == lied ;; contact.prevarication.n/a
+participant == Yahoo News ^^ Schiff ;; trigger == telephone ;; contact.collaborate.correspondence
+artifact == boycott ;; giver == government ;; place == France ;; recipient == divestment and sanctions ( BDS ) movement ;; trigger == boycott ;; transaction.transferownership.n/a
+detainee == Google employee ;; jailer == Egypt ;; place == Egypt ;; trigger == arrest ;; justice.arrestjaildetain.arrestjaildetain
+attacker == Russia ;; instrument == tactics more commonly associated with thugs than governments ;; place == Aleppo ;; trigger == slaughter ;; conflict.attack.selfdirectedbattle
+origin == our streets ;; transporter == aliens ;; trigger == roam ;; movement.transportperson.selfmotion
+artifact == oil ;; destination == Venezuela ;; origin == U.S. ;; transporter == U.S. ;; vehicle == tankers ;; trigger == exports ;; movement.transportartifact.sendsupplyexport
+victim == you ;; trigger == sick ;; life.injure.n/a
+crime == child sex abuse ;; defendant == Jeffrey Epstein ;; trigger == convicted ;; justice.judicialconsequences.convict
+preventer == movement ;; recipient == Israeli goods ;; trigger == boycott ;; transaction.transaction.embargosanction
+artifact == 98 percent of Essar Oil ;; beneficiary == a group led by Rosneft ;; giver == Vadinar ;; recipient == a group led by Rosneft ;; trigger == acquire ;; transaction.transferownership.purchase
+giver == Verizon ;; preventer == strikers ;; recipient == Palestine ;; trigger == boycotts ;; transaction.transfermoney.embargosanction
+killer == Omar Bashir ;; place == Darfur region ;; trigger == genocide ;; life.die.deathcausedbyviolentevents
+beneficiary == Trump ;; giver == U.S. banks ;; recipient == Trump ;; trigger == borrow ;; transaction.transfermoney.borrowlend
+injurer == Islamic State ;; instrument == explosion ;; place == central Syria ;; victim == airbase ;; trigger == attack ;; life.injure.injurycausedbyviolentevents
+communicator == she ;; place == a television talk show ;; recipient == public ;; trigger == lying ;; contact.prevarication.meet
+trigger == smuggled ;; movement.transportperson.hide
+place == North Korea ;; victim == Otto Warmbier ;; trigger == murdered ;; life.die.n/a
+artifact == Two undercover videos ;; manufacturer == O’Keefe and his Project Veritas deployed journalists ;; trigger == produced ;; manufacture.artifact.createmanufacture
+artifact == watch ;; attacker == perpetrator ;; instrument == revolver ;; place == Rio ;; target == car ;; trigger == robbery ;; conflict.attack.stealrobhijack
+defendant == her ;; judgecourt == Justice Department ;; prosecutor == Justice Department ;; trigger == indict ;; justice.initiatejudicialprocess.chargeindict
+artifact == true nature of agreements ;; transporter == German Chancellor Angela Merkel , French President Francois Hollande , and U.S. President Barack Obama ;; trigger == concealing ;; movement.transportartifact.hide
+giver == boycotts ;; preventer == laws ;; trigger == boycotts ;; transaction.transaction.embargosanction
+place == D.C. ;; trigger == homicides ;; life.die.n/a
+artifactmoney == the FBI ;; giver == Apple ;; preventer == Trump ;; recipient == technology ;; trigger == boycott ;; transaction.transaction.embargosanction
+employee == the employees ;; trigger == firings ;; personnel.endposition.firinglayoff
+destination == Falkenberg ;; preventer == Arab men ;; transporter == the 13-year - old ;; trigger == detained ;; movement.transportperson.preventexit
+artifact == monument ;; damagerdestroyer == activists ;; place == Limbazi ;; trigger == demolished ;; artifactexistence.damagedestroy.n/a
+artifact == forest and tundra ;; destroyer == wildfires ;; instrument == wildfires ;; place == Yamal ;; trigger == destroyed ;; artifactexistence.damagedestroy.destroy
+trigger == massacre ;; conflict.attack.n/a
+beneficiary == he ;; recipient == he ;; trigger == payment ;; transaction.transfermoney.payforservice
+attacker == soldiers and officers ;; place == Istanbul and Ankara ;; trigger == coup ;; conflict.attack.selfdirectedbattle
+attacker == Syrian government forces , backed by Russian ;; instrument == strikes ;; place == Aleppo ;; target == rebels ;; trigger == strikes ;; conflict.attack.n/a
+communicator == 100 prominent physicians , bioethicists and scientists ;; recipient == World Health Organization Director - General Margaret Chan ;; trigger == urging ;; contact.commandorder.correspondence
+destination == Syria ;; origin == two Gulf states ;; transporter == two Gulf states ;; trigger == shipments ;; movement.transportperson.disperseseparate
+killer == Ottoman Turks ;; victim == 1.5 million people ;; trigger == massacre ;; life.die.deathcausedbyviolentevents
+attacker == Khans ;; target == Trump ;; trigger == assail ;; conflict.attack.n/a
+participant == delegates ^^ delegates ;; place == Cleveland ;; trigger == convene ;; contact.discussion.correspondence
+beneficiary == US ;; observedentity == Russian territory ;; place == Black Sea ;; spy == American aircraft ;; trigger == spy ;; government.spy.spy
+artifact == loans ;; beneficiary == tide borrowers ;; giver == microfinance industry ;; recipient == tide borrowers ;; trigger == loans ;; transaction.transferownership.borrowlend
+communicator == Trump ;; recipient == Israel ;; trigger == vowing ;; contact.commitmentpromiseexpressintent.broadcast
+preventer == a guy from Florida ;; voter == fraudsters ;; trigger == vote ;; government.vote.violationspreventvote
+employee == campaign chief ;; placeofemployment == he ;; trigger == employed ;; personnel.startposition.hiring
+employee == he ;; placeofemployment == Centre ;; trigger == hired ;; personnel.startposition.n/a
+monitor == A new poll ;; monitoredentity == Trump ;; place == three crucial states ;; trigger == election ;; inspection.sensoryobserve.monitorelection
+governmentbody == cities and states ;; law == intolerance ;; trigger == legislating ;; government.legislate.legislate
+participant == NATO ^^ Russia Council ;; trigger == met ;; contact.discussion.n/a
+attacker == US military ;; place == around Manbij city east of Aleppo province ;; target == 28 civilians ;; trigger == airstrike ;; conflict.attack.selfdirectedbattle
+artifact == cocaine ;; trigger == smuggling ;; movement.transportartifact.hide
+spy == NSA ;; trigger == spying ;; government.spy.spy
+employee == whom ;; placeofemployment == Trump ;; trigger == appoint ;; personnel.startposition.hiring
+recipient == global system—“To ;; yielder == he ;; trigger == withdraw ;; conflict.yield.n/a
+passenger == drug traffickers , smugglers , pirates , kidnappers , jihadists , criminal gangs and militias ;; trigger == roam ;; movement.transportperson.n/a
+beneficiary == Kurdish YPG militia ;; giver == Kurdish YPG militia ;; place == Turkey ;; recipient == territory ;; territoryorfacility == territory ;; trigger == seizing ;; transaction.transaction.transfercontrol
+participant == Reagan ^^ Soviet Union ;; trigger == negotiated ;; contact.negotiate.meet
+trigger == debate ;; contact.discussion.meet
+place == Istanbul airport ;; victim == two Iraqis , one Tunisian , one Chinese , one Iranian , one Ukrainian , one Jordanian and one person from Uzbekistan ;; trigger == fatalities ;; life.die.deathcausedbyviolentevents
+detainee == immigrants ;; jailer == We ;; trigger == arrested ;; justice.arrestjaildetain.arrestjaildetain
+communicator == CNAS paper ;; recipient == Congress ;; trigger == urges ;; contact.commandorder.n/a
+beneficiary == Cruz ;; giver == financial firm ;; recipient == Cruz ;; trigger == loans ;; transaction.transferownership.borrowlend
+destination == its sun - mottled interior ;; origin == its sun - mottled interior ;; transporter == wolves and lynx ;; trigger == roam ;; movement.transportperson.selfmotion
+candidate == José Manuel Zelaya ;; place == Honduras ;; trigger == elected ;; personnel.elect.n/a
+injurer == CIA pilots ;; place == Syria ;; victim == Russian Sukhoi Su-24 m bomber ;; trigger == shooting ;; life.injure.injurycausedbyviolentevents
+investigator == FBI ;; trigger == investigation ;; justice.investigate.n/a
+communicator == Republican nominee Donald Trump ;; trigger == suggested ;; contact.requestadvise.broadcast
+giver == them ;; preventer == we ;; trigger == sanction ;; transaction.transferownership.embargosanction
+artifact == data ;; giver == hackers ;; recipient == losers ;; trigger == auction ;; transaction.transferownership.purchase
+communicator == the Kremlin ;; recipient == a transgressing politician or two ;; trigger == blackmailing ;; contact.threatencoerce.broadcast
+participant == Mr. Rubio ^^ Cuba ;; trigger == embargo ;; transaction.transaction.n/a
+trigger == violent ;; life.injure.n/a
+trigger == auction ;; transaction.transferownership.n/a
+attacker == Mr. Bush ;; place == the past ;; target == Mr. Trump ;; trigger == assailed ;; conflict.attack.n/a
+attacker == New Democrats ;; target == middle class ;; trigger == rob ;; conflict.attack.n/a
+crime == Russian meddling ;; defendant == DHS chief ;; trigger == testify ;; justice.initiatejudicialprocess.n/a
+injurer == Bill Clinton ;; place == Little Rock hotel room ;; victim == Juanita Broaddrick ;; trigger == rape ;; life.injure.injurycausedbyviolentevents
+artifact == embassy ;; damagerdestroyer == Shi’ite protesters ;; instrument == firebombed ;; place == Iran ;; trigger == ransacked ;; artifactexistence.damagedestroy.n/a
+destination == Tajikistan ;; origin == Russia ;; passenger == three to four of his countrymen ;; transporter == Scharipow ;; trigger == transport ;; movement.transportperson.n/a
+destination == here ;; granter == we ;; transporter == Mexicans ;; trigger == migrate ;; movement.transportperson.grantentryasylum
+participant == A Chinese official ;; place == the Korean peninsula ;; trigger == dialogue ;; contact.discussion.meet
+artifact == leverage ;; attacker == Obama ;; instrument == reticence ;; target == Secretary of State John Kerry ;; trigger == robbed ;; conflict.attack.stealrobhijack
+employee == Viktor Zolotov ;; place == Kremlin ;; placeofemployment == the Ministry of Internal Affairs ;; trigger == appointed ;; personnel.startposition.hiring
+communicator == Clinton ;; recipient == Plaintiffs ;; trigger == intimidate ;; contact.threatencoerce.broadcast
+communicator == U.S. Secretary of State John Kerry and Russian Foreign Minister Sergei Lavrov ;; place == Geneva ;; recipient == news conference ;; trigger == addressing ;; contact.mediastatement.n/a
+target == Russia ;; trigger == war ;; conflict.attack.selfdirectedbattle
+attacker == aircraft ;; instrument == aircraft ;; trigger == coup ;; conflict.attack.n/a
+communicator == Russia ;; place == Syria ;; trigger == vowed ;; contact.commitmentpromiseexpressintent.meet

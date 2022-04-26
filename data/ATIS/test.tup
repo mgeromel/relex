@@ -505,7 +505,6 @@ state_name == arizona ;; atis_airport
 state_name == california ;; atis_airport
 fromloc.city_name == las vegas ;; toloc.city_name == phoenix ;; atis_flight
 state_name == california ;; atis_airport
-atis_airport
 depart_date.day_name == wednesday ;; depart_time.period_of_day == night ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
 depart_date.day_name == thursday ;; depart_time.period_of_day == morning ;; depart_time.time == 6 am ;; depart_time.time_relative == before ;; fromloc.city_name == oakland ;; toloc.city_name == salt lake city ;; atis_flight
 fromloc.city_name == toronto ;; toloc.city_name == san diego ;; atis_airline
@@ -623,7 +622,6 @@ city_name == new york ;; atis_distance
 city_name == new york ;; atis_airport
 city_name == new york ;; atis_airport
 city_name == la ;; atis_airport
-atis_airport
 city_name == la ;; atis_airport
 city_name == la ;; atis_airport
 city_name == la ;; atis_airport
