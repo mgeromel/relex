@@ -1347,7 +1347,7 @@ obsessive-compulsive symptoms ;; Risperidone ;; adverse_effect
 interstitial pneumopathy ;; amiodarone ;; adverse_effect
 benign intracranial hypertension ;; minocycline ;; adverse_effect
 clitoral hypertrophy ;; Norethisterone ;; adverse_effect
-cranial dystonia ;; trihexyphenidyl ;; adverse_effect || CNS abnormalities ;; methotrexate ;; adverse_effect
+cranial dystonia ;; trihexyphenidyl ;; adverse_effect
 rhabdomyolysis ;; Colchicine ;; adverse_effect
 cytotoxic effect ;; ticlopidine ;; adverse_effect
 SJS ;; prednisolone ;; adverse_effect

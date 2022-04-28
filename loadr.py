@@ -31,7 +31,7 @@ def build_model_input(batch, decoder_max_length = 64, encoder_max_length = 256):
 		[[ int( tup != (-100,-100,-100,-100) ) for tup in sample ] for sample in decoder_inputs ]
 	)
 	batch[keys[3]] = torch.HalfTensor(decoder_inputs)
-
+	
 	del batch["phrases"]
 	del batch["targets"]
 	

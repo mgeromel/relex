@@ -1,0 +1,427 @@
+alters bile acid composition ;; octreotide ;; adverse_effect || gallbladder stasis ;; octreotide ;; adverse_effect || hasten intrahepatic sludge ;; octreotide ;; adverse_effect || stone formation ;; octreotide ;; adverse_effect
+retroperitoneal fibrosis ;; methysergide ;; adverse_effect
+Kaposi's sarcoma ;; prednisolone ;; adverse_effect
+mild cognitive impairment ;; propafenone ;; adverse_effect
+Posterior reversible encephalopathy syndrome ;; methotrexate ;; adverse_effect
+severe hepatitis ;; ivermectin ;; adverse_effect
+SJS ;; TMP-Sx ;; adverse_effect || SJS ;; trimethoprim-sulfamethoxazole ;; adverse_effect || Stevens-Johnson syndrome ;; TMP-Sx ;; adverse_effect || Stevens-Johnson syndrome ;; trimethoprim-sulfamethoxazole ;; adverse_effect || TEN ;; TMP-Sx ;; adverse_effect || TEN ;; trimethoprim-sulfamethoxazole ;; adverse_effect || toxic epidermal necrolysis ;; TMP-Sx ;; adverse_effect || toxic epidermal necrolysis ;; trimethoprim-sulfamethoxazole ;; adverse_effect
+pulmonary fibrosis ;; bleomycin ;; adverse_effect
+Prolongation of the QT interval ;; amiodarone ;; adverse_effect || ventricular tachyarrhymias ;; amiodarone ;; adverse_effect
+VFDs ;; tiagabine ;; adverse_effect || visual field defects ;; tiagabine ;; adverse_effect
+pulmonary symptoms ;; ticlopidine ;; adverse_effect
+adrenal suppression ;; fluticasone propionate ;; adverse_effect || growth retardation ;; fluticasone propionate ;; adverse_effect
+NMS ;; Haloperidol ;; adverse_effect
+fluorosis ;; niflumic acid ;; adverse_effect
+hepatitis ;; erlotinib ;; adverse_effect
+anuric ARF ;; mannitol ;; adverse_effect
+rhabdomyolysis ;; vasopressin ;; adverse_effect
+generalised exfoliative dermatitis ;; Ampicillin ;; adverse_effect || interstitial nephritis ;; Ampicillin ;; adverse_effect
+tardive dyskinesia ;; Risperidone ;; adverse_effect || TD ;; Risperidone ;; adverse_effect
+acute myopia ;; Accutane ;; adverse_effect || acute myopia ;; isotretinoin ;; adverse_effect
+painful ulcers ;; interferon beta-1b ;; adverse_effect || reticulate erythema ;; interferon beta-1b ;; adverse_effect
+increased pigmementation of skin ;; 5-fluorouracil ;; adverse_effect
+lichen nitidus ;; interferon alpha ;; adverse_effect
+Acute sensorineural hearing loss ;; ketoralac ;; adverse_effect
+CHF ;; IFN ;; adverse_effect
+Interaction ;; nefazodone ;; adverse_effect || Interaction ;; tacrolimus ;; adverse_effect
+gingival bleeding ;; danazol ;; adverse_effect || purpura ;; danazol ;; adverse_effect
+elevation of serum transaminases ;; 6-TG ;; adverse_effect
+drug eruptions ;; INH ;; adverse_effect
+osteomyelitis ;; Infliximab ;; adverse_effect || osteomyelitis ;; infliximab ;; adverse_effect
+Graft versus host-like illness ;; phenobarbital ;; adverse_effect || hypersensitivity ;; phenobarbital ;; adverse_effect
+intracranial bleeding ;; amprenavir ;; adverse_effect
+Gynecomastia ;; fluoresone ;; adverse_effect || Gynecomastia ;; phenobarbital ;; adverse_effect || Gynecomastia ;; phenytoin ;; adverse_effect
+acute hepatitis ;; amiodarone ;; adverse_effect
+ASPPC ;; IVTA ;; adverse_effect
+angioneurotic edema ;; oxcarbazepine ;; adverse_effect
+Disulfiram-like reactions ;; cefmenoxime ;; adverse_effect
+foot drop ;; CAP-XRT ;; adverse_effect || right leg weakness ;; CAP-XRT ;; adverse_effect
+cutaneous leucocytoclastic vasculitis ;; amphotericin B ;; adverse_effect
+hemoptysis ;; leflunomide ;; adverse_effect || severe weakness ;; leflunomide ;; adverse_effect || short-of-breath ;; leflunomide ;; adverse_effect
+leukopenia ;; AZA ;; adverse_effect
+perioral and upper extremity paresthesias ;; CAP ;; adverse_effect
+hemolytic reaction ;; oxaliplatin ;; adverse_effect
+granulocytopenia ;; dipyrone ;; adverse_effect
+schistocytosis ;; quinine ;; adverse_effect || thrombocytopenia ;; quinine ;; adverse_effect || TTP/HUS ;; quinine ;; adverse_effect
+Persistent hypoglycemia ;; etanercept ;; adverse_effect
+hypercalcemia ;; tacalcitol ;; adverse_effect || hypercalcemia ;; thiazide ;; adverse_effect || hypercalciuria ;; tacalcitol ;; adverse_effect || hypercalciuria ;; thiazide ;; adverse_effect
+hyperglycemia ;; olanzapine ;; adverse_effect
+hypocalcemic tetany ;; alendronate sodium ;; adverse_effect || hypocalcemic tetany ;; fleet phospho-soda ;; adverse_effect
+seizures ;; clozapine ;; adverse_effect
+acute pancreatitis ;; Ezetimibe ;; adverse_effect
+Scrotal ulceration ;; retinoic acid ;; adverse_effect
+pulmonary toxicity ;; etoposide ;; adverse_effect
+Systemic allergic contact dermatitis ;; 8-methoxypsoralen ;; adverse_effect || Systemic allergic contact dermatitis ;; 8-MOP ;; adverse_effect
+staphylococcus aureus sepsis ;; CyA ;; adverse_effect
+renal deterioration ;; cefuroxime ;; adverse_effect
+first-rank symptoms ;; fluvoxamine ;; adverse_effect
+seizures ;; phenytoin ;; adverse_effect
+hepatotoxicity ;; Salicylate ;; adverse_effect
+NEH ;; cyclophosphamide ;; adverse_effect
+immune hemolysis ;; Cefuroxime ;; adverse_effect
+dilated pupils ;; lidocaine ;; adverse_effect
+central nervous system side effects ;; acyclovir ;; adverse_effect || neurotoxicity ;; acyclovir ;; adverse_effect
+central nervous system depression ;; brimonidine ;; adverse_effect
+AIN ;; omeprazole ;; adverse_effect
+dystonia ;; carbamazepine ;; adverse_effect || opisthotonus ;; carbamazepine ;; adverse_effect
+breast tissue enlargement ;; Isoniazid ;; adverse_effect
+hypothyroidism ;; amiodarone ;; adverse_effect
+Severe acute encephalopathy ;; doxorubicin ;; adverse_effect
+rhabdomyolysis ;; lovastatin ;; adverse_effect
+Acute renal failure ;; enalapril ;; adverse_effect || severe tubulointerstitial changes ;; enalapril ;; adverse_effect
+acute tubular necrosis ;; cefoxitin ;; adverse_effect || acute tubular necrosis ;; gentamicin ;; adverse_effect
+eosinophilia ;; disulfiram ;; adverse_effect || headache ;; disulfiram ;; adverse_effect || mild fever ;; disulfiram ;; adverse_effect || nausea ;; disulfiram ;; adverse_effect || rash ;; disulfiram ;; adverse_effect || vomiting ;; disulfiram ;; adverse_effect
+acute coronary syndrome ;; rituximab ;; adverse_effect
+anaphylactic reaction ;; vancomycin ;; adverse_effect
+respiratory distress syndrome ;; phenothiazine ;; adverse_effect
+pneumonitis ;; MTX ;; adverse_effect
+Thrombotic thrombocytopenic purpura ;; sulfamethoxazole ;; adverse_effect || Thrombotic thrombocytopenic purpura ;; trimethoprim ;; adverse_effect
+ST elevation in right precordial leads ;; propafenone ;; adverse_effect || type 1 Brugada syndrome ;; propafenone ;; adverse_effect
+bilateral ballism ;; heroin ;; adverse_effect
+hypocalcemia ;; Amikacin ;; adverse_effect || hypomagnesemia ;; Amikacin ;; adverse_effect || metabolic alkalosis ;; Amikacin ;; adverse_effect || polyuria ;; Amikacin ;; adverse_effect || refractory hypokalemia ;; Amikacin ;; adverse_effect || severe renal tubular dysfunction ;; Amikacin ;; adverse_effect
+acute generalized exanthematous pustulosis ;; salazosulfapyridine ;; adverse_effect
+Visual hallucinations ;; bevacizumab ;; adverse_effect
+Hyperkalaemia ;; sulfamethoxazole-trimethoprim ;; adverse_effect || renal tubular dysfunction ;; sulfamethoxazole-trimethoprim ;; adverse_effect
+chromosome damage ;; Chlorambucil ;; adverse_effect
+nephrotic syndrome ;; IFN-beta-1b ;; adverse_effect || proteinuria ;; IFN-beta-1b ;; adverse_effect
+hypersensitivity syndrome ;; dapsone ;; adverse_effect
+fatal ;; Amphotericin B ;; adverse_effect
+altered mental status ;; valproic acid ;; adverse_effect
+acute interstitial nephritis ;; sunitinib ;; adverse_effect
+Cutaneous seeding ;; ethanol injection ;; adverse_effect
+rhabdomyolysis ;; sertraline ;; adverse_effect
+rhabdomyolysis ;; azithromycin ;; adverse_effect || rhabdomyolysis ;; clarithromycin ;; adverse_effect || rhabdomyolysis ;; lovastatin ;; adverse_effect
+bradycardia ;; Clonidine ;; adverse_effect
+flare-up ;; goserelin acetate ;; adverse_effect || severe dyspnea ;; goserelin acetate ;; adverse_effect || worsening pleuritis carcinomatosa ;; goserelin acetate ;; adverse_effect
+angry outbursts ;; lithium ;; adverse_effect || irritability ;; lithium ;; adverse_effect
+visual loss ;; ethambutol ;; adverse_effect
+myelosuppression ;; Azathioprine ;; adverse_effect
+hyperinsulinaemia ;; insulin ;; adverse_effect || insulin insensitivity ;; insulin ;; adverse_effect
+acral vascular toxicity ;; bleomycin ;; adverse_effect
+neuroleptic malignant syndrome ;; olanzapine ;; adverse_effect
+acute subdural haematoma ;; aspirin ;; adverse_effect
+intoxication ;; mirtazapine ;; adverse_effect
+Ulcerating enteritis ;; flucytosine ;; adverse_effect
+akathisia ;; clozapine ;; adverse_effect
+hypersensitivity pneumonitis-like syndrome ;; lenalidomide ;; adverse_effect
+PSA continued to decrease ;; flutamide ;; adverse_effect
+steroid diabetes ;; methylprednisolone ;; adverse_effect
+hearing impairment in the left ear (with progression to the right ear) ;; PTU ;; adverse_effect || tinnitus ;; PTU ;; adverse_effect || vertigo ;; PTU ;; adverse_effect
+Leiomyosarcoma ;; cyclophosphamide ;; adverse_effect
+cortical hyperexcitability ;; CBZ ;; adverse_effect || cranial nerve areflexia ;; CBZ ;; adverse_effect || profound burst-suppression EEG pattern ;; CBZ ;; adverse_effect || reversible encephalopathy ;; CBZ ;; adverse_effect
+diffuse longitudinal melanonychia ;; Hydroxyurea ;; adverse_effect || multiple squamous cell carcinomas ;; Hydroxyurea ;; adverse_effect
+hepatic adenomas ;; danazol ;; adverse_effect
+prolongation of the QT interval ;; pirmenol ;; adverse_effect || T wave inversion ;; pirmenol ;; adverse_effect
+dacryolith ;; Adrenaline ;; adverse_effect
+torsades de pointe ;; amiodarone ;; adverse_effect
+hepatic and renal failure ;; argatroban ;; adverse_effect || thrombocytopenia ;; heparin ;; adverse_effect
+delirium ;; lithium ;; adverse_effect
+bullous drug reaction ;; sulfonamide ;; adverse_effect
+disulfiram-like reaction ;; cefmenoxime ;; adverse_effect
+visual acuity had decreased ;; IFN ;; adverse_effect || visual acuity had decreased ;; IFN ;; adverse_effect
+apnea ;; quinidine ;; adverse_effect || apnea ;; verapamil ;; adverse_effect || atrial flutter ;; verapamil ;; adverse_effect || bradycardia ;; verapamil ;; adverse_effect || death ;; quinidine ;; adverse_effect || hypotension ;; verapamil ;; adverse_effect || long QT interval syndrome ;; quinidine ;; adverse_effect || sudden death ;; verapamil ;; adverse_effect
+severe cholestasis ;; oxacillin ;; adverse_effect
+Torsades de Pointes ;; disopyramide ;; adverse_effect || Torsades de Pointes ;; garenoxacin ;; adverse_effect
+pulmonary toxicity ;; piritrexim ;; adverse_effect
+AIN ;; pantoprazole ;; adverse_effect
+thyrotoxicosis ;; amiodarone ;; adverse_effect
+Hemodynamic collapse ;; labetalol ;; adverse_effect
+Trichiasis ;; prostaglandin ;; adverse_effect
+Anaphylactic reaction ;; prednisone ;; adverse_effect
+akathisia ;; IFN-alpha ;; adverse_effect || depressive disorders ;; IFN-alpha ;; adverse_effect || neuropsychiatric symptoms ;; IFN-alpha ;; adverse_effect || Parkinsonism ;; IFN-alpha ;; adverse_effect || seizure ;; IFN-alpha ;; adverse_effect
+death ;; Ambien ;; adverse_effect || death ;; Zolpidem ;; adverse_effect
+pneumonitis ;; Gold ;; adverse_effect
+Scleroderma-like reaction ;; UFT ;; adverse_effect || Scleroderma-like reaction ;; uracil-tegafur ;; adverse_effect
+Fatal outcome ;; formalin ;; adverse_effect
+Hyperkalaemia ;; co-trimoxazole ;; adverse_effect || Hyperkalaemia ;; sulfamethoxazole-trimethoprim ;; adverse_effect || renal tubular dysfunction ;; co-trimoxazole ;; adverse_effect || renal tubular dysfunction ;; sulfamethoxazole-trimethoprim ;; adverse_effect
+hyponatremic episode ;; vinblastine ;; adverse_effect
+thrombocytopenia ;; lansoprazole ;; adverse_effect
+cerebellar syndrome ;; Cytarabine ;; adverse_effect
+anticholinergic symptoms ;; diphenhydramine ;; adverse_effect || drug-seeking behavior ;; diphenhydramine ;; adverse_effect
+acute interstitial pneumonitis ;; Hydroxyurea ;; adverse_effect
+Flaccid quadriparesis ;; vecuronium ;; adverse_effect
+arrhythmias ;; lopinavir ;; adverse_effect || arrhythmias ;; ritonavir ;; adverse_effect
+acute hemoglobinemia ;; anti-D IGIV ;; adverse_effect || DIC ;; anti-D IGIV ;; adverse_effect || hemoglobinuria ;; anti-D IGIV ;; adverse_effect
+recall pneumonitis ;; gemcitabine ;; adverse_effect
+cataract ;; triamcinolone ;; adverse_effect
+seizures ;; amphotericin B ;; adverse_effect
+Acute non-lymphocytic leukemia ;; dihydroxybusulfan ;; adverse_effect || Acute non-lymphocytic leukemia ;; Treosulfan ;; adverse_effect
+Hypertension ;; cyclosporine ;; adverse_effect || Hypertension ;; prednisone ;; adverse_effect
+RTA ;; FK506 ;; adverse_effect
+hypoglycemia ;; Disopyramide ;; adverse_effect || hypoglycemia ;; Norpace ;; adverse_effect
+hyperphosphatemia ;; sodium phosphate ;; adverse_effect
+congestive heart failure ;; recombinant alpha-interferon ;; adverse_effect
+acute syphilitic posterior placoid chorioretinitis ;; IVTA ;; adverse_effect || acute syphilitic posterior placoid chorioretinitis ;; triamcinolone acetonide ;; adverse_effect || ASPPC ;; IVTA ;; adverse_effect || ASPPC ;; triamcinolone acetonide ;; adverse_effect
+Psoriasis ;; imiquimod ;; adverse_effect
+AVT ;; disopyramide ;; adverse_effect || syncope ;; disopyramide ;; adverse_effect
+headache ;; Capecitabine ;; adverse_effect
+IDDM ;; interferon ;; adverse_effect
+Goiter ;; amiodarone ;; adverse_effect || hypothyroidism ;; amiodarone ;; adverse_effect || thyrotoxicosis ;; amiodarone ;; adverse_effect
+transient structured visual hallucinations ;; Avastin ;; adverse_effect
+lupus erythematosus ;; Sulfasalazine ;; adverse_effect
+Asthma ;; disodium cromoglycate ;; adverse_effect || urticaria ;; disodium cromoglycate ;; adverse_effect
+Graves' disease ;; IFNalpha ;; adverse_effect
+ARDS ;; lithium ;; adverse_effect
+renal insufficiency ;; nimesulide ;; adverse_effect
+acute renal failure ;; mannitol ;; adverse_effect || ARF ;; mannitol ;; adverse_effect
+atheroembolic acute renal failure ;; t-PA ;; adverse_effect || cholesterol crystal embolization ;; t-PA ;; adverse_effect || extrarenal manifestations ;; t-PA ;; adverse_effect
+abnormal liver enzymes ;; 6-TG ;; adverse_effect || liver enzyme abnormalities ;; 6-TG ;; adverse_effect
+Interstitial pneumonitis ;; sirolimus ;; adverse_effect
+hepatic dysfunction ;; perhexiline maleate ;; adverse_effect || papilloedema ;; perhexiline maleate ;; adverse_effect
+bilateral optic neuritis ;; recombinant interferon alpha-2b ;; adverse_effect || bowel and bladder dysfunction ;; recombinant interferon alpha-2b ;; adverse_effect || numbness of the lower extremities ;; recombinant interferon alpha-2b ;; adverse_effect
+acute myocardial ischaemia ;; venlafaxine ;; adverse_effect
+nonconvulsive status epilepticus ;; ifosfamide ;; adverse_effect
+muscle weakness ;; colchicine ;; adverse_effect || muscle weakness ;; simvastatin ;; adverse_effect || rhabdomyolysis ;; colchicine ;; adverse_effect || rhabdomyolysis ;; simvastatin ;; adverse_effect
+gastritis ;; dexamethasone ;; adverse_effect || mucositis ;; doxorubicin ;; adverse_effect
+Severe systemic hypersensitivity reaction ;; ibuprofen ;; adverse_effect
+agitation ;; citalopram ;; adverse_effect || agitation ;; fentanyl ;; adverse_effect || agitation ;; fentanyl ;; adverse_effect || confusion ;; citalopram ;; adverse_effect || confusion ;; fentanyl ;; adverse_effect || confusion ;; fentanyl ;; adverse_effect || myoclonic jerks ;; citalopram ;; adverse_effect || myoclonic jerks ;; fentanyl ;; adverse_effect || myoclonic jerks ;; fentanyl ;; adverse_effect || serotonin syndrome ;; citalopram ;; adverse_effect || serotonin syndrome ;; fentanyl ;; adverse_effect || serotonin syndrome ;; fentanyl ;; adverse_effect || tachycardia ;; citalopram ;; adverse_effect || tachycardia ;; fentanyl ;; adverse_effect || tachycardia ;; fentanyl ;; adverse_effect || tremors ;; citalopram ;; adverse_effect || tremors ;; fentanyl ;; adverse_effect || tremors ;; fentanyl ;; adverse_effect || unsteady gait ;; citalopram ;; adverse_effect || unsteady gait ;; fentanyl ;; adverse_effect || unsteady gait ;; fentanyl ;; adverse_effect
+hypersensitivity syndrome ;; TMP-SMX ;; adverse_effect
+acute myocardial infarction ;; amsacrine ;; adverse_effect || focal myocardial necrosis ;; amsacrine ;; adverse_effect
+Pulmonary toxicity ;; procarbazine ;; adverse_effect
+liver injury ;; itraconazole ;; adverse_effect
+granulocytopenia ;; procainamide ;; adverse_effect
+Rhabdomyolysis ;; clozapine ;; adverse_effect
+fever ;; Cimetidine ;; adverse_effect
+psoriasiform eruption ;; carbamazepine ;; adverse_effect || psoriasiform eruption ;; sodium valproate ;; adverse_effect
+pneumonitis ;; sirolimus ;; adverse_effect
+antineutrophil cytoplasmic antibody (ANCA)-associated vasculitis ;; propylthiouracil ;; adverse_effect || antineutrophil cytoplasmic antibody (ANCA)-associated vasculitis ;; PTU ;; adverse_effect || ototoxicity ;; propylthiouracil ;; adverse_effect || ototoxicity ;; PTU ;; adverse_effect
+acute myocardial ischemia ;; epinephrine ;; adverse_effect || severe allergic reaction ;; epinephrine ;; adverse_effect || severe allergic reaction ;; epinephrine ;; adverse_effect
+abdominal pain ;; pyrimethamine ;; adverse_effect || abdominal pain ;; sulfadiazine ;; adverse_effect || fever ;; pyrimethamine ;; adverse_effect || fever ;; sulfadiazine ;; adverse_effect || severe cutaneous involvement ;; pyrimethamine ;; adverse_effect || severe cutaneous involvement ;; sulfadiazine ;; adverse_effect || swelling ;; pyrimethamine ;; adverse_effect || swelling ;; sulfadiazine ;; adverse_effect || transaminitis ;; pyrimethamine ;; adverse_effect || transaminitis ;; sulfadiazine ;; adverse_effect
+Acute ocular ischemic change ;; bevacizumab ;; adverse_effect
+Juvenile absence epilepsy ;; valproic acid ;; adverse_effect
+severe psychosis ;; ciprofloxacin ;; adverse_effect
+recurrent eosinophilia ;; tobramycin ;; adverse_effect || severe persistent bronchospasm ;; tobramycin ;; adverse_effect
+acute focal myositis ;; all-trans retinoic acid ;; adverse_effect || possible vasculitis ;; all-trans retinoic acid ;; adverse_effect || synovitis ;; all-trans retinoic acid ;; adverse_effect
+vomiting ;; Pancrease MT 16 ;; adverse_effect || vomiting ;; Viokase ;; adverse_effect
+injury to the cornea ;; Methamphetamine ;; adverse_effect
+malignant transformation of endometriosis ;; tamoxifen ;; adverse_effect
+photosensitivity reactions ;; mequitazine ;; adverse_effect
+erythema multiforme ;; griseofulvin ;; adverse_effect
+catatonia syndrome ;; disulfiram ;; adverse_effect
+neutrophilic skin lesions ;; G-CSF ;; adverse_effect || neutrophilic skin lesions ;; granulocyte colony-stimulating factor ;; adverse_effect || Painful ;; G-CSF ;; adverse_effect || Painful ;; granulocyte colony-stimulating factor ;; adverse_effect
+fixed drug eruption of the scrotum ;; methylphenidate ;; adverse_effect
+radiation recall ;; gemcitabine ;; adverse_effect
+teratogenic effect ;; ATRA ;; adverse_effect
+Duodenal ulceration ;; tolazoline ;; adverse_effect
+nail changes ;; clofazimine ;; adverse_effect
+non-convulsive status epilepticus ;; tiagabine ;; adverse_effect
+fatal pulmonary fibrosis ;; BCNU ;; adverse_effect
+rhabdomyolysis ;; azithromycin ;; adverse_effect || rhabdomyolysis ;; clarithromycin ;; adverse_effect || rhabdomyolysis ;; Lovastatin ;; adverse_effect
+acute urticaria ;; cloxacillin ;; adverse_effect || labial angioedema ;; cloxacillin ;; adverse_effect
+Cushing syndrome ;; triamcinolone ;; adverse_effect
+sAML ;; etoposide ;; adverse_effect || secondary acute myeloid leukemia ;; etoposide ;; adverse_effect
+multiple abscesses ;; CHOP ;; adverse_effect
+carbamazepine toxicity ;; carbamazepine ;; adverse_effect || carbamazepine toxicity ;; carbamazepine ;; adverse_effect || carbamazepine toxicity ;; clarithromycin ;; adverse_effect || increased plasma carbamazepine ;; carbamazepine ;; adverse_effect || increased plasma carbamazepine ;; carbamazepine ;; adverse_effect || increased plasma carbamazepine ;; clarithromycin ;; adverse_effect
+hyperpigmentation ;; Bleomycin ;; adverse_effect
+pericardial effusion ;; Gemcitabine ;; adverse_effect || tamponade ;; Gemcitabine ;; adverse_effect
+Anaphylactic reaction ;; recombinant insulin-like growth factor-I ;; adverse_effect
+neuropathy ;; Thalidomide ;; adverse_effect || proximal weakness ;; Thalidomide ;; adverse_effect
+acute pancreatitis ;; 5-aminosalicylic acid ;; adverse_effect
+death ;; fluoxetine ;; adverse_effect
+lethargy ;; lithium ;; adverse_effect
+primary and secondary perforation of the bladder ;; epirubicin ;; adverse_effect
+aphasia ;; methotrexate ;; adverse_effect || left arm weakness ;; methotrexate ;; adverse_effect || neurotoxicity ;; methotrexate ;; adverse_effect
+severe visual loss ;; vincristine ;; adverse_effect
+Hyperkalemia ;; adrenocorticotropic hormone ;; adverse_effect
+acute allergic contact dermatitis ;; 4-chloro-7-nitrobenzofurazan ;; adverse_effect || acute allergic contact dermatitis ;; NBD-Cl ;; adverse_effect
+life-threatening complications ;; 5-FU ;; adverse_effect
+bacterial peritonitis ;; vasopressin ;; adverse_effect
+Portal vein thrombosis ;; F VIII ;; adverse_effect
+acne ;; gold ;; adverse_effect || Lichen planus ;; gold ;; adverse_effect
+hepatotoxicity ;; D-penicillamine ;; adverse_effect
+posterior reversible encephalopathy syndrome ;; L-asparaginase ;; adverse_effect || PRES ;; L-asparaginase ;; adverse_effect
+respiratory depression ;; morphine ;; adverse_effect
+hypokalemic ;; albuterol ;; adverse_effect
+muscle weakness ;; colchicine ;; adverse_effect || muscle weakness ;; statin ;; adverse_effect
+interstitial pneumonia ;; ONO-1078 ;; adverse_effect || interstitial pneumonia ;; pranlukast ;; adverse_effect
+parasympathetic dysfunction ;; botulinum toxin type B ;; adverse_effect || Visual system side effects ;; botulinum toxin type B ;; adverse_effect
+acute coronary syndrome ;; Capecitabine ;; adverse_effect
+delirious ;; lithium ;; adverse_effect
+Keratitis ;; methamphetamine ;; adverse_effect
+Graves' disease ;; IFN-alpha ;; adverse_effect
+severe transient neutropenia ;; infliximab ;; adverse_effect
+thrombocytopenia ;; Heparin ;; adverse_effect || thrombocytopenia ;; heparin ;; adverse_effect || thrombosis ;; Heparin ;; adverse_effect || thrombosis ;; heparin ;; adverse_effect
+Erythema multiforme ;; phenytoin ;; adverse_effect
+agranulocytosis ;; Dipyrone ;; adverse_effect || agranulocytosis ;; metamizole ;; adverse_effect
+metabolic acidosis ;; cetrimide ;; adverse_effect || metabolic acidosis ;; chlorhexidine ;; adverse_effect
+granulomatous anterior uveitis ;; Metipranolol ;; adverse_effect
+anaphylactoid reactions ;; cisplatin ;; adverse_effect
+acute myocardial infarction ;; L-thyroxine ;; adverse_effect
+agranulocytosis ;; carbimazole ;; adverse_effect || neutropenic sepsis ;; carbimazole ;; adverse_effect
+severe lupus erythematosus ;; CY ;; adverse_effect || severe lupus erythematosus ;; cyclophosphamide ;; adverse_effect
+Ophthalmologic and neurologic findings ;; vigabatrin ;; adverse_effect
+rhabdomyolysis ;; sertraline ;; adverse_effect
+Mycobacterium marinum infection ;; infliximab ;; adverse_effect
+Celiac disease ;; pegylated interferon ;; adverse_effect || Celiac disease ;; ribavirin ;; adverse_effect
+hemophagocytic syndrome ;; Sulfasalazine ;; adverse_effect || hypersensitivity syndrome ;; Sulfasalazine ;; adverse_effect
+Eosinophilia ;; clozapine ;; adverse_effect
+anemia ;; pranlukast ;; adverse_effect
+Cardiac arrest ;; esmolol ;; adverse_effect
+Lipoid pneumonia ;; mineral oil ;; adverse_effect
+diabetes insipidus ;; lithium ;; adverse_effect
+central nervous toxicity ;; Chlorambucil ;; adverse_effect
+neuropathy ;; amiodarone ;; adverse_effect || pleural and pericardial effusion ;; amiodarone ;; adverse_effect || Pneumonitis ;; amiodarone ;; adverse_effect
+hearing impairment ;; PTU ;; adverse_effect || tinnitus ;; PTU ;; adverse_effect
+bilateral anterior uveitis ;; clomiphene citrate ;; adverse_effect
+Thrombotic thrombocytopenic purpura ;; penicillamine ;; adverse_effect
+Psoriasis-like skin reaction ;; sulphasalazine ;; adverse_effect
+maculopathy ;; chloroquine ;; adverse_effect || maculopathy ;; hydroxychloroquine ;; adverse_effect
+lipohypertrophy ;; insulin ;; adverse_effect
+embryopathy ;; cyclophosphamide ;; adverse_effect
+hepatotoxicity ;; salicylate ;; adverse_effect
+Electrical proarrhythmia ;; procainamide ;; adverse_effect
+Cystoid macular edema ;; bimatoprost ;; adverse_effect || Cystoid macular edema ;; latanoprost ;; adverse_effect
+psychosis ;; Phenylpropanolamine ;; adverse_effect
+hypotension ;; nitrate ;; adverse_effect || unconsciousness ;; nitrate ;; adverse_effect
+fatal interaction ;; minoxidil ;; adverse_effect
+difficulty walking ;; paclitaxel ;; adverse_effect
+SIADH ;; mizoribin ;; adverse_effect || syndrome of inappropriate secretion of antidiuretic hormone ;; mizoribin ;; adverse_effect
+Fatal pulmonary fibrosis ;; paclitaxel ;; adverse_effect
+cardiac failure ;; Insulin ;; adverse_effect
+hypercalcemia ;; dihydrotachysterol ;; adverse_effect
+severe hypoglycaemia ;; mefloquine ;; adverse_effect
+oral mucosa pigmentation ;; tacrolimus ;; adverse_effect
+fever ;; diltiazem ;; adverse_effect
+acute pancreatitis ;; propofol ;; adverse_effect
+Priapism ;; zuclopenthixol ;; adverse_effect
+nephrotic syndrome ;; gold ;; adverse_effect
+menstrual cycle disturbances ;; valproate ;; adverse_effect
+electrophysiologic effect ;; procainamide ;; adverse_effect
+pneumonitis ;; celiprolol ;; adverse_effect
+dysthyroidism ;; Amiodarone ;; adverse_effect
+arterial spasm ;; ergotamine ;; adverse_effect || fatal stroke ;; ergotamine ;; adverse_effect
+hematologic side effects ;; linezolid ;; adverse_effect
+hypothermia ;; risperidone ;; adverse_effect
+agitation ;; olanzapine ;; adverse_effect || paraesthesia ;; olanzapine ;; adverse_effect
+Tardive dyskinesia ;; ziprasidone ;; adverse_effect
+arrhythmia ;; adenosine ;; adverse_effect
+fever ;; lithium ;; adverse_effect || fever ;; olanzapine ;; adverse_effect || generalized rigidity ;; lithium ;; adverse_effect || generalized rigidity ;; olanzapine ;; adverse_effect || increased serum transaminase and creatine kinase ;; lithium ;; adverse_effect || increased serum transaminase and creatine kinase ;; olanzapine ;; adverse_effect || leukocytosis ;; lithium ;; adverse_effect || leukocytosis ;; olanzapine ;; adverse_effect
+anemia ;; pegylated interferon alpha-2a ;; adverse_effect || anemia ;; ribavirin ;; adverse_effect || progressive malaise ;; pegylated interferon alpha-2a ;; adverse_effect || progressive malaise ;; ribavirin ;; adverse_effect
+negative myoclonus ;; pregabalin ;; adverse_effect
+neuroleptic malignant syndrome ;; Fluphenazine ;; adverse_effect
+bone marrow suppression ;; Captopril ;; adverse_effect
+multiple infarcts ;; thrombin ;; adverse_effect || slow to awaken ;; thrombin ;; adverse_effect || vasospasm ;; thrombin ;; adverse_effect
+NEH ;; cytarabine ;; adverse_effect || NEH ;; mitoxantrone ;; adverse_effect
+pulmonary fibrosis ;; nabumetone ;; adverse_effect
+bradycardia ;; Amphotericin B deoxycholate ;; adverse_effect || cardiac toxicity ;; Amphotericin B deoxycholate ;; adverse_effect || ventricular arrhythmias ;; Amphotericin B deoxycholate ;; adverse_effect
+valvular heart disease ;; benfluorex ;; adverse_effect
+Cryptococcus neoformans fatal sepsis ;; alemtuzumab ;; adverse_effect
+tardive dyskinesia ;; deanol ;; adverse_effect
+hyperpigmented skin ;; IFN ;; adverse_effect || hyperpigmented skin ;; ribavirin ;; adverse_effect || tongue lesions ;; IFN ;; adverse_effect || tongue lesions ;; ribavirin ;; adverse_effect
+cardiotoxicity ;; pentamidine ;; adverse_effect || second-degree heart block ;; pentamidine ;; adverse_effect
+torsades de pointe ;; amiodarone ;; adverse_effect
+gastrointestinal symptoms ;; Copaxone ;; adverse_effect
+aseptic meningitis ;; sulfamethoxazole ;; adverse_effect || aseptic meningitis ;; trimethoprim ;; adverse_effect || hemolytic anemia ;; sulfamethoxazole ;; adverse_effect || hemolytic anemia ;; trimethoprim ;; adverse_effect || hepatitis ;; sulfamethoxazole ;; adverse_effect || hepatitis ;; trimethoprim ;; adverse_effect || orthostatic hypotension ;; sulfamethoxazole ;; adverse_effect || orthostatic hypotension ;; trimethoprim ;; adverse_effect
+macrophage activation syndrome ;; methotrexate ;; adverse_effect || methotrexate toxicity ;; methotrexate ;; adverse_effect
+anaphylactic reaction ;; Miacalcic ;; adverse_effect
+macrophagic activation syndrome ;; adalimumab ;; adverse_effect || Visceral leishmaniasis ;; adalimumab ;; adverse_effect
+priapism ;; prothipendylhydrochloride ;; adverse_effect
+fever ;; carbamazepine ;; adverse_effect || fever ;; CBZ ;; adverse_effect || fever ;; Tegretol ;; adverse_effect || leukopenia ;; carbamazepine ;; adverse_effect || leukopenia ;; CBZ ;; adverse_effect || leukopenia ;; Tegretol ;; adverse_effect || positive anti-nuclear antibody ;; carbamazepine ;; adverse_effect || positive anti-nuclear antibody ;; CBZ ;; adverse_effect || positive anti-nuclear antibody ;; Tegretol ;; adverse_effect || rash ;; carbamazepine ;; adverse_effect || rash ;; CBZ ;; adverse_effect || rash ;; Tegretol ;; adverse_effect || systemic lupus erythematosus (SLE)-like symptoms ;; carbamazepine ;; adverse_effect || systemic lupus erythematosus (SLE)-like symptoms ;; CBZ ;; adverse_effect || systemic lupus erythematosus (SLE)-like symptoms ;; Tegretol ;; adverse_effect
+Acute generalized exanthematous pustulosis ;; morphine ;; adverse_effect
+elevated serum CK concentration ;; olanzapine ;; adverse_effect
+nephrotoxicity ;; Amphotericin B ;; adverse_effect
+Schneiderian first-rank symptoms ;; fluvoxamine ;; adverse_effect
+isolated paresthesia ;; sulindac ;; adverse_effect || peripheral neuropathy ;; sulindac ;; adverse_effect
+Generalized pustular psoriasis ;; trazodone ;; adverse_effect
+Tremor ;; itraconazole ;; adverse_effect
+Renal damage ;; lithium carbonate ;; adverse_effect
+withdrawal syndrome ;; baclofen ;; adverse_effect || withdrawal syndrome ;; baclofen ;; adverse_effect
+Optic neuropathy ;; ethambutol ;; adverse_effect
+monocytosis ;; G-CSF ;; adverse_effect || monocytosis ;; G-CSF ;; adverse_effect
+neurotoxicity ;; acyclovir ;; adverse_effect
+acute respiratory distress ;; dalteparin ;; adverse_effect
+nonconvulsive status epilepticus ;; ifosfamide ;; adverse_effect
+Staphylococcus aureus knee arthritis ;; corticosteroids ;; adverse_effect || Staphylococcus aureus knee arthritis ;; sodium hyaluronate ;; adverse_effect
+tonic-clonic seizures ;; clozapine ;; adverse_effect
+acute interstitial nephritis ;; Sunitinib ;; adverse_effect
+Spindle coma ;; benzodiazepine ;; adverse_effect
+neutropenia ;; captopril ;; adverse_effect
+Chronic photosensitivity ;; hydrochlorothiazide ;; adverse_effect
+Vogt-Koyanagi-Harada disease ;; interferon ;; adverse_effect || Vogt-Koyanagi-Harada disease ;; interferon alpha ;; adverse_effect
+acute cardiomyopathy ;; methylphenidate ;; adverse_effect || pericarditis ;; methylphenidate ;; adverse_effect
+SLE ;; CBZ ;; adverse_effect
+coma ;; promethazine ;; adverse_effect
+decrease in blood flow ;; nitroglycerin ;; adverse_effect || increase in pulmonary artery pressure ;; nitroglycerin ;; adverse_effect || increase in pulmonary vascular resistance ;; nitroglycerin ;; adverse_effect
+severe hyponatremia ;; hydrochlorothiazide ;; adverse_effect
+angioedema ;; losartan ;; adverse_effect
+erythema multiforme ;; sulfonamides ;; adverse_effect || Stevens-Johnson syndrome ;; sulfonamides ;; adverse_effect
+dizziness ;; gatifloxacin ;; adverse_effect || dizziness ;; grepafloxacin ;; adverse_effect || dizziness ;; levofloxacin ;; adverse_effect || dizziness ;; moxifloxacin ;; adverse_effect || dizziness ;; sparfloxacin ;; adverse_effect || dizziness ;; trovafloxacin ;; adverse_effect || headache ;; gatifloxacin ;; adverse_effect || headache ;; grepafloxacin ;; adverse_effect || headache ;; levofloxacin ;; adverse_effect || headache ;; moxifloxacin ;; adverse_effect || headache ;; sparfloxacin ;; adverse_effect || headache ;; trovafloxacin ;; adverse_effect || insomnia ;; gatifloxacin ;; adverse_effect || insomnia ;; grepafloxacin ;; adverse_effect || insomnia ;; levofloxacin ;; adverse_effect || insomnia ;; moxifloxacin ;; adverse_effect || insomnia ;; sparfloxacin ;; adverse_effect || insomnia ;; trovafloxacin ;; adverse_effect
+erythroderma ;; epoprostenol ;; adverse_effect
+organic brain syndromes ;; lithium ;; adverse_effect
+Intracranial haemorrhage ;; aspirin ;; adverse_effect
+acute parotitis ;; Enalaprilat ;; adverse_effect
+psoriasiform eruptions ;; carbamazepine ;; adverse_effect || psoriasiform eruptions ;; Sodium valproate ;; adverse_effect
+fulminant liver failure ;; clarithromycin ;; adverse_effect
+hypothyroidism ;; Rifampin ;; adverse_effect
+Reversible heart failure ;; etanercept ;; adverse_effect
+elevation of serum creatine kinase ;; olanzapine ;; adverse_effect
+acute dystonic reactions ;; pimozide ;; adverse_effect || acute dystonic reactions ;; pimozide ;; adverse_effect || acute dystonic reactions ;; thioridazine ;; adverse_effect
+sarcoidosis ;; interferon alpha 2b ;; adverse_effect || sarcoidosis ;; ribavirin ;; adverse_effect
+Milk-alkali syndrome ;; 1,25(OH)2D ;; adverse_effect
+cardiomyopathy ;; Adriamycin ;; adverse_effect || nephrotoxicity ;; cis-platinum ;; adverse_effect
+life-threatening arrhythmias ;; pilsicainide ;; adverse_effect
+penile fibrosis ;; papaverine ;; adverse_effect || penile fibrosis ;; phentolamine ;; adverse_effect
+tubular and interstitial lesions ;; rifampin ;; adverse_effect
+chalazion ;; Docetaxel ;; adverse_effect || Meibomian duct inflammation and blockage ;; Docetaxel ;; adverse_effect
+spastic paraparesis at the lower limbs ;; Depo-Medrol ;; adverse_effect
+SS ;; mirtazapine ;; adverse_effect
+anaphylaxis ;; Isoniazid ;; adverse_effect
+myelodysplastic syndrome ;; temozolomide ;; adverse_effect
+significant 32%-46% loss of tyrosine hydroxylase (TH) immunoreactive neurons ;; HAL ;; adverse_effect
+anaphylactoid reaction ;; Gelofusine ;; adverse_effect
+cerebellar syndrome ;; Phenytoin ;; adverse_effect
+methemoglobinemia ;; bupivacaine ;; adverse_effect || methemoglobinemia ;; lidocaine ;; adverse_effect
+bilateral sensorineural hearing loss ;; ketoralac ;; adverse_effect
+cutaneous pigmentation ;; minocycline ;; adverse_effect
+generalized lichen nitidus ;; interferon alpha ;; adverse_effect || generalized lichen nitidus ;; ribavirin ;; adverse_effect
+drug interaction ;; theophylline ;; adverse_effect || drug interaction ;; zafirlukast ;; adverse_effect
+Large cerebral infarction ;; praziquantel ;; adverse_effect
+thrombocytopenia ;; Heparin ;; adverse_effect
+endometrial adenocarcinoma of the secretory type ;; tamoxifen ;; adverse_effect
+hepatotoxicity ;; Trimethoprim-sulfamethoxazole ;; adverse_effect
+anuria ;; ifosfamide ;; adverse_effect || irreversible lethal renal failure ;; ifosfamide ;; adverse_effect
+Delayed hypersensitivity ;; flurbiprofen ;; adverse_effect
+jaundice ;; streptokinase ;; adverse_effect
+TEN ;; ampicillin ;; adverse_effect
+diabetes ;; indapamide ;; adverse_effect
+hypertension ;; sibutramine ;; adverse_effect || tachycardia ;; sibutramine ;; adverse_effect
+Insulin-dependent diabetes mellitus ;; danazol ;; adverse_effect
+unintended sleep episodes ;; L-dopa ;; adverse_effect
+Increased lash length ;; prostaglandin ;; adverse_effect || pigmentation ;; prostaglandin ;; adverse_effect
+Severe symptomatic hyponatremia ;; sibutramine ;; adverse_effect
+Anticonvulsant hypersensitivity syndrome ;; Bellamine S ;; adverse_effect
+polyuria ;; Lithium ;; adverse_effect
+cirrhosis ;; MTX ;; adverse_effect || liver cirrhosis ;; MTX ;; adverse_effect
+Tuberculous uveitis ;; etanercept ;; adverse_effect
+restless legs symptoms ;; IFN alpha ;; adverse_effect || restless legs symptoms ;; interferon-alpha ;; adverse_effect
+Infectious toxicity ;; dexamethasone ;; adverse_effect
+rippling muscle disease ;; simvastatin ;; adverse_effect || RMD ;; simvastatin ;; adverse_effect
+Adrenal suppression in a fetus ;; methylprednisolone ;; adverse_effect
+sarcoidosis ;; interferon alpha ;; adverse_effect
+hypoglycemia ;; insulin ;; adverse_effect || rebound hyperglycemia ;; insulin ;; adverse_effect
+Ischaemic colitis ;; meloxicam ;; adverse_effect
+Neurological side effects ;; gold ;; adverse_effect
+exacerbate psoriasis or trigger off its onset ;; Recombinant human interferon-alpha ;; adverse_effect
+endometrial carcinoma ;; tamoxifen ;; adverse_effect
+colchicine intoxication ;; colchicine ;; adverse_effect
+severe chloroquine toxicity ;; chloroquine ;; adverse_effect
+Brugada type electrocardiographic changes ;; lithium ;; adverse_effect || Brugada type electrocardiographic changes ;; propafenone ;; adverse_effect
+hypersensitivity syndrome ;; Carbamazepine ;; adverse_effect
+hepatic VOD ;; tacrolimus ;; adverse_effect
+acute weakness ;; colchicine ;; adverse_effect || acute weakness ;; simvastatin ;; adverse_effect || mild chronic renal insufficiency ;; simvastatin ;; adverse_effect
+polyneuropathy ;; 5-ASA ;; adverse_effect
+priapism ;; Prothipendylhydrochloride ;; adverse_effect
+interstitial pneumonitis ;; Rituximab-CHOP ;; adverse_effect
+thyrotoxicosis ;; lithium ;; adverse_effect
+coagulopathy ;; Quinine ;; adverse_effect
+agranulocytosis ;; carbimazole ;; adverse_effect || sepsis ;; carbimazole ;; adverse_effect
+sexual dysfunction ;; Fluoxetine ;; adverse_effect
+Nail staining ;; hydroquinone ;; adverse_effect
+lead toxicity ;; lead ;; adverse_effect
+diabetes mellitus ;; norethisterone ;; adverse_effect || gestational diabetes ;; norethisterone ;; adverse_effect || impaired glucose tolerance ;; norethisterone ;; adverse_effect
+angioedema ;; Losartan ;; adverse_effect
+abnormal chest x-ray with diffuse interstitial opacities ;; piritrexim ;; adverse_effect || respiratory dysfunction ;; piritrexim ;; adverse_effect
+Hashimoto's disease ;; IFN-alpha ;; adverse_effect || Hashimoto's disease ;; interferon-alpha ;; adverse_effect
+neutropenia ;; olanzapine ;; adverse_effect || neutropenia ;; thiazide ;; adverse_effect
+skin toxicity ;; aminoglutethimide ;; adverse_effect
+hyperlactatemia relapse ;; zidovudine ;; adverse_effect

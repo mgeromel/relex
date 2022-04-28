@@ -5180,7 +5180,7 @@ movie_name == medal of honor ;; object_location_type == movie house ;; spatial_r
 party_size_number == four ;; restaurant_type == restaurant ;; state == al ;; BookRestaurant
 object_name == breed the pain ;; object_type == tv series ;; SearchCreativeWork
 album == the cross and the crucible ;; artist == angela au man sze ;; service == google music ;; PlayMusic
-artist == the alchemist ;; track == crazy==genius ;; PlayMusic
+artist == the alchemist ;; track == crazy=genius ;; PlayMusic
 music_item == album ;; playlist == cierra la puerta ;; AddToPlaylist
 object_name == mash confusion ;; SearchCreativeWork
 artist == irving berlin ;; playlist == dishwashing ;; playlist_owner == my ;; AddToPlaylist

@@ -1,0 +1,1152 @@
+Org == Radio Reloj Network ;; Loc == Havana ;; OrgBased_In
+Peop == Bruno Pusterla ;; Org == Italian Agricultural Confederation ;; Work_For
+Loc == Morgan City ;; Loc == Louisiana ;; Located_In
+Peop == Annie Oakley ;; Loc == Willowdell , Darke County ;; Live_In || Peop == Little Miss Sure Shot ;; Loc == Willowdell , Darke County ;; Live_In || Peop == Phoebe Ann Moses ;; Loc == Willowdell , Darke County ;; Live_In
+Loc == Livingston ;; Loc == Texas ;; Located_In
+Org == XINHUA ;; Loc == Beijing ;; OrgBased_In
+Peop == Shi Liming ;; Org == Institute of Zoology ;; Work_For || Org == Institute of Zoology ;; Loc == Kunming ;; OrgBased_In
+Peop == Lucille Ball ;; Loc == Jamestown N.Y. ;; Live_In
+Peop == John Wilkes Booth ;; Peop == Abraham Lincoln ;; Kill
+Peop == Oswald ;; Peop == President Kennedy ;; Kill || Peop == Oswald ;; Peop == Officer Tippit ;; Kill
+Peop == Bob Boyd ;; Loc == Chattanooga ;; Live_In || Peop == Bob Boyd ;; Loc == Tenn. ;; Live_In || Loc == Chattanooga ;; Loc == Tenn. ;; Located_In
+Loc == Rome ;; Loc == Lazio ;; Located_In || Loc == Naples ;; Loc == Campania ;; Located_In
+Org == State Department ;; Loc == U.S. ;; OrgBased_In || Org == Harvard ;; Loc == U.S. ;; OrgBased_In
+Peop == Mikhail Shevtsov ;; Org == ITAR-TASS ;; Work_For
+Peop == Allan Fitzmaurice. ;; Org == XBT ;; Work_For
+Peop == Betsy Ross ;; Loc == Philadelphia ;; Live_In
+Loc == Fire Island National Seashore ;; Loc == Patchogue ;; Located_In || Loc == Fire Island National Seashore ;; Loc == N.Y. ;; Located_In || Loc == Patchogue ;; Loc == N.Y. ;; Located_In
+Org == XINHUA ;; Loc == Beijing ;; OrgBased_In
+Loc == Boise ;; Loc == Idaho ;; Located_In
+Loc == Santa Ana ;; Loc == Southern California ;; Located_In
+Peop == Strom Thurmond ;; Org == Congress ;; Work_For
+Org == Congress ;; Loc == U.S. ;; OrgBased_In || Org == Congress ;; Loc == U.S. ;; OrgBased_In
+Peop == Charles Guiteau ;; Peop == President James Garfield ;; Kill
+Org == SPACE CENTER ;; Loc == Houston ;; OrgBased_In
+Peop == Sirhan B. Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Woodrow Wilson ;; Loc == Staunton , Va ;; Live_In
+Peop == Peter Butler ;; Org == A. Copeland Enterprises Inc. ;; Work_For || Peop == Henry A. Politz ;; Org == 5th U.S. Circuit Court of Appeals ;; Work_For
+Loc == PURCHASE ;; Loc == N.Y . ;; Located_In
+Peop == Martin Van Buren ;; Loc == Kinderhook , N.Y. ;; Live_In
+Org == U.S. Coast Guard Training Center ;; Loc == Petaluma ;; OrgBased_In || Org == U.S. Coast Guard Training Center ;; Loc == Calif. ;; OrgBased_In || Loc == Petaluma ;; Loc == Calif. ;; Located_In
+Org == IZVESTIYA ;; Loc == Moscow ;; OrgBased_In
+Org == Pepperell ;; Loc == West Point ;; OrgBased_In || Org == Pepperell ;; Loc == Ga. ;; OrgBased_In || Loc == West Point ;; Loc == Ga. ;; Located_In
+Peop == John Harvey Adamson ;; Peop == Don Bolles ;; Kill
+Peop == Michael R. Gordon ;; Org == Montgomery County House delegation ;; Work_For
+Peop == Vyacheslav Chornovil ;; Org == Ukrainian Popular Rukh ;; Work_For
+Peop == Slavko Mestrovic ;; Org == Croatian People 's Party ;; Work_For
+Loc == Port Arther ;; Loc == Texas. ;; Located_In || Loc == Galveston ;; Loc == Texas. ;; Located_In
+Peop == George Tompkins ;; Org == KAL ;; Work_For
+Loc == Lumberton ;; Loc == N.C. ;; Located_In
+Peop == Jack Ruby ;; Peop == Oswald ;; Kill
+Peop == Jean Bertrand Aristide ;; Loc == Haiti ;; Live_In
+Peop == Robert Ford ;; Peop == Jesse James ;; Kill
+Peop == Robert Bernero ;; Org == NRC ;; Work_For
+Peop == Datuk Sri Dr. Mahathir ;; Loc == Malaysia ;; Live_In
+Org == AP ;; Loc == SAN FRANCISCO ;; OrgBased_In
+Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In
+Org == The Environmental Protection Agency ;; Loc == Washington , D.C. ;; OrgBased_In || Peop == Robin Woods ;; Org == The Environmental Protection Agency ;; Work_For || Peop == Woods ;; Org == The Environmental Protection Agency ;; Work_For
+Peop == Woodrow Wilson ;; Loc == Virginia ;; Live_In
+Peop == Gerald Schwartz. ;; Loc == Miami Beach ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill || Peop == Lee Harvey Oswald ;; Peop == Dallas Police Officer J.D. Tippit. ;; Kill
+Peop == Prince Ranariddh ;; Loc == Cambodia ;; Live_In || Peop == Prince Ranariddh ;; Org == Phnom Penh government ;; Work_For || Org == Phnom Penh government ;; Loc == Cambodia ;; OrgBased_In
+Org == Church 's ;; Loc == San Antonio ;; OrgBased_In
+Loc == Benton ;; Loc == Tenn. ;; Located_In || Org == Tennessee Tech ;; Loc == Tenn. ;; OrgBased_In || Org == Tennessee Tech ;; Loc == Cookville ;; OrgBased_In || Loc == Cookville ;; Loc == Tenn. ;; Located_In
+Peop == Harold Lloyd ;; Loc == Burchard , Neb ;; Live_In
+Org == BTA ;; Loc == Sofia ;; OrgBased_In
+Peop == Betsy Ross ;; Loc == Philadelphia ;; Live_In
+Loc == GSA Depot ;; Loc == Davisville ;; Located_In || Loc == GSA Depot ;; Loc == R.I. ;; Located_In || Loc == Davisville ;; Loc == R.I. ;; Located_In || Loc == Mineral Wells ;; Loc == Texas ;; Located_In
+Peop == Mrs. Parks ;; Loc == Montgomery ;; Live_In || Peop == Mrs. Parks ;; Loc == Ala. ;; Live_In || Loc == Montgomery ;; Loc == Ala. ;; Located_In
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Loc == Caracas ;; Loc == Venezuela ;; Located_In || Peop == Carlos Andres Perez ;; Loc == Caracas ;; Live_In || Peop == Carlos Andres Perez ;; Loc == Venezuela ;; Live_In
+Peop == Rogers ;; Loc == Fort Worth , Texas ;; Live_In
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Loc == Nsukka ;; Loc == Nigeria ;; Located_In
+Loc == Denver ;; Loc == Colorado ;; Located_In
+Peop == Edward Marks ;; Org == Montgomery County Democratic Party ;; Work_For
+Org == IZVESTIYA ;; Loc == Moscow ;; OrgBased_In
+Org == St. Nicholas Hospital ;; Loc == Gosforth ;; OrgBased_In || Org == St. Nicholas Hospital ;; Loc == England ;; OrgBased_In || Loc == Gosforth ;; Loc == England ;; Located_In
+Loc == ROYAL OAK ;; Loc == Mich . ;; Located_In
+Peop == Aleksandr Kruhlow ;; Loc == Sevastopol ;; Live_In
+Peop == Kenneth Compton. ;; Org == Coast Guard ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == George Gershwin ;; Loc == New York ;; Live_In
+Peop == Marvin Feuerwerger ;; Org == Washington Institute for Near East Policy ;; Work_For
+Org == Atomenergoproekt institute ;; Loc == St. Petersburg ;; OrgBased_In
+Peop == Barry Goldwater ;; Loc == Arizona ;; Live_In
+Peop == Jose Tulio Gomez ;; Org == DIMA ;; Work_For
+Peop == Gen. William C. Westmoreland ;; Loc == South Carolina ;; Live_In
+Peop == Mrs. Cicippio ;; Loc == Beirut. ;; Live_In || Loc == American Embassy ;; Loc == Beirut. ;; Located_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Loc == BELGRADE ;; Loc == Yugoslavia ;; Located_In || Org == AP ;; Loc == BELGRADE ;; OrgBased_In || Org == AP ;; Loc == Yugoslavia ;; OrgBased_In
+Peop == Kenneth Earl Millikan ;; Peop == Peter J. Martinelli ;; Kill
+Peop == Mrs. Vogt ;; Loc == Akron ,Ohio ;; Live_In
+Peop == Ms. Barrow ;; Loc == High Island ;; Live_In
+Peop == George Lucas ;; Loc == Modesto ;; Live_In
+Peop == William Leonard Jennings ;; Peop == Stephen ;; Kill
+Peop == Vsevolod Fadeyev ;; Org == Pacific Fleet ;; Work_For
+Peop == Chapman ;; Peop == John Lennon ;; Kill
+Loc == STOCKTON-ON-TEES ;; Loc == England ;; Located_In || Org == AP ;; Loc == STOCKTON-ON-TEES ;; OrgBased_In || Org == AP ;; Loc == England ;; OrgBased_In || Peop == Michael Minns ;; Loc == STOCKTON-ON-TEES ;; Live_In || Peop == Michael Minns ;; Loc == England ;; Live_In || Peop == Michael Minns ;; Org == AP ;; Work_For
+Org == EFE ;; Loc == Madrid ;; OrgBased_In
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Peop == David Pimentel ;; Org == Cornell University. ;; Work_For
+Peop == Drazen Budisa ;; Org == Croatian Social Liberal Party ;; Work_For
+Loc == Moscow ;; Loc == Soviet ;; Located_In
+Loc == Serbia ;; Loc == Yugoslavia ;; Located_In || Loc == Montenegro ;; Loc == Yugoslavia ;; Located_In
+Peop == Edgar Allan Poe ;; Loc == Boston ;; Live_In
+Loc == Covington ;; Loc == Okla. ;; Located_In
+Peop == Michael Holtcamp ;; Loc == Huntsville ;; Live_In || Peop == Michael Holtcamp ;; Loc == Alabama ;; Live_In || Loc == Huntsville ;; Loc == Alabama ;; Located_In
+Peop == W. Dale Nelson ;; Org == The Associated Press ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Org == Supreme Court ;; Loc == Canada ;; OrgBased_In
+Peop == Ray ;; Peop == King ;; Kill
+Org == Centro Nacional de Microelectronica ;; Loc == Barcelona ;; OrgBased_In
+Org == AFP ;; Loc == Paris ;; OrgBased_In
+Peop == Igor Khmelnov ;; Org == Pacific Fleet ;; Work_For
+Peop == Sirhan Sirhan ;; Peop == New York Sen. Robert F. Kennedy ;; Kill
+Peop == Henry Ford ;; Loc == Dearborn Township , Mich ;; Live_In
+Peop == Elvis Presley ;; Loc == Tupelo , Miss ;; Live_In
+Loc == ADDIS ABABA ;; Loc == Ethiopia ;; Located_In
+Peop == Sirhan B. Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Babe Ruth ;; Loc == Baltimore ;; Live_In
+Org == NASA ;; Loc == U.S. ;; OrgBased_In
+Peop == Leroy Ivy ;; Peop == Lee County Circuit Judge Thomas Gardner III. ;; Kill || Peop == John Henry Ivy ;; Peop == Lee County Circuit Judge Thomas Gardner III. ;; Kill
+Peop == Madonna ;; Loc == Bay City , Mich. ;; Live_In
+Org == Supreme Court ;; Loc == Cape Town ;; OrgBased_In || Peop == J.H. Berman ;; Loc == Cape Town ;; Live_In || Peop == J.H. Berman ;; Org == Supreme Court ;; Work_For
+Org == AFP ;; Loc == Paris ;; OrgBased_In
+Peop == Andrew Stephens ;; Org == Eaglebrook Plastics ;; Work_For
+Peop == George Gershwin ;; Loc == Brooklyn , N.Y. ;; Live_In
+Peop == Roger Jacobsen ;; Org == Burlington ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Org == PAN ;; Loc == Mexico ;; OrgBased_In || Org == National Action Party ;; Loc == Mexico ;; OrgBased_In || Peop == Fernandez de Cevallos ;; Loc == Mexico ;; Live_In || Peop == Fernandez de Cevallos ;; Org == PAN ;; Work_For || Peop == Fernandez de Cevallos ;; Org == National Action Party ;; Work_For
+Loc == Batavia ;; Loc == N.Y. ;; Located_In
+Peop == Ms. Toth ;; Loc == Germantown ;; Live_In
+Peop == Javier Perez de Cuellar ;; Org == U.N. ;; Work_For
+Peop == Mr. Vee ;; Loc == Fargo ;; Live_In
+Peop == Ray Martinez ;; Peop == Charles Whitman ;; Kill
+Peop == Quayle ;; Org == Huntington Herald-Press ;; Work_For
+Peop == James Earl Ray ;; Peop == Martin Luther King Jr. ;; Kill || Loc == Brushy Mountain Penitentiary ;; Loc == Tennessee ;; Located_In
+Peop == Sirhan Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Dwight D. Eisenhower ;; Loc == Denison , Texas ;; Live_In
+Org == AP ;; Loc == NEW ORLEANS ;; OrgBased_In
+Org == German Government ;; Loc == Germany ;; OrgBased_In
+Peop == John Leyden ;; Org == Federal Aviation Administration ;; Work_For
+Org == AL-AHALI ;; Loc == Cairo ;; OrgBased_In
+Org == Radio France International ;; Loc == Paris ;; OrgBased_In
+Loc == Carbondale Mining Technology Center ;; Loc == Carterville ;; Located_In || Loc == Carbondale Mining Technology Center ;; Loc == Ill. ;; Located_In || Loc == Carterville ;; Loc == Ill. ;; Located_In
+Peop == Mary ;; Loc == Rock Hill ;; Live_In
+Peop == Karl Malden ;; Org == Vanderbilt University ;; Work_For
+Peop == Emily Dickinson ;; Loc == Amherst , Mass ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == William Doyle ;; Loc == Manhattan ;; Live_In
+Peop == Sara Matzar ;; Loc == Pabnjachel ;; Live_In || Peop == Sara Matzar ;; Loc == Solola ;; Live_In || Loc == Pabnjachel ;; Loc == Solola ;; Located_In
+Peop == Paul Revere ;; Loc == Boston ;; Live_In
+Org == Great Wall firm ;; Loc == China ;; OrgBased_In
+Loc == Baghdad ;; Loc == Iraq ;; Located_In
+Peop == Alan Cranston ;; Org == Senate Committee on Veterans Affairs ;; Work_For
+Peop == Gerald McEntee ;; Org == American Federation of State , County and Municipal Employees ;; Work_For
+Peop == Hernandez Galicia ;; Loc == Ciudad Madero ;; Live_In
+Loc == Kamchatka ;; Loc == Okhotsk Sea ;; Located_In
+Peop == Jean Hackett ;; Loc == New York City ;; Live_In
+Peop == Vasquez ;; Peop == John Walker ;; Kill || Peop == Vasquez ;; Peop == Alberto Radelat ;; Kill
+Peop == Khieu Samphan ;; Org == Khmer Rouge ;; Work_For
+Peop == Aharon Levran ;; Org == Bar-Ilan University ;; Work_For || Peop == Aharon Levran ;; Org == Center for Strategic Studies ;; Work_For
+Peop == Lucy Stone ;; Loc == Brookfield , Mass ;; Live_In
+Peop == Leonid Vinogradov ;; Org == ITAR-TASS ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Peop == Richard Celeste. ;; Loc == Ohio ;; Live_In
+Loc == Quebec ;; Loc == North America ;; Located_In
+Loc == Campbell Farm ;; Loc == Wapato ;; Located_In
+Loc == HUNTINGTON ;; Loc == Ind . ;; Located_In
+Peop == Sturholm ;; Org == KIRO. ;; Work_For || Peop == Kathryn Rich ;; Org == KIRO. ;; Work_For
+Peop == Jesse Jackson ;; Loc == South Carolina ;; Live_In
+Org == Radio Lebanon ;; Loc == Beirut ;; OrgBased_In
+Peop == Dennis DeConcini ;; Org == Senate Appropriations treasury and postal subcommittee ;; Work_For
+Peop == Bob Dole ;; Loc == Kansas ;; Live_In
+Org == Pacific Marine Inc. ;; Loc == Houston ;; OrgBased_In
+Org == ANP ;; Loc == The Hague ;; OrgBased_In
+Peop == John Wilkes Booth ;; Peop == President Abraham Lincoln ;; Kill
+Peop == Gavrilo Princip ;; Peop == Archduke Ferdinand ;; Kill
+Org == Radio Bosnia-Herzegovina Network ;; Loc == Sarajevo ;; OrgBased_In
+Loc == Mlita hill ;; Loc == Iqlim al-Tuffah ;; Located_In
+Loc == Kebara cave ;; Loc == Israel ;; Located_In || Loc == Haifa ;; Loc == Israel ;; Located_In
+Peop == James G. Blight ;; Org == Harvard University ;; Work_For || Peop == James G. Blight ;; Org == John F. Kennedy School of Government ;; Work_For || Peop == David A. Welch ;; Org == Harvard University ;; Work_For || Peop == David A. Welch ;; Org == John F. Kennedy School of Government ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Richard Kennedy ;; Org == GE ;; Work_For
+Peop == Andrew Jackson ;; Loc == Waxhaw , S.C. ;; Live_In
+Peop == Robert Weisner ;; Loc == Washington ;; Live_In
+Peop == Henry Fonda ;; Loc == Grand Island ,Neb. ;; Live_In
+Peop == Reagan ;; Loc == U.S. ;; Live_In || Org == State Department ;; Loc == U.S. ;; OrgBased_In
+Peop == Abebe Worke ;; Loc == Ethiopia ;; Live_In || Peop == Abebe Worke ;; Org == High Court ;; Work_For
+Peop == Steve Hardy ;; Org == Coast Guard ;; Work_For
+Org == Radio France International ;; Loc == Paris ;; OrgBased_In
+Peop == George Lucas ;; Loc == Modesto ;; Live_In
+Peop == Cardenas ;; Org == PRD ;; Work_For || Peop == Cardenas ;; Org == Party of the Democratic Revolution ;; Work_For
+Loc == Riga ;; Loc == Latvia ;; Located_In || Loc == Riga ;; Loc == Soviet Union ;; Located_In || Loc == Latvia ;; Loc == Soviet Union ;; Located_In
+Peop == Sevket Kazan ;; Org == RP ;; Work_For || Peop == Sevket Kazan ;; Org == Welfare Party ;; Work_For
+Loc == Santiago ;; Loc == Chile. ;; Located_In
+Peop == Actress Angie Dickinson ;; Loc == Kulm , N.D. ;; Live_In
+Org == The National Space Development Agency ;; Loc == Japan ;; OrgBased_In
+Org == Radiozurnal Radio Network ;; Loc == Prague ;; OrgBased_In
+Loc == Connecticut Valley Hospital ;; Loc == Middletown ;; Located_In
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == David Cicippio ;; Loc == North Wales ;; Live_In || Peop == David Cicippio ;; Loc == Pa. ;; Live_In || Loc == North Wales ;; Loc == Pa. ;; Located_In
+Peop == James Monroe ;; Loc == Westmoreland County , Va ;; Live_In
+Org == INTERFAX ;; Loc == Moscow ;; OrgBased_In
+Peop == Lance Davis ;; Org == Truck Stops of America ;; Work_For || Peop == Lance Davis ;; Loc == Ontario ;; Live_In || Org == Truck Stops of America ;; Loc == Ontario ;; OrgBased_In
+Peop == Barbara Houser ;; Org == Minpeco S.A. ;; Work_For
+Org == DAO SIAM ;; Loc == Bangkok ;; OrgBased_In
+Loc == SEOUL ;; Loc == South Korea ;; Located_In || Org == AP ;; Loc == SEOUL ;; OrgBased_In || Org == AP ;; Loc == South Korea ;; OrgBased_In
+Peop == Vicente Licona ;; Org == Indemerc-Louis Harris ;; Work_For || Peop == Cecilia Soto ;; Org == Labor Party ;; Work_For
+Org == Angolan Government ;; Loc == Angola ;; OrgBased_In
+Loc == MEMPHIS ;; Loc == Tenn . ;; Located_In
+Org == Russian State Duma ;; Loc == Moscow ;; OrgBased_In || Peop == Konstantin Zatulin ;; Loc == Moscow ;; Live_In || Peop == Konstantin Zatulin ;; Org == Russian State Duma ;; Work_For
+Peop == Thurgood Marshall ;; Loc == Baltimore ;; Live_In
+Loc == Ramona ;; Loc == San Diego ;; Located_In
+Peop == Calvin Coolidge ;; Loc == Plymouth , Vt ;; Live_In
+Peop == Jim Bowell ;; Org == Butler Township Fire Department ;; Work_For
+Loc == TRENTON ;; Loc == N.J. ;; Located_In
+Peop == Judy Kaye ;; Org == New York Opera Repertory Theater ;; Work_For
+Peop == Chapman ;; Peop == Lennon ;; Kill
+Peop == Mr. Vishnu Hari Dalmia ;; Org == VHP ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Peop == Ernest L. Boyer ;; Org == Carnegie Foundation for the Advancement of Teaching ;; Work_For
+Loc == Santa Catarina Palopo ;; Loc == Solola ;; Located_In
+Peop == Stephen K. Yee. ;; Org == Chinese Consolidated Benevolent Association ;; Work_For
+Peop == Tom Wolfe ;; Loc == Richmond ;; Live_In
+Peop == Louis W. Parker ;; Loc == Budapest , Hungary ;; Live_In
+Peop == Gary H. Heichel ;; Org == USDA ;; Work_For
+Org == O ESTADO DE SAO PAULO ;; Loc == Sao Paulo ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Martin Van Buren ;; Loc == Kinderhook , N.Y. ;; Live_In
+Peop == Osny Eugene ;; Org == Senate ;; Work_For
+Loc == Rocky Flats ;; Loc == Colorado ;; Located_In || Loc == Fernald ;; Loc == Ohio ;; Located_In
+Org == N-TV ;; Loc == Berlin ;; OrgBased_In
+Org == JINGJI YANJIU ;; Loc == Beijing ;; OrgBased_In
+Loc == KHARTOUM ;; Loc == Sudan ;; Located_In
+Peop == James Cirona ;; Org == Federal Home Loan Bank ;; Work_For || Peop == James Cirona ;; Loc == San Francisco ;; Live_In || Org == Federal Home Loan Bank ;; Loc == San Francisco ;; OrgBased_In
+Peop == Leon Czolgosz ;; Peop == President McKinley ;; Kill
+Peop == John Wilkes Booth ;; Peop == Lincoln ;; Kill
+Loc == Marrackech ;; Loc == Morocco ;; Located_In
+Peop == Reuven Pedatzur ;; Org == Jaffe Center for Strategic Studies ;; Work_For
+Org == NEZAVISIMAYA GAZETA ;; Loc == Moscow ;; OrgBased_In
+Peop == Leon Czolgosz ;; Peop == President McKinley ;; Kill
+Peop == Joe Weitz ;; Org == Emery ;; Work_For
+Peop == John Wilkes Booth ;; Peop == Lincoln ;; Kill
+Peop == James Earl Ray ;; Peop == Martin Luther King Jr ;; Kill
+Peop == Olgerts Pavlovskis ;; Org == European Community ;; Work_For
+Loc == Portland ;; Loc == Maine ;; Located_In
+Peop == John Mazor ;; Org == Air Line Pilots Association ;; Work_For
+Peop == Nils Bemer ;; Org == Bellona ;; Work_For || Peop == Tomas Nilsen ;; Org == Bellona ;; Work_For || Org == Northern Fleet ;; Loc == Russia ;; OrgBased_In
+Peop == Tom Selleck ;; Loc == Detroit ;; Live_In
+Peop == Mrs. Tsuruyama ;; Loc == Yatsushiro ;; Live_In || Peop == Mrs. Tsuruyama ;; Loc == Kumamoto Prefecture ;; Live_In || Peop == Mrs. Tsuruyama ;; Loc == Japan ;; Live_In || Loc == Yatsushiro ;; Loc == Kumamoto Prefecture ;; Located_In || Loc == Yatsushiro ;; Loc == Japan ;; Located_In || Loc == Kumamoto Prefecture ;; Loc == Japan ;; Located_In
+Org == KRASNAYA ZVEZDA ;; Loc == Moscow ;; OrgBased_In
+Peop == Ruben Blades ;; Org == Papa Egoro Movement ;; Work_For || Peop == Ruben Blades ;; Org == MPE ;; Work_For
+Peop == Calvin Coolidge ;; Loc == Plymouth , Vt ;; Live_In
+Peop == John Harvey Adamson ;; Peop == Don Bolles ;; Kill
+Peop == David Graham ;; Org == Veterans Administration O Center ;; Work_For || Org == Veterans Administration O Center ;; Loc == Houston ;; OrgBased_In
+Peop == Phillip Lieberman ;; Org == Brown Univeristy ;; Work_For || Peop == Phillip Lieberman ;; Loc == Providence ;; Live_In || Peop == Phillip Lieberman ;; Loc == R.I. ;; Live_In || Org == Brown Univeristy ;; Loc == Providence ;; OrgBased_In || Org == Brown Univeristy ;; Loc == R.I. ;; OrgBased_In || Loc == Providence ;; Loc == R.I. ;; Located_In
+Peop == Chris Herr ;; Org == Wool Wizards ;; Work_For
+Peop == Babe Ruth ;; Loc == Camden Yards ;; Live_In
+Peop == Kakuei Tanaka ;; Org == Liberal Democratic Party ;; Work_For || Peop == Noboru Takeshita ;; Org == Liberal Democratic Party ;; Work_For
+Peop == James Dickey ;; Loc == Georgia ;; Live_In
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Org == Cox Packing Co. ;; Loc == Devine ;; OrgBased_In || Org == TSW Meats Ltd. ;; Loc == Liverpool ;; OrgBased_In
+Loc == Gallup Indian Center ;; Loc == N.M. ;; Located_In
+Org == K mart ;; Loc == St. Claire Shores ;; OrgBased_In || Org == K mart ;; Loc == Mich . ;; OrgBased_In || Loc == St. Claire Shores ;; Loc == Mich . ;; Located_In
+Org == Minox company ;; Loc == Heuchelheim ;; OrgBased_In
+Peop == Oswald ;; Peop == Kennedy. ;; Kill
+Org == XINHUA ;; Loc == Hefei ;; OrgBased_In
+Peop == Felix S. Bloch ;; Loc == U.S. ;; Live_In
+Peop == Anthony M. Kennedy ;; Org == Supreme Court ;; Work_For
+Peop == Jean-Verdy Bastien ;; Org == Celeste Borlette Banks ;; Work_For || Peop == Jean-Verdy Bastien ;; Org == Celeste FM ;; Work_For
+Peop == Jesse James ;; Loc == Kearney ;; Live_In || Peop == Jesse James ;; Loc == Centerville ;; Live_In || Peop == Jesse James ;; Loc == Clay County , Mo. ;; Live_In
+Peop == Epps ;; Org == Epps Aviation ;; Work_For || Org == Epps Aviation ;; Loc == DeKalb Peachtree Airport ;; OrgBased_In
+Peop == Granic ;; Loc == Croatia ;; Live_In || Peop == Granic ;; Loc == Croatia ;; Live_In
+Org == MAINICHI SHIMBUN ;; Loc == Tokyo ;; OrgBased_In
+Peop == Millard Fillmore ;; Loc == Summerhill , N.Y. ;; Live_In
+Loc == Stockholm ;; Loc == Sweden. ;; Located_In
+Peop == Ginsberg ;; Loc == New Jersey ;; Live_In
+Peop == Darci Alves Pereira ;; Peop == Mendes ;; Kill
+Peop == Margie Clack. ;; Org == Forest Service ;; Work_For
+Peop == Duane Hanson ;; Loc == Minnesota ;; Live_In
+Loc == LANCASTER ;; Loc == Ky. ;; Located_In
+Org == Chinese Government ;; Loc == China ;; OrgBased_In || Org == Chinese Government ;; Loc == China ;; OrgBased_In
+Peop == Bob Dole ;; Loc == Russell , Kan ;; Live_In
+Peop == George Washington ;; Loc == Westmoreland County ;; Live_In
+Peop == Harold Richardson ;; Org == U.S. Strategic Defense Initiative Office ;; Work_For
+Peop == John Shalikashvili ;; Org == Joint Chiefs of Staff ;; Work_For
+Org == THE NATION ;; Loc == Bangkok ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == Mr Kennedy ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Loc == Perugia ;; Loc == Umbria ;; Located_In
+Peop == Gen. Samuel K. Doe ;; Peop == President William Tolbert ;; Kill
+Loc == Goddess of Democracy ;; Loc == Chinatown ;; Located_In
+Peop == Darly Alves da Silva ;; Peop == Mendes ;; Kill
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Javier Perez de Cuellar ;; Org == U.N. ;; Work_For
+Loc == Grande Isle ;; Loc == Vt. ;; Located_In || Loc == St. Albans ;; Loc == Vt. ;; Located_In
+Peop == Alvaro Arzu ;; Org == National Vanguard Party ;; Work_For
+Loc == Afar district ;; Loc == Djibouti ;; Located_In || Loc == Afar district ;; Loc == Arhiba ;; Located_In || Loc == Arhiba ;; Loc == Djibouti ;; Located_In || Peop == Djama Elabe ;; Org == Party for Democratic Renewal ;; Work_For
+Loc == Mount Blanc ;; Loc == Western Europe ;; Located_In
+Peop == Ralph K. Winter ;; Org == 2nd U.S. Circuit Court of Appeals ;; Work_For || Org == 2nd U.S. Circuit Court of Appeals ;; Loc == New York City ;; OrgBased_In || Peop == Kenneth Starr ;; Org == U.S. Circuit Court of Appeals ;; Work_For || Org == U.S. Circuit Court of Appeals ;; Loc == District of Columbia ;; OrgBased_In
+Peop == Grigory Karasin ;; Org == Foreign Ministry ;; Work_For
+Loc == Anhui ;; Loc == China ;; Located_In
+Org == N-TV ;; Loc == Berlin ;; OrgBased_In
+Loc == Florida ;; Loc == Gulf Coast ;; Located_In
+Peop == Lou Ray ;; Loc == Fontana ;; Live_In
+Org == I KATHIMERINI ;; Loc == Athens ;; OrgBased_In
+Peop == Will Rogers ;; Loc == Oologah , Okla ;; Live_In
+Loc == FRESNO ;; Loc == Calif. ;; Located_In
+Peop == George Malina ;; Org == Healy ;; Work_For
+Org == I KATHIMERINI ;; Loc == Athens ;; OrgBased_In
+Peop == Cybill Shepherd ;; Loc == Memphis ;; Live_In
+Peop == Perez de Cuellar ;; Org == U.N. ;; Work_For || Peop == Perez de Cuellar ;; Org == United Nations ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Stephen Greiner ;; Org == Farley ;; Work_For
+Org == TANJUG ;; Loc == Knin ;; OrgBased_In || Peop == Milan Martic ;; Loc == Krajina ;; Live_In || Peop == Milan Martic ;; Loc == RSK ;; Live_In || Peop == Milan Martic ;; Loc == republic of Serbian Krajina ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Rudolf Filkus ;; Loc == Slovakia ;; Live_In
+Peop == Warner ;; Org == Home State Savings Bank of Cincinnati ;; Work_For
+Loc == Moscow ;; Loc == Russia ;; Located_In || Org == PRAVDA ;; Loc == Moscow ;; OrgBased_In || Org == PRAVDA ;; Loc == Russia ;; OrgBased_In
+Loc == HIGH ISLAND ;; Loc == Texas ;; Located_In
+Loc == Anhui ;; Loc == China ;; Located_In
+Loc == DES MOINES ;; Loc == Iowa ;; Located_In
+Peop == James O 'Brien ;; Org == California Highway Patrol ;; Work_For
+Org == Radio Bosnia-Herzegovina Network ;; Loc == Sarajevo ;; OrgBased_In
+Peop == Bernice K. McIntyre. ;; Org == Department of Public Utilities ;; Work_For
+Org == AP ;; Loc == VATICAN CITY ;; OrgBased_In
+Org == National Aeronautics and Space Administration. ;; Loc == America ;; OrgBased_In
+Peop == Abraham Lincoln ;; Loc == Larue County , Kentucky ;; Live_In
+Org == Fire Department ;; Loc == Orange County ;; OrgBased_In || Peop == Hugh Madlock ;; Loc == Orange County ;; Live_In || Peop == Hugh Madlock ;; Org == Fire Department ;; Work_For
+Loc == Pasadena ;; Loc == Calif. ;; Located_In || Loc == Gary ;; Loc == Ind . ;; Located_In
+Loc == Kelowna ;; Loc == British Columbia ;; Located_In
+Peop == M. Pierre Brochand ;; Loc == France ;; Live_In
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Org == ANP ;; Loc == The Hague ;; OrgBased_In || Org == ANP ;; Loc == The Hague ;; OrgBased_In
+Peop == Elizabeth. ;; Loc == North Carolina ;; Live_In
+Loc == Casablanca ;; Loc == Morocco ;; Located_In
+Peop == Dean Falk ;; Org == State University of New York ;; Work_For || Peop == Dean Falk ;; Loc == Albany ;; Live_In || Org == State University of New York ;; Loc == Albany ;; OrgBased_In
+Loc == BAYONNE ;; Loc == France ;; Located_In
+Peop == Grover Hartt III ;; Org == IRS. ;; Work_For
+Peop == Joseph Smith Jr. ;; Loc == Sharon , Vt ;; Live_In
+Org == Radio Rebelde Network ;; Loc == Havana ;; OrgBased_In
+Loc == CARACAS ;; Loc == Venezuela ;; Located_In
+Peop == Franjo Tudjman ;; Loc == Croatia ;; Live_In
+Org == SUEDDEUTSCHE ZEITUNG ;; Loc == Munich ;; OrgBased_In
+Peop == Ulysses S. Grant ;; Loc == Point Pleasant , Ohio ;; Live_In
+Peop == Samih al-Sa 'id ;; Loc == Asyut ;; Live_In
+Peop == Mary Campbell ;; Org == Clover Town Council ;; Work_For
+Peop == Harry Reasoner ;; Loc == Iowa ;; Live_In
+Peop == Antonio Vasquez Ochoa ;; Peop == John Walker ;; Kill || Peop == Antonio Vasquez Ochoa ;; Peop == Alberto Radelat ;; Kill
+Loc == Port Nolloth ;; Loc == South Africa ;; Located_In
+Org == SAPA ;; Loc == Johannesburg ;; OrgBased_In
+Peop == Van Buren ;; Loc == Kinderhook ;; Live_In
+Peop == Roland Dumas ;; Loc == France. ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Peop == David Leahy ;; Loc == Dade County ;; Live_In
+Peop == John Wilkes Booth ;; Peop == Lincoln ;; Kill
+Loc == BUENOS AIRES ;; Loc == Argentina ;; Located_In
+Peop == George Lucas ;; Loc == Modesto ;; Live_In || Loc == McHenry Avenue ;; Loc == California ;; Located_In
+Peop == Lee Mitgang ;; Org == AP ;; Work_For
+Org == Texas Department of Agriculture ;; Loc == Texas ;; OrgBased_In || Peop == Jim Hightower ;; Org == Texas Department of Agriculture ;; Work_For || Peop == Jim Hightower ;; Loc == Texas ;; Live_In
+Loc == Pearl Harbor ;; Loc == Hawaii ;; Located_In
+Peop == James Earl Ray ;; Peop == Martin Luther King Jr. ;; Kill
+Peop == Oliver North. ;; Org == National Security Council ;; Work_For
+Peop == Cesar Augusto Morones Servin ;; Org == CEO ;; Work_For
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Peop == John Tyler ;; Loc == Charles City County , Va ;; Live_In
+Peop == Diana Mondino ;; Org == Argentine Center for Macroeconomic Studies ;; Work_For
+Peop == Rutherford B. Hayes ;; Loc == Delaware , Ohio ;; Live_In
+Org == PRAVDA ;; Loc == Moscow ;; OrgBased_In
+Org == Minox ;; Loc == West Germany ;; OrgBased_In || Org == Leica ;; Loc == West Germany ;; OrgBased_In || Org == Rollei ;; Loc == West Germany ;; OrgBased_In
+Peop == Igor Khmelnov ;; Org == Pacific Fleet ;; Work_For
+Peop == Sirhan ;; Peop == Sen. Robert Kennedy ;; Kill
+Org == National Assembly ;; Loc == Uruguay ;; OrgBased_In
+Peop == Berlusconi ;; Org == Freedom Alliance ;; Work_For
+Peop == Richard Pavese ;; Loc == Tempe ;; Live_In
+Peop == Richard P. Kusserow ;; Org == Health and Human Services ;; Work_For
+Peop == Derwinski ;; Org == House Foreign Affairs subcommittee ;; Work_For
+Peop == Andres Vega Cedeno ;; Loc == Panama City ;; Live_In || Peop == Felipe Cano ;; Loc == San Miguelito ;; Live_In
+Loc == Pinedale ;; Loc == New Mexico ;; Located_In
+Peop == Sirhan Sirhan ;; Peop == Sen. Robert F. Kennedy ;; Kill || Peop == Sirhan Sirhan ;; Peop == Kennedy ;; Kill
+Org == THE HINDU ;; Loc == Madras ;; OrgBased_In
+Loc == Lenin Shipyard ;; Loc == Gdansk ;; Located_In || Peop == Walesa ;; Org == Solidarity ;; Work_For
+Loc == Salida ;; Loc == Colorado ;; Located_In || Loc == Gunnison ;; Loc == Colorado ;; Located_In
+Peop == Sanders ;; Org == CBOT ;; Work_For || Peop == Daniel Dewey ;; Org == CBOT ;; Work_For
+Peop == Anderson ;; Org == Associated Press. ;; Work_For
+Peop == Angel Pena ;; Org == Mediterranean Foundation ;; Work_For
+Peop == Al Comproni. ;; Org == Massachusetts Department of Public Health ;; Work_For
+Peop == Larry Jinks ;; Org == Knight-Ridder ;; Work_For || Peop == Larry Jinks ;; Org == San Jose Mercury News ;; Work_For || Peop == William A. Ott ;; Org == Knight-Ridder ;; Work_For || Peop == William A. Ott ;; Org == San Jose Mercury News ;; Work_For
+Peop == Prasong Sunsiri ;; Loc == Thailand ;; Live_In
+Peop == Reith Chuol ;; Loc == Upper Nile region ;; Live_In
+Peop == Kravchuk ;; Loc == Ukraine ;; Live_In || Peop == Chornovil ;; Loc == Ukraine ;; Live_In
+Peop == Emily Dickinson ;; Loc == Amherst , Mass ;; Live_In
+Loc == Dayton International Airport ;; Loc == Dayton ;; Located_In || Loc == Dayton ;; Loc == Dayton International Airport ;; Located_In
+Peop == Richard Taylor ;; Loc == Atlanta ;; Live_In
+Org == Democratic Socialists ;; Loc == America ;; OrgBased_In
+Org == THE SUNDAY TIMES ;; Loc == London ;; OrgBased_In
+Peop == Jesse Jackson ;; Loc == Greenville , S.C. ;; Live_In
+Org == GAZETA MERCANTIL ;; Loc == Sao Paulo ;; OrgBased_In
+Loc == Las Vegas ;; Loc == Nev. ;; Located_In
+Peop == Mark David Chapman ;; Peop == John Lennon ;; Kill
+Loc == Umbria ;; Loc == Italy ;; Located_In || Loc == Lazio ;; Loc == Italy ;; Located_In || Loc == Campania ;; Loc == Italy ;; Located_In
+Peop == Warner ;; Loc == Ocala ;; Live_In || Peop == Warner ;; Loc == Fla. ;; Live_In || Loc == Ocala ;; Loc == Fla. ;; Located_In || Loc == U.S. Bankruptcy Court ;; Loc == Jacksonville ;; Located_In || Loc == U.S. Bankruptcy Court ;; Loc == Fla. ;; Located_In || Loc == Jacksonville ;; Loc == Fla. ;; Located_In
+Peop == Henry Ford ;; Loc == Dearborn Township , Mich ;; Live_In
+Peop == Don Paramatwinai ;; Org == Foreign Ministry ;; Work_For || Peop == Don Paramatwinai ;; Org == Southeast Asian Department ;; Work_For
+Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In
+Peop == Brutus ;; Peop == Roman Emperor Julius Caesar ;; Kill || Peop == Cassius ;; Peop == Roman Emperor Julius Caesar ;; Kill
+Peop == Thomas Wolfe ;; Loc == North Carolina ;; Live_In
+Peop == Dan Rather ;; Org == CBS ;; Work_For
+Loc == Akagera River ;; Loc == Tanzania ;; Located_In || Loc == Akagera River ;; Loc == Uganda ;; Located_In
+Loc == Camp Butner ;; Loc == N.C. ;; Located_In
+Peop == Daniel Sullivan ;; Loc == Boothbay ;; Live_In
+Loc == Clear Air Force Station ;; Loc == Alaska ;; Located_In
+Peop == Zachary Taylor ;; Loc == Orange County , Virginia ;; Live_In
+Peop == Robert Mugabe ;; Loc == Zimbabwe ;; Live_In
+Peop == Tim Valentine ;; Loc == U.S. ;; Live_In
+Peop == Donald W. Riegle Jr. ;; Org == Senate Banking Committee ;; Work_For
+Peop == Sirhan ;; Peop == U.S. Sen. Robert Kennedy ;; Kill
+Peop == Ray ;; Peop == King ;; Kill
+Org == NRC ;; Loc == Rockville ;; OrgBased_In || Org == NRC ;; Loc == Md. ;; OrgBased_In || Loc == Rockville ;; Loc == Md. ;; Located_In
+Org == FBI ;; Loc == United States ;; OrgBased_In
+Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In || Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In
+Peop == Ruby ;; Peop == Oswald ;; Kill
+Peop == Earl Long ;; Loc == Louisiana ;; Live_In
+Peop == Edouard Balladur ;; Loc == Paris ;; Live_In
+Peop == Higgins ;; Loc == Danville ;; Live_In || Peop == Higgins ;; Loc == Louisville. ;; Live_In
+Peop == Suzanne Zachry ;; Org == Wallowa-Whitman National Forest ;; Work_For
+Peop == Aldrin ;; Loc == Montclair , N.J. ;; Live_In || Peop == Edwin E. Aldrin Jr ;; Loc == Montclair , N.J. ;; Live_In
+Peop == Bruce Jonasson ;; Org == Bradley First Air ;; Work_For
+Loc == Cascade Mountains ;; Loc == Oregon ;; Located_In
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == Reagan ;; Loc == America ;; Live_In
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Org == XINHUA ;; Loc == Beijing ;; OrgBased_In
+Peop == John Ray ;; Org == District of Columbia Council ;; Work_For
+Peop == Gerald R. Ford ;; Loc == Omaha , Neb ;; Live_In
+Peop == Tuvia Tzafir ;; Loc == Israel ;; Live_In
+Peop == Robert Thompson ;; Org == Eaglebrook ;; Work_For
+Peop == James O. Mason ;; Org == Department of Health and Human Services ;; Work_For
+Peop == James Garfield ;; Loc == Orange , Ohio ;; Live_In
+Loc == Whitefish ;; Loc == Montana ;; Located_In
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == David Abernathy ;; Loc == Linden , Ala. ;; Live_In
+Peop == Buddy Roemer ;; Loc == Louisiana ;; Live_In
+Loc == Mountain Empire Unified School District ;; Loc == San Diego ;; Located_In
+Peop == Sirhan B. Sirhan ;; Peop == Kennedy ;; Kill
+Org == Supreme Council ;; Loc == Ukraine ;; OrgBased_In
+Peop == Deng Nan ;; Loc == China ;; Live_In
+Peop == Mickey Kantor ;; Loc == U.S. ;; Live_In || Peop == Hosokawa ;; Loc == Japan ;; Live_In
+Loc == Mount Blanc ;; Loc == Alps ;; Located_In
+Loc == Andrews Air Force Base ;; Loc == Md. ;; Located_In
+Peop == Malcolm O 'Neill ;; Org == Ballistic Missile Development Organization ;; Work_For || Peop == Malcolm O 'Neill ;; Loc == U.S. ;; Live_In || Peop == Malcolm O 'Neill ;; Loc == U.S. ;; Live_In || Org == Ballistic Missile Development Organization ;; Loc == U.S. ;; OrgBased_In || Org == Ballistic Missile Development Organization ;; Loc == U.S. ;; OrgBased_In || Org == Congress ;; Loc == U.S. ;; OrgBased_In || Org == Congress ;; Loc == U.S. ;; OrgBased_In
+Org == Waste Disposal Co. ;; Loc == Randolph ;; OrgBased_In || Peop == Debra Bornstein ;; Org == Waste Disposal Co. ;; Work_For
+Peop == Patrick Strosahl ;; Org == Vision Seattle ;; Work_For
+Peop == Mark David Chapman ;; Peop == John Lennon ;; Kill
+Peop == James Monroe ;; Loc == Westmoreland County , Va ;; Live_In
+Peop == Sirhan Bishara Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Mark David Chapman ;; Peop == John Lennon ;; Kill
+Peop == Frank Sobrino ;; Org == Board of Education ;; Work_For
+Org == Shanghai Opera ;; Loc == Shanghai ;; OrgBased_In
+Peop == Frank B. Colton ;; Loc == Poland ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Org == American Enterprise Institute ;; Loc == U.S. ;; OrgBased_In
+Loc == ANNAPOLIS ;; Loc == Md . ;; Located_In
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill
+Peop == Thomas Woodrow Wilson ;; Loc == Staunton , Va ;; Live_In
+Peop == Cetin ;; Loc == Turkey ;; Live_In || Peop == Cetin ;; Loc == Balkans ;; Live_In || Loc == Turkey ;; Loc == Balkans ;; Located_In
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill || Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Lawrence J. Hagen ;; Org == USDA ;; Work_For
+Peop == Warner ;; Loc == U.S. ;; Live_In || Peop == Warner ;; Loc == Switzerland ;; Live_In
+Peop == Buddy Holly ;; Loc == Lubbock , Texas ;; Live_In || Peop == Charles Hardin Holley ;; Loc == Lubbock , Texas ;; Live_In
+Peop == Mikhail S. Gorbachev ;; Loc == Soviet ;; Live_In || Peop == Mikhail S. Gorbachev ;; Loc == Soviet ;; Live_In
+Org == YONHAP ;; Loc == Seoul ;; OrgBased_In
+Peop == Charles McC. ;; Org == Congress ;; Work_For
+Peop == Miller ;; Loc == Wilmington ;; Live_In
+Loc == Kafue River ;; Loc == Zambia ;; Located_In
+Org == EL COMERCIO ;; Loc == Lima ;; OrgBased_In
+Loc == WHITEFISH ;; Loc == Mont. ;; Located_In
+Peop == Peter McWalters ;; Loc == Rochester ;; Live_In
+Peop == Robinson ;; Loc == Greenville ;; Live_In
+Loc == Buenos Aires Province ;; Loc == Argentina ;; Located_In || Peop == Antonio Cafiero. ;; Loc == Argentina ;; Live_In || Peop == Antonio Cafiero. ;; Loc == Buenos Aires Province ;; Live_In
+Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In
+Peop == Jesse Jackson ;; Loc == South Carolina ;; Live_In
+Loc == Washington ;; Loc == U.S. ;; Located_In || Loc == Washington ;; Loc == U.S. ;; Located_In
+Peop == Cecil Ray. ;; Loc == King County ;; Live_In
+Loc == Fort Hamilton ;; Loc == Brooklyn ;; Located_In || Loc == Fort Hamilton ;; Loc == N.Y. ;; Located_In || Loc == Brooklyn ;; Loc == N.Y. ;; Located_In
+Peop == Giuseppe Zangara ;; Peop == Chicago Mayor Anton Cermak ;; Kill
+Peop == Marcio Nogueira Barbosa ;; Org == INPE ;; Work_For
+Loc == HAUPPAUGE ;; Loc == N.Y . ;; Located_In
+Peop == Bob Baker ;; Org == Prudential-Bache Securities Inc. ;; Work_For
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Loc == Saudi Arabia ;; Loc == Gulf ;; Located_In
+Peop == Charles A. Palmer ;; Loc == Texas ;; Live_In
+Peop == Claudio Manoel Constancio ;; Org == Assipen ;; Work_For
+Peop == Acharya Giriraj Kishore ;; Org == Vishwa Hindu Parishad ;; Work_For || Peop == Acharya Giriraj Kishore ;; Org == VHP ;; Work_For
+Peop == Ze 'ev Eytan ;; Org == Jaffe Center for Strategic Studies ;; Work_For
+Peop == Oswald ;; Peop == Officer Tippit ;; Kill
+Org == RNE International ;; Loc == Madrid ;; OrgBased_In
+Peop == Oswald ;; Peop == President Kennedy ;; Kill
+Peop == Francisco Pizarro ;; Peop == Atahualpa ;; Kill
+Org == XINHUA ;; Loc == Beijing ;; OrgBased_In || Peop == Qian Qichen ;; Loc == Beijing ;; Live_In
+Loc == Baton Rouge ;; Loc == La. ;; Located_In
+Peop == Ouyang Zhongcan ;; Org == Institute of Theoretical Physics ;; Work_For
+Peop == John Wilkes Booth ;; Peop == President Abraham Lincoln ;; Kill
+Peop == Pat Philbin. ;; Org == Coast Guard ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Gus Melonas ;; Org == Burlington ;; Work_For
+Peop == Aleksander Alekseev ;; Loc == Soviet ;; Live_In
+Org == YONHAP ;; Loc == Seoul ;; OrgBased_In
+Org == National Aeronautics and Space Administration ;; Loc == U.S. ;; OrgBased_In || Org == NASA ;; Loc == U.S. ;; OrgBased_In || Org == Department of Defense ;; Loc == U.S. ;; OrgBased_In
+Peop == Buffalo Bill ;; Loc == Davenport , Iowa ;; Live_In || Peop == Cody ;; Loc == Davenport , Iowa ;; Live_In
+Peop == Ivan Plyushch ;; Org == Supreme Soviet Council ;; Work_For || Peop == Ivan Plyushch ;; Org == Supreme Soviet Council ;; Work_For
+Org == GAZETA MERCANTIL ;; Loc == Sao Paulo ;; OrgBased_In
+Peop == Bob Miller ;; Loc == Nevada. ;; Live_In
+Peop == James Earl Ray ;; Peop == King ;; Kill
+Peop == Henry David Thoreau ;; Loc == Concord , Mass ;; Live_In
+Peop == Nora Ananieva ;; Org == BSP ;; Work_For
+Org == Phnom Penh government ;; Loc == Cambodia ;; OrgBased_In || Org == Khmer Rouge ;; Loc == Cambodia ;; OrgBased_In
+Peop == Bob Graham ;; Loc == Florida ;; Live_In
+Peop == James Helmer ;; Org == GE ;; Work_For
+Peop == Carl Rubin ;; Loc == U.S. ;; Live_In
+Loc == PASADENA ;; Loc == Calif. ;; Located_In
+Peop == Bernard Sansaricq ;; Org == Senate ;; Work_For || Peop == Firmin Jean-Louis ;; Org == Senate ;; Work_For
+Org == Radio Rebelde Network ;; Loc == Havana ;; OrgBased_In
+Peop == Sherman G. Finesilver ;; Loc == U.S. ;; Live_In
+Peop == Norman Vaughan ;; Loc == Trapper Creek ;; Live_In || Peop == Norman Vaughan ;; Loc == Alaska ;; Live_In || Loc == Trapper Creek ;; Loc == Alaska ;; Located_In
+Peop == Helen Keller ;; Loc == Tuscumbia , Ala ;; Live_In
+Peop == Sharon Pratt Dixon ;; Org == Pepco ;; Work_For
+Peop == Jack Ruby ;; Peop == Oswald ;; Kill
+Peop == Michael Dukakis ;; Loc == Massachusetts. ;; Live_In
+Peop == James Joseph Rovida Jr. ;; Peop == Robert Brock ;; Kill
+Peop == Helen Keller ;; Loc == Tuscumbia , Ala. ;; Live_In
+Org == Kanal-6 Television ;; Loc == London ;; OrgBased_In
+Peop == Hun Sen ;; Loc == Cambodia ;; Live_In || Peop == Hun Sen ;; Org == Phnom Penh government ;; Work_For || Org == Phnom Penh government ;; Loc == Cambodia ;; OrgBased_In || Org == Khmer Rouge ;; Loc == Cambodia ;; OrgBased_In || Org == KR ;; Loc == Cambodia ;; OrgBased_In
+Peop == Henry Fonda ;; Loc == Grand Island , Neb ;; Live_In
+Loc == Shands Hospital ;; Loc == Gainesville ;; Located_In
+Peop == Will Rogers ;; Loc == Oologah , Okla. ;; Live_In
+Org == EFE ;; Loc == Madrid ;; OrgBased_In
+Loc == TUCSON ;; Loc == Ariz . ;; Located_In
+Peop == Clinton ;; Loc == United States ;; Live_In
+Loc == Astoria ;; Loc == Ore. ;; Located_In || Loc == Needles ;; Loc == Calif. ;; Located_In
+Peop == Betty Barrow ;; Loc == High Island. ;; Live_In
+Org == ANSA ;; Loc == Brussels ;; OrgBased_In
+Org == State Department ;; Loc == Washington ;; OrgBased_In || Org == U.S. Embassy ;; Loc == Ethiopia ;; OrgBased_In
+Peop == Richard Kennedy ;; Org == GE ;; Work_For
+Loc == YAKIMA ;; Loc == Wash. ;; Located_In
+Peop == Sydney J. Freedberg ;; Loc == Boston ;; Live_In
+Loc == Grand Isle ;; Loc == Louisiana ;; Located_In
+Peop == Teruo Sofue ;; Org == NASDA ;; Work_For
+Peop == An Wang ;; Loc == Shanghai , China ;; Live_In
+Org == CLARIN ;; Loc == Buenos Aires ;; OrgBased_In
+Org == AP ;; Loc == SAN FRANCISCO ;; OrgBased_In
+Peop == Jimmy Dorsey ;; Loc == Shenandoah , Penn ;; Live_In
+Peop == Larry Martin ;; Loc == Tucson ;; Live_In
+Peop == Brent ;; Loc == Fresno ;; Live_In
+Loc == Andrews Lock and Dam ;; Loc == Henry County ;; Located_In || Loc == Andrews Lock and Dam ;; Loc == Ala. ;; Located_In || Loc == Henry County ;; Loc == Ala. ;; Located_In
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Loc == NIAGARA FALLS ;; Loc == N.Y . ;; Located_In
+Loc == BRUSSELS ;; Loc == Belgium ;; Located_In || Org == AP ;; Loc == BRUSSELS ;; OrgBased_In || Org == AP ;; Loc == Belgium ;; OrgBased_In
+Org == PRAVDA UKRAINY ;; Loc == Kiev ;; OrgBased_In
+Peop == Buffalo Bill ;; Loc == Davenport , Iowa. ;; Live_In || Peop == Cody ;; Loc == Davenport , Iowa. ;; Live_In
+Loc == DAYTON ;; Loc == Ohio ;; Located_In
+Peop == Allan McArtor ;; Org == FAA ;; Work_For
+Peop == Susanna Petrosyan ;; Loc == Leninakan ;; Live_In || Peop == Gayaney ;; Loc == Leninakan ;; Live_In
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Bush ;; Loc == U.S. ;; Live_In
+Peop == Leon Czolgosz ;; Peop == President William McKinley ;; Kill
+Peop == John Wilkes Booth ;; Peop == Lincoln ;; Kill
+Peop == Ernesto Zedillo ;; Org == Institutional Revolutionary Party ;; Work_For
+Peop == Yasser Arafat ;; Org == Palestine Liberation Organization ;; Work_For
+Peop == Kevin Kelly ;; Org == Southern California Edison ;; Work_For || Peop == Kevin Kelly ;; Org == Edison ;; Work_For
+Org == FBI ;; Loc == Washington. ;; OrgBased_In || Peop == Doug Beldon ;; Org == FBI ;; Work_For || Peop == Doug Beldon ;; Loc == Albuquerque ;; Live_In || Peop == Doug Beldon ;; Loc == N.M. ;; Live_In || Loc == Albuquerque ;; Loc == N.M. ;; Located_In
+Peop == Bush ;; Loc == White House ;; Live_In
+Org == Congress ;; Loc == United States ;; OrgBased_In
+Org == Martires leather factory ;; Loc == Caguasu ;; OrgBased_In
+Peop == Husni Mubarak ;; Loc == Cairo ;; Live_In
+Peop == Nick Rufford ;; Loc == Far East ;; Live_In
+Peop == Larry Sturholm ;; Org == KIRO Television. ;; Work_For
+Peop == Miguel Rodriguez ;; Loc == Venezuela ;; Live_In
+Loc == St. Louis County ;; Loc == Minnesota ;; Located_In
+Peop == Mr Kim ;; Loc == South Korea ;; Live_In
+Peop == Dr. Lee DeForest ;; Loc == Council Bluffs , Iowa ;; Live_In
+Peop == Man Ray ;; Loc == Philadelphia ;; Live_In
+Loc == BLYTHE ;; Loc == Calif . ;; Located_In
+Org == Avis Bourg Co. ;; Loc == Folsom ;; OrgBased_In
+Loc == Camas ;; Loc == Wash. ;; Located_In || Peop == Chris Jonientz-Trisler ;; Org == University of Washington Seismology Lab. ;; Work_For || Org == University of Washington Seismology Lab. ;; Loc == Wash. ;; OrgBased_In
+Peop == Frank Lloyd Wright ;; Loc == Wisconsin ;; Live_In
+Loc == Holliston ;; Loc == Mass ;; Located_In
+Loc == Gyandzha ;; Loc == Azerbaijan ;; Located_In || Loc == Gyandzha ;; Loc == Soviet ;; Located_In || Loc == Shamkhor ;; Loc == Azerbaijan ;; Located_In || Loc == Shamkhor ;; Loc == Soviet ;; Located_In || Loc == Azerbaijan ;; Loc == Soviet ;; Located_In
+Loc == WARSAW ;; Loc == Poland ;; Located_In || Org == AP ;; Loc == WARSAW ;; OrgBased_In || Org == AP ;; Loc == Poland ;; OrgBased_In
+Peop == Harold Abramson ;; Loc == U.S. ;; Live_In
+Peop == Lucille Ball ;; Loc == New York ;; Live_In
+Peop == Lynette Davis ;; Org == Boise National Forest ;; Work_For
+Peop == Calvin Coolidge ;; Loc == Plymouth , Vt ;; Live_In
+Org == UT-1 Television Network ;; Loc == Kiev ;; OrgBased_In
+Peop == Jesse Jackson ;; Loc == South Carolina ;; Live_In
+Loc == Cuenca ;; Loc == Ecuador ;; Located_In
+Peop == Tansu Ciller ;; Loc == Turkey ;; Live_In
+Peop == Washington Irving ;; Loc == New York City ;; Live_In
+Loc == Byelorussia ;; Loc == Soviet ;; Located_In
+Peop == Sirhan Sirhan ;; Peop == Robert Kennedy ;; Kill
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == Benjamin Harrison ;; Loc == North Bend , Ohio ;; Live_In
+Peop == Ali Sunni Muntasser ;; Loc == Libya ;; Live_In
+Peop == Sohn Ho Young ;; Org == Korean CIA ;; Work_For
+Org == Zapatist National Liberation Army ;; Loc == Mexican Southeast ;; OrgBased_In || Org == Zapatist National Liberation Army ;; Loc == Mexico ;; OrgBased_In || Org == EZLN ;; Loc == Mexican Southeast ;; OrgBased_In || Org == EZLN ;; Loc == Mexico ;; OrgBased_In || Org == ( Zapatist National Liberation Army ;; Loc == Mexican Southeast ;; OrgBased_In || Org == ( Zapatist National Liberation Army ;; Loc == Mexico ;; OrgBased_In || Org == EZLN ;; Loc == Mexican Southeast ;; OrgBased_In || Org == EZLN ;; Loc == Mexico ;; OrgBased_In
+Org == ACAN ;; Loc == Panama City ;; OrgBased_In
+Org == Foreign Ministry ;; Loc == Russia ;; OrgBased_In
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Miss Dickinson ;; Loc == Kulm ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Loc == Bedford ;; Loc == Indiana ;; Located_In
+Org == AP ;; Loc == NEW YORK ;; OrgBased_In
+Loc == Armenia ;; Loc == Soviet ;; Located_In
+Loc == KHARTOUM ;; Loc == Sudan ;; Located_In
+Org == METEOROLOGIYA I GIDROLOGIYA ;; Loc == Moscow ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Peop == Corbin Bernsen ;; Org == NBC ;; Work_For || Peop == Kate Mulgrew ;; Org == ABC ;; Work_For
+Peop == Rutherford B. Hayes ;; Loc == Delaware , Ohio ;; Live_In
+Org == O GLOBO ;; Loc == Rio de Janeiro ;; OrgBased_In
+Peop == Johnny Campbell ;; Peop == Lattie McGee. ;; Kill || Peop == Alicia Abraham ;; Peop == Lattie McGee. ;; Kill
+Peop == Todd Kimberlain ;; Org == National Hurricane Center. ;; Work_For
+Peop == Gilmore ;; Org == Downtown Seattle Association ;; Work_For
+Peop == Andy Lipkis ;; Org == TreePeople ;; Work_For
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Lucille Ball ;; Loc == Jamestown , N.Y. ;; Live_In
+Peop == Koji Kakizawa ;; Loc == Tokyo ;; Live_In
+Loc == Truckee ;; Loc == Calif. ;; Located_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Peop == Elvis Presley ;; Loc == Tupelo , Miss ;; Live_In
+Peop == John Wilkes Booth ;; Peop == President Abraham Lincoln ;; Kill
+Peop == Paul Revere ;; Loc == Boston ;; Live_In
+Peop == Fred Coe ;; Loc == Nashville ;; Live_In
+Org == EFE ;; Loc == Madrid ;; OrgBased_In
+Org == The Associated Press ;; Loc == Beirut ;; OrgBased_In
+Org == BABIL ;; Loc == Baghdad ;; OrgBased_In
+Org == KOMSOMOLSKAYA PRAVDA ;; Loc == Moscow ;; OrgBased_In
+Org == Radio Riga Network ;; Loc == Riga ;; OrgBased_In
+Org == SILSKI VISTI ;; Loc == Kiev ;; OrgBased_In
+Loc == BUENOS AIRES ;; Loc == Argentina ;; Located_In
+Peop == Mason ;; Org == Centers for Disease Control ;; Work_For || Peop == Mason ;; Loc == Atlanta ;; Live_In || Peop == Mason ;; Org == HHS ;; Work_For || Org == Centers for Disease Control ;; Loc == Atlanta ;; OrgBased_In
+Peop == Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill || Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill
+Peop == Brutus ;; Peop == Roman Emperor Julius Caesar ;; Kill || Peop == Cassius. ;; Peop == Roman Emperor Julius Caesar ;; Kill
+Org == YOMIURI SHIMBUN ;; Loc == Tokyo ;; OrgBased_In
+Peop == Jerome Robbins ;; Loc == New York ;; Live_In
+Peop == James Earl Ray ;; Peop == Rev. Martin Luther King ;; Kill
+Loc == Richland ;; Loc == Wash. ;; Located_In || Loc == Feed Materials Production Center ;; Loc == Fernald ;; Located_In || Loc == Feed Materials Production Center ;; Loc == Ohio ;; Located_In || Loc == Feed Materials Production Center ;; Loc == Ohio ;; Located_In || Loc == Fernald ;; Loc == Ohio ;; Located_In || Loc == Mound Plant ;; Loc == Ohio ;; Located_In
+Peop == Sirhan Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Franca Chlistovsky ;; Org == Brera metereologic institute ;; Work_For || Org == Brera metereologic institute ;; Loc == Milan ;; OrgBased_In
+Org == Suomen Yleisradio Network ;; Loc == Helsinki ;; OrgBased_In
+Org == Superior Court ;; Loc == Maricopa County ;; OrgBased_In || Peop == Lindsay Ellis ;; Org == Superior Court ;; Work_For
+Peop == Fang Kaitai ;; Org == Institute of Applied Mathematics ;; Work_For || Peop == Wang Yuan ;; Org == Institute of Mathematics ;; Work_For
+Peop == Leslie Kota ;; Org == K mart ;; Work_For || Org == K mart ;; Loc == Troy ;; OrgBased_In || Org == K mart ;; Loc == Mich. ;; OrgBased_In || Loc == Troy ;; Loc == Mich. ;; Located_In
+Peop == James Earl Ray ;; Peop == Dr. Martin Luther King Jr. ;; Kill
+Org == AP ;; Loc == LOS ANGELES ;; OrgBased_In
+Peop == Michael Mason ;; Org == American Petroleum Institute ;; Work_For
+Loc == WAMPSVILLE ;; Loc == N.Y . ;; Located_In
+Peop == Mauri Pekkarinen ;; Loc == Finland ;; Live_In
+Loc == Portland ;; Loc == Maine ;; Located_In
+Peop == Oded Ben-Ami ;; Org == Defense Ministry ;; Work_For
+Peop == Nancy Cowan ;; Org == Red Cross ;; Work_For
+Loc == JOHANNESBURG ;; Loc == South Africa ;; Located_In
+Peop == Richard C. Wallace ;; Loc == Pittsburgh ;; Live_In
+Loc == Custer National Forest ;; Loc == Montana ;; Located_In || Peop == Jerry Chapman ;; Org == Bureau of Land Management. ;; Work_For
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill
+Peop == John Wilkes Booth ;; Peop == Lincoln ;; Kill
+Loc == Dade County ;; Loc == Miami ;; Located_In
+Peop == Boris Sitnikov ;; Org == ITAR-TASS ;; Work_For
+Loc == Marshall Space Flight Center ;; Loc == Huntsville ;; Located_In || Loc == Marshall Space Flight Center ;; Loc == Ala ;; Located_In || Loc == Huntsville ;; Loc == Ala ;; Located_In
+Peop == Gavrilo Princip ;; Peop == Archduke Franz Ferdinand ;; Kill || Loc == Austria-Hungary ;; Loc == Sarajevo ;; Located_In
+Org == CHINA DAILY ;; Loc == Beijing ;; OrgBased_In
+Peop == William Miller. ;; Loc == Ukraine ;; Live_In
+Loc == Savannah River ;; Loc == South Carolina ;; Located_In
+Loc == Little Havana ;; Loc == Miami ;; Located_In
+Peop == Fred Bauman ;; Org == Habitat for Humanity ;; Work_For || Peop == Fred Bauman ;; Org == Yakima Valley Partners ;; Work_For
+Loc == Cedar City ;; Loc == Utah ;; Located_In
+Peop == William O 'Brien III ;; Loc == Madison County ;; Live_In
+Org == KOMSOMOLSKAYA PRAVDA ;; Loc == Moscow ;; OrgBased_In
+Loc == Rancho Cucamonga ;; Loc == San Bernardino County ;; Located_In || Peop == Denise Garland ;; Loc == San Bernardino County ;; Live_In
+Loc == State House ;; Loc == Nairobi ;; Located_In || Peop == Mr. Lucas Pande Tavaya ;; Loc == Zimbabwe ;; Live_In
+Peop == Richard Kahn ;; Org == American Diabetes Association ;; Work_For || Org == American Diabetes Association ;; Loc == Alexandria ;; OrgBased_In || Org == American Diabetes Association ;; Loc == Va. ;; OrgBased_In || Loc == Alexandria ;; Loc == Va. ;; Located_In
+Peop == Hua Wen-Yi ;; Loc == Shanghai ;; Live_In || Peop == Leonard Lee ;; Loc == San Francisco. ;; Live_In
+Peop == Alan Pollock ;; Org == NTSB ;; Work_For
+Org == Syrian Arab Republic Radio Network ;; Loc == Damascus ;; OrgBased_In
+Org == Avis Bourg Co. ;; Loc == Folsom ;; OrgBased_In
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Loc == Kings Bay ;; Loc == Ga. ;; Located_In
+Peop == M. F. Reshetnov ;; Org == Scientific Production Association of Applied Mechanics ;; Work_For
+Peop == Gerald Baliles ;; Loc == Virginia ;; Live_In || Peop == Terry Branstad ;; Loc == Iowa ;; Live_In
+Peop == Cybill Shepherd ;; Loc == Memphis ;; Live_In
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Peop == Charles Fried ;; Org == Harvard University Law School ;; Work_For
+Org == INTERFAX ;; Loc == Moscow ;; OrgBased_In
+Loc == Brighton Beach ;; Loc == Brooklyn ;; Located_In
+Peop == John Wilkes Booth ;; Peop == President Lincoln ;; Kill
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill || Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Peop == David Foster ;; Org == AP ;; Work_For || Org == AP ;; Loc == Northwest ;; OrgBased_In || Org == AP ;; Loc == Seattle. ;; OrgBased_In
+Org == Radio Republik Indonesia Network ;; Loc == Jakarta ;; OrgBased_In
+Peop == Jesse Owens ;; Loc == Danville , Ala. ;; Live_In
+Peop == Spencer Christian ;; Org == ABC ;; Work_For
+Org == Supreme Court ;; Loc == Niagara County ;; OrgBased_In || Peop == Norma Viscomi ;; Loc == Niagara Falls ;; Live_In || Loc == Niagara Falls ;; Loc == Niagara County ;; Located_In
+Org == LA JORNADA ;; Loc == Mexico City ;; OrgBased_In
+Loc == Santa Ana ;; Loc == Southern California ;; Located_In
+Peop == John Paul Rosser. ;; Org == Eastern Airlines ;; Work_For
+Peop == De La Pena ;; Org == UN ;; Work_For
+Peop == Jeffrey Laitman ;; Loc == New York ;; Live_In || Peop == Jeffrey Laitman ;; Org == Mount Sinai School of Medicine ;; Work_For || Org == Mount Sinai School of Medicine ;; Loc == New York ;; OrgBased_In
+Peop == Elizabeth Dole ;; Loc == U.S. ;; Live_In
+Peop == LeRoy ;; Loc == New York ;; Live_In
+Loc == Andrews Lock and Dam ;; Loc == Early County ;; Located_In || Loc == Andrews Lock and Dam ;; Loc == Ga. ;; Located_In || Loc == Early County ;; Loc == Ga. ;; Located_In
+Peop == Cuauhtemoc Cardenas ;; Org == Party of the Democratic Revolution ;; Work_For || Peop == Cuauhtemoc Cardenas ;; Org == PRD ;; Work_For || Peop == Cuauhtemoc Cardenas ;; Loc == Mexico ;; Live_In || Org == Party of the Democratic Revolution ;; Loc == Mexico ;; OrgBased_In || Org == PRD ;; Loc == Mexico ;; OrgBased_In
+Peop == Firmin Jean-Louis ;; Org == Senate ;; Work_For
+Org == FBI ;; Loc == United States ;; OrgBased_In
+Peop == Ruby ;; Peop == Oswald ;; Kill
+Peop == Michael O 'Connor. ;; Org == Conoco Inc. ;; Work_For
+Peop == James Rovida ;; Peop == Robert Brock ;; Kill
+Peop == Mason ;; Org == Public Health Service ;; Work_For
+Peop == Fred Eckhard ;; Org == U.N. ;; Work_For
+Loc == Taj Mahal ;; Loc == Atlantic City ;; Located_In
+Peop == Reynie Ortiz ;; Org == U S West International ;; Work_For
+Org == AP ;; Loc == WASHINGTON ;; OrgBased_In
+Peop == Richard Celeste ;; Loc == Ohio ;; Live_In
+Peop == Leon Czolgosz ;; Peop == President William McKinley ;; Kill
+Loc == Kosovo ;; Loc == Serbia ;; Located_In
+Loc == Channel Islands ;; Loc == Europe ;; Located_In
+Loc == San Antonio ;; Loc == Texas ;; Located_In
+Peop == James Earl Ray ;; Peop == Rev. Martin Luther King Jr. ;; Kill
+Loc == Dade County ;; Loc == Fla. ;; Located_In || Loc == Rochester ;; Loc == N.Y. ;; Located_In
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Lucille Ball ;; Loc == New York ;; Live_In
+Peop == Anton Valukas ;; Loc == U.S. ;; Live_In
+Peop == John Kennedy ;; Loc == United States ;; Live_In
+Loc == Ontario airport ;; Loc == Los Angeles ;; Located_In
+Org == CLARIN ;; Loc == Buenos Aires ;; OrgBased_In
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == Nelson ;; Loc == Abbott ;; Live_In
+Peop == Norma Cano ;; Org == Papa Egoro Movement ;; Work_For || Peop == Rolando Miller ;; Org == Papa Egoro Movement ;; Work_For || Peop == Norma Cano ;; Org == Papa Egoro Movement ;; Work_For || Peop == Rolando Miller ;; Org == Papa Egoro Movement ;; Work_For
+Peop == Mario Cuomo ;; Loc == New York ;; Live_In
+Peop == Mark David Chapman ;; Peop == John Lennon ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Yuriy Tyssovsky ;; Org == ITAR-TASS ;; Work_For
+Peop == James Earl Ray ;; Peop == King ;; Kill
+Loc == Aramar Experimental Center ;; Loc == Ipero ;; Located_In || Loc == Aramar Experimental Center ;; Loc == Sao Paulo ;; Located_In || Loc == Ipero ;; Loc == Sao Paulo ;; Located_In
+Loc == Turiguano ;; Loc == Cuba ;; Located_In
+Peop == Klemow ;; Org == Associated Press ;; Work_For || Peop == Klemow ;; Org == IAI ;; Work_For
+Org == Immigration and Naturalization Service ;; Loc == U.S. ;; OrgBased_In
+Peop == Dwight D. Eisenhower ;; Loc == Denison , Tex. ;; Live_In || Loc == E. Day St. ;; Loc == Denison , Tex. ;; Located_In
+Peop == Morihiro Hosokawa ;; Loc == Japan ;; Live_In
+Peop == Sinclair Lewis ;; Loc == Sauk Center , Minn ;; Live_In
+Peop == Brutus ;; Peop == Julius Caesar ;; Kill
+Loc == Memphis ;; Loc == Tenn. ;; Located_In
+Org == METEOROLOGIYA I GIDROLOGIYA ;; Loc == Moscow ;; OrgBased_In
+Peop == Herbert Clark Hoover ;; Loc == West Branch , Iowa ;; Live_In
+Peop == Sirhan Bishara Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Deniz Baykal ;; Org == CHP ;; Work_For || Peop == Deniz Baykal ;; Org == Republican People 's Party ;; Work_For
+Org == International Court of Justice ;; Loc == The Hague ;; OrgBased_In || Org == International Court of Justice ;; Loc == The Hague ;; OrgBased_In
+Org == K mart ;; Loc == Niagara Falls ;; OrgBased_In
+Peop == Mitch McConnell ;; Loc == U.S. ;; Live_In
+Peop == Sirhan Bishara Sirhan ;; Peop == Kennedy ;; Kill
+Peop == Robert Isaacks ;; Loc == High Island. ;; Live_In
+Loc == Evendale ;; Loc == Ohio ;; Located_In
+Peop == James Earl Ray ;; Peop == Dr. Martin Luther King Jr. ;; Kill
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Loc == MIDDLETOWN ;; Loc == N.Y . ;; Located_In
+Org == DAO SIAM ;; Loc == Bangkok ;; OrgBased_In
+Peop == Albrecht ;; Org == University of Iowa ;; Work_For || Peop == Albrecht ;; Org == CFTC ;; Work_For
+Peop == Fred Farrar ;; Org == FAA ;; Work_For
+Peop == Ted Weiss ;; Org == House ;; Work_For
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == Jessica Lange ;; Loc == Minnesota ;; Live_In
+Peop == Mary Fisher ;; Loc == Louisville ;; Live_In || Peop == Mary Fisher ;; Loc == Okolona ;; Live_In
+Loc == Anzio ;; Loc == Italy ;; Located_In || Loc == Normandy ;; Loc == France ;; Located_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Org == Larami Corp. ;; Loc == Philadelphia. ;; OrgBased_In
+Peop == George Proctor ;; Loc == U.S. ;; Live_In
+Peop == Ramiro de Leon Carpio ;; Loc == Guatemala City ;; Live_In
+Peop == Herschel Grynszpan ;; Peop == German Embassy Third Secretary Ernst vom Rath ;; Kill
+Peop == Larry Jinks ;; Org == San Jose Mercury News ;; Work_For || Peop == William A. Ott ;; Org == San Jose Mercury News ;; Work_For
+Peop == Allen Harker ;; Org == Coast Guard 's 8th District headquarters ;; Work_For
+Peop == Richard Celeste ;; Loc == Ohio ;; Live_In || Peop == Richard Celeste ;; Org == Democratic Governors ' Association ;; Work_For
+Org == CTK ;; Loc == Prague ;; OrgBased_In
+Org == BANGKOK POST ;; Loc == Bangkok ;; OrgBased_In
+Loc == AOSTA ;; Loc == Italy ;; Located_In || Org == AP ;; Loc == AOSTA ;; OrgBased_In || Org == AP ;; Loc == Italy ;; OrgBased_In
+Peop == Sirhan Bishara Sirhan ;; Peop == Kennedy ;; Kill
+Org == KRASNAYA ZVEZDA ;; Loc == Moscow ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill || Peop == Lee Harvey Oswald ;; Peop == Officer J.D. Tippit ;; Kill
+Org == Harvard ;; Loc == U.S. ;; OrgBased_In || Peop == Kennedy ;; Loc == U.S. ;; Live_In
+Loc == ROCK HILL ;; Loc == S.C ;; Located_In
+Peop == Andrew Jackson ;; Loc == Waxhaw , South Carolina ;; Live_In
+Peop == Jim Martin ;; Loc == North Carolina ;; Live_In
+Org == Brazilian Embassy ;; Loc == Britain ;; OrgBased_In || Org == Brazilian Embassy ;; Loc == London ;; OrgBased_In
+Loc == Statue of Liberty ;; Loc == America ;; Located_In
+Peop == Jack Nicklaus ;; Loc == Ohio ;; Live_In
+Peop == Russell Strong ;; Org == Queensland Liver Transplant Service ;; Work_For
+Org == Tunisian Republic Radio Network ;; Loc == Tunis ;; OrgBased_In
+Peop == Quayles ;; Loc == Naval Observatory ;; Live_In || Peop == Quayles ;; Loc == Washington ;; Live_In || Peop == Tucker ;; Loc == Naval Observatory ;; Live_In || Peop == Tucker ;; Loc == Washington ;; Live_In || Peop == Benjamin ;; Loc == Naval Observatory ;; Live_In || Peop == Benjamin ;; Loc == Washington ;; Live_In || Peop == Corinne ;; Loc == Naval Observatory ;; Live_In || Peop == Corinne ;; Loc == Washington ;; Live_In || Loc == Naval Observatory ;; Loc == Washington ;; Located_In
+Org == The Globe and Mail ;; Loc == Canada ;; OrgBased_In || Peop == Robert Bourassa ;; Loc == Canada ;; Live_In || Peop == Robert Bourassa ;; Loc == Quebec ;; Live_In || Peop == Robert Bourassa ;; Loc == Quebec. ;; Live_In
+Loc == GSA Depot ;; Loc == Watertown ;; Located_In || Loc == GSA Depot ;; Loc == Mass. ;; Located_In || Loc == Watertown ;; Loc == Mass. ;; Located_In
+Peop == Mr Nelson Rohihlahla Mandela ;; Loc == Republic of South Africa ;; Live_In
+Peop == Juan Novara ;; Org == Mediterranean Foundation ;; Work_For
+Peop == James Earl Ray ;; Peop == Dr. Martin Luther King Jr ;; Kill
+Peop == Man Ray ;; Loc == Philadelphia ;; Live_In
+Peop == Frank D. Cuevas ;; Peop == James Miller ;; Kill
+Org == Chinese Foreign Ministry ;; Loc == Beijing ;; OrgBased_In || Org == Chinese Foreign Ministry ;; Loc == China ;; OrgBased_In || Peop == Li Zhaoxing ;; Org == Chinese Foreign Ministry ;; Work_For || Peop == Li Zhaoxing ;; Loc == Beijing ;; Live_In || Peop == Li Zhaoxing ;; Loc == China ;; Live_In
+Peop == Sophie Masloff ;; Loc == Pittsburgh ;; Live_In
+Peop == Kim Jae-kyu ;; Peop == President Park Chung-hee ;; Kill
+Org == Austrian television ;; Loc == Georgetown ;; OrgBased_In
+Org == Radio Reloj Network ;; Loc == Havana ;; OrgBased_In
+Peop == Thomas Alva Edison ;; Loc == Milan , Ohio ;; Live_In
+Org == Bradley First Air of Carp ;; Loc == Ontario ;; OrgBased_In
+Peop == Mohamed Ahmed Issa ;; Org == United Djibouti Opposition Front ;; Work_For || Peop == Cheiko ;; Org == United Djibouti Opposition Front ;; Work_For
+Peop == V. Mikhaylov ;; Org == Russian Atomic Energy Minister ;; Work_For || Peop == Mikhaylov ;; Org == Russian Atomic Energy Minister ;; Work_For
+Peop == Me 'ir Kohen ;; Org == IDF ;; Work_For || Peop == Me 'ir Kohen ;; Org == Israel Defense Forces ;; Work_For
+Peop == Will Carlson. ;; Org == Michigan State ;; Work_For
+Loc == Robeson County ;; Loc == N.C. ;; Located_In
+Org == SILSKI VISTI ;; Loc == Kiev ;; OrgBased_In
+Org == Keen Corp. ;; Loc == New York ;; OrgBased_In || Org == Eagle-Picher Industries ;; Loc == Cincinnati ;; OrgBased_In
+Peop == George Eastman ;; Loc == Waterville , N. Y. ;; Live_In
+Peop == Jozef Moravcik ;; Loc == Slovakia ;; Live_In
+Peop == Dominique Beuff ;; Org == International Committee of the Red Cross ;; Work_For || Peop == Dominique Beuff ;; Loc == Khartoum ;; Live_In || Org == International Committee of the Red Cross ;; Loc == Khartoum ;; OrgBased_In
+Peop == Elizabeth ;; Loc == North Carolina ;; Live_In
+Peop == James Earl Ray ;; Peop == Martin Luther King Jr ;; Kill || Loc == Memphis ;; Loc == Tenn. ;; Located_In
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Peop == John Wilkes Booth ;; Peop == President Abraham Lincoln ;; Kill
+Peop == King Fahd-Bin- 'Abd-al- 'Aziz ;; Loc == Saudi Arabia ;; Live_In || Peop == Crown Prince 'Abdallah ;; Loc == Saudi Arabia ;; Live_In
+Peop == Perez Balladares ;; Org == Labor Union ;; Work_For
+Org == Radio Reloj Network ;; Loc == Havana ;; OrgBased_In
+Peop == Benito Mussolini ;; Loc == Italy ;; Live_In
+Org == Navy ;; Loc == U.S. ;; OrgBased_In
+Peop == Tahir Muhammad Hassun ;; Loc == Baghdad ;; Live_In
+Peop == Sirhan Sirhan ;; Peop == Sen. Robert F. Kennedy ;; Kill
+Peop == Ferhat Chibout ;; Org == communist party ;; Work_For
+Loc == Lemmon ;; Loc == South Dakota ;; Located_In
+Peop == Fernandez de Cevallos ;; Loc == Mexico ;; Live_In
+Loc == Port Nolloth ;; Loc == South Africa ;; Located_In
+Peop == Winter ;; Org == Yale University ;; Work_For || Peop == Starr ;; Org == D.C. Circuit ;; Work_For || Peop == Lewis Powell ;; Org == Supreme Court ;; Work_For
+Peop == Eddie Rickenbacker ;; Loc == Columbus , Ohio ;; Live_In
+Peop == John Deutschendorf ;; Loc == Roswell , N.M. ;; Live_In
+Peop == Lowell Thomas ;; Loc == Woodington , Ohio ;; Live_In
+Peop == Bush ;; Loc == Massachusetts ;; Live_In || Peop == Bush ;; Loc == Norfolk County ;; Live_In || Peop == Dukakis ;; Loc == Massachusetts ;; Live_In || Peop == Dukakis ;; Loc == Norfolk County ;; Live_In || Peop == John Adams ;; Loc == Massachusetts ;; Live_In || Peop == John Adams ;; Loc == Norfolk County ;; Live_In || Peop == John Quincy Adams ;; Loc == Massachusetts ;; Live_In || Peop == John Quincy Adams ;; Loc == Norfolk County ;; Live_In || Peop == John Fitzgerald Kennedy ;; Loc == Massachusetts ;; Live_In || Peop == John Fitzgerald Kennedy ;; Loc == Norfolk County ;; Live_In
+Peop == Darci Alves Pereira ;; Peop == Mendes ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Abraham Lincoln ;; Loc == Hodgenville , Ky. ;; Live_In
+Peop == Leigh Gibbs Gore ;; Org == The New York Opera Repertory Theater ;; Work_For
+Peop == Wright ;; Org == University of Texas ;; Work_For
+Org == RNE International ;; Loc == Madrid ;; OrgBased_In
+Org == AP ;; Loc == NEW YORK ;; OrgBased_In
+Org == AP ;; Loc == NEW YORK ;; OrgBased_In
+Peop == Nixon ;; Loc == U.S. ;; Live_In
+Peop == Bush ;; Loc == United States ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Samuel Bogran ;; Loc == San Pedro Sula ;; Live_In
+Peop == Yount ;; Peop == Pamela Sue Rimer ;; Kill || Peop == James Marvin Forsgren ;; Peop == Pamela Sue Rimer ;; Kill
+Peop == Brigham Young ;; Loc == Whitingham , Vt ;; Live_In
+Org == Radio Magadan ;; Loc == Magadan ;; OrgBased_In
+Peop == Deng Nan ;; Loc == China ;; Live_In
+Peop == Alain Farley ;; Org == McGill University ;; Work_For || Org == McGill University ;; Loc == Montreal ;; OrgBased_In
+Org == THE SUNDAY TIMES ;; Loc == London ;; OrgBased_In
+Loc == HIGH ISLAND ;; Loc == Texas ;; Located_In || Org == AP ;; Loc == HIGH ISLAND ;; OrgBased_In || Org == AP ;; Loc == Texas ;; OrgBased_In
+Org == Royal Alexandra Theatre ;; Loc == Toronto ;; OrgBased_In || Org == Royal Alexandra Theatre ;; Loc == Canada ;; OrgBased_In || Loc == Toronto ;; Loc == Canada ;; Located_In
+Peop == Robert Ford ;; Peop == Jesse James ;; Kill
+Peop == Sirhan Sirhan ;; Peop == Sen. Robert F. Kennedy ;; Kill
+Peop == Dietmar Kanzer ;; Org == Rollei ;; Work_For
+Peop == Sirhan B. Sirhan ;; Peop == Robert F. Kennedy ;; Kill
+Peop == Ulysses S. Grant ;; Loc == Point Pleasant , Ohio ;; Live_In
+Peop == James Earl Ray ;; Peop == Martin Luther King Junior ;; Kill
+Org == CHINA DAILY ;; Loc == Beijing ;; OrgBased_In
+Org == YOMIURI SHIMBUN ;; Loc == Tokyo ;; OrgBased_In
+Peop == Roger Mauro ;; Org == Ancora State Psychiatric Hospital ;; Work_For || Org == Ancora State Psychiatric Hospital ;; Loc == Hammonton. ;; OrgBased_In
+Peop == Weiss ;; Peop == Huey Long ;; Kill
+Org == XINHUA ;; Loc == Beijing ;; OrgBased_In
+Peop == Higgins ;; Org == United Nations ;; Work_For
+Peop == James Madison ;; Loc == Port Conway , Va. ;; Live_In
+Peop == Anderson ;; Org == GE ;; Work_For
+Peop == Stacy Lin Bickel ;; Loc == Tempe ;; Live_In || Peop == Deborah Sue Tomazin ;; Loc == Phoenix ;; Live_In
+Org == O ESTADO DE SAO PAULO ;; Loc == Sao Paulo ;; OrgBased_In
+Org == XINHUA ;; Loc == Beijing ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill
+Loc == MILLINOCKET ;; Loc == Maine ;; Located_In || Org == AP ;; Loc == MILLINOCKET ;; OrgBased_In || Org == AP ;; Loc == Maine ;; OrgBased_In
+Peop == Mark David Chapman ;; Peop == Beatle John Lennon ;; Kill
+Peop == Nabil ;; Org == Palestinian National Authority ;; Work_For
+Peop == Oswald ;; Peop == Jack Kennedy ;; Kill
+Peop == Copland ;; Loc == Brooklyn ;; Live_In
+Peop == Jim Bowell ;; Org == Butler Township Fire Department ;; Work_For
+Org == Owens-Corning Fiberglass ;; Loc == Toledo ;; OrgBased_In || Org == Owens-Corning Fiberglass ;; Loc == Ohio ;; OrgBased_In || Loc == Toledo ;; Loc == Ohio ;; Located_In
+Peop == Kennedy ;; Loc == Cincinnati ;; Live_In || Peop == Kennedy ;; Org == GE ;; Work_For
+Org == Maxwell 's Plum ;; Loc == Manhattan ;; OrgBased_In
+Loc == Kosovo ;; Loc == Yugoslav Republic of Serbia ;; Located_In || Loc == Sandzak ;; Loc == Yugoslav Republic of Serbia ;; Located_In || Loc == Vojvodina ;; Loc == Yugoslav Republic of Serbia ;; Located_In
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill || Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Loc == Yuma ;; Loc == Ariz. ;; Located_In
+Org == Becton Dickinson Co. ;; Loc == Franklin Lakes ;; OrgBased_In || Org == Becton Dickinson Co. ;; Loc == N.J. ;; OrgBased_In || Loc == Franklin Lakes ;; Loc == N.J. ;; Located_In
+Peop == Darly Alves da Silva ;; Peop == Mendes ;; Kill || Peop == Darci Alves Pereira ;; Peop == Mendes ;; Kill
+Loc == Freeport ;; Loc == Texas ;; Located_In || Loc == Morgan City ;; Loc == La. ;; Located_In
+Org == S.A. Healy Co. ;; Loc == McCook ;; OrgBased_In || Org == S.A. Healy Co. ;; Loc == Ill. ;; OrgBased_In || Loc == McCook ;; Loc == Ill. ;; Located_In || Org == CH2M Hill ;; Loc == Corvallis ;; OrgBased_In || Org == CH2M Hill ;; Loc == Ore. ;; OrgBased_In || Loc == Corvallis ;; Loc == Ore. ;; Located_In
+Peop == Tony Denny ;; Org == Republican Party ;; Work_For || Peop == Mary Campbell ;; Loc == Clover ;; Live_In
+Peop == Sirhan Sirhan ;; Peop == Robert F. Kennedy ;; Kill
+Org == Tunisian Republic Radio Network ;; Loc == Tunis ;; OrgBased_In
+Loc == Fort Snelling ;; Loc == Minn. ;; Located_In
+Org == Radio Rebelde Network ;; Loc == Havana ;; OrgBased_In
+Loc == Dutchess County ;; Loc == New York ;; Located_In
+Org == Radio Republik Indonesia Network ;; Loc == Jakarta ;; OrgBased_In
+Loc == Army Reserve Center ;; Loc == Springfield ;; Located_In || Loc == Army Reserve Center ;; Loc == Mo. ;; Located_In || Loc == Springfield ;; Loc == Mo. ;; Located_In
+Peop == Qian Qichen ;; Loc == Beijing ;; Live_In || Peop == Qian Qichen ;; Loc == Beijing ;; Live_In || Org == XINHUA ;; Loc == Beijing ;; OrgBased_In || Org == XINHUA ;; Loc == Beijing ;; OrgBased_In
+Peop == Andrew Jackson ;; Loc == Waxhaw ;; Live_In || Peop == Andrew Jackson ;; Loc == North Carolina South Carolina ;; Live_In
+Peop == Baruch Arensberg ;; Org == Tel Aviv Univerisity ;; Work_For || Peop == Baruch Arensberg ;; Loc == Israel. ;; Live_In || Org == Tel Aviv Univerisity ;; Loc == Israel. ;; OrgBased_In
+Peop == Bill Clinton ;; Loc == Arkansas ;; Live_In
+Peop == Leon Czolgosz ;; Peop == President William McKinley ;; Kill
+Peop == Suraphong Khemasingkhi ;; Org == BPP Unit 24 ;; Work_For
+Org == BISNIS INDONESIA ;; Loc == Indonesia ;; OrgBased_In || Org == BISNIS INDONESIA ;; Loc == Indonesia ;; OrgBased_In || Loc == Mindanao islands ;; Loc == the Philippines ;; Located_In
+Peop == Edgar Allan Poe ;; Loc == Boston ;; Live_In
+Org == ACAN ;; Loc == Panama City ;; OrgBased_In
+Loc == Pasayten Wilderness ;; Loc == Washington ;; Located_In
+Peop == Edward Roybal ;; Org == House Appropriations treasury and postal subcommittee ;; Work_For
+Org == Russian Statistics Committee ;; Loc == Russia ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Loc == Washington ;; Loc == U.S. ;; Located_In
+Org == Radio Riga Network ;; Loc == Riga ;; OrgBased_In
+Peop == Lehi ;; Peop == Lord Moyne ;; Kill || Peop == Lehi ;; Peop == Folke Bernadotte. ;; Kill || Peop == Stern Gang ;; Peop == Lord Moyne ;; Kill || Peop == Stern Gang ;; Peop == Folke Bernadotte. ;; Kill
+Peop == Takeshi Sasaki ;; Org == Tokyo University ;; Work_For || Peop == Shoichi Oikawa ;; Org == YOMIURI SHIMBUN ;; Work_For || Peop == Shoichi Oikawa ;; Org == YOMIURI SHIMBUN ;; Work_For || Peop == Shoichi Oikawa ;; Org == YOMIURI SHIMBUN ;; Work_For || Peop == Ichiro Ozawa ;; Org == Shinseito ;; Work_For || Peop == Ichiro Ozawa ;; Org == Shinseito ;; Work_For
+Peop == Ulysses S. Grant ;; Loc == Point Pleasant , Ohio ;; Live_In
+Peop == Wang Shaohua ;; Loc == San Francisco ;; Live_In
+Peop == Mark David Chapman ;; Peop == John Lennon ;; Kill
+Org == THE NATION ;; Loc == Bangkok ;; OrgBased_In
+Peop == Lawrence Welk ;; Loc == North Dakota ;; Live_In
+Peop == Robert C. Anderson ;; Org == GE ;; Work_For
+Peop == Ejup Ganic ;; Loc == Federation of Bosnia-Herzegovina ;; Live_In || Org == Bosnia-Herzegovina Radio and TV ;; Loc == Federation of Bosnia-Herzegovina ;; OrgBased_In
+Org == Eaglebrook East ;; Loc == Middletown ;; OrgBased_In
+Peop == Oswald ;; Peop == Kennedy ;; KillPeop == John Wilkes Booth ;; Peop == President Lincoln ;; Kill
+Loc == Palace of Fine Arts ;; Loc == San Francisco ;; Located_In
+Peop == Wang Ziqiang ;; Org == Institute of Mechanics ;; Work_For
+Org == Sun Hung Kai Properties ;; Loc == Hong Kong ;; OrgBased_In
+Peop == Marie Magdefrau Ferraro ;; Loc == Bethany ;; Live_In || Peop == Marie Magdefrau Ferraro ;; Loc == Conn. ;; Live_In || Loc == Bethany ;; Loc == Conn. ;; Located_In
+Loc == Morgan City ;; Loc == La. ;; Located_In
+Loc == Lowman ;; Loc == Idaho ;; Located_In
+Peop == Avihu Bin-Nun ;; Org == Air Force ;; Work_For
+Loc == Savannah River Plant ;; Loc == Aiken ;; Located_In || Loc == Savannah River Plant ;; Loc == S.C. ;; Located_In || Loc == Aiken ;; Loc == S.C. ;; Located_In
+Peop == Thomas ;; Loc == Chisholm ;; Live_In || Peop == Thomas ;; Loc == Minn . ;; Live_In || Loc == Chisholm ;; Loc == Minn . ;; Located_In
+Peop == James Thompson ;; Loc == Illinois ;; Live_In
+Peop == Brian Michaud ;; Loc == Millinocket ;; Live_In
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == Yang Jianbai ;; Org == Economic Research ;; Work_For
+Peop == Daniel Urquhart ;; Loc == Aumsville ;; Live_In
+Org == Congress ;; Loc == U.S. ;; OrgBased_In
+Peop == James Earl Ray ;; Peop == Martin Luther King III ;; Kill
+Peop == Benjamin Harrison ;; Loc == North Bend , Ohio ;; Live_In
+Peop == Khrushchev ;; Loc == Soviet ;; Live_In || Peop == Roy Medvedev ;; Loc == Soviet ;; Live_In
+Peop == Walter R. Mears ;; Org == The Associated Press ;; Work_For
+Peop == Gerald Przenislawski ;; Org == La Valette Underground Military Museum. ;; Work_For
+Peop == Jesse Jackson ;; Loc == South Carolina ;; Live_In
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill
+Peop == Cetin ;; Loc == Turkey ;; Live_In
+Peop == Vernon A. Walters ;; Loc == U.S. ;; Live_In
+Peop == Mark Moseley ;; Org == National Football League ;; Work_For
+Peop == Hernandez Galicia ;; Org == Mexican Oil Workers Union ;; Work_For
+Peop == Muddy Waters ;; Loc == Rolling Fork ;; Live_In
+Org == NASA ;; Loc == U.S. ;; OrgBased_In || Org == National Aeronautics and Space Administration ;; Loc == U.S. ;; OrgBased_In
+Peop == Phil Fuhrer ;; Org == Gannett New Media. ;; Work_For
+Org == Teleonce Television ;; Loc == Guatemala City ;; OrgBased_In
+Loc == DAYTON ;; Loc == Ohio ;; Located_In || Org == AP ;; Loc == DAYTON ;; OrgBased_In || Org == AP ;; Loc == Ohio ;; OrgBased_In
+Peop == John Wilkes Booth ;; Peop == President Lincoln ;; Kill
+Loc == San Gabriel River Channel ;; Loc == Azusa ;; Located_In || Loc == San Gabriel River Channel ;; Loc == Calif. ;; Located_In || Loc == Azusa ;; Loc == Calif. ;; Located_In
+Org == Phnom Penh government ;; Loc == Cambodia ;; OrgBased_In
+Peop == Derwinski ;; Loc == Chicago ;; Live_In || Peop == Derwinski ;; Org == Congress ;; Work_For
+Loc == BANGKOK ;; Loc == Thailand ;; Located_In || Org == AP ;; Loc == BANGKOK ;; OrgBased_In || Org == AP ;; Loc == Thailand ;; OrgBased_In
+Peop == Pramot Pansakun ;; Org == Region 2 Border Patrol Police ;; Work_For || Loc == Dan Sai District ;; Loc == Loei Province ;; Located_In || Loc == Nakhon Thai District ;; Loc == Phitsanulok Province ;; Located_In || Loc == Lomsak District ;; Loc == Phetchabun Province ;; Located_In
+Peop == Fred Demler ;; Org == Drexel Burnham Lambert Inc. ;; Work_For || Peop == Fred Demler ;; Loc == New York ;; Live_In || Org == Drexel Burnham Lambert Inc. ;; Loc == New York ;; OrgBased_In
+Org == European Community Commission. ;; Loc == Brussels ;; OrgBased_In
+Loc == Addis Ababa ;; Loc == Ethiopia. ;; Located_In
+Peop == Charles J. Guiteau ;; Peop == President James A. Garfield ;; Kill
+Loc == Argentina ;; Loc == Latin America ;; Located_In
+Peop == Virginia Towle ;; Loc == Wallingford ;; Live_In
+Peop == Prince Norodom Ranariddh ;; Loc == Thailand ;; Live_In
+Peop == John Wayne ;; Loc == Winterset ;; Live_In
+Org == Ranch ;; Loc == River North ;; OrgBased_In
+Org == AFP ;; Loc == Paris ;; OrgBased_In
+Loc == Tokyo ;; Loc == Japan ;; Located_In || Loc == Kyoto ;; Loc == Japan ;; Located_In
+Peop == Jonathan Lifa ;; Org == Chevron ;; Work_For
+Peop == Jake Garn ;; Org == NASA ;; Work_For || Peop == Bill Nelson ;; Org == NASA ;; Work_For
+Loc == Armenia. ;; Loc == Soviet ;; Located_In
+Peop == Juppe ;; Org == French Government ;; Work_For || Peop == Cetin ;; Loc == Turkey ;; Live_In || Peop == Cetin ;; Loc == Turkey ;; Live_In
+Org == Andean Group ;; Loc == Colombia ;; OrgBased_In || Org == Andean Group ;; Loc == Bolivia ;; OrgBased_In || Org == Andean Group ;; Loc == Ecuador ;; OrgBased_In || Org == Andean Group ;; Loc == Peru ;; OrgBased_In || Org == Andean Group ;; Loc == Venezuela ;; OrgBased_In
+Peop == Elizabeth ;; Loc == Salisbury , N.C ;; Live_In
+Org == BTA ;; Loc == Sofia ;; OrgBased_In || Org == Bulgarian Socialist ( formerly Communist ) Party ;; Loc == Bulgaria ;; OrgBased_In || Org == BSP ;; Loc == Bulgaria ;; OrgBased_In || Org == Union of Democratic Forces ;; Loc == Bulgaria ;; OrgBased_In || Org == SDS ;; Loc == Bulgaria ;; OrgBased_In
+Org == Supreme Court ;; Loc == District of Columbia ;; OrgBased_In || Org == Senate ;; Loc == District of Columbia ;; OrgBased_In
+Loc == Madagascar ;; Loc == Indian Ocean ;; Located_In
+Org == Radio Monte Carlo ;; Loc == Paris ;; OrgBased_In
+Peop == Francisco Pizarro ;; Peop == Atahualpa ;; Kill
+Peop == Neil Estes. ;; Loc == Atlanta ;; Live_In
+Peop == Robert C. Corduwener ;; Loc == Netherlands ;; Live_In
+Loc == Sahara desert ;; Loc == Africa ;; Located_In
+Peop == Willi Marx ;; Loc == Heuchelheim ;; Live_In
+Peop == Jeff Shia ;; Org == Kiangsu Chekiang Association ;; Work_For
+Loc == Anzio ;; Loc == Italy ;; Located_In
+Peop == James Earl Ray ;; Peop == Rev. Martin Luther King Jr. ;; Kill
+Loc == Tiananmen Square ;; Loc == Beijing ;; Located_In
+Org == XINHUA ;; Loc == China ;; OrgBased_In || Org == XINHUA ;; Loc == People 's Republic of China ;; OrgBased_In || Peop == Li Peng ;; Loc == China ;; Live_In || Peop == Li Peng ;; Loc == People 's Republic of China ;; Live_In
+Peop == Herbert Clark Hoover ;; Loc == West Branch , Iowa ;; Live_In
+Loc == Bugesera ;; Loc == Rwanda ;; Located_In
+Peop == Andrew Hall ;; Loc == Miami ;; Live_In || Peop == Andrew Hall ;; Loc == Fla. ;; Live_In || Loc == Miami ;; Loc == Fla. ;; Located_In
+Loc == GRAND RAPIDS ;; Loc == Mich . ;; Located_In
+Peop == Thomas Kean ;; Loc == New Jersey ;; Live_In
+Peop == Marcos Victorica ;; Org == Institute of Contemporary Studies. ;; Work_For
+Org == Kanal-6 Television ;; Loc == London ;; OrgBased_In
+Peop == John Wilkes Booth ;; Peop == Lincoln ;; Kill
+Loc == BANGKOK ;; Loc == Thailand ;; Located_In
+Peop == Joseph Cicippio ;; Org == American University of Beirut ;; Work_For
+Loc == Santa Ana ;; Loc == Southern California ;; Located_In
+Org == Radio Reloj Network ;; Loc == Havana ;; OrgBased_In
+Peop == John A. Georges ;; Org == International Paper ;; Work_For
+Loc == Pinecastle Electronic Warfare Range ;; Loc == Ocala National Forest ;; Located_In
+Loc == EAST LANSING ;; Loc == Mich. ;; Located_In
+Org == Oberlin College ;; Loc == United States ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill || Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill
+Peop == Datuk Abdul Halim Ali ;; Org == Foreign Ministry ;; Work_For
+Peop == John Harvey Adamson ;; Peop == Don Bolles ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Linda Schmitt ;; Org == Becton Dickinson ;; Work_For
+Peop == Sirhan Bishara Sirhan ;; Peop == Kennedy ;; Kill
+Org == AL-AHALI ;; Loc == Cairo ;; OrgBased_In
+Peop == Buddy Holly ;; Loc == Lubbock , Texas ;; Live_In || Peop == Charles Hardin Holley ;; Loc == Lubbock , Texas ;; Live_In
+Peop == Jack Ruby ;; Peop == Lee Harvey Oswald ;; Kill || Peop == Lee Harvey Oswald ;; Peop == John F. Kennedy ;; Kill
+Loc == Sarajevo ;; Loc == Bosnia ;; Located_In || Peop == Gavrilo Princip ;; Peop == Austrian Archduke Franz Ferdinand ;; Kill
+Peop == Walesa ;; Org == Solidarity ;; Work_For
+Peop == Henry David Thoreau ;; Loc == Concord , Mass ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Hitler ;; Loc == Berlin ;; Live_In
+Peop == Mrs. Higgins ;; Org == Marine Corps ;; Work_For || Peop == Mrs. Higgins ;; Org == Pentagon ;; Work_For
+Peop == Sam Kadet ;; Org == Skadden , Arps ;; Work_For
+Peop == Yisrael Tal ;; Loc == Israel ;; Live_In || Peop == Yisrael Tal ;; Loc == Israel ;; Live_In
+Peop == Clinton ;; Loc == United States ;; Live_In || Peop == Clinton ;; Loc == U.S. ;; Live_In
+Peop == Guy M. Struve ;; Loc == New York ;; Live_In || Peop == Guy M. Struve ;; Org == Church 's ;; Work_For
+Peop == Vladimir Ashkenazy ;; Loc == Soviet ;; Live_In
+Peop == Charlton Heston ;; Loc == Illinois ;; Live_In
+Peop == Johnny Paul Penry ;; Loc == Texas ;; Live_In
+Peop == Tennessee Williams ;; Loc == Columbus , Miss. ;; Live_In
+Loc == BRISBANE ;; Loc == Australia ;; Located_In || Org == AP ;; Loc == BRISBANE ;; OrgBased_In || Org == AP ;; Loc == Australia ;; OrgBased_In
+Peop == Laercio Vinhas ;; Org == CNEN ;; Work_For
+Peop == Gordon Parks ;; Loc == Fort Scott , Kan. ;; Live_In
+Peop == Emily Dickinson ;; Loc == Amherst , Mass. ;; Live_In
+Peop == Stephanie Powell ;; Org == DEM ;; Work_For
+Peop == Nihat ;; Org == SHP ;; Work_For || Peop == Nihat ;; Org == Social Democrat Populist Party ;; Work_For || Peop == Marka ;; Org == SHP ;; Work_For || Peop == Marka ;; Org == Social Democrat Populist Party ;; Work_For
+Loc == Kassala ;; Loc == Sudan ;; Located_In
+Peop == Harrington ;; Org == Queens College ;; Work_For || Peop == Harrington ;; Org == City University of New York ;; Work_For || Peop == Harrington ;; Org == Socialist International ;; Work_For || Peop == Harrington ;; Loc == Larchmont ;; Live_In
+Peop == Norton Winfred Simon ;; Loc == Portland , Ore. ;; Live_In
+Peop == Ulf D. Merbold ;; Org == European Space Agency ;; Work_For || Peop == Roger K. Crouch ;; Org == National Aeronautics and Space Administration ;; Work_For || Peop == Roger K. Crouch ;; Org == NASA ;; Work_For
+Peop == Felipe Gonzalez ;; Loc == Spain ;; Live_In
+Peop == Betsy Ross ;; Loc == Philadelphia ;; Live_In
+Peop == Emile Jonassaint ;; Loc == Haiti ;; Live_In || Peop == Emile Jonassaint ;; Loc == Haiti ;; Live_In || Org == Haitian Parliament ;; Loc == Haiti ;; OrgBased_In || Org == Haitian Parliament ;; Loc == Haiti ;; OrgBased_In
+Loc == Columbia Seafirst Center ;; Loc == West Coast ;; Located_In
+Loc == Mohammadia ;; Loc == Algeria ;; Located_In || Peop == Mohamed Touali ;; Org == Ettahadi ( Challenge ) political party ;; Work_For || Org == Ettahadi ( Challenge ) political party ;; Loc == Algeria ;; OrgBased_In || Org == Ettahadi ( Challenge ) political party ;; Loc == Algeria ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == President Kennedy ;; Kill
+Loc == Custer National Forest ;; Loc == Montana ;; Located_In
+Loc == JOHANNESBURG ;; Loc == South Africa ;; Located_In
+Peop == Radovan Karadzic ;; Org == Union of Serb Writers ;; Work_For
+Org == The National Central Organization of Panamanian Workers ;; Loc == the Republic ;; OrgBased_In || Org == CNTP ;; Loc == the Republic ;; OrgBased_In || Peop == Ernesto Perez Balladares ;; Loc == the Republic ;; Live_In
+Peop == Lazutkin ;; Org == Russian Federation Federal Service for Television and Radio Broadcasting. ;; Work_For
+Peop == Daniel L. Bakst ;; Loc == West Palm Beach ;; Live_In || Peop == Daniel L. Bakst ;; Loc == Fla. ;; Live_In || Loc == West Palm Beach ;; Loc == Fla. ;; Located_In
+Loc == Serbia ;; Loc == Yugoslavia ;; Located_In
+Peop == Sirhan ;; Peop == Kennedy ;; Kill
+Org == 21st Brigade of Cerro Muriano ;; Loc == Cordoba ;; OrgBased_In || Org == 12th Brigade ;; Loc == Botoa ;; OrgBased_In || Org == 12th Brigade ;; Loc == Badajoz ;; OrgBased_In || Org == Special Operations Group ;; Loc == Alicante ;; OrgBased_In || Org == Jarama 1st Cavalry Brigade ;; Loc == Salamanca ;; OrgBased_In
+Loc == Howard Beach ;; Loc == Queens ;; Located_In
+Peop == Sohn ;; Loc == New Jersey ;; Live_In
+Peop == Brian Mulroney ;; Org == Progressive Conservative Party ;; Work_For
+Org == 6th Fleet ;; Loc == U.S. ;; OrgBased_In
+Loc == BANGKOK ;; Loc == Thailand ;; Located_In || Org == AP ;; Loc == BANGKOK ;; OrgBased_In || Org == AP ;; Loc == Thailand ;; OrgBased_In
+Org == General Accounting Office ;; Loc == Washington ;; OrgBased_In || Org == GAO ;; Loc == Washington ;; OrgBased_In
+Peop == Duchess of York ;; Loc == Britain ;; Live_In || Peop == Imelda Marcos ;; Loc == Philippines ;; Live_In
+Peop == Brutus ;; Peop == Roman Emperor Julius Caesar ;; Kill || Peop == Cassius ;; Peop == Roman Emperor Julius Caesar ;; Kill
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Org == Russian Defence Ministry ;; Loc == Moscow ;; OrgBased_In
+Peop == Herbert S. Okun ;; Loc == U.S. ;; Live_In
+Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In || Org == ITAR-TASS ;; Loc == Moscow ;; OrgBased_In || Peop == Boris Yeltsin ;; Loc == Moscow ;; Live_In || Peop == Boris Yeltsin ;; Loc == Moscow ;; Live_In || Peop == Viktor Chernomyrdin ;; Loc == Moscow ;; Live_In || Peop == Viktor Chernomyrdin ;; Loc == Moscow ;; Live_In
+Peop == Winter ;; Org == Yale University ;; Work_For
+Peop == Dr. Lee DeForest ;; Loc == Council Bluffs , Iowa ;; Live_In
+Loc == Cameron Parish ;; Loc == Louisiana ;; Located_In || Peop == Hayes Picou ;; Loc == Louisiana ;; Live_In || Peop == Hayes Picou ;; Loc == Cameron Parish ;; Live_In
+Org == Manufacturers Hanover Trust Co. ;; Loc == New York ;; OrgBased_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Org == ACAN ;; Loc == Panama City ;; OrgBased_In
+Peop == Actress Helen Hayes ;; Loc == Washington ;; Live_In
+Peop == Bossi ;; Org == Freedom Alliance ;; Work_For || Peop == Occhetto ;; Org == Democratic Party ;; Work_For
+Peop == Fran Sepler ;; Org == state Crime Victim and Witness Advisory Council. ;; Work_For
+Peop == Gary Hess ;; Org == Emery ;; Work_For
+Loc == Yerevan ;; Loc == Armenia ;; Located_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Jeremy Rifkin ;; Org == Foundation on Economic Trends ;; Work_For || Peop == Jeremy Rifkin ;; Org == Global Greenhouse Network ;; Work_For
+Peop == Sirhan Sirhan ;; Peop == Robert F. Kennedy ;; Kill
+Org == NIHON KEIZAI SHIMBUN ;; Loc == Tokyo ;; OrgBased_In
+Peop == Jeffrey Bander ;; Org == American Express ;; Work_For
+Peop == James Earl Ray ;; Peop == Dr. Martin Luther King Jr ;; Kill
+Peop == James Earl Ray ;; Peop == King ;; Kill
+Peop == Bill Clinton ;; Loc == US ;; Live_In
+Loc == Washington ;; Loc == U.S ;; Located_In || Org == Navy ;; Loc == U.S ;; OrgBased_In
+Peop == Mile Akmadzic ;; Loc == Croatian Republic of Herceg-Bosna ;; Live_In || Peop == Nikola Koljevic ;; Loc == Serbian Republic ;; Live_In
+Peop == Tal ;; Org == Defense Ministry ;; Work_For
+Peop == Mark David Chapman ;; Peop == Lennon ;; Kill
+Peop == Dwight D. Eisenhower ;; Loc == Denison , Texas ;; Live_In
+Peop == Virginia Galle ;; Org == City Council ;; Work_For
+Peop == Harrington ;; Org == Harvard University ;; Work_For || Peop == Harrington ;; Org == National War College. ;; Work_For
+Peop == John Harvey Adamson ;; Peop == Don Bolles ;; Kill
+Peop == Fred Farrar ;; Org == FAA ;; Work_For
+Org == Navy ;; Loc == Soviet ;; OrgBased_In || Peop == Nikolai Kuznetsov ;; Loc == Soviet ;; Live_In || Peop == Nikolai Kuznetsov ;; Org == Navy ;; Work_For || Peop == Stalin ;; Loc == Soviet ;; Live_In || Peop == Stalin ;; Loc == Soviet ;; Live_In
+Peop == Vinicio Villar Anleu ;; Org == National Congress ;; Work_For
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Eduard Baltin. ;; Org == Black Sea Fleet ;; Work_For
+Loc == Nashville ;; Loc == Tenn. ;; Located_In
+Peop == Booth ;; Peop == Lincoln ;; Kill
+Peop == Chien Fu ;; Loc == Taipei ;; Live_In
+Peop == Jo Ann Emmerich ;; Org == ABC Entertainment ;; Work_For
+Peop == William McKinley ;; Loc == Niles , Ohio ;; Live_In
+Org == MOSKOVSKIY KOMSOMOLETS ;; Loc == Moscow ;; OrgBased_In
+Peop == Herbert Clark Hoover ;; Loc == West Branch , Iowa ;; Live_In
+Org == Bezirksparkasse bank ;; Loc == Giessen ;; OrgBased_In
+Peop == Wang Guangyan ;; Org == Institute of Mathematics ;; Work_For
+Peop == Owen Le Vallee ;; Org == Liberation Day Committee ;; Work_For
+Loc == KARBALA ;; Loc == Iraq ;; Located_In || Org == AP ;; Loc == KARBALA ;; OrgBased_In || Org == AP ;; Loc == Iraq ;; OrgBased_In
+Peop == Prateep Ungsongtham ;; Loc == Bangkok. ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == President John Kennedy ;; Kill
+Peop == Michael Henley Jr. ;; Loc == Grants ;; Live_In || Peop == Michael Henley Jr. ;; Loc == N.M. ;; Live_In || Loc == Grants ;; Loc == N.M. ;; Located_In || Peop == Ms. Calico ;; Loc == N.M. ;; Live_In || Peop == Ms. Calico ;; Loc == Belen ;; Live_In || Peop == Ms. Calico ;; Loc == N.M. ;; Live_In || Loc == Belen ;; Loc == N.M. ;; Located_In
+Org == TASS ;; Loc == Moscow ;; OrgBased_In
+Peop == Jose Antonio Urutigoechea ;; Org == ETA ;; Work_For
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == Susan Cruzan ;; Org == FDA ;; Work_For
+Loc == Oxford ;; Loc == Massachusetts. ;; Located_In
+Peop == Leon Czolgosz ;; Peop == William McKinley ;; Kill
+Org == MOSKOVSKIY KOMSOMOLETS ;; Loc == Moscow ;; OrgBased_In
+Loc == Frankfurt ;; Loc == West Germany. ;; Located_In
+Peop == Sirhan Sirhan ;; Peop == U.S. Sen. Robert F. Kennedy ;; Kill
+Peop == Jesse Jackson ;; Loc == South Carolina ;; Live_In
+Org == AP ;; Loc == MEXICO CITY ;; OrgBased_In
+Loc == Jackson ;; Loc == Wyo. ;; Located_In || Loc == Gunnison ;; Loc == Colo. ;; Located_In || Loc == McAllen ;; Loc == Texas ;; Located_In
+Peop == Craig Martin ;; Org == Boeing Commercial Airplanes ;; Work_For
+Peop == Adam Urbanski ;; Loc == Rochester ;; Live_In
+Org == MAINICHI SHIMBUN ;; Loc == Tokyo ;; OrgBased_In
+Peop == Fernandez de Cevallos ;; Loc == Mexico ;; Live_In
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == Richardson ;; Loc == Beaumont , Texas ;; Live_In
+Org == NRC ;; Loc == Rockville ;; OrgBased_In || Org == NRC ;; Loc == Md. ;; OrgBased_In || Loc == Rockville ;; Loc == Md. ;; Located_In || Peop == Bernero ;; Org == NRC ;; Work_For || Org == NRC ;; Loc == Rockville ;; OrgBased_In || Org == NRC ;; Loc == Md. ;; OrgBased_In
+Loc == Saint-Gall ;; Loc == Switzerland ;; Located_In || Org == AFP ;; Loc == Saint-Gall ;; OrgBased_In || Org == AFP ;; Loc == Switzerland ;; OrgBased_In
+Loc == Rancho Nuevo ;; Loc == Chiapas State ;; Located_In
+Peop == Oswald ;; Peop == President John F. Kennedy ;; Kill
+Peop == Greg Thayer ;; Org == Forest Service. ;; Work_For
+Peop == Luis Cobos R. ;; Org == CNTP ;; Work_For
+Peop == John Wilkes ;; Peop == Abraham Lincoln ;; Kill
+Peop == Brigham Young ;; Loc == Whitingham , Vt ;; Live_In
+Peop == Lee Harvey Oswald ;; Peop == Kennedy ;; Kill
+Peop == Tom Muri. ;; Loc == Whitefish City ;; Live_In
+Loc == Sierra Nevada ;; Loc == California ;; Located_In
+Peop == James Hackett ;; Org == Titan Systems ;; Work_For || Peop == James Hackett ;; Loc == U.S . ;; Live_In
+Loc == Leninakan ;; Loc == Armenia ;; Located_In
+Org == Pittsburgh-Corning Corp. ;; Loc == Pittsburgh ;; OrgBased_In
+Peop == Barrett ;; Org == Illinois Commerce Commission ;; Work_For
+Peop == Sultan Qabus Bin-Sa 'id ;; Loc == Oman ;; Live_In
+Peop == James Earl Ray ;; Peop == Dr. Martin Luther King Jr. ;; Kill
+Peop == Jack Ruby ;; Peop == Oswald ;; Kill
+Loc == Brazoria ;; Loc == Texas. ;; Located_In || Loc == Fort Bend ;; Loc == Texas. ;; Located_In || Loc == Galveston ;; Loc == Texas. ;; Located_In || Loc == Harris Counties ;; Loc == Texas. ;; Located_In
+Org == INTERFAX ;; Loc == Moscow ;; OrgBased_In
+Org == 6th Fleet ;; Loc == Mediterranean ;; OrgBased_In
+Loc == Najd plateau ;; Loc == Saudi Arabia ;; Located_In

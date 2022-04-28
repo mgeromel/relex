@@ -1,0 +1,100 @@
+Battle ;; Hostile_encounter || War ;; Hostile_encounter || took place ;; Process_start
+command ;; Control || capture ;; Conquering || moved ;; Self_motion || occupied ;; Control
+blocked ;; Hindering || destroy ;; Destroying
+gave ;; Giving || presence ;; Presence || attack ;; Attack
+obtained ;; Getting || brought in ;; Bringing || filled ;; Filling || consisted ;; Cause_to_be_included || armed ;; Giving
+purchased ;; Commerce_buy || reinforced ;; Cause_change_of_strength
+hired ;; Employment || assist ;; Assistance || managing ;; Control
+consisting ;; Cause_to_be_included || bribed ;; Committing_crime
+sent ;; Sending || blowing ;; Motion || on fire ;; Damaging || anchored ;; Connect || setting ;; Placing || pushing ;; Motion
+cutting ;; Removing || save ;; Rescuing || flee ;; Escaping || attack ;; Attack || attempted ;; Self_motion
+burned ;; Destroying
+Retreating ;; Escaping || came ;; Self_motion || fire ;; Catastrophe || waiting ;; Change_event_time
+escaped ;; Escaping || engage ;; Participation || fight ;; Hostile_encounter
+pursue ;; Self_motion
+fell ;; Conquering
+impact ;; Influence || war ;; Hostile_encounter || victory ;; Earnings_and_losses || assault ;; Attack || contributed ;; Causation || halting ;; Process_end
+Battle ;; Hostile_encounter || fought ;; Hostile_encounter
+killed ;; Killing || led ;; Causation || battle ;; Hostile_encounter
+battle ;; Hostile_encounter || battle ;; Hostile_encounter || Battle ;; Hostile_encounter || Wars ;; Hostile_encounter || retreat ;; Escaping
+began ;; Process_start || found ;; Know || Battle ;; Hostile_encounter || attack ;; Attack || closed ;; Openness || taken up ;; Building
+refused ;; Agree_or_refuse_to_act || began ;; Process_start || battle ;; Hostile_encounter || hoisted ;; Body_movement || surrender ;; Surrendering
+ill-equipped ;; Supply || fortified ;; Cause_change_of_strength || facing ;; Confronting_problem
+surrounded ;; Surrounding || protected ;; Preventing_or_letting || war ;; Hostile_encounter || cross ;; Motion_directional
+killed ;; Killing || casualties ;; Catastrophe || battle ;; Hostile_encounter || attacked ;; Attack || placed ;; Placing || war ;; Hostile_encounter || led ;; Causation
+rushed ;; Motion || killed ;; Killing || Battle ;; Hostile_encounter || held ;; Defending || mired ;; Placing || led ;; Causation
+found ;; Know || dismounted ;; Self_motion
+equipped ;; Supply || finish ;; Process_end
+ended ;; Process_end || battle ;; Hostile_encounter || escape ;; Escaping
+casualties ;; Catastrophe || escape ;; Escaping || defeated ;; Conquering
+beat ;; Preventing_or_letting
+deployment ;; Arranging
+called ;; Name_conferral
+held ;; Defending
+festival ;; Social_event || held ;; Process_start || encompassed ;; Surrounding
+created ;; Creating
+duplicate ;; Creating || held ;; Defending
+contacted ;; Communication
+published ;; Publishing
+joined ;; Becoming_a_member
+relief ;; Assistance
+reached ;; Arriving
+protect ;; Defending
+attendance ;; Participation
+concert ;; Social_event
+aid ;; Assistance
+performed ;; Hold
+tore up ;; Destroying || played ;; Competition || show ;; Create_artwork
+supposed ;; Coming_to_believe
+order ;; Arranging
+headlined ;; Statement
+managed ;; Control
+aired ;; Expressing_publicly
+broadcast ;; Expressing_publicly || unplug ;; Removing || equipment ;; Supply || set ;; Placing || took ;; Conquering
+aired ;; Expressing_publicly || placed ;; Placing
+performed ;; Hold || called ;; Name_conferral
+bumped ;; Self_motion
+confirmed ;; Check
+booed ;; Communication || cut ;; Removing || throwing up ;; Body_movement || due ;; Causation
+refused ;; Agree_or_refuse_to_act || issues ;; Creating || due ;; Causation || play ;; Competition
+bumped ;; Bodily_harm || scheduled ;; Arranging || open ;; Openness
+confirmed ;; Check
+held ;; Hold
+decided ;; Deciding
+Turned ;; Change
+moved back ;; Motion || order ;; Arranging
+looked ;; Perception_active
+stolen ;; Theft || returned ;; Giving
+vowed ;; Commitment || handled ;; Hold || lit ;; Lighting
+motioned ;; Body_movement || set ;; Placing || played ;; Competition || play ;; Competition || came ;; Self_motion
+stolen ;; Theft
+recovered ;; Recovering || held ;; Hold
+explained ;; Statement || destroyed ;; Destroying
+smashed ;; Destroying || threw ;; Self_motion
+came ;; Motion
+joined ;; Becoming_a_member
+recalls ;; Statement
+performed ;; Hold || claims ;; Statement || performing ;; Hold
+ended ;; Process_end || tour ;; Traveling
+joined ;; Becoming_a_member || perform ;; Hold
+filmed ;; Create_artwork
+seemed ;; Change_sentiment
+enjoyed ;; Perception_active
+joined ;; Becoming_a_member
+reached ;; Arriving || pass ;; Motion_directional || lifted ;; Motion || prompting ;; Convincing
+sprayed ;; Motion
+lost ;; Earnings_and_losses
+promised ;; Commitment
+formed ;; Coming_to_be
+began ;; Process_start || establish ;; Building || become ;; Becoming
+originated ;; Coming_to_be || perceived ;; Know
+occurred ;; Coming_to_be || known ;; Know
+hunted ;; Killing || gathered ;; Come_together
+diminished ;; Cause_change_of_position_on_a_scale || declined ;; Agree_or_refuse_to_act
+replacing ;; Change_of_leadership
+began ;; Process_start || develop ;; Cause_to_make_progress
+became ;; Becoming
+replaced ;; Change_of_leadership
+transition ;; Change
+took ;; Creating
+gave ;; Giving || asserted ;; Statement || influence ;; Influence
