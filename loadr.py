@@ -6,7 +6,8 @@ from gramm import *
 
 #-----------------------------------------------------------#
 
-tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+#tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
 
 def crop_list(vector, size, item):
 	 return vector[:size] + [item] * (size - len(vector))
@@ -43,7 +44,14 @@ class MyDataset(Dataset):
 	def __init__(self, file_name, list_size, vocab, decoder_max_length = 64, encoder_max_length = 256):
 		
 		data_sent = read_file(file_name + ".sent")[:list_size]
-		data_tups = read_file(file_name + ".tup" )[:list_size]
+		data_tups = read_file(file_name + ".tup" )[:list_size]	
+		
+		# REMOVE PUNCTIUATION
+		translator = str.maketrans('', '', string.punctuation)
+		
+		for i, sent in enumerate(data_sent):
+			data_sent[i] = sent.translate(translator)
+		
 		data_tups = [ extract(rel, sent, vocab) for sent, rel in zip(data_sent, data_tups) ]
 		
 		self.data = { "phrases" : data_sent , "targets" : data_tups }

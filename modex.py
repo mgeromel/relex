@@ -1,15 +1,55 @@
 from transformers import *
-from transformers.utils import logging
 
-import os, random, torch, numpy
-import torch.nn.functional as F
-import gen_decoder
-from gramm import GRAMMAR
+import os, torch, numpy
+
+from encoder import CustomAlbertModel
+from decoder import CustomBertGenerationDecoder
 
 ##################################################
 
 class TestModel(torch.nn.Module):
 	def __init__(self, gramm = None, vocab = None, point_size = 256):
+		super(TestModel, self).__init__()
+		
+		self.gramm_size = gramm.size() + 1
+		self.relat_size = len(vocab)
+		self.point_size = point_size
+		self.vocab_size = self.gramm_size + self.relat_size + 2 * self.point_size
+		
+		self.encoder = CustomAlbertModel.from_pretrained(
+			"albert-base-v1",
+			add_pooling_layer = False,
+			bos_token_id = 2, 
+			eos_token_id = 3
+		)
+		
+		self.decoder = CustomBertGenerationDecoder(
+			BertGenerationConfig(
+				vocab_size = self.vocab_size,
+				add_cross_attention = True,
+				is_decoder = True, 
+				use_cache = False,
+				pad_token_id = 0, #?
+				bos_token_id = 1, #?
+				eos_token_id = 2, #?
+				hidden_size = 768,
+				num_hidden_layers = 8,
+				num_attention_heads = 12,
+				intermediate_size = 4096
+			)
+		)
+		
+		self.decoder.bert.encoder.gradient_checkpointing = True
+		
+		self.gramm_head = torch.nn.Linear(       self.vocab_size,     self.gramm_size)
+		self.relat_head = torch.nn.Linear(       self.vocab_size,     self.relat_size)
+		self.point_head = torch.nn.Linear( 768 + self.point_size, 2 * self.point_size)
+		
+		self.dropout_logits = torch.nn.Dropout(0.0)
+
+	##################################################
+	
+	def __init__BACKUP(self, gramm = None, vocab = None, point_size = 256):
 		super(TestModel, self).__init__()
 		
 		self.gramm_size = gramm.size() + 1
@@ -49,7 +89,7 @@ class TestModel(torch.nn.Module):
 		self.point_head = torch.nn.Linear(768 + self.point_size, 2 * self.point_size)
 		
 		self.dropout_logits = torch.nn.Dropout(0.15)
-
+	
 	##################################################
 	
 	def compute_loss(self, logits, labels):
@@ -58,7 +98,6 @@ class TestModel(torch.nn.Module):
 		bound_a = self.gramm_size
 		bound_b = self.gramm_size + self.relat_size
 		bound_c = self.point_size
-		
 		
 		if labels != None:
 			loss_func = torch.nn.CrossEntropyLoss()
@@ -76,10 +115,10 @@ class TestModel(torch.nn.Module):
 			p_logits = shifted_logits[:,:, bound_b :-bound_c].reshape(-1, self.point_size)
 			q_logits = shifted_logits[:,:,-bound_c :        ].reshape(-1, self.point_size)
 			
-			g_loss = loss_func(g_logits, g_labels) * 1/6
-			r_loss = loss_func(r_logits, r_labels) * 1/6
-			p_loss = loss_func(p_logits, p_labels) * 2/6
-			q_loss = loss_func(q_logits, q_labels) * 2/6
+			g_loss = loss_func(g_logits, g_labels) * 0.25
+			r_loss = loss_func(r_logits, r_labels) * 0.25
+			p_loss = loss_func(p_logits, p_labels) * 0.25
+			q_loss = loss_func(q_logits, q_labels) * 0.25
 			
 			loss = g_loss + r_loss + p_loss + q_loss
 			

@@ -1,6 +1,6 @@
-import torch, numpy, os, random
+import torch, numpy, os, random, string
 
-from transformers import BertTokenizerFast
+from transformers import BertTokenizerFast, AlbertTokenizerFast
 from collections import Counter
 	
 ##################################################
@@ -18,6 +18,9 @@ def read_file(filename):
 ##################################################
 
 def extract(labels, sentence, vocab):
+	
+	translator = str.maketrans('', '', string.punctuation)
+	
 	result = []
 	
 	tables = labels.split(" || ")
@@ -39,6 +42,7 @@ def extract(labels, sentence, vocab):
 			tokens = tokens[-1].split(" ^^ ")
 			
 			for token in tokens:
+				token = token.translate(translator)
 				result.append( (5, -100) + tuple(find(token, sentence)) )
 	
 	result = [ (1, -100, -100, -100) ] + result + [ (2, -100, -100, -100) ]
@@ -51,22 +55,17 @@ def extract_results(results):
 	all_entities = []
 	all_table_id = []
 	
-	for labels in results:
+	for table_dicts in results:
 		
 		slot_labels = []
 		tabs_labels = []
 		
-		for label in labels:
-			temp = label.split(" ;; ")
-			tabs_labels.append(temp[-1])
-
-			temp = [ X.split(" == ")[1] for X in temp[:-1] ]
+		for table_dict in table_dicts:
+			tabs_labels.append(table_dict["TABLE_ID"])
 			
-			slot = []
-			for t in temp:
-				slot.extend(t.split(" ^^ "))
-
-			slot_labels.extend(slot)
+			for key in table_dict:
+				if key != "TABLE_ID":
+					slot_labels.extend(table_dict[key])
 		
 		all_entities.append(slot_labels)
 		all_table_id.append(tabs_labels)
@@ -75,20 +74,48 @@ def extract_results(results):
 
 ##################################################
 
-tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+#tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
 
 def find(word, sent, offset = 0):
+	sent = sent.replace(word, " <pad> " + word + " <pad> ", 1) 
+	
+	sent = sent.lower()
+	word = word.lower()
+	
 	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
-	s_tokens = tokenizer(sent, add_special_tokens = True).input_ids
+	s_tokens = tokenizer(sent, add_special_tokens = True ).input_ids
 	
-	# Find W_TOKENS in S_TOKENS 
-	for i in range(len(s_tokens) - len(w_tokens)):
-		if w_tokens == s_tokens[i : i + len(w_tokens)]:
-			return (i + offset, i + offset + len(w_tokens))
+	word = tokenizer.decode(w_tokens)
 	
-	import IPython ; IPython.embed() ; exit(1)
+	#------------------------------#
 	
-	return (-1, -1)
+	l_bound = 0
+	r_bound = len(s_tokens)
+	
+	#------------------------------#
+	
+	# LEFT BOUND 
+	for idx in range(r_bound):
+		if s_tokens[idx] == 0:
+			l_bound = idx + 1
+			break
+		
+	#------------------------------#
+	
+	# RIGHT BOUND
+	for idx in range(l_bound, len(s_tokens)+1):
+		if s_tokens[idx] == 0:
+			r_bound = idx
+			break
+	
+	if tokenizer.decode(s_tokens[l_bound : r_bound]) != word:
+		print("Matching Error.")
+		import IPython ; IPython.embed() ; exit(1)
+	
+	#------------------------------#
+	
+	return (l_bound - 1, r_bound - 1)
 
 ##################################################
 
@@ -110,31 +137,32 @@ def compute_metrics(pred):
 	labels = pred["label_ids"]
 	predic = pred["predicted"]
 	
-	micro_value = compute_scores(predic, labels)
+	#------------------------------#
 	
-	return {
-		"R": micro_value[0],
-		"P": micro_value[1],
-		"F": micro_value[2],
-	}
-
-#-----------------------------------------------------------#
-
-def compute_scores(predic, labels):
-	recall = [0] * len(labels)
-	precis = [0] * len(labels)
+	recall = []
+	precis = []
 	
-	for x in range(len(labels)):
-		precis[x], recall[x] = compute(predic[x], labels[x])
+	for pre, lab in zip(predic, labels):
+		pre = [str(x) for x in pre]
+		lab = [str(x) for x in lab]
 		
-	recall = sum(recall) / len(labels)
-	precis = sum(precis) / len(labels)
+		pre, rec = compute(pre, lab)
+		
+		recall.append(rec)
+		precis.append(pre)
+
+	recall = sum(recall) / len(recall)
+	precis = sum(precis) / len(precis)
 	
 	if precis + recall > 0:
 		fscore = (2 * precis * recall) / (precis + recall)
 	else:
 		fscore = 0
-		
-	return (recall, precis, fscore)
+	
+	#------------------------------#
+	
+	return {
+		"R": recall, "P": precis, "F": fscore,
+	}
 
 ##################################################

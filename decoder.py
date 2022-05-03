@@ -17,11 +17,11 @@ import torch.nn as nn
 class CustomBertGenerationEmbeddings(BertGenerationEmbeddings):
 	def __init__(self, config):
 		super().__init__(config)
-		self.word_embeddings = torch.nn.Linear(config.vocab_size, config.hidden_size)
+		self.word_embeddings = nn.Linear(config.vocab_size, config.hidden_size)
 
 #-----------------------------------------------------------#
 
-class RelexDecoder(BertGenerationDecoder):
+class CustomBertGenerationDecoder(BertGenerationDecoder):
 	def __init__(self, config):
 		super().__init__(config)
 		self.bert = CustomGenerationEncoder(config)
