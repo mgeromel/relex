@@ -3,7 +3,7 @@ import gramm, loadr, tqdm
 from utils import *
 from modex import *
 
-from transformers import AdamW, get_scheduler, BertTokenizerFast
+from transformers import AdamW, get_scheduler, BertTokenizerFast, RobertaTokenizerFast
 from torch.utils.data import DataLoader
 
 #-----------------------------------------------------------#
@@ -23,8 +23,116 @@ set_seed(1001)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-#tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
 tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
+
+#-----------------------------------------------------------#
+
+def convert(values):
+	
+	# FLOAT -> INT
+	values = values.int()
+	
+	# INITIALIZE
+	g_list = [0] * gramm_size
+	r_list = [0] * vocab_size
+	p_list = [0] * point_size
+	q_list = [0] * point_size
+	
+	# PADDING
+	g_list[0] = int(values[0] == -100)
+	
+	# SETTING VALUES
+	if values[0] != -100:
+		g_list[values[0]] = 1
+	
+	if values[1] != -100:
+		r_list[values[1]] = 1
+	
+	if values[2] != -100:
+		p_list[values[2]] = 1
+	
+	if values[3] != -100:
+		q_list[values[3]] = 1
+		
+	return g_list + r_list + p_list + q_list
+
+#-----------------------------------------------------------#
+
+def reduce(tokens, logits):
+	G = torch.argmax(logits[:gramm_size]).item()
+	V = torch.argmax(logits[gramm_size : gramm_size + vocab_size]).item()
+	P = (
+		torch.argmax(logits[ -2*point_size : - point_size ]).item(),
+		torch.argmax(logits[   -point_size :              ]).item()
+	)
+	P = tokenizer.decode(tokens[P[0] : P[1]].tolist()).strip()
+	
+	return (G, V, P)
+
+#-----------------------------------------------------------#
+
+def translate(input_ids, batch):
+	
+	result = []
+	
+	for tokens, output in zip(input_ids, batch):
+		table_dicts = []
+		
+		table_dict = {}
+		curr_entry = "DEFAULT"
+		
+		for logits in output:
+			G, V, P = reduce(tokens, logits)
+			
+			# STATE 2
+			if G == 2:
+				if table_dict != {}:
+					table_dicts.append(table_dict)
+				
+				break
+				
+			# STATE 3
+			if G == 3:
+				if table_dict != {}:
+					table_dicts.append(table_dict)
+					table_dict = {}
+				table_dict["TABLE_ID"] = bacov[V]
+				
+			# STATE 4
+			if G == 4:
+				curr_entry = bacov[V]
+			
+			# STATE 5
+			if G == 5:
+				if curr_entry not in table_dict:
+					table_dict[curr_entry] = []
+				
+				table_dict[curr_entry].append( P )
+		
+		result.append(table_dicts)
+	
+	# TRANSFORM TABLES
+	final_result = []
+	
+	return result
+	
+	for table_dicts in result:
+		
+		temp_result = []
+		for table_dict in table_dicts:
+			
+			dirty = False
+			
+			for key in table_dict.keys():
+				if key != "TABLE_ID" and "" in table_dict[key]:
+					dirty = True
+			
+			if not dirty and "TABLE_ID" in table_dict:
+				temp_result.append(table_dict)
+		
+		final_result.append(temp_result)
+		
+	return final_result
 
 #-----------------------------------------------------------#
 
@@ -100,113 +208,6 @@ def validate(model, dataset, tqdm_bar, epoch = -1):
 	#------------------------------------------------------#
 	
 	return {"label_ids": labels, "predicted": predic}
-	
-#-----------------------------------------------------------#
-
-def reduce(tokens, logits):
-	G = torch.argmax(logits[:gramm_size]).item()
-	V = torch.argmax(logits[gramm_size : gramm_size + vocab_size]).item()
-	P = (
-		torch.argmax(logits[ -2*point_size : - point_size ]).item(),
-		torch.argmax(logits[   -point_size :              ]).item()
-	)
-	P = tokenizer.decode(tokens[P[0] : P[1]].tolist()).strip()
-	
-	return (G, V, P)
-
-#-----------------------------------------------------------#
-
-def translate(input_ids, batch):
-	
-	result = []
-	
-	for tokens, output in zip(input_ids, batch):
-		table_dicts = []
-		
-		table_dict = {}
-		curr_entry = "DEFAULT"
-		
-		for logits in output:
-			G, V, P = reduce(tokens, logits)
-			
-			# STATE 2
-			if G == 2:
-				if table_dict != {}:
-					table_dicts.append(table_dict)
-				
-				break
-				
-			# STATE 3
-			if G == 3:
-				if table_dict != {}:
-					table_dicts.append(table_dict)
-					table_dict = {}
-				table_dict["TABLE_ID"] = bacov[V]
-				
-			# STATE 4
-			if G == 4:
-				curr_entry = bacov[V]
-			
-			# STATE 5
-			if G == 5:
-				if curr_entry not in table_dict:
-					table_dict[curr_entry] = []
-				
-				table_dict[curr_entry].append( P )
-		
-		result.append(table_dicts)
-	
-	# TRANSFORM TABLES
-	final_result = []
-	
-	for table_dicts in result:
-		
-		temp_result = []
-		for table_dict in table_dicts:
-			
-			dirty = False
-			
-			for key in table_dict.keys():
-				if key != "TABLE_ID" and "" in table_dict[key]:
-					dirty = True
-			
-			if not dirty and "TABLE_ID" in table_dict:
-				temp_result.append(table_dict)
-		
-		final_result.append(temp_result)
-		
-	return final_result
-
-#-----------------------------------------------------------#
-
-def convert(values):
-	
-	# FLOAT -> INT
-	values = values.int()
-	
-	# INITIALIZE
-	g_list = [0] * gramm_size
-	r_list = [0] * vocab_size
-	p_list = [0] * point_size
-	q_list = [0] * point_size
-	
-	# PADDING
-	g_list[0] = int(values[0] == -100)
-	
-	# SETTING VALUES
-	if values[0] != -100:
-		g_list[values[0]] = 1
-	
-	if values[1] != -100:
-		r_list[values[1]] = 1
-	
-	if values[2] != -100:
-		p_list[values[2]] = 1
-	
-	if values[3] != -100:
-		q_list[values[3]] = 1
-		
-	return g_list + r_list + p_list + q_list
 
 #-----------------------------------------------------------#
 
@@ -219,9 +220,10 @@ dataset = "MAVEN" # point_size = 340, batch_size = 24
 dataset = "CoNLL04" # point_size = 145, batch_size = 4/8
 dataset = "ADE/folds" # point_size = 115, batch_size = 16, lr = 5e-5
 dataset = "SNIPS" # point_size = 40, batch_size = 24
+dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 # USE THE FOLLOWING:
-dataset = "ADE/folds"
+dataset = "BiQuAD"
 
 gramm = gramm.GRAMMAR("gramm.txt")
 vocab = read_file("data/" + dataset + "/vocabulary.txt")
@@ -230,21 +232,21 @@ bacov = { i : s for s, i in vocab.items() }
 
 gramm_size = gramm.size() + 1
 vocab_size = len(vocab)
-point_size = 115
+point_size = 100
 
 #-----------------------------------------------------------#
 
-EPOCHS = 50
+EPOCHS = 1
 
-train_size = 99999
-valid_size = 99999
-tests_size = 99999
-batch_size = 32
+train_size = 999999
+valid_size = 999999
+tests_size = 999999
+batch_size = 16
 
 use_amp = True
 save_model = False
 combined = False
-folded = True
+folded = False
 
 #-----------------------------------------------------------#
 
@@ -270,19 +272,18 @@ tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = True)
 #-----------------------------------------------------------# 
 
 model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
+model.load_state_dict(torch.load("models/model_biquad_e1_b64.pt"))
 model = model.to(device)
 
-#model.load_state_dict(torch.load("models/relex_base12x12_E5-F0-B52.pt"))
 #-----------------------------------------------------------#
 
 optimizer = torch.optim.AdamW(model.parameters(), lr = 5e-5)
 ampscaler = torch.cuda.amp.GradScaler()
 scheduler = transformers.get_cosine_schedule_with_warmup(
 	optimizer = optimizer,
-	num_warmup_steps = len(train_loader) * 1/5,
+	num_warmup_steps = 0.1 * EPOCHS * len(train_loader),
 	num_training_steps = EPOCHS * len(train_loader)
 )
-
 #-----------------------------------------------------------#
 
 train_bar = tqdm.tqdm(total = EPOCHS * len(train_loader), leave = False, position = 0, desc = "TRAIN")
@@ -326,15 +327,15 @@ for epoch in range(EPOCHS):
 
 	tests_over_score = compute_metrics( tests_result )
 	tests_tabs_score = compute_metrics({"label_ids": tests_tabs_labels, "predicted": tests_tabs_predic})
-	tests_slot_score = compute_metrics({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
+	#tests_slot_score = compute_metrics({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
 	
 	MAX_TESTS_TOTAL_PR = max(tests_over_score["P"], MAX_TESTS_TOTAL_PR)
 	MAX_TESTS_TOTAL_RE = max(tests_over_score["R"], MAX_TESTS_TOTAL_RE)
 	MAX_TESTS_TOTAL_F1 = max(tests_over_score["F"], MAX_TESTS_TOTAL_F1)
 	MAX_TESTS_TABLE_F1 = max(tests_tabs_score["F"], MAX_TESTS_TABLE_F1)
-	MAX_TESTS_SLOTS_F1 = max(tests_slot_score["F"], MAX_TESTS_SLOTS_F1)
+	#MAX_TESTS_SLOTS_F1 = max(tests_slot_score["F"], MAX_TESTS_SLOTS_F1)
 
-	for i in range(50):
+	for i in range(0):
 		print("labels:", tests_result["label_ids"][i])
 		print("predic:", tests_result["predicted"][i])
 		print("")
@@ -342,7 +343,7 @@ for epoch in range(EPOCHS):
 	tests_bar.write(f"MAX_TESTS_TOTAL_PR: {MAX_TESTS_TOTAL_PR}")
 	tests_bar.write(f"MAX_TESTS_TOTAL_RE: {MAX_TESTS_TOTAL_RE}")
 	tests_bar.write(f"MAX_TESTS_TOTAL_F1: {MAX_TESTS_TOTAL_F1}")
-	tests_bar.write("")
+	tests_bar.write("-----")
 	tests_bar.write(f"MAX_TESTS_TABLE_F1: {MAX_TESTS_TABLE_F1}")
 	tests_bar.write(f"MAX_TESTS_SLOTS_F1: {MAX_TESTS_SLOTS_F1}")
 		
@@ -356,20 +357,20 @@ for epoch in range(EPOCHS):
 
 		valid_over_score = compute_metrics( valid_result )
 		valid_tabs_score = compute_metrics({"label_ids": valid_tabs_labels, "predicted": valid_tabs_predic})
-		valid_slot_score = compute_metrics({"label_ids": valid_slot_labels, "predicted": valid_slot_predic})
+		#valid_slot_score = compute_metrics({"label_ids": valid_slot_labels, "predicted": valid_slot_predic})
 
 		MAX_VALID_TOTAL_PR = max(valid_over_score["P"], MAX_VALID_TOTAL_PR)
 		MAX_VALID_TOTAL_RE = max(valid_over_score["R"], MAX_VALID_TOTAL_RE)
 		MAX_VALID_TOTAL_F1 = max(valid_over_score["F"], MAX_VALID_TOTAL_F1)
 		MAX_VALID_TABLE_F1 = max(valid_tabs_score["F"], MAX_VALID_TABLE_F1)
-		MAX_VALID_SLOTS_F1 = max(valid_slot_score["F"], MAX_VALID_SLOTS_F1)
+		#MAX_VALID_SLOTS_F1 = max(valid_slot_score["F"], MAX_VALID_SLOTS_F1)
 		
 		tests_bar.write("")
 	
 		tests_bar.write(f"MAX_VALID_TOTAL_PR: {MAX_VALID_TOTAL_PR}")
 		tests_bar.write(f"MAX_VALID_TOTAL_RE: {MAX_VALID_TOTAL_RE}")
-		tests_bar.write("")
 		tests_bar.write(f"MAX_VALID_TOTAL_F1: {MAX_VALID_TOTAL_F1}")
+		tests_bar.write("-----")
 		tests_bar.write(f"MAX_VALID_TABLE_F1: {MAX_VALID_TABLE_F1}")
 		tests_bar.write(f"MAX_VALID_SLOTS_F1: {MAX_VALID_SLOTS_F1}")
 
@@ -377,7 +378,9 @@ for epoch in range(EPOCHS):
 
 	#-----------------------------------------------------------#
 
+import IPython ; IPython.embed() ; exit(1)
+	
 ################################################################################
 
 if save_model:
-	torch.save(model.state_dict(), "models/relex_base_E40-F0-B64.pt")
+	torch.save(model.state_dict(), "models/model_biquad_e1_b64.pt")

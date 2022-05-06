@@ -1,6 +1,6 @@
 import torch, numpy, os, random, string
 
-from transformers import BertTokenizerFast, AlbertTokenizerFast
+from transformers import BertTokenizerFast, AlbertTokenizerFast, RobertaTokenizerFast
 from collections import Counter
 	
 ##################################################
@@ -74,14 +74,19 @@ def extract_results(results):
 
 ##################################################
 
-#tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+#tokenizer = BertTokenizerFast.from_pretrained("bert-base-cased")
+#tokenizer = RobertaTokenizerFast.from_pretrained("roberta-base")
 tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
 
 def find(word, sent, offset = 0):
-	sent = sent.replace(word, " <pad> " + word + " <pad> ", 1) 
+	pad = tokenizer.pad_token
 	
 	sent = sent.lower()
 	word = word.lower()
+	
+	pad = tokenizer.pad_token
+	
+	sent = sent.replace(word, " " + pad + " " + word + " " + pad + " ", 1) 
 	
 	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
 	s_tokens = tokenizer(sent, add_special_tokens = True ).input_ids
@@ -97,15 +102,15 @@ def find(word, sent, offset = 0):
 	
 	# LEFT BOUND 
 	for idx in range(r_bound):
-		if s_tokens[idx] == 0:
+		if s_tokens[idx] == tokenizer.pad_token_id:
 			l_bound = idx + 1
 			break
 		
 	#------------------------------#
 	
 	# RIGHT BOUND
-	for idx in range(l_bound, len(s_tokens)+1):
-		if s_tokens[idx] == 0:
+	for idx in range(l_bound, len(s_tokens)):
+		if s_tokens[idx] == tokenizer.pad_token_id:
 			r_bound = idx
 			break
 	
@@ -131,7 +136,20 @@ def compute(predic, labels):
 	return precis, recall
 
 #-----------------------------------------------------------#
+
+def linearize(table_dict):
 	
+	if type(table_dict) is str:
+		return table_dict
+	
+	result = ""
+	
+	for key in sorted(table_dict.keys()):
+		#result = result + key + " : "
+		result = result + str(table_dict[key]) + " ; "
+		
+	return result
+
 def compute_metrics(pred):
 	
 	labels = pred["label_ids"]
@@ -143,13 +161,13 @@ def compute_metrics(pred):
 	precis = []
 	
 	for pre, lab in zip(predic, labels):
-		pre = [str(x) for x in pre]
-		lab = [str(x) for x in lab]
+		pre = [linearize(x) for x in pre]
+		lab = [linearize(x) for x in lab]
 		
-		pre, rec = compute(pre, lab)
+		p, r = compute(pre, lab)
 		
-		recall.append(rec)
-		precis.append(pre)
+		recall.append(r)
+		precis.append(p)
 
 	recall = sum(recall) / len(recall)
 	precis = sum(precis) / len(precis)

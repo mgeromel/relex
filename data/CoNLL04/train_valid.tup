@@ -919,7 +919,8 @@ Peop == Lawrence Welk ;; Loc == North Dakota ;; Live_In
 Peop == Robert C. Anderson ;; Org == GE ;; Work_For
 Peop == Ejup Ganic ;; Loc == Federation of Bosnia-Herzegovina ;; Live_In || Org == Bosnia-Herzegovina Radio and TV ;; Loc == Federation of Bosnia-Herzegovina ;; OrgBased_In
 Org == Eaglebrook East ;; Loc == Middletown ;; OrgBased_In
-Peop == Oswald ;; Peop == Kennedy ;; KillPeop == John Wilkes Booth ;; Peop == President Lincoln ;; Kill
+Peop == Oswald ;; Peop == Kennedy ;; Kill
+Peop == John Wilkes Booth ;; Peop == President Lincoln ;; Kill
 Loc == Palace of Fine Arts ;; Loc == San Francisco ;; Located_In
 Peop == Wang Ziqiang ;; Org == Institute of Mechanics ;; Work_For
 Org == Sun Hung Kai Properties ;; Loc == Hong Kong ;; OrgBased_In

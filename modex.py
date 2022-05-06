@@ -14,14 +14,15 @@ class TestModel(torch.nn.Module):
 		self.gramm_size = gramm.size() + 1
 		self.relat_size = len(vocab)
 		self.point_size = point_size
-		self.vocab_size = self.gramm_size + self.relat_size + 2 * self.point_size
-		
+		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
+	
 		self.encoder = CustomAlbertModel.from_pretrained(
 			"albert-base-v1",
 			add_pooling_layer = False,
-			bos_token_id = 2, 
-			eos_token_id = 3
 		)
+		
+		#self.encoder = BertGenerationEncoder.from_pretrained("bert-base-cased")
+		#self.encoder.encoder.gradient_checkpointing = True
 		
 		self.decoder = CustomBertGenerationDecoder(
 			BertGenerationConfig(
@@ -35,61 +36,18 @@ class TestModel(torch.nn.Module):
 				hidden_size = 768,
 				num_hidden_layers = 8,
 				num_attention_heads = 12,
-				intermediate_size = 4096
+				intermediate_size = 2048
 			)
 		)
 		
-		self.decoder.bert.encoder.gradient_checkpointing = True
+		#self.decoder.bert.encoder.gradient_checkpointing = True
 		
-		self.gramm_head = torch.nn.Linear(       self.vocab_size,     self.gramm_size)
-		self.relat_head = torch.nn.Linear(       self.vocab_size,     self.relat_size)
-		self.point_head = torch.nn.Linear( 768 + self.point_size, 2 * self.point_size)
-		
-		self.dropout_logits = torch.nn.Dropout(0.0)
-
-	##################################################
-	
-	def __init__BACKUP(self, gramm = None, vocab = None, point_size = 256):
-		super(TestModel, self).__init__()
-		
-		self.gramm_size = gramm.size() + 1
-		self.relat_size = len(vocab)
-		self.point_size = point_size
-		self.vocab_size = self.gramm_size + self.relat_size + 2 * self.point_size
-		
-		self.encoder = BertGenerationEncoder.from_pretrained(
-			"bert-base-uncased",
-			bos_token_id = 101, 
-			eos_token_id = 102
-		)
-		
-		self.encoder.encoder.gradient_checkpointing = True
-		
-		self.decoder = gen_decoder.RelexDecoder(
-			BertGenerationConfig(
-				vocab_size = self.vocab_size,
-				add_cross_attention = True,
-				is_decoder = True, 
-				use_cache = False,
-				pad_token_id = 0, #?
-				bos_token_id = 1, #?
-				eos_token_id = 2, #?
-				hidden_size = 768,
-				num_hidden_layers = 8,
-				num_attention_heads = 12,
-				intermediate_size = 3072,
-				#gradient_checkpointing = True
-			)
-		)
-		
-		self.decoder.bert.encoder.gradient_checkpointing = True
-		
-		self.gramm_head = torch.nn.Linear(      self.vocab_size,     self.gramm_size)
-		self.relat_head = torch.nn.Linear(      self.vocab_size,     self.relat_size)
-		self.point_head = torch.nn.Linear(768 + self.point_size, 2 * self.point_size)
+		self.gramm_head = torch.nn.Linear(        self.vocab_size,     self.gramm_size)
+		self.relat_head = torch.nn.Linear(        self.vocab_size,     self.relat_size)
+		self.point_head = torch.nn.Linear(  768 + self.point_size, 2 * self.point_size)
 		
 		self.dropout_logits = torch.nn.Dropout(0.15)
-	
+
 	##################################################
 	
 	def compute_loss(self, logits, labels):
@@ -139,7 +97,7 @@ class TestModel(torch.nn.Module):
 		
 		encoder_hidden_states = encoder_outputs[0]
 		
-		# 2. DECODER 
+		# 2. DECODER
 		decoder_outputs = self.decoder(
 			input_ids = decoder_input_ids,
 			attention_mask = decoder_attention_mask,

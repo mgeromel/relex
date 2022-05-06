@@ -6,7 +6,8 @@ from gramm import *
 
 #-----------------------------------------------------------#
 
-#tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+#tokenizer = BertTokenizerFast.from_pretrained("bert-base-cased")
+#tokenizer = RobertaTokenizerFast.from_pretrained("roberta-base")
 tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
 
 def crop_list(vector, size, item):
@@ -51,6 +52,8 @@ class MyDataset(Dataset):
 		
 		for i, sent in enumerate(data_sent):
 			data_sent[i] = sent.translate(translator)
+		
+		print(file_name)
 		
 		data_tups = [ extract(rel, sent, vocab) for sent, rel in zip(data_sent, data_tups) ]
 		
