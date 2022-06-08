@@ -1,4 +1,2 @@
 adverse_effect
-dose
-ITEM
 DEFAULT

@@ -1,6 +1,6 @@
-import torch, numpy, os, random, string
+import string
 
-from transformers import BertTokenizerFast, AlbertTokenizerFast, RobertaTokenizerFast
+from transformers import AlbertTokenizerFast
 from collections import Counter
 	
 ##################################################
@@ -17,7 +17,7 @@ def read_file(filename):
 
 ##################################################
 
-def extract(labels, sentence, vocab):
+def extract(labels, sentence, vocab, tokenizer):
 	
 	translator = str.maketrans('', '', string.punctuation)
 	
@@ -37,13 +37,19 @@ def extract(labels, sentence, vocab):
 			tokens = line.split(" == ")
 			
 			if len(tokens) > 1: # DISTINCTION REQUIRED ?
-				result.append( (4, vocab[tokens[0].strip()], -100, -100) ) 
+				result.append( (4, vocab[tokens[0].strip()], -100, -100) )
+			else:
+				result.append( (4, vocab["DEFAULT"], -100, -100) )	
 			
 			tokens = tokens[-1].split(" ^^ ")
 			
 			for token in tokens:
 				token = token.translate(translator)
-				result.append( (5, -100) + tuple(find(token, sentence)) )
+				result.append( (6, -100) + tuple(find(token, sentence, tokenizer)) )
+			
+			result.append( (7, -100, -100, -100) )
+			
+		result.append( (5, -100, -100, -100) )
 	
 	result = [ (1, -100, -100, -100) ] + result + [ (2, -100, -100, -100) ]
 	
@@ -74,24 +80,23 @@ def extract_results(results):
 
 ##################################################
 
-#tokenizer = BertTokenizerFast.from_pretrained("bert-base-cased")
-#tokenizer = RobertaTokenizerFast.from_pretrained("roberta-base")
-tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
-
-def find(word, sent, offset = 0):
+def find(word, sent, tokenizer, offset = 0):
 	pad = tokenizer.pad_token
 	
 	sent = sent.lower()
 	word = word.lower()
 	
-	pad = tokenizer.pad_token
-	
-	sent = sent.replace(word, " " + pad + " " + word + " " + pad + " ", 1) 
-	
 	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
-	s_tokens = tokenizer(sent, add_special_tokens = True ).input_ids
+	s_tokens = tokenizer(sent, add_special_tokens = False).input_ids
 	
 	word = tokenizer.decode(w_tokens)
+	sent = tokenizer.decode(s_tokens)
+	
+	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
+	
+	sent = sent.replace(word, f" {pad} {word} {pad} ", 1) 
+	
+	s_tokens = tokenizer(sent, add_special_tokens = True).input_ids
 	
 	#------------------------------#
 	
@@ -114,7 +119,7 @@ def find(word, sent, offset = 0):
 			r_bound = idx
 			break
 	
-	if tokenizer.decode(s_tokens[l_bound : r_bound]) != word:
+	if s_tokens[l_bound : r_bound] != w_tokens:
 		print("Matching Error.")
 		import IPython ; IPython.embed() ; exit(1)
 	
@@ -149,6 +154,8 @@ def linearize(table_dict):
 		result = result + str(table_dict[key]) + " ; "
 		
 	return result
+
+#-----------------------------------------------------------#
 
 def compute_metrics(pred):
 	

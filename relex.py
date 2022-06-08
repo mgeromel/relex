@@ -93,17 +93,19 @@ def translate(input_ids, batch):
 				
 			# STATE 3
 			if G == 3:
-				if table_dict != {}:
-					table_dicts.append(table_dict)
-					table_dict = {}
 				table_dict["TABLE_ID"] = bacov[V]
 				
 			# STATE 4
 			if G == 4:
 				curr_entry = bacov[V]
 			
-			# STATE 5
 			if G == 5:
+				table_dicts.append(table_dict)
+				table_dict = {}
+				curr_entry = "DEFAULT"
+			
+			# STATE 5
+			if G == 6:
 				if curr_entry not in table_dict:
 					table_dict[curr_entry] = []
 				
@@ -163,7 +165,7 @@ def training(model, dataset, tqdm_bar, epoch = -1):
 			output = model.forward(**batch)
 			output["loss"].backward()
 			optimizer.step()
-			
+        		
 		scheduler.step()
 		tqdm_bar.update(1)
 		
@@ -223,7 +225,7 @@ dataset = "SNIPS" # point_size = 40, batch_size = 24
 dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 # USE THE FOLLOWING:
-dataset = "BiQuAD"
+dataset = "ADE"
 
 gramm = gramm.GRAMMAR("gramm.txt")
 vocab = read_file("data/" + dataset + "/vocabulary.txt")
@@ -232,11 +234,11 @@ bacov = { i : s for s, i in vocab.items() }
 
 gramm_size = gramm.size() + 1
 vocab_size = len(vocab)
-point_size = 100
+point_size = 115
 
 #-----------------------------------------------------------#
 
-EPOCHS = 1
+EPOCHS = 50
 
 train_size = 999999
 valid_size = 999999
@@ -245,44 +247,47 @@ batch_size = 16
 
 use_amp = True
 save_model = False
-combined = False
+combined = True
 folded = False
 
 #-----------------------------------------------------------#
 
 if folded:
-	data_train = loadr.MyDataset("data/" + dataset + "/train_4", train_size, vocab, encoder_max_length = point_size)
-	data_tests = loadr.MyDataset("data/" + dataset + "/test_4", tests_size, vocab, encoder_max_length = point_size)
+	data_train = loadr.MyDataset("data/" + dataset + "/train_4", train_size, vocab, tokenizer, encoder_max_length = point_size)
+	data_tests = loadr.MyDataset("data/" + dataset + "/test_4", tests_size, vocab, tokenizer, encoder_max_length = point_size)
 
 else:
 	if combined:
-		data_train = loadr.MyDataset("data/" + dataset + "/train_valid", train_size, vocab, encoder_max_length = point_size)
-		data_tests = loadr.MyDataset("data/" + dataset + "/test", tests_size, vocab, encoder_max_length = point_size)
+		data_train = loadr.MyDataset("data/" + dataset + "/train_valid", train_size, vocab, tokenizer, encoder_max_length = point_size)
+		data_tests = loadr.MyDataset("data/" + dataset + "/test", tests_size, vocab, tokenizer, encoder_max_length = point_size)
 
 	else:
-		data_train = loadr.MyDataset("data/" + dataset + "/train", train_size, vocab, encoder_max_length = point_size)
-		data_valid = loadr.MyDataset("data/" + dataset + "/valid", valid_size, vocab, encoder_max_length = point_size)
-		data_tests = loadr.MyDataset("data/" + dataset + "/test", tests_size, vocab, encoder_max_length = point_size)
+		data_train = loadr.MyDataset("data/" + dataset + "/train", train_size, vocab, tokenizer, encoder_max_length = point_size)
+		data_valid = loadr.MyDataset("data/" + dataset + "/valid", valid_size, vocab, tokenizer, encoder_max_length = point_size)
+		data_tests = loadr.MyDataset("data/" + dataset + "/test", tests_size, vocab, tokenizer, encoder_max_length = point_size)
 
 		valid_loader = DataLoader(data_valid, batch_size = batch_size, shuffle = True)
 
 train_loader = DataLoader(data_train, batch_size = batch_size, shuffle = True)
 tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = True)
 
+#import IPython ; IPython.embed() ; exit(1)
+
 #-----------------------------------------------------------# 
 
 model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
-model.load_state_dict(torch.load("models/model_biquad_e1_b64.pt"))
+#model.load_state_dict(torch.load("models/model_biquad_e1_b64.pt"))
+
 model = model.to(device)
 
 #-----------------------------------------------------------#
 
 optimizer = torch.optim.AdamW(model.parameters(), lr = 5e-5)
 ampscaler = torch.cuda.amp.GradScaler()
-scheduler = transformers.get_cosine_schedule_with_warmup(
+scheduler = transformers.get_constant_schedule_with_warmup( # cosine <--> constant
 	optimizer = optimizer,
 	num_warmup_steps = 0.1 * EPOCHS * len(train_loader),
-	num_training_steps = EPOCHS * len(train_loader)
+	#num_training_steps = EPOCHS * len(train_loader)
 )
 #-----------------------------------------------------------#
 
@@ -327,15 +332,15 @@ for epoch in range(EPOCHS):
 
 	tests_over_score = compute_metrics( tests_result )
 	tests_tabs_score = compute_metrics({"label_ids": tests_tabs_labels, "predicted": tests_tabs_predic})
-	#tests_slot_score = compute_metrics({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
+	tests_slot_score = compute_metrics({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
 	
 	MAX_TESTS_TOTAL_PR = max(tests_over_score["P"], MAX_TESTS_TOTAL_PR)
 	MAX_TESTS_TOTAL_RE = max(tests_over_score["R"], MAX_TESTS_TOTAL_RE)
 	MAX_TESTS_TOTAL_F1 = max(tests_over_score["F"], MAX_TESTS_TOTAL_F1)
 	MAX_TESTS_TABLE_F1 = max(tests_tabs_score["F"], MAX_TESTS_TABLE_F1)
-	#MAX_TESTS_SLOTS_F1 = max(tests_slot_score["F"], MAX_TESTS_SLOTS_F1)
+	MAX_TESTS_SLOTS_F1 = max(tests_slot_score["F"], MAX_TESTS_SLOTS_F1)
 
-	for i in range(0):
+	for i in range(10):
 		print("labels:", tests_result["label_ids"][i])
 		print("predic:", tests_result["predicted"][i])
 		print("")
@@ -357,13 +362,13 @@ for epoch in range(EPOCHS):
 
 		valid_over_score = compute_metrics( valid_result )
 		valid_tabs_score = compute_metrics({"label_ids": valid_tabs_labels, "predicted": valid_tabs_predic})
-		#valid_slot_score = compute_metrics({"label_ids": valid_slot_labels, "predicted": valid_slot_predic})
+		valid_slot_score = compute_metrics({"label_ids": valid_slot_labels, "predicted": valid_slot_predic})
 
 		MAX_VALID_TOTAL_PR = max(valid_over_score["P"], MAX_VALID_TOTAL_PR)
 		MAX_VALID_TOTAL_RE = max(valid_over_score["R"], MAX_VALID_TOTAL_RE)
 		MAX_VALID_TOTAL_F1 = max(valid_over_score["F"], MAX_VALID_TOTAL_F1)
 		MAX_VALID_TABLE_F1 = max(valid_tabs_score["F"], MAX_VALID_TABLE_F1)
-		#MAX_VALID_SLOTS_F1 = max(valid_slot_score["F"], MAX_VALID_SLOTS_F1)
+		MAX_VALID_SLOTS_F1 = max(valid_slot_score["F"], MAX_VALID_SLOTS_F1)
 		
 		tests_bar.write("")
 	
@@ -383,4 +388,4 @@ import IPython ; IPython.embed() ; exit(1)
 ################################################################################
 
 if save_model:
-	torch.save(model.state_dict(), "models/model_biquad_e1_b64.pt")
+	torch.save(model.state_dict(), "models/model_snips_e50_b16.pt")

@@ -1,8 +1,7 @@
-#_SEQ_# , <BOS> #_EXP_#
-#_EXP_# , <EOS>
-#_EXP_# , #_REL_# #_EXP_#
-#_REL_# , #_RID_# ( #_ARG_# )
-#_ARG_# , #_ENT_# , #_ARG_#
-#_ARG_# , #_ENT_#
-#_RID_# , <REL>
-#_ENT_# , <ENT>
+#_SEQS_# , [BOS] #_RELS_#
+#_RELS_# , [EOS]
+#_RELS_# , TOKEN ( #_ROWS_# ) #_RELS_#
+#_ROWS_# , TOKEN ( #_COLS_# ) #_ROWS_#
+#_ROWS_# , [END]
+#_COLS_# , POINT , #_COLS_#
+#_COLS_# , [END]

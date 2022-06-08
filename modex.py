@@ -1,6 +1,9 @@
-from transformers import *
+from transformers import BertGenerationConfig
 
-import os, torch, numpy
+from transformers import BartTokenizerFast
+from transformers import BartForConditionalGeneration
+
+import torch
 
 from encoder import CustomAlbertModel
 from decoder import CustomBertGenerationDecoder
@@ -8,21 +11,25 @@ from decoder import CustomBertGenerationDecoder
 ##################################################
 
 class TestModel(torch.nn.Module):
+	
 	def __init__(self, gramm = None, vocab = None, point_size = 256):
 		super(TestModel, self).__init__()
+		
+		# Building Mask from Grammar
+		self.gramm = gramm
+		self.smap, self.mask = gramm.build_mask()
+		self.mask = torch.tensor(self.mask)
 		
 		self.gramm_size = gramm.size() + 1
 		self.relat_size = len(vocab)
 		self.point_size = point_size
+		
 		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
-	
+		
 		self.encoder = CustomAlbertModel.from_pretrained(
 			"albert-base-v1",
 			add_pooling_layer = False,
 		)
-		
-		#self.encoder = BertGenerationEncoder.from_pretrained("bert-base-cased")
-		#self.encoder.encoder.gradient_checkpointing = True
 		
 		self.decoder = CustomBertGenerationDecoder(
 			BertGenerationConfig(
@@ -30,9 +37,46 @@ class TestModel(torch.nn.Module):
 				add_cross_attention = True,
 				is_decoder = True, 
 				use_cache = False,
-				pad_token_id = 0, #?
-				bos_token_id = 1, #?
-				eos_token_id = 2, #?
+				hidden_size = 768,
+				num_hidden_layers = 8,
+				num_attention_heads = 12,
+				intermediate_size = 2048
+			)
+		)
+		
+		#self.decoder.bert.encoder.gradient_checkpointing = True
+		
+		self.gramm_head = torch.nn.Linear(        self.vocab_size,     self.gramm_size)
+		self.relat_head = torch.nn.Linear(        self.vocab_size,     self.relat_size)
+		self.point_head = torch.nn.Linear(  768 + self.point_size, 2 * self.point_size)
+		
+		self.dropout_logits = torch.nn.Dropout(0.15)
+	
+	def __init__backup(self, gramm = None, vocab = None, point_size = 256):
+		super(TestModel, self).__init__()
+		
+		# Building Mask from Grammar
+		self.gramm = gramm
+		self.smap, self.mask = gramm.build_mask()
+		self.mask = torch.tensor(self.mask)
+		
+		self.gramm_size = gramm.size() + 1
+		self.relat_size = len(vocab)
+		self.point_size = point_size
+		
+		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
+	
+		self.encoder = CustomAlbertModel.from_pretrained(
+			"albert-base-v1",
+			add_pooling_layer = False,
+		)
+		
+		self.decoder = CustomBertGenerationDecoder(
+			BertGenerationConfig(
+				vocab_size = self.vocab_size,
+				add_cross_attention = True,
+				is_decoder = True, 
+				use_cache = False,
 				hidden_size = 768,
 				num_hidden_layers = 8,
 				num_attention_heads = 12,
@@ -113,7 +157,7 @@ class TestModel(torch.nn.Module):
 		# CROSS_ATTENTIONS: batch_size x num_attention_heads x decoder_sequence_length x encoder_seqence_length
 		last_cross_attentions = decoder_outputs["cross_attentions"][-1]
 		decoder_hidden_states = decoder_outputs["hidden_states"][-1]
-		last_cross_attentions = last_cross_attentions.sum(dim = 1)
+		last_cross_attentions = last_cross_attentions.sum(dim = 1) # Single Attention Head?
 		
 		# 3. FUNCTION HEAD: GRAMM / RELAT
 		gramm_logits = self.gramm_head(logits)
@@ -156,7 +200,11 @@ class TestModel(torch.nn.Module):
 		input_size = input_ids.shape[1]                 # LENGTH OF SENTENCES
 		
 		undone = torch.ones(batch_size, device=device)  # GENERATED SEQUENCES (FLAG)
-
+		
+		masking = True
+		strings = [ "[BOS] #_RELS_#" ] * batch_size
+		self.mask = self.mask.to(device)
+		
 		decoder_input_ids = torch.zeros(
 			batch_size, 1, self.vocab_size, device=device
 		).float()
@@ -184,7 +232,31 @@ class TestModel(torch.nn.Module):
 			g_logits = decoder_outputs["logits"][:, -1,                   :   self.gramm_size].detach()
 			r_logits = decoder_outputs["logits"][:, -1,   self.gramm_size :-2*self.point_size].detach()
 			p_logits = decoder_outputs["logits"][:, -1,-2*self.point_size :                  ].detach()
+			
+			#------------------------------------------------#
+			
+			if masking:
+				for idx, string in enumerate(strings):
+					if undone[idx]: 
+						l_bound = string.find("#_")
+						r_bound = string.find("_#") + 2
 
+						if l_bound == -1: # DONE
+							continue
+
+						state = string[l_bound : r_bound] 
+						
+						g_logits[idx][1:] = g_logits[idx][1:] + self.mask[self.smap[state]]
+						g_logits[idx][0 ] = -float("inf")
+
+						production = self.gramm.rule(
+							torch.argmax(g_logits[idx][1:])
+						)
+						
+						strings[idx] = strings[idx].replace(state, production[1], 1)
+					
+			#------------------------------------------------#
+			
 			g_values = torch.argmax(g_logits, dim =-1)
 			r_values = torch.argmax(r_logits, dim =-1)
 			p_values = torch.stack(
@@ -204,13 +276,15 @@ class TestModel(torch.nn.Module):
 			for i, (gv, rv, pv) in enumerate(zip(g_values, r_values, p_values)):
 				if undone[i]:
 					g_logits[i, gv] = 1     # RULE?
-					undone[i] = gv != 2
+					undone[i] = ("[EOS]" not in strings[i]) # gv != 2
 
-					if gv in [3, 4]:
+					if "TOKEN" in strings[i]: # gv in [3, 4]: 
 						r_logits[i, rv] = 1 # RELATION?
+						strings[i] = strings[i].replace("TOKEN", "token", 1)
 
-					if gv in [5]:
+					if "POINT" in strings[i]: # gv in [5]:
 						p_logits[i, pv] = 1 # ENTITY?
+						strings[i] = strings[i].replace("POINT", "point", 1)
 				else:
 					g_logits[i, 0] = 1
 
