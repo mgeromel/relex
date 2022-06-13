@@ -5,7 +5,7 @@ import torch
 ##################################################
 
 class CustomDataset(torch.utils.data.Dataset):
-	def __init__(self, data, tokenizer, decoder_max_length = 64, encoder_max_length = 256):
+	def __init__(self, data, tokenizer, decode_len = 64, encode_len = 256):
 		
 		phrases = [ x["phrases"] for x in data ]
 		targets = [ x["targets"] for x in data ]
@@ -15,8 +15,8 @@ class CustomDataset(torch.utils.data.Dataset):
 		self.data = build_model_input(
 			self.data,
 			tokenizer,
-			decoder_max_length = decoder_max_length,
-			encoder_max_length = encoder_max_length
+			decode_len = decode_len,
+			encode_len = encode_len
 		)
 		
 		self.size = len(phrases)
@@ -32,7 +32,7 @@ class CustomDataset(torch.utils.data.Dataset):
 
 #------------------------------------------------#
 
-def build_model_input(batch, tokenizer, decoder_max_length = 64, encoder_max_length = 256):
+def build_model_input(batch, tokenizer, decode_len = 64, encode_len = 256):
 	
 	if len(batch) == 0:
 		return
@@ -41,7 +41,7 @@ def build_model_input(batch, tokenizer, decoder_max_length = 64, encoder_max_len
 		batch["phrases"],
 		padding = "max_length",
 		truncation = True,
-		max_length = encoder_max_length,
+		max_length = encode_len,
 		return_tensors = "pt"
 	)
 	
@@ -49,7 +49,7 @@ def build_model_input(batch, tokenizer, decoder_max_length = 64, encoder_max_len
 		batch["targets"],
 		padding = "max_length",
 		truncation = True,
-		max_length = decoder_max_length,
+		max_length = decode_len,
 		return_tensors = "pt"
 	)
 	
