@@ -6,10 +6,11 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 #-----------------------------------------------------------#
 
-def validate(model = None, dataloader = None, tqdm_bar = None, tokenizer = None, extractor = None):
+def validate(model = None, dataloader = None, tqdm_bar = None, tokenizer = None, extractor = None, return_inputs = False):
 	
 	labels = []
 	predic = []
+	inputs = []
 	
 	#------------------------------------------------------#
 	
@@ -22,18 +23,27 @@ def validate(model = None, dataloader = None, tqdm_bar = None, tokenizer = None,
 				max_length = 64
 			).to("cpu")
 		
+		if return_inputs:
+			for sequence in batch["input_ids"]:
+				text = tokenizer.decode(sequence, skip_special_tokens = True)
+				inputs.append(text)
+		
 		for sequence in batch["labels"]:
-			text = tokenizer.decode(sequence)
+			text = tokenizer.decode(sequence, skip_special_tokens = True)
 			labels.append(extractor.read(text))
 		
 		for sequence in output:
-			text = tokenizer.decode(sequence)
+			text = tokenizer.decode(sequence, skip_special_tokens = True)
 			predic.append(extractor.read(text))
 			
 		tqdm_bar.update(1)
 	
 	#------------------------------------------------------#
-	
-	return {"labels": labels, "predicted": predic}
 
+	result = {"labels": labels, "predicted": predic}
+	
+	if return_inputs: result["inputs"] = inputs
+	
+	return result
+	
 #-----------------------------------------------------------#

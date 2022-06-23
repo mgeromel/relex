@@ -1,0 +1,955 @@
+INPUTS :: will it be hotter in wyomissing hills
+LABELS :: {'city': 'wyomissing hills', 'condition_temperature': 'hotter', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'wyotuming hills', 'condition_temperature': 'hotter', 'TYPE': ' get weather'}
+
+INPUTS :: play this is colour by panda bear
+LABELS :: {'artist': 'panda bear', 'track': 'this is colour', 'TYPE': ' play music'}
+PREDIC :: {'album': 'this is colour', 'artist': 'kai bear', 'TYPE': ' play music'}
+
+INPUTS :: will there be cloud coverage in verdery myanmar
+LABELS :: {'city': 'verdery', 'condition_description': 'cloud', 'country': 'myanmar', 'TYPE': ' get weather'}
+PREDIC :: {'condition_description': 'cloud', 'country': 'myanmarry', 'TYPE': ' get weather'}
+
+INPUTS :: i want to see the television show called cuts both ways
+LABELS :: {'object_name': 'cuts both ways', 'object_type': 'television show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'cut both ways', 'object_type': 'television show', 'TYPE': ' search creative work'}
+
+INPUTS :: add kylie minogue to my novedades viernes sudamerica playlist
+LABELS :: {'artist': 'kylie minogue', 'playlist': 'novedades viernes sudamerica', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'nana kita', 'playlist': 'novedades viernes sudamerica', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: add justin mcroberts to this is chopin
+LABELS :: {'artist': 'justin mcroberts', 'playlist': 'this is chopin', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'justin mcandros', 'playlist': 'this is chopin', 'TYPE': ' add to playlist'}
+
+INPUTS :: put a track by lil mama into my guest list sneaky zebra playlist
+LABELS :: {'artist': 'lil mama', 'music_item': 'track', 'playlist': 'guest list sneaky zebra', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'lil mama', 'music_item': 'track', 'playlist': 'guest list takey hind', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play how does it work by helen carter
+LABELS :: {'album': 'how does it work', 'artist': 'helen carter', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'helen carter', 'track': 'how is it', 'TYPE': ' play music'}
+
+INPUTS :: play the video game the genesis machine
+LABELS :: {'object_name': 'the genesis machine', 'object_type': 'video game', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the millennium machine', 'object_type': 'video game', 'TYPE': ' search creative work'}
+
+INPUTS :: add the song don t drink the water to my playlist
+LABELS :: {'music_item': 'song', 'playlist': 'don t drink the water', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'music_item': 'song', 'playlist': 'don ts the water', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play ep by arjen anthony lucassen
+LABELS :: {'artist': 'arjen anthony lucassen', 'music_item': 'ep', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'ar georgie anthonysen', 'music_item': 'ep', 'TYPE': ' play music'}
+
+INPUTS :: play rob mills album the golden archipelago
+LABELS :: {'album': 'the golden archipelago', 'artist': 'rob mills', 'music_item': 'album', 'TYPE': ' play music'}
+PREDIC :: {'album': 'the golden factory', 'artist': 'rob mills', 'music_item': 'album', 'TYPE': ' play music'}
+
+INPUTS :: put artist paulinho da costa on my very nearly nashville playlist
+LABELS :: {'artist': 'paulinho da costa', 'music_item': 'artist', 'playlist': 'very nearly nashville', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'paulinho da viola', 'music_item': 'artist', 'playlist': 'very nearly nashville', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: i m looking for a movie called salvage mice
+LABELS :: {'object_name': 'salvage mice', 'object_type': 'movie', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'cracking contra', 'object_type': 'movie', 'TYPE': ' search creative work'}
+
+INPUTS :: i want to give the chronicle zombie bums from uranus 3 points
+LABELS :: {'object_name': 'zombie bums from uranus', 'object_part_of_series_type': 'chronicle', 'rating_unit': 'points', 'rating_value': '3', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'zombie bums from hallowus', 'object_part_of_series_type': 'chronicle', 'rating_unit': 'points', 'rating_value': '3', 'TYPE': ' rate book'}
+
+INPUTS :: will it snow in amy
+LABELS :: {'city': 'amy', 'condition_description': 'snow', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'zachary', 'condition_description': 'snow', 'TYPE': ' get weather'}
+
+INPUTS :: make a reservation at a bakery that has acquacotta in central african republic for five
+LABELS :: {'country': 'central african republic', 'party_size_number': 'five', 'restaurant_type': 'bakery', 'served_dish': 'acquacotta', 'TYPE': ' book restaurant'}
+PREDIC :: {'country': 'central african republic', 'party_size_number': 'five', 'restaurant_type': 'bakery', 'served_dish': 'blinblina', 'TYPE': ' book restaurant'}
+
+INPUTS :: play geddy lee music on spotify sort by top
+LABELS :: {'artist': 'geddy lee', 'service': 'spotify', 'sort': 'top', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'gesch lee', 'service': 'spotify', 'sort': 'top', 'TYPE': ' play music'}
+
+INPUTS :: add karusellen to jazz brasileiro
+LABELS :: {'entity_name': 'karusellen', 'playlist': 'jazz brasileiro', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'karus wien', 'playlist': 'jazz brasileiro', 'TYPE': ' add to playlist'}
+
+INPUTS :: add sabrina salerno to the grime instrumentals playlist
+LABELS :: {'artist': 'sabrina salerno', 'playlist': 'grime instrumentals', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'tanya salerno', 'playlist': 'grime instrumentals', 'TYPE': ' add to playlist'}
+
+INPUTS :: what is the weather in south bradenton
+LABELS :: {'city': 'south bradenton', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'south puntaton', 'TYPE': ' get weather'}
+
+INPUTS :: is romulus and the sabines playing at the nearest cinema at ten
+LABELS :: {'movie_name': 'romulus and the sabines', 'object_location_type': 'cinema', 'spatial_relation': 'nearest', 'timerange': 'ten', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'rombola and the judas', 'object_location_type': 'cinema', 'spatial_relation': 'nearest', 'timerange': 'ten', 'TYPE': ' search screening event'}
+
+INPUTS :: i m hoping you can find a photograph from live at the isle of wight 1970
+LABELS :: {'object_name': 'live at the isle of wight 1970', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'live at the isle of leningrad 2016', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+
+INPUTS :: add gary lachman track to jazz for loving couples playlist
+LABELS :: {'artist': 'gary lachman', 'music_item': 'track', 'playlist': 'jazz for loving couples', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'gary schenman', 'music_item': 'track', 'playlist': 'jazz for loving couples', 'TYPE': ' add to playlist'}
+
+INPUTS :: my rating for the eiffel tower and other mythologies is 0 out of 6 stars
+LABELS :: {'best_rating': '6', 'object_name': 'the eiffel tower and other mythologies', 'rating_unit': 'stars', 'rating_value': '0', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'the ecolael lamp and other myths', 'rating_unit': 'stars', 'rating_value': '0', 'TYPE': ' rate book'}
+
+INPUTS :: i want to book a cafe for 3 in fargo
+LABELS :: {'city': 'fargo', 'party_size_number': '3', 'restaurant_type': 'cafe', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'crocker', 'party_size_number': '3', 'restaurant_type': 'cafe', 'TYPE': ' book restaurant'}
+
+INPUTS :: please book a room in spaghetti warehouse for catalina delores and brandie mendoza at 12 am
+LABELS :: {'party_size_description': 'catalina delores and brandie mendoza', 'restaurant_name': 'spaghetti warehouse', 'timerange': '12 am', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'monty monty', 'party_size_description': 'dianns and brandie', 'timerange': '12 am', 'TYPE': ' book restaurant'}
+
+INPUTS :: can you put musiri subramania iyer s song onto the lo-fi love soundtrack
+LABELS :: {'artist': 'musiri subramania iyer', 'music_item': 'song', 'playlist': 'lo-fi love', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'musra subrasia iyer', 'music_item': 'song', 'playlist': 'lo-fi love', 'TYPE': ' add to playlist'}
+
+INPUTS :: find me the balance and timing book
+LABELS :: {'object_name': 'balance and timing', 'object_type': 'book', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'balance and decisions', 'object_type': 'book', 'TYPE': ' search creative work'}
+
+INPUTS :: i want to book a restaurant for four around zapata
+LABELS :: {'city': 'zapata', 'party_size_number': 'four', 'restaurant_type': 'restaurant', 'spatial_relation': 'around', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': 'four', 'poi': 'zamia', 'restaurant_type': 'restaurant', 'spatial_relation': 'around', 'TYPE': ' book restaurant'}
+
+INPUTS :: what is the weather going to be like in klondike gold rush national historical park on february the 28th 2034
+LABELS :: {'geographic_poi': 'klondike gold rush national historical park', 'timerange': 'february the 28th 2034', 'TYPE': ' get weather'}
+PREDIC :: {'geographic_poi': 'klondida gold park', 'timerange': 'february the 28th 2034', 'TYPE': ' get weather'}
+
+INPUTS :: add cecil womack to my 50 great female voices playlist
+LABELS :: {'artist': 'cecil womack', 'playlist': '50 great female voices', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'frederick wower', 'playlist': '50 great female voices', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: put some frank ferrer into my edna st vincent millay playlist
+LABELS :: {'artist': 'frank ferrer', 'playlist': 'edna st vincent millay', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'frank sinatra', 'playlist': 'edna st vincent millay', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play artist vlada divljan from something he did that is good
+LABELS :: {'artist': 'vlada divljan', 'sort': 'good', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'sergeia diannjan', 'sort': 'good', 'TYPE': ' play music'}
+
+INPUTS :: what s the weather like in schenectady ma
+LABELS :: {'city': 'schenectady', 'state': 'ma', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'schenschenwa', 'state': 'ma', 'TYPE': ' get weather'}
+
+INPUTS :: play moondog s chupacabra
+LABELS :: {'album': 'chupacabra', 'artist': 'moondog', 'TYPE': ' play music'}
+PREDIC :: {'album': 'moon', 'artist': 'moonppabra', 'TYPE': ' play music'}
+
+INPUTS :: book at table at forest av restaurant close-by for 2 1 second from now
+LABELS :: {'party_size_number': '2', 'poi': 'forest av', 'restaurant_type': 'restaurant', 'spatial_relation': 'close-by', 'timerange': '1 second from now', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': '2', 'poi': 'forest av', 'restaurant_type': 'forest restaurant', 'spatial_relation': 'close-by', 'timerange': '1 second from now', 'TYPE': ' book restaurant'}
+
+INPUTS :: book a restaurant in donnelly
+LABELS :: {'city': 'donnelly', 'restaurant_type': 'restaurant', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'manning', 'restaurant_type': 'restaurant', 'TYPE': ' book restaurant'}
+
+INPUTS :: play a top 5 song from wally bastian on google music
+LABELS :: {'artist': 'wally bastian', 'music_item': 'song', 'service': 'google music', 'sort': 'top 5', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'ernie bastian', 'music_item': 'song', 'service': 'google music', 'sort': 'top 5', 'TYPE': ' play music'}
+
+INPUTS :: where s the nearest movie house playing no trains no planes
+LABELS :: {'movie_name': 'no trains no planes', 'object_location_type': 'movie house', 'spatial_relation': 'nearest', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'no meets no skies', 'object_location_type': 'movie house', 'spatial_relation': 'nearest', 'TYPE': ' search screening event'}
+
+INPUTS :: i would rate the persistence of vision 1 stars and a best rating of 6
+LABELS :: {'best_rating': '6', 'object_name': 'the persistence of vision', 'rating_unit': 'stars', 'rating_value': '1', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'the bridges of vision', 'rating_unit': 'stars', 'rating_value': '1', 'TYPE': ' rate book'}
+
+INPUTS :: the book history by contract is rated five stars in my opinion
+LABELS :: {'object_name': 'history by contract', 'object_type': 'book', 'rating_unit': 'stars', 'rating_value': 'five', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'history by thousands', 'object_type': 'book', 'rating_unit': 'stars', 'rating_value': 'five', 'TYPE': ' rate book'}
+
+INPUTS :: what s the weather in low moor
+LABELS :: {'city': 'low moor', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'low low', 'TYPE': ' get weather'}
+
+INPUTS :: what time is children of divorce playing
+LABELS :: {'movie_name': 'children of divorce', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'children of divorced', 'TYPE': ' search screening event'}
+
+INPUTS :: i am looking for the tv show called the flight of the lost balloon
+LABELS :: {'object_name': 'flight of the lost balloon', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the flight of the lost carpet', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+
+INPUTS :: i want to rate the ingenuity gap 3 out of 6
+LABELS :: {'best_rating': '6', 'object_name': 'the ingenuity gap', 'rating_value': '3', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'the nichuity', 'rating_value': '3', 'TYPE': ' rate book'}
+
+INPUTS :: pull up sweeney todd - il diabolico barbiere di fleet street
+LABELS :: {'object_name': 'sweeney todd - il diabolico barbiere di fleet street', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'sai todd - il diaco diariore diariore di street', 'TYPE': ' search creative work'}
+
+INPUTS :: put four rating on the raging quiet
+LABELS :: {'object_name': 'the raging quiet', 'rating_value': 'four', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'the extreme quiet', 'rating_value': 'four', 'TYPE': ' rate book'}
+
+INPUTS :: play a track by mila islam from deezer
+LABELS :: {'artist': 'mila islam', 'music_item': 'track', 'service': 'deezer', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'milagro', 'music_item': 'track', 'service': 'deezer', 'TYPE': ' play music'}
+
+INPUTS :: play tujiko noriko s ten years and running
+LABELS :: {'album': 'ten years and running', 'artist': 'tujiko noriko', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'tujiko noreen', 'track': 'ten years and running', 'TYPE': ' play music'}
+
+INPUTS :: can you put a song by jessica mauboy on my playlist entitled a sudden rainstorm
+LABELS :: {'artist': 'jessica mauboy', 'music_item': 'song', 'playlist': 'a sudden rainstorm', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'jessica autry', 'music_item': 'song', 'playlist': 'a sudden rainstorm', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: show creativity of song a discord electric
+LABELS :: {'object_name': 'a discord electric', 'object_type': 'song', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'a vol electric', 'object_type': 'song', 'TYPE': ' search creative work'}
+
+INPUTS :: what is the forecast for in 1 second at monte sereno for freezing temps
+LABELS :: {'city': 'monte sereno', 'condition_temperature': 'freezing', 'timerange': 'in 1 second', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'montevall center', 'condition_temperature': 'freezing', 'timerange': 'in 1 second', 'TYPE': ' get weather'}
+
+INPUTS :: i rate shadow of suribachi at five stars
+LABELS :: {'object_name': 'shadow of suribachi', 'rating_unit': 'stars', 'rating_value': 'five', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'shadow of deibachichi', 'rating_unit': 'stars', 'rating_value': 'five', 'TYPE': ' rate book'}
+
+INPUTS :: book me a reservation for eight for the top-rated bakery eleven hours from now in mango
+LABELS :: {'city': 'mango', 'party_size_number': 'eight', 'restaurant_type': 'bakery', 'sort': 'top-rated', 'timerange': 'eleven hours from now', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'limerick', 'party_size_number': 'eight', 'restaurant_type': 'bakery', 'sort': 'top-rated', 'timerange': 'eleven hours from now', 'TYPE': ' book restaurant'}
+
+INPUTS :: please find me asking alexandria discography
+LABELS :: {'object_name': 'asking alexandria discography', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'egypt discography', 'TYPE': ' search creative work'}
+
+INPUTS :: rate awaiting strange gods: weird and lovecraftian fictions a 1
+LABELS :: {'object_name': 'awaiting strange gods: weird and lovecraftian fictions', 'rating_value': '1', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'waiting strange gods: strange and lovecrafts', 'rating_value': '1', 'TYPE': ' rate book'}
+
+INPUTS :: add leah kauffman to my uncharted 4 nathan drake playlist
+LABELS :: {'artist': 'leah kauffman', 'playlist': 'uncharted 4 nathan drake', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'beth ka mulman', 'playlist': 'uncharted 4 nathan drake', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: add the artist cho kyu hyun to funky jams
+LABELS :: {'artist': 'cho kyu hyun', 'music_item': 'artist', 'playlist': 'funky jams', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'cho hyun hyun', 'music_item': 'artist', 'playlist': 'funky jams', 'TYPE': ' add to playlist'}
+
+INPUTS :: on jan the twentieth what will it feel like in ct or the area not far from it
+LABELS :: {'spatial_relation': 'not far', 'state': 'ct', 'timerange': 'jan the twentieth', 'TYPE': ' get weather'}
+PREDIC :: {'state': 'notct', 'timerange': 'jan the twentieth', 'TYPE': ' get weather'}
+
+INPUTS :: what is the weather like in hurstville
+LABELS :: {'city': 'hurstville', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'jolville', 'TYPE': ' get weather'}
+
+INPUTS :: add this album ny bill callahan to my mi casa es la tuya playlist oficial list
+LABELS :: {'artist': 'bill callahan', 'music_item': 'album', 'playlist': 'mi casa es la tuya playlist oficial', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'ny bill suzuki', 'music_item': 'album', 'playlist': 'mi casa esencia sw', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: i want to bring four people to a place that s close to downtown that serves churrascaria cuisine
+LABELS :: {'party_size_number': 'four', 'poi': 'downtown', 'restaurant_type': 'churrascaria', 'spatial_relation': 'close', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': 'four', 'poi': 'downtown', 'restaurant_type': 'churrascaria', 'served_dish': 'ranch dressing', 'spatial_relation': 'close', 'TYPE': ' book restaurant'}
+
+INPUTS :: add this song to this is no te va gustar playlist
+LABELS :: {'music_item': 'song', 'playlist': 'this is no te va gustar', 'TYPE': ' add to playlist'}
+PREDIC :: {'music_item': 'song', 'playlist': 'this is no te vaar', 'TYPE': ' add to playlist'}
+
+INPUTS :: play the song i get ideas as performed by richard kruspe
+LABELS :: {'artist': 'richard kruspe', 'music_item': 'song', 'track': 'i get ideas', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'richard richardspe', 'music_item': 'song', 'TYPE': ' i get weather'}
+
+INPUTS :: rate cuisines of the axis of evil and other irritating states one out of 6
+LABELS :: {'best_rating': '6', 'object_name': 'cuisines of the axis of evil and other irritating states', 'rating_value': 'one', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'atops of the axis of evil and other writings', 'rating_value': 'one', 'TYPE': ' rate book'}
+
+INPUTS :: find an album called just call me stupid
+LABELS :: {'object_name': 'just call me stupid', 'object_type': 'album', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'just call me never', 'object_type': 'album', 'TYPE': ' search creative work'}
+
+INPUTS :: use netflix to play bizzy bone kiss me goodnight sergeant major
+LABELS :: {'artist': 'bizzy bone', 'service': 'netflix', 'track': 'kiss me goodnight sergeant major', 'TYPE': ' play music'}
+PREDIC :: {'track': 'bumble bone kiss me good night', 'TYPE': ' play music'}
+
+INPUTS :: add pangaea to my gold edition playlist
+LABELS :: {'entity_name': 'pangaea', 'playlist': 'gold edition', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'snapfinger', 'playlist': 'gold edition', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: show me the movie operetta for the theatre organ
+LABELS :: {'object_name': 'operetta for the theatre organ', 'object_type': 'movie', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'memoirs for the theatre organ', 'object_type': 'movie', 'TYPE': ' search creative work'}
+
+INPUTS :: tell me the weather forecast close by brown county state park for meal time
+LABELS :: {'geographic_poi': 'brown county state park', 'spatial_relation': 'close by', 'timerange': 'meal', 'TYPE': ' get weather'}
+PREDIC :: {'geographic_poi': 'brown state park', 'spatial_relation': 'close by', 'timerange': 'meal', 'TYPE': ' get weather'}
+
+INPUTS :: will it be chillier at 06:05:48 in wagener reunion
+LABELS :: {'city': 'wagener', 'condition_temperature': 'chillier', 'country': 'reunion', 'timerange': '06:05:48', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'cottonner', 'condition_temperature': 'chillier', 'country': 'reunion', 'timerange': '06:31:32', 'TYPE': ' get weather'}
+
+INPUTS :: add no prejudice to 90s indie
+LABELS :: {'entity_name': 'no prejudice', 'playlist': '90s indie', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'nostal', 'playlist': '90s indie', 'TYPE': ' add to playlist'}
+
+INPUTS :: will there be a cloud here at 06:50:20
+LABELS :: {'condition_description': 'cloud', 'current_location': 'here', 'timerange': '06:50:20', 'TYPE': ' get weather'}
+PREDIC :: {'condition_description': 'cloud', 'current_location': 'here', 'timerange': '06:31:20', 'TYPE': ' get weather'}
+
+INPUTS :: play pop 2017 picks
+LABELS :: {'playlist': 'pop 2017 picks', 'TYPE': ' play music'}
+PREDIC :: {'playlist': 'pop 2017 strings', 'TYPE': ' play music'}
+
+INPUTS :: find a tv show called ruthless
+LABELS :: {'object_name': 'ruthless', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'justified', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+
+INPUTS :: what time is the clutching hand playing at amco entertainment
+LABELS :: {'location_name': 'amco entertainment', 'movie_name': 'the clutching hand', 'TYPE': ' search screening event'}
+PREDIC :: {'location_name': 'amco entertainment', 'movie_name': 'the bleeding hand', 'TYPE': ' search screening event'}
+
+INPUTS :: find the via dolorosa: songs of redemption saga
+LABELS :: {'object_name': 'via dolorosa: songs of redemption', 'object_type': 'saga', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'via dowyn carolina: songs of redemption', 'object_type': 'saga', 'TYPE': ' search creative work'}
+
+INPUTS :: will there be snowfall at six pm in leisure knoll california
+LABELS :: {'city': 'leisure knoll', 'condition_description': 'snowfall', 'state': 'california', 'timerange': 'six pm', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'monet bluff', 'condition_description': 'snowfall', 'state': 'california', 'timerange': 'six pm', 'TYPE': ' get weather'}
+
+INPUTS :: show me the tv show limit of love: umizaru
+LABELS :: {'object_name': 'limit of love: umizaru', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'limits of love: umbrianru', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+
+INPUTS :: will it be hot on orthodox good friday in michigan and close-by
+LABELS :: {'condition_temperature': 'hot', 'spatial_relation': 'close-by', 'state': 'michigan', 'timerange': 'orthodox good friday', 'TYPE': ' get weather'}
+PREDIC :: {'condition_temperature': 'hot', 'spatial_relation': 'close-by', 'state': 'michigan', 'timerange': 'aug good friday', 'TYPE': ' get weather'}
+
+INPUTS :: find tv series titled a life in the death of joe meek
+LABELS :: {'object_name': 'a life in the death of joe meek', 'object_type': 'tv series', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'a life in the death of joe fisher', 'object_type': 'tv series', 'TYPE': ' search creative work'}
+
+INPUTS :: find the tv series shaun the sheep
+LABELS :: {'object_name': 'shaun the sheep', 'object_type': 'tv series', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'seamus the pigs', 'object_type': 'tv series', 'TYPE': ' search creative work'}
+
+INPUTS :: i want to go to 88th st-boyd av or close by and book seats for 10
+LABELS :: {'party_size_number': '10', 'poi': '88th st-boyd av', 'spatial_relation': 'close', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': '10', 'poi': '88th st-devild av', 'spatial_relation': 'close by', 'TYPE': ' book restaurant'}
+
+INPUTS :: i would like to book a restaurant for two in 42 weeks from now in wagram
+LABELS :: {'city': 'wagram', 'party_size_number': 'two', 'restaurant_type': 'restaurant', 'timerange': '42 weeks from now', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'wafinger', 'party_size_number': 'two', 'restaurant_type': 'restaurant', 'timerange': '42 weeks from now', 'TYPE': ' book restaurant'}
+
+INPUTS :: find the picture ultima vi: the false prophet
+LABELS :: {'object_name': 'ultima vi: the false prophet', 'object_type': 'picture', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'phinina vi: the false prophet', 'object_type': 'picture', 'TYPE': ' search creative work'}
+
+INPUTS :: rate the beggar of volubilis 1 out of 6
+LABELS :: {'best_rating': '6', 'object_name': 'the beggar of volubilis', 'rating_value': '1', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'the beggar of clas', 'rating_value': '1', 'TYPE': ' rate book'}
+
+INPUTS :: play jawad ahmad
+LABELS :: {'artist': 'jawad ahmad', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'bonead ahmad', 'TYPE': ' play music'}
+
+INPUTS :: i need a table in ottoville on feb 15th 2029 at gus stevens seafood restaurant & buccaneer lounge
+LABELS :: {'city': 'ottoville', 'restaurant_name': 'gus stevens seafood restaurant & buccaneer lounge', 'timerange': 'feb 15th 2029', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'czarville', 'restaurant_name': 'gus stevens seafood restaurant & buccaneer lounge', 'timerange': 'feb 15th 2029', 'TYPE': ' book restaurant'}
+
+INPUTS :: what time is southern theatres showing ukraine is not a brothel
+LABELS :: {'location_name': 'southern theatres', 'movie_name': 'ukraine is not a brothel', 'TYPE': ' search screening event'}
+PREDIC :: {'location_name': 'southern theatres', 'movie_name': 'ukraine is not a dame', 'TYPE': ' search screening event'}
+
+INPUTS :: will it be nice on aug the nineteenth in beda bulgaria
+LABELS :: {'city': 'beda', 'country': 'bulgaria', 'timerange': 'aug the nineteenth', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'beda', 'country': 'serbia', 'timerange': 'aug the nineteenth', 'TYPE': ' get weather'}
+
+INPUTS :: can you make reservations at a tea house that serves fettucine
+LABELS :: {'restaurant_type': 'tea house', 'served_dish': 'fettucine', 'TYPE': ' book restaurant'}
+PREDIC :: {'restaurant_type': 'tea house', 'served_dish': 'blintuoni', 'TYPE': ' book restaurant'}
+
+INPUTS :: i would like to add something by kuk harrell to my hip hop 2017 new school playlist
+LABELS :: {'artist': 'kuk harrell', 'playlist': 'hip hop 2017 new school', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'moh hagar', 'playlist': 'hip hop 2017 new school', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: show me the courts of chaos
+LABELS :: {'object_name': 'the courts of chaos', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the lords of chaos', 'TYPE': ' search creative work'}
+
+INPUTS :: add rupee to my ultra metal playlist
+LABELS :: {'artist': 'rupee', 'playlist': 'ultra metal', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'ruwang', 'playlist': 'ultra metal', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: i need the wather for next week in the philippines
+LABELS :: {'country': 'philippines', 'timerange': 'next week', 'TYPE': ' get weather'}
+PREDIC :: {'country': 'philippines', 'state': 'the wa wa wa', 'timerange': 'next week', 'TYPE': ' get weather'}
+
+INPUTS :: please make reservations in yeager for seven am at a highly rated indian brasserie
+LABELS :: {'city': 'yeager', 'cuisine': 'indian', 'restaurant_type': 'brasserie', 'sort': 'highly rated', 'timerange': 'seven am', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'yeock', 'cuisine': 'indian', 'restaurant_type': 'brasserie', 'sort': 'highly rated', 'timerange': 'seven am', 'TYPE': ' book restaurant'}
+
+INPUTS :: add shi xin hui to my piano chill playlist
+LABELS :: {'artist': 'shi xin hui', 'playlist': 'piano chill', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'shi shi shi', 'playlist': 'piano chill', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: rate canto for a gypsy two of 6 stars
+LABELS :: {'best_rating': '6', 'object_name': 'canto for a gypsy', 'rating_unit': 'stars', 'rating_value': 'two', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'canto for a fake', 'rating_unit': 'stars', 'rating_value': 'two', 'TYPE': ' rate book'}
+
+INPUTS :: rate a taste of blackberries a three
+LABELS :: {'object_name': 'a taste of blackberries', 'rating_value': 'three', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'a taste of black isles', 'rating_value': 'three', 'TYPE': ' rate book'}
+
+INPUTS :: what is the weather of east portal ks
+LABELS :: {'city': 'east portal', 'state': 'ks', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'east dundee', 'state': 'ks', 'TYPE': ' get weather'}
+
+INPUTS :: 21 weeks from now elinor crystal turner and nita want to eat german food at a bar in distant california
+LABELS :: {'cuisine': 'german', 'party_size_description': 'elinor crystal turner and nita', 'restaurant_type': 'bar', 'spatial_relation': 'distant', 'state': 'california', 'timerange': '21 weeks from now', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_description': 'germanita crystal viola and rierie', 'restaurant_type': 'bar', 'spatial_relation': 'distant', 'state': 'california', 'timerange': '21 weeks from now', 'TYPE': ' book restaurant'}
+
+INPUTS :: book a taverna that serves bengali for six at five
+LABELS :: {'cuisine': 'bengali', 'party_size_number': 'six', 'restaurant_type': 'taverna', 'timerange': 'five', 'TYPE': ' book restaurant'}
+PREDIC :: {'cuisine': 'punjabi', 'party_size_number': 'six', 'restaurant_type': 'taverna', 'TYPE': ' book restaurant'}
+
+INPUTS :: find doggy day school an album
+LABELS :: {'object_name': 'doggy day school', 'object_type': 'album', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'disordery day school', 'object_type': 'album', 'TYPE': ' search creative work'}
+
+INPUTS :: i d like a reservation at a place in iran for neva alice and maggie parker
+LABELS :: {'country': 'iran', 'party_size_description': 'neva alice and maggie parker', 'TYPE': ' book restaurant'}
+PREDIC :: {'country': 'iran', 'party_size_description': 'neva and maggie', 'TYPE': ' book restaurant'}
+
+INPUTS :: i want to watch supernatural: the unseen powers of animals
+LABELS :: {'object_name': 'supernatural: the unseen powers of animals', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'supernatural: the invisible powers of animals', 'TYPE': ' search creative work'}
+
+INPUTS :: add even serpents shine to dorothea s indie hipster playlist
+LABELS :: {'entity_name': 'even serpents shine', 'playlist': 'indie hipster', 'playlist_owner': 'dorothea s', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'ajoys shine', 'playlist': 'indie hipster', 'playlist_owner': 'abigail s', 'TYPE': ' add to playlist'}
+
+INPUTS :: where can i see a slice of life
+LABELS :: {'movie_name': 'a slice of life', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'a handful of life', 'TYPE': ' search screening event'}
+
+INPUTS :: rate maps for lost lovers 1 of 6
+LABELS :: {'best_rating': '6', 'object_name': 'maps for lost lovers', 'rating_value': '1', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'highways for lost lovers', 'rating_value': '1', 'TYPE': ' rate book'}
+
+INPUTS :: is it windy in telogia
+LABELS :: {'city': 'telogia', 'condition_description': 'windy', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'kalotum', 'condition_description': 'windy', 'TYPE': ' get weather'}
+
+INPUTS :: book a table at grecian coffee house for 7 on apr 7th 2024
+LABELS :: {'party_size_number': '7', 'restaurant_name': 'grecian coffee house', 'timerange': 'apr 7th 2024', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': '7', 'restaurant_name': 'grebench coffee house', 'timerange': 'apr 7th 2024', 'TYPE': ' book restaurant'}
+
+INPUTS :: where can i watch tv series shopping spree
+LABELS :: {'object_name': 'shopping spree', 'object_type': 'tv series', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'brand brand', 'object_type': 'tv series', 'TYPE': ' search creative work'}
+
+INPUTS :: find the panic in needle park
+LABELS :: {'movie_name': 'the panic in needle park', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'the panic in glove park', 'TYPE': ' search screening event'}
+
+INPUTS :: play the last wellman braud album relaesd
+LABELS :: {'artist': 'wellman braud', 'music_item': 'album', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'wellman bra vibrationesd', 'music_item': 'album', 'track': 'lastla', 'TYPE': ' play music'}
+
+INPUTS :: book a table for chasity ruiz and mary at the fat duck in puerto rico
+LABELS :: {'country': 'puerto rico', 'party_size_description': 'chasity ruiz and mary', 'restaurant_name': 'the fat duck', 'TYPE': ' book restaurant'}
+PREDIC :: {'country': 'puerto rico', 'party_size_description': 'chasity reyes and mary', 'restaurant_name': 'the fat duck', 'TYPE': ' book restaurant'}
+
+INPUTS :: i d like a table for midday at the unseen bean
+LABELS :: {'restaurant_name': 'the unseen bean', 'timerange': 'midday', 'TYPE': ' book restaurant'}
+PREDIC :: {'restaurant_name': 'the invisible bean', 'timerange': 'midday', 'TYPE': ' book restaurant'}
+
+INPUTS :: please add ruud jolie to my playlist guest list polygon
+LABELS :: {'artist': 'ruud jolie', 'playlist': 'guest list polygon', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'ruud mclean', 'playlist': 'guest list polygon', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: what is the michael moore is a big fat stupid white man video game
+LABELS :: {'object_name': 'michael moore is a big fat stupid white man', 'object_type': 'video game', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'michael moore is a big fat fat white man', 'object_type': 'video game', 'TYPE': ' search creative work'}
+
+INPUTS :: i want to put look to you on the playlist named 80s classic hits
+LABELS :: {'entity_name': 'look to you', 'playlist': '80s classic hits', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'to see you', 'playlist': '80s classic hits', 'TYPE': ' add to playlist'}
+
+INPUTS :: search for teenage mutant hero turtles: fall of the foot clan photograph
+LABELS :: {'object_name': 'teenage mutant hero turtles: fall of the foot clan', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'teen teen hero hero: fall of the hand pokemon', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+
+INPUTS :: add the singer ivan roudyk to my fairy tales playlists
+LABELS :: {'artist': 'ivan roudyk', 'playlist': 'fairy tales', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'ivan roudyk', 'playlist': 'fairy taless', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: put lindsey cardinale into my hillary clinton s women s history month playlist
+LABELS :: {'artist': 'lindsey cardinale', 'playlist': 'hillary clinton s women s history month playlist', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'leigh nashe', 'playlist': 'hillary clinton s women s history month playlist', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: i want to give a mortal flower a two
+LABELS :: {'object_name': 'a mortal flower', 'rating_value': 'two', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'a faint flower', 'rating_value': 'two', 'TYPE': ' rate book'}
+
+INPUTS :: book me a table for 3 at tkk fried chicken in sri lanka
+LABELS :: {'country': 'sri lanka', 'party_size_number': '3', 'restaurant_name': 'tkk fried chicken', 'TYPE': ' book restaurant'}
+PREDIC :: {'country': 'sri lanka', 'party_size_number': '3', 'restaurant_name': 'ts fried chicken', 'TYPE': ' book restaurant'}
+
+INPUTS :: play the song memories are my only witness
+LABELS :: {'object_name': 'memories are my only witness', 'object_type': 'song', 'TYPE': ' search creative work'}
+PREDIC :: {'track': 'memories are my only witness witness', 'TYPE': ' play music'}
+
+INPUTS :: i d like a table for ten in 2 minutes at french horn sonning eye
+LABELS :: {'party_size_number': 'ten', 'restaurant_name': 'french horn sonning eye', 'timerange': 'in 2 minutes', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': 'ten', 'restaurant_name': 'french sonning', 'timerange': 'in 2 minutes', 'TYPE': ' book restaurant'}
+
+INPUTS :: will it get overcast in la dolores
+LABELS :: {'city': 'la dolores', 'condition_description': 'overcast', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'lavina', 'condition_description': 'overcast', 'TYPE': ' get weather'}
+
+INPUTS :: what time is goodbye mothers playing
+LABELS :: {'movie_name': 'goodbye mothers', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'goodbye creatures', 'TYPE': ' search screening event'}
+
+INPUTS :: rate the key word and other mysteries 4 of 6
+LABELS :: {'best_rating': '6', 'object_name': 'the key word and other mysteries', 'rating_value': '4', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'the key word and other sins', 'rating_value': '4', 'TYPE': ' rate book'}
+
+INPUTS :: add this artist to pop 2017 picks
+LABELS :: {'music_item': 'artist', 'playlist': 'pop 2017 picks', 'TYPE': ' add to playlist'}
+PREDIC :: {'music_item': 'artist', 'playlist': 'pop 2017 guest list', 'TYPE': ' add to playlist'}
+
+INPUTS :: restaurant in bulgaria this week party for 9 numbers
+LABELS :: {'country': 'bulgaria', 'party_size_number': '9', 'restaurant_type': 'restaurant', 'timerange': 'this week', 'TYPE': ' book restaurant'}
+PREDIC :: {'country': 'serbia', 'party_size_number': '9', 'restaurant_type': 'restaurant', 'timerange': 'this week', 'TYPE': ' book restaurant'}
+
+INPUTS :: play a new symphony by perfecto de castro on lastfm
+LABELS :: {'artist': 'perfecto de castro', 'music_item': 'symphony', 'service': 'lastfm', 'sort': 'new', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'perfecto delange', 'music_item': 'symphony', 'service': 'lastfm', 'sort': 'new', 'TYPE': ' play music'}
+
+INPUTS :: what will the weather be in grand coteau ut at six pm
+LABELS :: {'city': 'grand coteau', 'state': 'ut', 'timerange': 'six pm', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'grand bonneau', 'state': 'ut', 'timerange': 'six pm', 'TYPE': ' get weather'}
+
+INPUTS :: what movie theatre is showing if the huns came to melbourne
+LABELS :: {'movie_name': 'if the huns came to melbourne', 'object_location_type': 'movie theatre', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'if the saracens came to melbourne', 'object_location_type': 'movie theatre', 'TYPE': ' search screening event'}
+
+INPUTS :: find a soundtrack called pax warrior
+LABELS :: {'object_name': 'pax warrior', 'object_type': 'soundtrack', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'galactic warrior', 'object_type': 'soundtrack', 'TYPE': ' search creative work'}
+
+INPUTS :: find conker: live and reloaded
+LABELS :: {'object_name': 'conker: live and reloaded', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'conker: live and unreleaseded', 'TYPE': ' search creative work'}
+
+INPUTS :: will it be a snowy day in dalcour
+LABELS :: {'city': 'dalcour', 'condition_description': 'snowy', 'timerange': 'day', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'dalbello', 'condition_description': 'snowy', 'timerange': 'day', 'TYPE': ' get weather'}
+
+INPUTS :: play arif music from the fourties
+LABELS :: {'artist': 'arif', 'year': 'fourties', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'apathy', 'year': 'fourties', 'TYPE': ' play music'}
+
+INPUTS :: i d like to know when i can see the taking of flight 847: the uli derickson story at amco entertainment
+LABELS :: {'location_name': 'amco entertainment', 'movie_name': 'the taking of flight 847: the uli derickson story', 'TYPE': ' search screening event'}
+PREDIC :: {'location_name': 'amco entertainment', 'movie_name': 'the taking of the ululul', 'TYPE': ' search screening event'}
+
+INPUTS :: show me when scandalous john is playing
+LABELS :: {'movie_name': 'scandalous john', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'shamous john', 'TYPE': ' search screening event'}
+
+INPUTS :: find the schedule for the band of honest men at the nearest movie theatre
+LABELS :: {'movie_name': 'the band of honest men', 'object_location_type': 'movie theatre', 'object_type': 'schedule', 'spatial_relation': 'nearest', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'the band of your favorite men', 'object_location_type': 'movie theatre', 'object_type': 'schedule', 'spatial_relation': 'nearest', 'TYPE': ' search screening event'}
+
+INPUTS :: the sleep machine waterscapes playlist needs some kris chetan ramlu in it
+LABELS :: {'artist': 'kris chetan ramlu', 'playlist': 'the sleep machine waterscapes', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'tak bitan ramlu', 'playlist': 'sleep machine waterscapes', 'TYPE': ' add to playlist'}
+
+INPUTS :: can you get me the trailer of the multiversity
+LABELS :: {'object_name': 'the multiversity', 'object_type': 'trailer', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the doubleevity', 'object_type': 'trailer', 'TYPE': ' search creative work'}
+
+INPUTS :: is it forecast to be warm in doi inthanon national park
+LABELS :: {'condition_temperature': 'warm', 'geographic_poi': 'doi inthanon national park', 'TYPE': ' get weather'}
+PREDIC :: {'condition_temperature': 'warm', 'geographic_poi': 'minami intheon national park', 'TYPE': ' get weather'}
+
+INPUTS :: is unbeatable harold at century theatres
+LABELS :: {'location_name': 'century theatres', 'movie_name': 'unbeatable harold', 'TYPE': ' search screening event'}
+PREDIC :: {'location_name': 'century theatres', 'movie_name': 'unreachable differences', 'TYPE': ' search screening event'}
+
+INPUTS :: show me the weather forecast for the city of spencer
+LABELS :: {'city': 'spencer', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'huxley', 'TYPE': ' get weather'}
+
+INPUTS :: add this tune to cristina s endorphin rush playlist
+LABELS :: {'music_item': 'tune', 'playlist': 'endorphin rush', 'playlist_owner': 'cristina s', 'TYPE': ' add to playlist'}
+PREDIC :: {'music_item': 'tune', 'playlist': 'endorphin rush', 'playlist_owner': 'marta s', 'TYPE': ' add to playlist'}
+
+INPUTS :: add turk to the deep house playlist
+LABELS :: {'artist': 'turk', 'playlist': 'deep house', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'turks', 'playlist': 'deep house', 'TYPE': ' add to playlist'}
+
+INPUTS :: i give the phishing manual four stars out of 6
+LABELS :: {'best_rating': '6', 'object_name': 'the phishing manual', 'rating_unit': 'stars', 'rating_value': 'four', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'the phi phi', 'rating_unit': 'stars', 'rating_value': 'four', 'TYPE': ' rate book'}
+
+INPUTS :: play the top 20 ep from the fifties by john bundrick
+LABELS :: {'artist': 'john bundrick', 'music_item': 'ep', 'sort': 'top 20', 'year': 'fifties', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'john schenrick', 'music_item': 'ep', 'sort': 'top 20', 'year': 'fifties', 'TYPE': ' play music'}
+
+INPUTS :: add nothing fancy to meditate to sounds of nature playlist
+LABELS :: {'entity_name': 'nothing fancy', 'playlist': 'meditate to sounds of nature', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'nothing like', 'playlist': 'sounds of nature', 'TYPE': ' add to playlist'}
+
+INPUTS :: add rob tyner to betsy s we everywhere
+LABELS :: {'artist': 'rob tyner', 'playlist': 'we everywhere', 'playlist_owner': 'betsy s', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'rob tyner', 'playlist': 'we everywhere', 'playlist_owner': 'pamela s', 'TYPE': ' add to playlist'}
+
+INPUTS :: please search the ironbound picture
+LABELS :: {'object_name': 'ironbound', 'object_type': 'picture', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'irongenesis', 'object_type': 'picture', 'TYPE': ' search creative work'}
+
+INPUTS :: add this artist to the laugh list
+LABELS :: {'music_item': 'artist', 'playlist': 'the laugh list', 'TYPE': ' add to playlist'}
+PREDIC :: {'music_item': 'artist', 'playlist': 'smile', 'TYPE': ' add to playlist'}
+
+INPUTS :: add nyoil to my this is prince playlist
+LABELS :: {'artist': 'nyoil', 'playlist': 'this is prince', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'nypd', 'playlist': 'this is prince', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: table for one somewhere in palco
+LABELS :: {'city': 'palco', 'party_size_number': 'one', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'the greatco', 'party_size_number': 'one', 'TYPE': ' book restaurant'}
+
+INPUTS :: i d like to watch may blossom
+LABELS :: {'movie_name': 'may blossom', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'may flower', 'TYPE': ' search screening event'}
+
+INPUTS :: add george thorogood to el mejor rock en espanol
+LABELS :: {'artist': 'george thorogood', 'playlist': 'el mejor rock en espanol', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'george wakeogood', 'playlist': 'el mejor rock en espanol', 'TYPE': ' add to playlist'}
+
+INPUTS :: what will the weather be in lago vista on october fourteenth 2022
+LABELS :: {'city': 'lago vista', 'timerange': 'october fourteenth 2022', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'parc grove', 'timerange': 'october fourteenth 2022', 'TYPE': ' get weather'}
+
+INPUTS :: do you have something like impossible is nothing by abderrahmane abdelli
+LABELS :: {'artist': 'abderrahmane abdelli', 'track': 'impossible is nothing', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'abderminatoreguchi', 'track': 'you have something is nothing', 'TYPE': ' play music'}
+
+INPUTS :: find love will tear us apart a photograph
+LABELS :: {'object_name': 'love will tear us apart', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'love will torn us apart', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+
+INPUTS :: find politicsnation with al sharpton
+LABELS :: {'object_name': 'politicsnation with al sharpton', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'politicsna with al shortton', 'TYPE': ' search creative work'}
+
+INPUTS :: rate lamy of santa fe 5 of 6 stars
+LABELS :: {'best_rating': '6', 'object_name': 'lamy of santa fe', 'rating_unit': 'stars', 'rating_value': '5', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'lamy of santa bears', 'rating_unit': 'stars', 'rating_value': '5', 'TYPE': ' rate book'}
+
+INPUTS :: add this ruth crawford seeger song to my playlist called the soundtrack 007
+LABELS :: {'artist': 'ruth crawford seeger', 'music_item': 'song', 'playlist': 'the soundtrack 007', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'ruth lorenzo', 'music_item': 'the soundtrack', 'playlist': 'the soundtrack 0 0', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: what will the weather be in stelvio national park 1 hour and 1 minute from now
+LABELS :: {'geographic_poi': 'stelvio national park', 'timerange': '1 hour and 1 minute from now', 'TYPE': ' get weather'}
+PREDIC :: {'geographic_poi': 'seldo national park', 'timerange': '1 hour and 1 minute from now', 'TYPE': ' get weather'}
+
+INPUTS :: i want a matt garrison tune in my fresh finds fire emoji playlist
+LABELS :: {'artist': 'matt garrison', 'music_item': 'tune', 'playlist': 'fresh finds fire emoji', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'matt mckenna', 'music_item': 'tune', 'playlist': 'fresh finds fire emoji', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play the electrochemical and solid state letters song
+LABELS :: {'object_name': 'electrochemical and solid state letters', 'object_type': 'song', 'TYPE': ' search creative work'}
+PREDIC :: {'album': 'electro electro and fresh state letters', 'TYPE': ' play music'}
+
+INPUTS :: rate this book titled the improvisatore five stars
+LABELS :: {'object_name': 'the improvisatore', 'object_type': 'book', 'rating_unit': 'stars', 'rating_value': 'five', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'the expexpisore', 'object_type': 'book', 'rating_unit': 'stars', 'rating_value': 'five', 'TYPE': ' rate book'}
+
+INPUTS :: rate wielding a red sword 0 stars
+LABELS :: {'object_name': 'wielding a red sword', 'rating_unit': 'stars', 'rating_value': '0', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'krieg a red sword', 'rating_unit': 'stars', 'rating_value': '0', 'TYPE': ' rate book'}
+
+INPUTS :: is strauss is playing today at the cineplex odeon corporation
+LABELS :: {'location_name': 'cineplex odeon corporation', 'movie_name': 'strauss is playing today', 'TYPE': ' search screening event'}
+PREDIC :: {'location_name': 'cineplex odeon corporation', 'movie_name': 'liberator', 'TYPE': ' search screening event'}
+
+INPUTS :: i want to book a bar in bonaparte palau
+LABELS :: {'city': 'bonaparte', 'restaurant_type': 'bar', 'state': 'palau', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'booker', 'restaurant_type': 'bar', 'state': 'palau', 'TYPE': ' book restaurant'}
+
+INPUTS :: will i be able to watch camping-car at movie house at 6 pm
+LABELS :: {'movie_name': 'camping-car', 'object_location_type': 'movie house', 'timerange': '6 pm', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'camp- car', 'object_location_type': 'movie house', 'timerange': '6 pm', 'TYPE': ' search screening event'}
+
+INPUTS :: play an andy silvester sound track from the thirties on spotify
+LABELS :: {'artist': 'andy silvester', 'music_item': 'sound track', 'service': 'spotify', 'year': 'thirties', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'andyeccion', 'music_item': 'sound track', 'service': 'spotify', 'year': 'thirties', 'TYPE': ' play music'}
+
+INPUTS :: get the video game of the chipmunk song
+LABELS :: {'object_name': 'the chipmunk song', 'object_type': 'video game', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the chipbiank song', 'object_type': 'video game', 'TYPE': ' search creative work'}
+
+INPUTS :: where can i view the picture reaching horizons
+LABELS :: {'object_name': 'reaching horizons', 'object_type': 'picture', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'waiting horizons', 'object_type': 'picture', 'TYPE': ' search creative work'}
+
+INPUTS :: put nothing remains the same on my summer music playlist
+LABELS :: {'entity_name': 'nothing remains the same', 'playlist': 'summer music', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'nothing has the same', 'playlist': 'summer music', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: show me the photograph johnny cash: the complete columbia album collection
+LABELS :: {'object_name': 'johnny cash: the complete columbia album collection', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'johnny cash: the complete complete album', 'object_type': 'photograph', 'TYPE': ' search creative work'}
+
+INPUTS :: find the gill deacon show
+LABELS :: {'object_name': 'the gill deacon show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the gill gill', 'object_type': 'show', 'TYPE': ' search creative work'}
+
+INPUTS :: add david axelrod to my futuros hits list
+LABELS :: {'artist': 'david axelrod', 'playlist': 'futuros hits', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'david frei frei', 'playlist': 'futuros hits', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: i want to add hind etin to my la mejor musica dance 2017 playlist
+LABELS :: {'entity_name': 'hind etin', 'playlist': 'la mejor musica dance 2017', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'har etin', 'playlist': 'la mejor musica dance 2017', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play me a cinder block movement
+LABELS :: {'artist': 'cinder block', 'music_item': 'movement', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'kry block', 'music_item': 'movement', 'TYPE': ' play music'}
+
+INPUTS :: rate the book an appeal from the new to the old whigs a 0
+LABELS :: {'object_name': 'an appeal from the new to the old whigs', 'object_type': 'book', 'rating_value': '0', 'TYPE': ' rate book'}
+PREDIC :: {'object_name': 'an inquiry from the new leases', 'object_type': 'book', 'rating_value': '0', 'TYPE': ' rate book'}
+
+INPUTS :: will there be snowfall in kitlope heritage conservancy
+LABELS :: {'condition_description': 'snowfall', 'geographic_poi': 'kitlope heritage conservancy', 'TYPE': ' get weather'}
+PREDIC :: {'condition_description': 'snowfall', 'geographic_poi': 'kitlope heritage monument', 'TYPE': ' get weather'}
+
+INPUTS :: i d like to reserve a table at a pub that serves andouillettes within the same area in san marino
+LABELS :: {'country': 'san marino', 'restaurant_type': 'pub', 'served_dish': 'andouillettes', 'spatial_relation': 'within the same area', 'TYPE': ' book restaurant'}
+PREDIC :: {'country': 'san marino', 'restaurant_type': 'pub', 'served_dish': 'and andle', 'spatial_relation': 'within the same area', 'TYPE': ' book restaurant'}
+
+INPUTS :: add dwele to marguerite s eurovision 2016 playlist
+LABELS :: {'artist': 'dwele', 'playlist': 'eurovision 2016', 'playlist_owner': 'marguerite s', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'kelele', 'playlist': 'transatlantic 2016', 'playlist_owner': 'isabelle s', 'TYPE': ' add to playlist'}
+
+INPUTS :: where is the closest cinema playing a drink in the passage
+LABELS :: {'movie_name': 'a drink in the passage', 'object_location_type': 'cinema', 'spatial_relation': 'closest', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'a wine in the passage', 'object_location_type': 'cinema', 'spatial_relation': 'closest', 'TYPE': ' search screening event'}
+
+INPUTS :: show me movie time for i am sorry at my movie house
+LABELS :: {'movie_name': 'i am sorry', 'object_location_type': 'movie house', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'i am am i', 'object_location_type': 'movie house', 'TYPE': ' search screening event'}
+
+INPUTS :: book a table around london borough of ealing that is highly rated in a gluten free bar
+LABELS :: {'cuisine': 'gluten free', 'poi': 'london borough of ealing', 'restaurant_type': 'bar', 'sort': 'highly rated', 'spatial_relation': 'around', 'TYPE': ' book restaurant'}
+PREDIC :: {'cuisine': 'gluten free', 'restaurant_type': 'brasserie', 'sort': 'highly rated', 'spatial_relation': 'around', 'TYPE': ' book restaurant'}
+
+INPUTS :: find me a movie with the name oshin
+LABELS :: {'object_name': 'oshin', 'object_type': 'movie', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'ogawa', 'object_type': 'movie', 'TYPE': ' search creative work'}
+
+INPUTS :: for my crossfit playlist add the soul sessions volume 2
+LABELS :: {'entity_name': 'the soul sessions volume 2', 'playlist': 'crossfit', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'the soul sessions volume 2', 'playlist': 'crossroad', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play the discografia de the pretty reckless saga
+LABELS :: {'object_name': 'discografia de the pretty reckless', 'object_type': 'saga', 'TYPE': ' search creative work'}
+PREDIC :: {'track': 'disco fevera de the very very', 'TYPE': ' play music'}
+
+INPUTS :: can you tell me the actors of the saga awards/
+LABELS :: {'object_name': 'actors', 'object_type': 'saga', 'TYPE': ' search creative work'}
+PREDIC :: {'object_part_of_series_type': 'theaters of the saga', 'TYPE': ' search screening event'}
+
+INPUTS :: coon chicken inn restaurant for 1 am for me clarice and debbie
+LABELS :: {'party_size_description': 'me clarice and debbie', 'restaurant_name': 'coon chicken inn', 'restaurant_type': 'restaurant', 'timerange': '1 am', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_description': 'me silviace and dolly', 'restaurant_name': 'coon chicken inn', 'timerange': '1 am', 'TYPE': ' book restaurant'}
+
+INPUTS :: how can i view the show corpus: a home movie about selena
+LABELS :: {'object_name': 'corpus: a home movie about selena', 'object_type': 'show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'meta: a home movie about selena', 'object_type': 'show', 'TYPE': ' search creative work'}
+
+INPUTS :: play the album vibrations by marion elise raven
+LABELS :: {'album': 'vibrations', 'artist': 'marion elise raven', 'music_item': 'album', 'TYPE': ' play music'}
+PREDIC :: {'album': 'vasilis', 'artist': 'annie annie', 'music_item': 'album', 'TYPE': ' play music'}
+
+INPUTS :: add a gackt camui track to the white noise playlist
+LABELS :: {'artist': 'gackt camui', 'music_item': 'track', 'playlist': 'white noise', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'gwynt cam cam', 'music_item': 'track', 'playlist': 'white noise', 'TYPE': ' add to playlist'}
+
+INPUTS :: i am looking for the work: nikki
+LABELS :: {'object_name': 'nikki', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the dolls', 'TYPE': ' search creative work'}
+
+INPUTS :: is it rainy season in manitou springs
+LABELS :: {'city': 'manitou springs', 'condition_description': 'rainy', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'manimani springs', 'condition_description': 'rainy', 'TYPE': ' get weather'}
+
+INPUTS :: shw the picture twin husbands
+LABELS :: {'object_name': 'twin husbands', 'object_type': 'picture', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'twin widows', 'object_type': 'picture', 'TYPE': ' search creative work'}
+
+INPUTS :: is it warm in botna
+LABELS :: {'city': 'botna', 'condition_temperature': 'warm', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'natna', 'condition_temperature': 'warm', 'TYPE': ' get weather'}
+
+INPUTS :: play the red room sessions from chris cunningham
+LABELS :: {'album': 'the red room sessions', 'artist': 'chris cunningham', 'TYPE': ' play music'}
+PREDIC :: {'album': 'the red room tapes', 'artist': 'chris robertson', 'TYPE': ' play music'}
+
+INPUTS :: book a table for 2 at a restaurant in follett
+LABELS :: {'city': 'follett', 'party_size_number': '2', 'restaurant_type': 'restaurant', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'folly', 'party_size_number': '2', 'restaurant_type': 'restaurant', 'TYPE': ' book restaurant'}
+
+INPUTS :: i would give french poets and novelists a best rating of 6 and a value of three
+LABELS :: {'best_rating': '6', 'object_name': 'french poets and novelists', 'rating_value': 'three', 'TYPE': ' rate book'}
+PREDIC :: {'best_rating': '6', 'object_name': 'french poems and novelss', 'rating_value': 'three', 'TYPE': ' rate book'}
+
+INPUTS :: show the tv show the last samurai
+LABELS :: {'object_name': 'the last samurai', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the last opium', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+
+INPUTS :: play the god that failed on vimeo
+LABELS :: {'service': 'vimeo', 'track': 'the god that failed', 'TYPE': ' play music'}
+PREDIC :: {'album': 'the god that shouted', 'service': 'vimeo', 'TYPE': ' play music'}
+
+INPUTS :: show me the nearest movie house showing the luckiest girl in the world
+LABELS :: {'movie_name': 'the luckiest girl in the world', 'object_location_type': 'movie house', 'spatial_relation': 'nearest', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'the luckest girl in the world', 'object_location_type': 'movie house', 'spatial_relation': 'nearest', 'TYPE': ' search screening event'}
+
+INPUTS :: where can i see the movie across the line: the exodus of charlie wright
+LABELS :: {'object_name': 'across the line: the exodus of charlie wright', 'object_type': 'movie', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'across the line: the persecution of charlie wright', 'object_type': 'movie', 'TYPE': ' search creative work'}
+
+INPUTS :: i m looking for the pokemon: the movie 2000 tv show
+LABELS :: {'object_name': 'pokemon: the movie 2000', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'pokemon: the movie 2000 2000', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+
+INPUTS :: what will the weather be like this tuesday in the area neighboring rendezvous mountain educational state forest
+LABELS :: {'geographic_poi': 'rendezvous mountain educational state forest', 'spatial_relation': 'neighboring', 'timerange': 'this tuesday', 'TYPE': ' get weather'}
+PREDIC :: {'geographic_poi': 'lyons mountain state forest', 'spatial_relation': 'neighboring', 'timerange': 'this week', 'TYPE': ' get weather'}
+
+INPUTS :: will it be freezing on 4/20/2038 in american beach nc
+LABELS :: {'city': 'american beach', 'condition_temperature': 'freezing', 'state': 'nc', 'timerange': '4/20/2038', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'american beach', 'condition_temperature': 'freezing', 'state': 'nc', 'timerange': '4/2038', 'TYPE': ' get weather'}
+
+INPUTS :: what is dear old girl cooper foundation
+LABELS :: {'location_name': 'cooper foundation', 'movie_name': 'dear old girl', 'TYPE': ' search screening event'}
+PREDIC :: {'object_name': 'dear old girl cooper', 'object_type': 'show', 'TYPE': ' search creative work'}
+
+INPUTS :: find a tv show called revenge of the nerds
+LABELS :: {'object_name': 'revenge of the nerds', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'vengeance of the dozens', 'object_type': 'tv show', 'TYPE': ' search creative work'}
+
+INPUTS :: add garry shider album to my classical essentials
+LABELS :: {'artist': 'garry shider', 'music_item': 'album', 'playlist': 'classical essentials', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'igor shider', 'music_item': 'album', 'playlist': 'classical essentials', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: find a movie house for 07:52 showing ganges: river to heaven
+LABELS :: {'movie_name': 'ganges: river to heaven', 'object_location_type': 'movie house', 'timerange': '07:52', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'ganges: river to heaven', 'object_location_type': 'movie house', 'timerange': '07:27', 'TYPE': ' search screening event'}
+
+INPUTS :: is love and other troubles playing
+LABELS :: {'movie_name': 'love and other troubles', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'love and other sins', 'TYPE': ' search screening event'}
+
+INPUTS :: play the album how insensitive
+LABELS :: {'album': 'how insensitive', 'music_item': 'album', 'TYPE': ' play music'}
+PREDIC :: {'object_name': 'how inversion', 'object_type': 'album', 'TYPE': ' search creative work'}
+
+INPUTS :: where can i find thor meets captain america
+LABELS :: {'object_name': 'thor meets captain america', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'resurrection meets captain america', 'TYPE': ' search creative work'}
+
+INPUTS :: book a spot at savoy hotel and grill that is neighboring wisconsin
+LABELS :: {'restaurant_name': 'savoy hotel and grill', 'spatial_relation': 'neighboring', 'state': 'wisconsin', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_description': 'arcadia hotel and grill', 'restaurant_type': 'osteria', 'spatial_relation': 'neighboring', 'state': 'wisconsin', 'TYPE': ' book restaurant'}
+
+INPUTS :: will it snow in granbury
+LABELS :: {'city': 'granbury', 'condition_description': 'snow', 'TYPE': ' get weather'}
+PREDIC :: {'city': 'villabury', 'condition_description': 'snow', 'TYPE': ' get weather'}
+
+INPUTS :: add this tune by rod argent to propuesta alternativa playlist
+LABELS :: {'artist': 'rod argent', 'music_item': 'tune', 'playlist': 'propuesta alternativa', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'rod rod', 'music_item': 'tune', 'playlist': 'propuesta alternativa', 'TYPE': ' add to playlist'}
+
+INPUTS :: is it going to get chillier near hocking state forest
+LABELS :: {'condition_temperature': 'chillier', 'geographic_poi': 'hocking state forest', 'spatial_relation': 'near', 'TYPE': ' get weather'}
+PREDIC :: {'condition_temperature': 'chillier', 'geographic_poi': 'tyreing state forest', 'spatial_relation': 'near', 'TYPE': ' get weather'}
+
+INPUTS :: where can i find conduct unbecoming
+LABELS :: {'object_name': 'conduct unbecoming', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'conduct unbeliev', 'TYPE': ' search creative work'}
+
+INPUTS :: search for the complots
+LABELS :: {'object_name': 'complots', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the compleas', 'TYPE': ' search creative work'}
+
+INPUTS :: play the track asleep in the deep
+LABELS :: {'music_item': 'track', 'track': 'asleep in the deep', 'TYPE': ' play music'}
+PREDIC :: {'music_item': 'track', 'track': 'drifting in the deep', 'TYPE': ' play music'}
+
+INPUTS :: i want to play the video game espn major league soccer
+LABELS :: {'object_name': 'espn major league soccer', 'object_type': 'video game', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'nba part league league', 'object_type': 'video game', 'TYPE': ' search creative work'}
+
+INPUTS :: i want to eat close to bowlegs seven years from now
+LABELS :: {'city': 'bowlegs', 'spatial_relation': 'close', 'timerange': 'seven years from now', 'TYPE': ' book restaurant'}
+PREDIC :: {'restaurant_name': 'cupelins', 'spatial_relation': 'close', 'timerange': 'seven years from now', 'TYPE': ' book restaurant'}
+
+INPUTS :: please make me reservations somewhere for eight people in foley nv
+LABELS :: {'city': 'foley', 'party_size_number': 'eight', 'state': 'nv', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'ludlow', 'party_size_number': 'eight', 'state': 'nv', 'TYPE': ' book restaurant'}
+
+INPUTS :: please add jency anthony to my playlist this is mozart
+LABELS :: {'artist': 'jency anthony', 'playlist': 'this is mozart', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'jtr anthony', 'playlist': 'this is mozart', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: play is this my world by leo arnaud
+LABELS :: {'album': 'is this my world', 'artist': 'leo arnaud', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'leo arnauld', 'track': 'this is my world', 'TYPE': ' play music'}
+
+INPUTS :: get jump down painting
+LABELS :: {'object_name': 'jump down', 'object_type': 'painting', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'leap down', 'object_type': 'painting', 'TYPE': ' search creative work'}
+
+INPUTS :: play a song by nash the slash
+LABELS :: {'artist': 'nash the slash', 'music_item': 'song', 'TYPE': ' play music'}
+PREDIC :: {'artist': 'nash the thames', 'music_item': 'song', 'TYPE': ' play music'}
+
+INPUTS :: find the schedule for the solitude of prime numbers at the nearest cinema in 1 hour
+LABELS :: {'movie_name': 'the solitude of prime numbers', 'object_location_type': 'cinema', 'object_type': 'schedule', 'spatial_relation': 'nearest', 'timerange': 'in 1 hour', 'TYPE': ' search screening event'}
+PREDIC :: {'object_part_of_series_type': 'the silence of chronicle', 'movie_name': '', 'object_location_type': 'cinema', 'object_type': 'schedule', 'spatial_relation': 'nearest', 'timerange': 'in 1 hour', 'TYPE': ' search screening event'}
+
+INPUTS :: book a table today at a steakhouse for eight that serves sashimi
+LABELS :: {'party_size_number': 'eight', 'restaurant_type': 'steakhouse', 'served_dish': 'sashimi', 'timerange': 'today', 'TYPE': ' book restaurant'}
+PREDIC :: {'party_size_number': 'eight', 'restaurant_type': 'steakhouse', 'sort': 'highly rated', 'timerange': 'today', 'TYPE': ' book restaurant'}
+
+INPUTS :: for my playlist chill add the name cater fe she
+LABELS :: {'entity_name': 'cater fe she', 'playlist': 'chill', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+PREDIC :: {'artist': 'bring bears she', 'playlist': 'chill', 'playlist_owner': 'my', 'TYPE': ' add to playlist'}
+
+INPUTS :: find a reservation at a restaurant that serves gougere in laneville with a party of nine
+LABELS :: {'city': 'laneville', 'party_size_number': 'nine', 'restaurant_type': 'restaurant', 'served_dish': 'gougere', 'TYPE': ' book restaurant'}
+PREDIC :: {'city': 'laneville', 'party_size_number': 'nine', 'restaurant_type': 'restaurant', 'served_dish': 'goshenre', 'TYPE': ' book restaurant'}
+
+INPUTS :: find worldly goods starting now at a movie house
+LABELS :: {'movie_name': 'worldly goods', 'object_location_type': 'movie house', 'timerange': 'now', 'TYPE': ' search screening event'}
+PREDIC :: {'movie_name': 'worldly store', 'object_location_type': 'movie house', 'timerange': 'now', 'TYPE': ' search screening event'}
+
+INPUTS :: play the caps lock trailer
+LABELS :: {'object_name': 'caps lock', 'object_type': 'trailer', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'the duel lock', 'object_type': 'trailer', 'TYPE': ' search creative work'}
+
+INPUTS :: please search the work eve-olution
+LABELS :: {'object_name': 'eve-olution', 'TYPE': ' search creative work'}
+PREDIC :: {'object_name': 'eve-colored discography', 'TYPE': ' search creative work'}
+
+INPUTS :: add the blurred crusade to crate diggers anonymous
+LABELS :: {'entity_name': 'the blurred crusade', 'playlist': 'crate diggers anonymous', 'TYPE': ' add to playlist'}
+PREDIC :: {'entity_name': 'the unravel unravel', 'playlist': 'crate diggers anonymous', 'TYPE': ' add to playlist'}

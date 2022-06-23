@@ -8,16 +8,16 @@ from gramm import *
 def crop_list(vector, size, item):
 	 return vector[:size] + [item] * (size - len(vector))
 	
-def build_model_input(batch, tokenizer = None, decoder_max_length = 64, encoder_max_length = 256):
+def build_model_input(batch, tokenizer = None, decode_length = 64, encode_length = 256):
 	encoder_inputs = tokenizer(
 		batch["phrases"],
 		padding = "max_length",
 		truncation = True,
-		max_length = encoder_max_length
+		max_length = encode_length
 	)
 	
 	decoder_inputs = [
-		crop_list(labels, decoder_max_length, (-100,-100,-100,-100)) for labels in batch["targets"]
+		crop_list(labels, decode_length, (-100,-100,-100,-100)) for labels in batch["targets"]
 	]
 	
 	keys = ["input_ids", "attention_mask", "decoder_attention_mask", "labels"]
@@ -37,10 +37,10 @@ def build_model_input(batch, tokenizer = None, decoder_max_length = 64, encoder_
 #-----------------------------------------------------------#
 
 class MyDataset(torch.utils.data.Dataset):
-	def __init__(self, file_name, list_size, vocab, tokenizer, decoder_max_length = 64, encoder_max_length = 256):
+	def __init__(self, file_name, vocab, tokenizer, decode_length = 64, encode_length = 256):
 		
-		data_sent = read_file(file_name + ".sent")[:list_size]
-		data_tups = read_file(file_name + ".tup" )[:list_size]	
+		data_sent = read_file(file_name + ".sent")
+		data_tups = read_file(file_name + ".tup" )
 		
 		# REMOVE PUNCTIUATION
 		translator = str.maketrans('', '', string.punctuation)
@@ -56,8 +56,8 @@ class MyDataset(torch.utils.data.Dataset):
 		self.data = build_model_input(
 			self.data,
 			tokenizer = tokenizer,
-			decoder_max_length = decoder_max_length,
-			encoder_max_length = encoder_max_length
+			decode_length = decode_length,
+			encode_length = encode_length
 		)
 		self.size = len(data_tups)
 		

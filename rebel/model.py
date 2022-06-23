@@ -1,13 +1,69 @@
 from transformers import AlbertModel, BertGenerationDecoder
 from transformers import BertGenerationConfig
 
+from transformers import BartForConditionalGeneration
+from transformers import BartTokenizer
+
+from transformers.models.bart.modeling_bart import BartEncoder, BartDecoder
+
 import torch
+
+from bart_encoder import *
 
 #------------------------------------------------#
 
 class REBEL(torch.nn.Module):
 	
+	__load_model = True
+	
 	def __init__(self, tokenizer):
+		super(REBEL, self).__init__()
+		
+		BartEncoder.forward = custom_encoder_forward
+		BartDecoder.forward = custom_decoder_forward
+		
+		if self.__load_model:
+			# 0. TOKENIZER
+			self.tokenizer = tokenizer
+			self.basemodel = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
+			self.basemodel.resize_token_embeddings(len(tokenizer))
+			
+			# 1. ENCODER
+			self.encoder = self.basemodel.model.encoder
+			self.encoder.gradient_checkpointing = True
+			
+			# 1.5 FREEZE LAYERS 0..5 
+			for layer in self.encoder.layers[:12]:
+				for param in layer.parameters():
+					param.requires_grad = False
+				
+			# 2. DECODER
+			self.decoder = self.basemodel.model.decoder
+			self.decoder.resize_token_embeddings(len(tokenizer))
+			self.decoder.gradient_checkpointing = True
+			self.decoder.config.use_cache = False
+			
+		else:
+			# 0. BASEMODEL
+			self.tokenizer = tokenizer
+			self.basemodel = BartForConditionalGeneration(
+				BartConfig(
+					vocab_size = len(tokenizer),
+					encoder_layers = 6,
+					decoder_layers = 6,
+					use_cache = False,
+				)
+			)
+
+			# 1. ENCODER
+			self.encoder = self.basemodel.model.encoder
+			self.encoder.gradient_checkpointing = True
+
+			# 2. DECODER
+			self.decoder = self.basemodel.model.decoder
+			self.decoder.gradient_checkpointing = True
+		
+	def __init__backup(self, tokenizer):
 		super(REBEL, self).__init__()
 		
 		# 0. TOKENIZER
@@ -56,8 +112,27 @@ class REBEL(torch.nn.Module):
 		return loss
 	
 	#--------------------------------------------#
-	
+
 	def forward(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None):
+		
+		# 1. ENCODER
+		output = self.basemodel(
+			input_ids = input_ids,
+			attention_mask = attention_mask,
+			decoder_input_ids = decoder_input_ids,
+			decoder_attention_mask = decoder_attention_mask,
+			encoder_outputs = encoder_outputs,
+		)
+		
+		logits = output.logits
+		loss = self.compute_loss(logits, labels)
+			
+		return {
+			"loss": loss,
+			"logits": logits
+		}
+	
+	def forward_backup(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None):
 		
 		# 1. ENCODER
 		if encoder_outputs is None:
@@ -137,7 +212,7 @@ class REBEL(torch.nn.Module):
 				input_ids = input_ids,
 				attention_mask = attention_mask,
 				encoder_outputs = encoder_outputs,
-				decoder_input_ids = decoder_input_ids,
+				decoder_input_ids = decoder_input_ids.int(),
 				decoder_attention_mask = decoder_attention_mask
 			)
 			

@@ -118,7 +118,7 @@ class TestModel(torch.nn.Module):
 			q_logits = shifted_logits[:,:,-bound_c :        ].reshape(-1, self.point_size)
 			
 			g_loss = loss_func(g_logits, g_labels) * 0.25
-			r_loss = loss_func(r_logits, r_labels) * 0.25
+			r_loss = loss_func(r_logits, r_labels) * 0.24
 			p_loss = loss_func(p_logits, p_labels) * 0.25
 			q_loss = loss_func(q_logits, q_labels) * 0.25
 			

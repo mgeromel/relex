@@ -1,0 +1,343 @@
+INPUTS :: how many canadian airlines international flights use j31
+LABELS :: {'aircraft_code': 'j31', 'airline_name': 'canadian airlines international', 'TYPE': ' quantity'}
+PREDIC :: {'airline_name': 'canadian airlines', 'fromloc.airport_code': 'jfk', 'TYPE': ' quantity'}
+
+INPUTS :: what is the seating capacity of the 757
+LABELS :: {'aircraft_code': '757', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': '767', 'TYPE': ' capacity'}
+
+INPUTS :: is there a fare from pittsburgh to cleveland under 200 dollars
+LABELS :: {'cost_relative': 'under', 'fare_amount': '200 dollars', 'fromloc.city_name': 'pittsburgh', 'toloc.city_name': 'cleveland', 'TYPE': ' airfare'}
+PREDIC :: {'cost_relative': 'under', 'fare_amount': '1000 dollars', 'fromloc.city_name': 'pittsburgh', 'toloc.city_name': 'cleveland', 'TYPE': ' airfare'}
+
+INPUTS :: what does fare code bh mean
+LABELS :: {'fare_basis_code': 'bh', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'dl', 'TYPE': ' abbreviation'}
+
+INPUTS :: list flights from salt lake city utah to phoenix arizona monday
+LABELS :: {'depart_date.day_name': 'monday', 'fromloc.city_name': 'salt lake city', 'fromloc.state_name': 'utah', 'toloc.city_name': 'phoenix', 'toloc.state_name': 'arizona', 'TYPE': ' flight'}
+PREDIC :: {'depart_date.day_name': 'monday', 'fromloc.city_name': 'salt lake city', 'fromloc.state_name': 'california', 'toloc.city_name': 'phoenix', 'toloc.state_name': 'arizona', 'TYPE': ' flight'}
+
+INPUTS :: what does fare code bh mean
+LABELS :: {'fare_basis_code': 'bh', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'dl', 'TYPE': ' abbreviation'}
+
+INPUTS :: what does fare code bh mean
+LABELS :: {'fare_basis_code': 'bh', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'dl', 'TYPE': ' abbreviation'}
+
+INPUTS :: what does fare code bn mean
+LABELS :: {'fare_basis_code': 'bn', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'dl', 'TYPE': ' abbreviation'}
+
+INPUTS :: what are the departure times from detroit to westchester county
+LABELS :: {'flight_time': 'departure times', 'fromloc.city_name': 'detroit', 'toloc.city_name': 'westchester county', 'TYPE': ' flight time'}
+PREDIC :: {'flight_time': 'flight times', 'fromloc.city_name': 'detroit', 'toloc.city_name': 'westchester county', 'TYPE': ' flight time'}
+
+INPUTS :: show me delta flight 486
+LABELS :: {'airline_name': 'delta', 'flight_number': '486', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'delta', 'flight_number': '296', 'TYPE': ' flight'}
+
+INPUTS :: what is cvg
+LABELS :: {'airport_code': 'cvg', 'TYPE': ' abbreviation'}
+PREDIC :: {'airport_code': 'bna', 'TYPE': ' abbreviation'}
+
+INPUTS :: what is the first class round trip airfare from india indianapolis to memphis
+LABELS :: {'class_type': 'first class', 'fromloc.city_name': 'indianapolis', 'round_trip': 'round trip', 'toloc.city_name': 'memphis', 'TYPE': ' airfare'}
+PREDIC :: {'class_type': 'first class', 'fromloc.city_name': 'ontario', 'round_trip': 'round trip', 'toloc.city_name': 'memphis', 'TYPE': ' airfare'}
+
+INPUTS :: show me flight us 1500 on monday from charlotte to minneapolis please
+LABELS :: {'airline_code': 'us', 'depart_date.day_name': 'monday', 'flight_number': '1500', 'fromloc.city_name': 'charlotte', 'toloc.city_name': 'minneapolis', 'TYPE': ' flight'}
+PREDIC :: {'airline_code': 'us', 'depart_date.day_name': 'monday', 'flight_number': '1200', 'fromloc.city_name': 'charlotte', 'toloc.city_name': 'minneapolis', 'TYPE': ' flight'}
+
+INPUTS :: what is the seating capacity for aircraft l10
+LABELS :: {'aircraft_code': 'l10', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': 'm80', 'TYPE': ' capacity'}
+
+INPUTS :: show delta airlines flights from boston to salt lake
+LABELS :: {'airline_name': 'delta airlines', 'fromloc.city_name': 'boston', 'toloc.city_name': 'salt lake', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'delta airlines', 'fromloc.city_name': 'boston', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+
+INPUTS :: i'd like to book two flights to westchester county
+LABELS :: {'toloc.city_name': 'westchester county', 'TYPE': ' flight'}
+PREDIC :: {'flight_stop': 'one stop', 'toloc.city_name': 'westchester county', 'TYPE': ' flight'}
+
+INPUTS :: can you list all of the delta flights from salt lake city to new york next saturday arriving before 6 pm
+LABELS :: {'airline_name': 'delta', 'arrive_time.time': '6 pm', 'arrive_time.time_relative': 'before', 'depart_date.date_relative': 'next', 'depart_date.day_name': 'saturday', 'fromloc.city_name': 'salt lake city', 'toloc.city_name': 'new york', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'delta', 'arrive_time.time': '6 pm', 'arrive_time.time_relative': 'before', 'depart_date.date_relative': 'next', 'depart_date.day_name': 'saturday', 'fromloc.city_name': 'salt lake city', 'toloc.city_name': 'new york city', 'TYPE': ' flight'}
+
+INPUTS :: what is phl
+LABELS :: {'airport_code': 'phl', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'hp', 'TYPE': ' abbreviation'}
+
+INPUTS :: is there ground transportation from the memphis airport into town when if i arrive at 842 in the morning
+LABELS :: {'airport_name': 'memphis airport', 'period_of_day': 'morning', 'TYPE': ' ground service'}
+PREDIC :: {'arrive_time.period_of_day': 'morning', 'arrive_time.time': '838', 'fromloc.city_name': 'memphis', 'toloc.city_name': 'city', 'TYPE': ' ground service'}
+
+INPUTS :: list fares from washington dc to toronto that should be good
+LABELS :: {'fromloc.city_name': 'washington', 'fromloc.state_code': 'dc', 'toloc.city_name': 'toronto', 'TYPE': ' airfare'}
+PREDIC :: {'cost_relative': 'cheapest', 'fromloc.city_name': 'washington', 'fromloc.state_code': 'dc', 'toloc.city_name': 'toronto', 'TYPE': ' airfare'}
+
+INPUTS :: list flights from oakland to salt lake city leaving after 1700 wednesday
+LABELS :: {'depart_date.day_name': 'wednesday', 'depart_time.time': '1700', 'depart_time.time_relative': 'after', 'fromloc.city_name': 'oakland', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+PREDIC :: {'depart_date.day_name': 'wednesday', 'depart_time.time': '1700 hours', 'depart_time.time_relative': 'after', 'fromloc.city_name': 'oakland', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+
+INPUTS :: what days of the week do flights from san jose to nashville fly on
+LABELS :: {'fromloc.city_name': 'san jose', 'toloc.city_name': 'nashville', 'TYPE': ' day name'}
+PREDIC :: {'flight_mod': 'during week days', 'fromloc.city_name': 'san jose', 'toloc.city_name': 'nashville', 'TYPE': ' flight'}
+
+INPUTS :: what meals are served on american flight 811 from tampa to milwaukee
+LABELS :: {'airline_name': 'american', 'flight_number': '811', 'fromloc.city_name': 'tampa', 'meal': 'meals', 'toloc.city_name': 'milwaukee', 'TYPE': ' meal'}
+PREDIC :: {'airline_name': 'american', 'flight_number': '813', 'fromloc.city_name': 'tampa', 'meal': 'meals', 'toloc.city_name': 'milwaukee', 'TYPE': ' meal'}
+
+INPUTS :: what is a d9s
+LABELS :: {'aircraft_code': 'd9s', 'TYPE': ' abbreviation'}
+PREDIC :: {'aircraft_code': 'd10', 'TYPE': ' abbreviation'}
+
+INPUTS :: please find a flight from detroit michigan to st. petersburg arriving before 10 pm
+LABELS :: {'arrive_time.time': '10 pm', 'arrive_time.time_relative': 'before', 'fromloc.city_name': 'detroit', 'fromloc.state_name': 'michigan', 'toloc.city_name': 'st. petersburg', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.time': '10 pm', 'arrive_time.time_relative': 'before', 'fromloc.city_name': 'detroit', 'fromloc.state_name': 'california', 'toloc.city_name': 'st. petersburg', 'TYPE': ' flight'}
+
+INPUTS :: find nonstop flights from salt lake city to new york on saturday april ninth
+LABELS :: {'depart_date.day_name': 'saturday', 'depart_date.day_number': 'ninth', 'depart_date.month_name': 'april', 'flight_stop': 'nonstop', 'fromloc.city_name': 'salt lake city', 'toloc.city_name': 'new york', 'TYPE': ' flight'}
+PREDIC :: {'arrive_date.day_name': 'saturday', 'arrive_date.day_number': 'ninth', 'arrive_date.month_name': 'may', 'flight_stop': 'nonstop', 'fromloc.city_name': 'salt lake city', 'toloc.city_name': 'new york city', 'TYPE': ' flight'}
+
+INPUTS :: please find a flight from miami florida to las vegas nevada arriving before 4 o'clock pm
+LABELS :: {'arrive_time.time': "4 o'clock pm", 'arrive_time.time_relative': 'before', 'fromloc.city_name': 'miami', 'fromloc.state_name': 'florida', 'toloc.city_name': 'las vegas', 'toloc.state_name': 'nevada', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.time': "4 o'clock pm", 'arrive_time.time_relative': 'before', 'fromloc.city_name': 'miami', 'fromloc.state_name': 'florida', 'toloc.city_name': 'las vegas', 'toloc.state_name': 'california', 'TYPE': ' flight'}
+
+INPUTS :: which airline is kw
+LABELS :: {'airline_code': 'kw', 'TYPE': ' airline'}
+PREDIC :: {'airline_code': 'hp', 'TYPE': ' airline'}
+
+INPUTS :: what is mci
+LABELS :: {'airport_code': 'mci', 'TYPE': ' abbreviation'}
+PREDIC :: {'airport_code': 'mco', 'TYPE': ' abbreviation'}
+
+INPUTS :: list flights from orlando to tacoma on saturday of fare basis code of q
+LABELS :: {'depart_date.day_name': 'saturday', 'fare_basis_code': 'q', 'fromloc.city_name': 'orlando', 'toloc.city_name': 'tacoma', 'TYPE': ' flight'}
+PREDIC :: {'depart_date.day_name': 'saturday', 'fare_basis_code': 'qx', 'fromloc.city_name': 'orlando', 'toloc.city_name': 'tacoma', 'TYPE': ' flight'}
+
+INPUTS :: please find a flight from las vegas to michigan
+LABELS :: {'fromloc.city_name': 'las vegas', 'toloc.state_name': 'michigan', 'TYPE': ' flight'}
+PREDIC :: {'fromloc.city_name': 'las vegas', 'toloc.city_name': 'detroit', 'toloc.state_name': 'michigan', 'TYPE': ' flight'}
+
+INPUTS :: i need flight and fare information for thursday departing prior to 9 am from oakland going to salt lake city
+LABELS :: {'depart_date.day_name': 'thursday', 'depart_time.time': '9 am', 'depart_time.time_relative': 'prior to', 'fromloc.city_name': 'oakland', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight airfare'}
+PREDIC :: {'depart_date.day_name': 'thursday', 'depart_time.time': '9 am', 'depart_time.time_relative': 'before', 'fromloc.city_name': 'oakland', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+
+INPUTS :: list the arizona airport
+LABELS :: {'state_name': 'arizona', 'TYPE': ' airport'}
+PREDIC :: {'airport_name': 'phoenix airport', 'TYPE': ' airport'}
+
+INPUTS :: list all flights arriving in denver between 8 and 9 pm
+LABELS :: {'arrive_time.end_time': '9 pm', 'arrive_time.start_time': '8', 'toloc.city_name': 'denver', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.end_time': '9 pm', 'arrive_time.start_time': '8 pm', 'toloc.city_name': 'denver', 'TYPE': ' flight'}
+
+INPUTS :: get flights from milwaukee to dtw
+LABELS :: {'fromloc.city_name': 'milwaukee', 'toloc.airport_code': 'dtw', 'TYPE': ' flight'}
+PREDIC :: {'fromloc.city_name': 'milwaukee', 'toloc.airport_code': 'dfw', 'TYPE': ' flight'}
+
+INPUTS :: i need a flight from indianapolis to seattle arriving in seattle at 1205 pm
+LABELS :: {'arrive_time.time': '1205 pm', 'fromloc.city_name': 'indianapolis', 'toloc.city_name': 'seattle', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.time': '1245 pm', 'fromloc.city_name': 'indianapolis', 'toloc.city_name': 'seattle', 'TYPE': ' flight'}
+
+INPUTS :: are snacks served on tower air
+LABELS :: {'airline_name': 'tower air', 'meal_description': 'snacks', 'TYPE': ' meal'}
+PREDIC :: {'airline_name': 'tower air', 'meal': 'meals', 'TYPE': ' meal'}
+
+INPUTS :: get flight from toronto to san diego stopping at dtw
+LABELS :: {'fromloc.city_name': 'toronto', 'stoploc.airport_code': 'dtw', 'toloc.city_name': 'san diego', 'TYPE': ' flight'}
+PREDIC :: {'aircraft_code': 'd10', 'fromloc.city_name': 'toronto', 'toloc.city_name': 'san diego', 'TYPE': ' flight'}
+
+INPUTS :: i need to rent a car at tampa
+LABELS :: {'city_name': 'tampa', 'transport_type': 'car', 'TYPE': ' ground service'}
+PREDIC :: {'city_name': 'tampa', 'transport_type': 'car rental', 'TYPE': ' ground service'}
+
+INPUTS :: which flights leave chicago on april twelfth and arrive in indianapolis in the morning
+LABELS :: {'arrive_time.period_of_day': 'morning', 'depart_date.day_number': 'twelfth', 'depart_date.month_name': 'april', 'fromloc.city_name': 'chicago', 'toloc.city_name': 'indianapolis', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.period_of_day': 'morning', 'arrive_date.day_number': 'twelfth', 'arrive_date.month_name': 'may', 'fromloc.city_name': 'chicago', 'toloc.city_name': 'indianapolis', 'TYPE': ' flight'}
+
+INPUTS :: what is a d9s
+LABELS :: {'aircraft_code': 'd9s', 'TYPE': ' abbreviation'}
+PREDIC :: {'aircraft_code': 'd10', 'TYPE': ' abbreviation'}
+
+INPUTS :: show me northwest flight 608 from kansas city to st. paul
+LABELS :: {'airline_name': 'northwest', 'flight_number': '608', 'fromloc.city_name': 'kansas city', 'toloc.city_name': 'st. paul', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'northwest', 'flight_number': '852', 'fromloc.city_name': 'kansas city', 'toloc.city_name': 'st. paul', 'TYPE': ' flight'}
+
+INPUTS :: list all flights arriving in denver between 8 and 9 pm
+LABELS :: {'arrive_time.end_time': '9 pm', 'arrive_time.start_time': '8', 'toloc.city_name': 'denver', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.end_time': '9 pm', 'arrive_time.start_time': '8 pm', 'toloc.city_name': 'denver', 'TYPE': ' flight'}
+
+INPUTS :: which flights arrive in burbank from las vegas on saturday april twenty third in the afternoon
+LABELS :: {'depart_date.day_name': 'saturday', 'depart_date.day_number': 'twenty third', 'depart_date.month_name': 'april', 'depart_time.period_of_day': 'afternoon', 'fromloc.city_name': 'las vegas', 'toloc.city_name': 'burbank', 'TYPE': ' flight'}
+PREDIC :: {'arrive_date.day_name': 'saturday', 'arrive_date.day_number': 'twenty third', 'arrive_date.month_name': 'may', 'arrive_time.period_of_day': 'afternoon', 'fromloc.city_name': 'las vegas', 'toloc.city_name': 'burbank', 'TYPE': ' flight'}
+
+INPUTS :: how many passengers can fly on a 757
+LABELS :: {'aircraft_code': '757', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': '767', 'TYPE': ' capacity'}
+
+INPUTS :: i want a flight from nashville to seattle that arrives no later than 3 pm
+LABELS :: {'arrive_time.time': '3 pm', 'arrive_time.time_relative': 'no later than', 'fromloc.city_name': 'nashville', 'toloc.city_name': 'seattle', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.time': '3 pm', 'arrive_time.time_relative': 'close', 'fromloc.city_name': 'nashville', 'toloc.city_name': 'seattle', 'TYPE': ' flight'}
+
+INPUTS :: which flights leave on wednesday april thirteenth from indianapolis and arrive in montreal in the morning
+LABELS :: {'arrive_time.period_of_day': 'morning', 'depart_date.day_name': 'wednesday', 'depart_date.day_number': 'thirteenth', 'depart_date.month_name': 'april', 'fromloc.city_name': 'indianapolis', 'toloc.city_name': 'montreal', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.period_of_day': 'morning', 'depart_date.day_name': 'wednesday', 'depart_date.day_number': 'twelfth', 'depart_date.month_name': 'april', 'fromloc.city_name': 'indianapolis', 'toloc.city_name': 'montreal', 'TYPE': ' flight'}
+
+INPUTS :: list flights from washington dc to pittsburgh leaving after 1800
+LABELS :: {'depart_time.time': '1800', 'depart_time.time_relative': 'after', 'fromloc.city_name': 'washington', 'fromloc.state_code': 'dc', 'toloc.city_name': 'pittsburgh', 'TYPE': ' flight'}
+PREDIC :: {'depart_time.time': '1700', 'depart_time.time_relative': 'after', 'fromloc.city_name': 'washington', 'fromloc.state_code': 'dc', 'toloc.city_name': 'pittsburgh', 'TYPE': ' flight'}
+
+INPUTS :: list airports in arizona nevada and california please
+LABELS :: {'state_name': 'arizona nevada', 'TYPE': ' airport'}
+PREDIC :: {'city_name': 'phoenix', 'fromloc.state_name': 'california', 'TYPE': ' airport'}
+
+INPUTS :: what meals are there on flight 382 from milwaukee to washington dc on tuesday morning
+LABELS :: {'depart_date.day_name': 'tuesday', 'depart_time.period_of_day': 'morning', 'flight_number': '382', 'fromloc.city_name': 'milwaukee', 'meal': 'meals', 'toloc.city_name': 'washington', 'toloc.state_code': 'dc', 'TYPE': ' meal'}
+PREDIC :: {'depart_date.day_name': 'tuesday', 'depart_time.period_of_day': 'morning', 'depart_time.time': '755', 'fromloc.city_name': 'milwaukee', 'meal': 'meals', 'toloc.city_name': 'washington', 'toloc.state_code': 'dc', 'TYPE': ' flight'}
+
+INPUTS :: is there taxi service at the ontario airport
+LABELS :: {'airport_name': 'ontario airport', 'transport_type': 'taxi service', 'TYPE': ' ground service'}
+PREDIC :: {'airport_name': 'ontario airport', 'or': 'or', 'transport_type': 'limousines', 'TYPE': ' ground service'}
+
+INPUTS :: what airline is as as in sam
+LABELS :: {'airline_code': 'as', 'TYPE': ' airline'}
+PREDIC :: {'city_name': 'san jose', 'TYPE': ' airline'}
+
+INPUTS :: what type of aircraft is used for the american flight leaving at 419 pm
+LABELS :: {'airline_name': 'american', 'depart_time.time': '419 pm', 'TYPE': ' aircraft'}
+PREDIC :: {'airline_name': 'american', 'flight_number': '4400', 'TYPE': ' aircraft'}
+
+INPUTS :: what does fare code bh mean
+LABELS :: {'fare_basis_code': 'bh', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'dl', 'TYPE': ' abbreviation'}
+
+INPUTS :: list all of the daily flights arriving in denver between 8 and 9 pm
+LABELS :: {'arrive_time.end_time': '9 pm', 'arrive_time.start_time': '8', 'flight_days': 'daily', 'toloc.city_name': 'denver', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.end_time': '9 pm', 'arrive_time.start_time': '8 pm', 'flight_days': 'daily', 'toloc.city_name': 'denver', 'TYPE': ' flight'}
+
+INPUTS :: what is tpa
+LABELS :: {'airport_code': 'tpa', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'twa', 'TYPE': ' abbreviation'}
+
+INPUTS :: list flights from seattle to salt lake city on delta be1
+LABELS :: {'aircraft_code': 'be1', 'airline_name': 'delta', 'fromloc.city_name': 'seattle', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'delta', 'depart_time.time': '1 1', 'fromloc.city_name': 'seattle', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+
+INPUTS :: show me the delta flights which serve a snack to coach passengers
+LABELS :: {'airline_name': 'delta', 'compartment': 'coach', 'meal_description': 'snack', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'delta', 'class_type': 'coach', 'meal': 'meal', 'TYPE': ' meal'}
+
+INPUTS :: what day of the week do flights from nashville to tacoma fly on
+LABELS :: {'fromloc.city_name': 'nashville', 'toloc.city_name': 'tacoma', 'TYPE': ' day name'}
+PREDIC :: {'depart_date.month_name': 'december', 'fromloc.city_name': 'nashville', 'toloc.city_name': 'tacoma', 'TYPE': ' flight'}
+
+INPUTS :: show me the first class and coach flights from kennedy airport to miami
+LABELS :: {'class_type': 'first class', 'fromloc.airport_name': 'kennedy airport', 'toloc.city_name': 'miami', 'TYPE': ' flight'}
+PREDIC :: {'class_type': 'first class', 'fromloc.city_name': 'dallas', 'toloc.city_name': 'miami', 'TYPE': ' flight'}
+
+INPUTS :: is there ground transportation from lga into new york city
+LABELS :: {'airport_code': 'lga', 'city_name': 'new york city', 'TYPE': ' ground service'}
+PREDIC :: {'fromloc.airport_code': 'dfw', 'toloc.city_name': 'new york city', 'TYPE': ' ground service'}
+
+INPUTS :: what is the seating capacity of a dc9
+LABELS :: {'aircraft_code': 'dc9', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': 'dc10', 'TYPE': ' capacity'}
+
+INPUTS :: i need to rent a car in milwaukee
+LABELS :: {'city_name': 'milwaukee', 'transport_type': 'car', 'TYPE': ' ground service'}
+PREDIC :: {'city_name': 'milwaukee', 'transport_type': 'car rental', 'TYPE': ' ground service'}
+
+INPUTS :: i need a flight from salt lake to newark airport that arrives on saturday before 6 pm
+LABELS :: {'arrive_date.day_name': 'saturday', 'arrive_time.time': '6 pm', 'arrive_time.time_relative': 'before', 'fromloc.city_name': 'salt lake', 'toloc.airport_name': 'newark airport', 'TYPE': ' flight'}
+PREDIC :: {'arrive_date.day_name': 'saturday', 'arrive_time.time': '6 pm', 'arrive_time.time_relative': 'before', 'fromloc.city_name': 'salt lake city', 'toloc.city_name': 'newark', 'TYPE': ' flight'}
+
+INPUTS :: what is the seating capacity of a 757
+LABELS :: {'aircraft_code': '757', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': '767', 'TYPE': ' capacity'}
+
+INPUTS :: show me the flights from minneapolis to indiana
+LABELS :: {'fromloc.city_name': 'minneapolis', 'toloc.state_name': 'indiana', 'TYPE': ' flight'}
+PREDIC :: {'fromloc.city_name': 'minneapolis', 'toloc.city_name': 'indianapolis', 'toloc.state_name': 'indiana', 'TYPE': ' flight'}
+
+INPUTS :: what is airline wn
+LABELS :: {'airline_code': 'wn', 'TYPE': ' airline'}
+PREDIC :: {'airline_code': 'ff', 'TYPE': ' airline'}
+
+INPUTS :: how many canadian airlines international flights use aircraft 320
+LABELS :: {'aircraft_code': '320', 'airline_name': 'canadian airlines international', 'TYPE': ' quantity'}
+PREDIC :: {'airline_name': 'canadian airlines', 'flight_number': '296', 'TYPE': ' quantity'}
+
+INPUTS :: show me the flights between milwaukee and indiana
+LABELS :: {'fromloc.city_name': 'milwaukee', 'toloc.state_name': 'indiana', 'TYPE': ' flight'}
+PREDIC :: {'fromloc.city_name': 'milwaukee', 'toloc.city_name': 'indianapolis', 'toloc.state_name': 'indiana', 'TYPE': ' flight'}
+
+INPUTS :: list the distance in miles from new york's la guardia airport to downtown new york city
+LABELS :: {'city_name': 'new york city', 'fromloc.airport_name': 'la guardia airport', 'fromloc.city_name': "new york's", 'TYPE': ' distance'}
+PREDIC :: {'fromloc.airport_name': 'new york city airport', 'toloc.city_name': 'new york city', 'TYPE': ' distance'}
+
+INPUTS :: please list the ground transportation from lga into new york city
+LABELS :: {'airport_code': 'lga', 'city_name': 'new york city', 'TYPE': ' ground service'}
+PREDIC :: {'fromloc.airport_code': 'dfw', 'toloc.city_name': 'new york city', 'TYPE': ' ground service'}
+
+INPUTS :: which flights travel from las vegas to los angeles california and arrive on april ninth between 4 and 5 pm
+LABELS :: {'arrive_date.day_number': 'ninth', 'arrive_date.month_name': 'april', 'arrive_time.end_time': '5 pm', 'arrive_time.start_time': '4', 'fromloc.city_name': 'las vegas', 'toloc.city_name': 'los angeles', 'toloc.state_name': 'california', 'TYPE': ' flight'}
+PREDIC :: {'arrive_date.day_number': 'ninth', 'arrive_date.month_name': 'april', 'arrive_time.end_time': '4 pm', 'arrive_time.start_time': '4', 'fromloc.city_name': 'las vegas', 'toloc.city_name': 'los angeles', 'toloc.state_name': 'california', 'TYPE': ' flight'}
+
+INPUTS :: how many people will a 757 hold
+LABELS :: {'aircraft_code': '757', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': '767', 'TYPE': ' capacity'}
+
+INPUTS :: how about flights from milwaukee to washington dc on tuesday mornings
+LABELS :: {'depart_date.day_name': 'tuesday', 'depart_time.period_of_day': 'mornings', 'fromloc.city_name': 'milwaukee', 'toloc.city_name': 'washington', 'toloc.state_code': 'dc', 'TYPE': ' flight'}
+PREDIC :: {'depart_date.day_name': 'tuesdays', 'depart_time.period_of_day': 'mornings', 'fromloc.city_name': 'milwaukee', 'toloc.city_name': 'washington', 'toloc.state_code': 'dc', 'TYPE': ' flight'}
+
+INPUTS :: what does ap 20 mean
+LABELS :: {'restriction_code': 'ap 20', 'TYPE': ' abbreviation'}
+PREDIC :: {'restriction_code': 'ap 80', 'TYPE': ' abbreviation'}
+
+INPUTS :: show delta airlines from boston to salt lake
+LABELS :: {'airline_name': 'delta airlines', 'fromloc.city_name': 'boston', 'toloc.city_name': 'salt lake', 'TYPE': ' flight'}
+PREDIC :: {'airline_name': 'delta airlines', 'fromloc.city_name': 'boston', 'toloc.city_name': 'salt lake city', 'TYPE': ' flight'}
+
+INPUTS :: what does the restriction ap58 mean
+LABELS :: {'restriction_code': 'ap58', 'TYPE': ' abbreviation'}
+PREDIC :: {'restriction_code': 'ap57', 'TYPE': ' abbreviation'}
+
+INPUTS :: what meals are available on dl 468 which al arrives in san francisco at 950 am
+LABELS :: {'airline_code': 'dl', 'arrive_time.time': '950 am', 'flight_number': '468', 'meal': 'meals', 'toloc.city_name': 'san francisco', 'TYPE': ' meal'}
+PREDIC :: {'airline_code': 'dl', 'arrive_time.time': '4 am', 'flight_number': '466', 'city_name': 'dallas', 'TYPE': ' meal'}
+
+INPUTS :: what does fare code bh mean
+LABELS :: {'fare_basis_code': 'bh', 'TYPE': ' abbreviation'}
+PREDIC :: {'airline_code': 'dl', 'TYPE': ' abbreviation'}
+
+INPUTS :: what airline is aa
+LABELS :: {'airline_code': 'aa', 'TYPE': ' airline'}
+PREDIC :: {'airline_code': 'ac', 'TYPE': ' airline'}
+
+INPUTS :: i want a flight from memphis to seattle that arrives no later than 3 pm
+LABELS :: {'arrive_time.time': '3 pm', 'arrive_time.time_relative': 'no later than', 'fromloc.city_name': 'memphis', 'toloc.city_name': 'seattle', 'TYPE': ' flight'}
+PREDIC :: {'arrive_time.time': '3 pm', 'arrive_time.time_relative': 'close', 'fromloc.city_name': 'memphis', 'toloc.city_name': 'seattle', 'TYPE': ' flight'}
+
+INPUTS :: dallas to houston after 1201 am
+LABELS :: {'depart_time.time': '1201 am', 'depart_time.time_relative': 'after', 'fromloc.city_name': 'dallas', 'toloc.city_name': 'houston', 'TYPE': ' flight'}
+PREDIC :: {'depart_time.time': '1245 am', 'depart_time.time_relative': 'after', 'fromloc.city_name': 'dallas', 'toloc.city_name': 'houston', 'TYPE': ' flight'}
+
+INPUTS :: what type of plane is a d9s
+LABELS :: {'aircraft_code': 'd9s', 'TYPE': ' aircraft'}
+PREDIC :: {'aircraft_code': 'd10', 'TYPE': ' aircraft'}
+
+INPUTS :: show me flight us 1207 from indianapolis to charlotte on monday and flight us 1500 from charlotte to minneapolis on monday and flight twa 639 from minneapolis to indianapolis
+LABELS :: {'airline_code': 'us', 'depart_date.day_name': 'monday', 'flight_number': '1207', 'fromloc.city_name': 'indianapolis', 'toloc.city_name': 'charlotte', 'TYPE': ' flight'}
+PREDIC :: {'airline_code': 'twa', 'depart_date.day_name': 'monday', 'flight_number': '1222', 'fromloc.city_name': 'indianapolis', 'toloc.city_name': 'charlotte', 'TYPE': ' flight'}
+
+INPUTS :: what ground transportation is available between dca and downtown washington
+LABELS :: {'airport_code': 'dca', 'city_name': 'washington', 'TYPE': ' ground service'}
+PREDIC :: {'aircraft_code': 'dc10', 'fromloc.state_code': 'dc', 'toloc.city_name': 'washington', 'TYPE': ' ground service'}
+
+INPUTS :: how many passengers can an l1011 aircraft hold
+LABELS :: {'aircraft_code': 'l1011', 'TYPE': ' capacity'}
+PREDIC :: {'aircraft_code': 'm80', 'TYPE': ' capacity'}

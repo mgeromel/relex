@@ -1,4 +1,5 @@
 from transformers import AlbertTokenizer
+from transformers import BartTokenizer
 
 from model import REBEL
 from utils import *
@@ -7,6 +8,17 @@ from valid import validate
 from datas import *
 
 import transformers, torch, random, numpy, tqdm
+
+#------------------------------------------------#
+
+def write_results(batch, name = "DEFAULT"):
+	
+	with open(f"{name}_results.txt", "w") as file:
+		for inputs, labels, predic in zip(batch["inputs"], batch["labels"], batch["predicted"]):
+			file.write("INPUTS :: " + inputs + "\n")
+			file.write("LABELS :: " + str(labels)[1:-1] + "\n")
+			file.write("PREDIC :: " + str(predic)[1:-1] + "\n")
+			file.write("\n")
 
 #------------------------------------------------#
 
@@ -36,14 +48,15 @@ set_seed(1001)
 dloader = SNIPSLoader()
 dreader = SEQReader(dloader)
 
-tokenizer = AlbertTokenizer.from_pretrained("albert-base-v1")
+#tokenizer = AlbertTokenizer.from_pretrained("albert-base-v1")
+tokenizer = BartTokenizer.from_pretrained("facebook/bart-large")
 tokenizer.add_tokens(dloader.tokens(), special_tokens = True)
 
-num_epochs = 30
-round_skip = 15 # \in [0, ..., num_epochs - 1]
+num_epochs = 10
+round_skip = 0 # \in [0, ..., num_epochs - 1]
 
-batch_size = 16
-encode_len = 45
+batch_size = 1
+encode_len = 60
 decode_len = 48
 
 num_sample = 2
@@ -93,6 +106,10 @@ MAX_TESTS_SLOTS_F1 = -1
 MAX_VALID_TABLE_F1 = -1
 MAX_TESTS_TABLE_F1 = -1
 
+MAX_TESTS_KEYS_F1 = -1
+MAX_TESTS_TABS_F1 = -1
+MAX_TESTS_SLOT_F1 = -1
+
 ################################################################################
 
 for epoch in range(num_epochs):
@@ -100,7 +117,7 @@ for epoch in range(num_epochs):
 	#-----------------------------------------------------------#
 
 	train_bar.write(f"TRAINING {epoch + 1}/{num_epochs}: {dloader.name()}")
-
+	
 	training(
 		model = model,
 		dataloader = train_loader,
@@ -109,7 +126,7 @@ for epoch in range(num_epochs):
 		scheduler = scheduler,
 		ampscaler = ampscaler
 	)
-
+	
 	#-----------------------------------------------------------#
 
 	if epoch < round_skip:
@@ -123,6 +140,7 @@ for epoch in range(num_epochs):
 		tqdm_bar = tests_bar,
 		tokenizer = tokenizer,
 		extractor = dreader,
+		return_inputs = True
 	)
 
 	tests_score = compute_metrics( tests_result )
@@ -131,7 +149,9 @@ for epoch in range(num_epochs):
 		MAX_TESTS_TOTAL_PR = tests_score["P"]
 		MAX_TESTS_TOTAL_RE = tests_score["R"]
 		MAX_TESTS_TOTAL_F1 = tests_score["F"]
-
+		
+		write_results(tests_result, name = dloader.name())
+		
 	for i in range(num_sample):
 		print("labels:", tests_result["labels"][i])
 		print("predic:", tests_result["predicted"][i])
@@ -140,7 +160,7 @@ for epoch in range(num_epochs):
 	tests_bar.write(f"MAX_TESTS_TOTAL_PR: {MAX_TESTS_TOTAL_PR}")
 	tests_bar.write(f"MAX_TESTS_TOTAL_RE: {MAX_TESTS_TOTAL_RE}")
 	tests_bar.write(f"MAX_TESTS_TOTAL_F1: {MAX_TESTS_TOTAL_F1}")
-
+	
 	#-----------------------------------------------------------#
 
 	if "valid_loader" not in locals():
@@ -168,7 +188,7 @@ for epoch in range(num_epochs):
 	tests_bar.write(f"MAX_VALID_TOTAL_F1: {MAX_VALID_TOTAL_F1}")
 
 	tests_bar.write("o" + "-----" * 6 + "o")
-
+	
 	#-----------------------------------------------------------#
 
 import IPython ; IPython.embed() ; exit(1)

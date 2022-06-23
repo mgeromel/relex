@@ -403,12 +403,12 @@ class NYT24Loader():
 			
 			for triple in rels.split(" || "):
 				triple = triple.split(" ;; ")
-				triple = ( triple[0] , triple[1], reduce(triple[2]) )
+				triple = ( triple[0] , triple[1], self._vmap[triple[2]] )
 				
 				if triple not in triples:
 					triples.append(triple)
 			
-			triples.sort(key = lambda x : reduce(x[2])) # text.find(x[0])
+			triples.sort(key = lambda x : x[2]) # text.find(x[0])
 			
 			#------------------------------------#
 			
@@ -439,7 +439,7 @@ class SNIPSLoader():
 			'SearchCreativeWork' : 'search creative work',
 			'SearchScreeningEvent' : 'search screening event'
 		}
-		self._tkns = ["<trip>", "<album>", "<artist>", "<best_rating>", "<city>", "<condition_description>", "<condition_temperature>", "<country>", "<cuisine>", "<current_location>", "<entity_name>", "<facility>", "<genre>", "<geographic_poi>", "<location_name>", "<movie_name>", "<movie_type>", "<music_item>", "<object_location_type>", "<object_name>", "<object_part_of_series_type>", "<object_select>", "<object_type>", "<party_size_description>", "<party_size_number>", "<playlist>", "<playlist_owner>", "<poi>", "<rating_unit>", "<rating_value>", "<restaurant_name>", "<restaurant_type>", "<served_dish>", "<service>", "<sort>", "<spatial_relation>", "<state>", "<timeRange>", "<track>", "<year>"]
+		self._tkns = ["<trip>", "<album>", "<artist>", "<best_rating>", "<city>", "<condition_description>", "<condition_temperature>", "<country>", "<cuisine>", "<current_location>", "<entity_name>", "<facility>", "<genre>", "<geographic_poi>", "<location_name>", "<movie_name>", "<movie_type>", "<music_item>", "<object_location_type>", "<object_name>", "<object_part_of_series_type>", "<object_select>", "<object_type>", "<party_size_description>", "<party_size_number>", "<playlist>", "<playlist_owner>", "<poi>", "<rating_unit>", "<rating_value>", "<restaurant_name>", "<restaurant_type>", "<served_dish>", "<service>", "<sort>", "<spatial_relation>", "<state>", "<timerange>", "<track>", "<year>"]
 		
 	#--------------------------------------------#
 	
@@ -485,7 +485,7 @@ class SNIPSLoader():
 				
 				for entry in table[:-1]:
 					entry = entry.split(" == ")
-					labels = labels + f"{entry[1]} <{entry[0]}> "
+					labels = labels + f"{entry[1]} <{entry[0].lower()}> "
 				
 				labels = labels + table_type
 				

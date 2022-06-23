@@ -27,6 +27,15 @@ tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
 
 #-----------------------------------------------------------#
 
+def write_results(batch, name = "DEFAULT"):
+	
+	with open(f"{name}_results.txt", "w") as file:
+		for inputs, labels, predic in zip(batch["inputs"], batch["label_ids"], batch["predicted"]):
+			file.write("INPUTS :: " + inputs + "\n")
+			file.write("LABELS :: " + str(labels)[1:-1].replace("[", "").replace("]", "") + "\n")
+			file.write("PREDIC :: " + str(predic)[1:-1].replace("[", "").replace("]", "") + "\n")
+			file.write("\n")
+			
 def convert(values):
 	
 	# FLOAT -> INT
@@ -182,8 +191,9 @@ def training(model, dataset, tqdm_bar, epoch = -1):
 			
 #-----------------------------------------------------------#
 
-def validate(model, dataset, tqdm_bar, epoch = -1):
+def validate(model, dataset, tqdm_bar, epoch = -1, return_inputs = False):
 	
+	inputs = []
 	labels = []
 	predic = []
 	
@@ -202,6 +212,11 @@ def validate(model, dataset, tqdm_bar, epoch = -1):
 				max_length = 64
 			).to("cpu")
 		
+		if return_inputs:
+			for sequence in batch["input_ids"]:
+				text = tokenizer.decode(sequence, skip_special_tokens = True)
+				inputs.append(text)
+				
 		labels.extend(translate(batch["input_ids"], batch["decoder_input_ids"]))
 		predic.extend(translate(batch["input_ids"], output))
 		
@@ -209,7 +224,11 @@ def validate(model, dataset, tqdm_bar, epoch = -1):
 	
 	#------------------------------------------------------#
 	
-	return {"label_ids": labels, "predicted": predic}
+	result = {"label_ids": labels, "predicted": predic}
+	
+	if return_inputs: result["inputs"] = inputs
+	
+	return result
 
 #-----------------------------------------------------------#
 
@@ -225,7 +244,7 @@ dataset = "SNIPS" # point_size = 40, batch_size = 24
 dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 # USE THE FOLLOWING:
-dataset = "ADE"
+dataset = "ATIS"
 
 gramm = gramm.GRAMMAR("gramm.txt")
 vocab = read_file("data/" + dataset + "/vocabulary.txt")
@@ -234,7 +253,7 @@ bacov = { i : s for s, i in vocab.items() }
 
 gramm_size = gramm.size() + 1
 vocab_size = len(vocab)
-point_size = 115
+point_size = 55
 
 #-----------------------------------------------------------#
 
@@ -247,37 +266,21 @@ batch_size = 16
 
 use_amp = True
 save_model = False
-combined = True
-folded = False
 
 #-----------------------------------------------------------#
-
-if folded:
-	data_train = loadr.MyDataset("data/" + dataset + "/train_4", train_size, vocab, tokenizer, encoder_max_length = point_size)
-	data_tests = loadr.MyDataset("data/" + dataset + "/test_4", tests_size, vocab, tokenizer, encoder_max_length = point_size)
-
-else:
-	if combined:
-		data_train = loadr.MyDataset("data/" + dataset + "/train_valid", train_size, vocab, tokenizer, encoder_max_length = point_size)
-		data_tests = loadr.MyDataset("data/" + dataset + "/test", tests_size, vocab, tokenizer, encoder_max_length = point_size)
-
-	else:
-		data_train = loadr.MyDataset("data/" + dataset + "/train", train_size, vocab, tokenizer, encoder_max_length = point_size)
-		data_valid = loadr.MyDataset("data/" + dataset + "/valid", valid_size, vocab, tokenizer, encoder_max_length = point_size)
-		data_tests = loadr.MyDataset("data/" + dataset + "/test", tests_size, vocab, tokenizer, encoder_max_length = point_size)
-
-		valid_loader = DataLoader(data_valid, batch_size = batch_size, shuffle = True)
+		
+data_train = loadr.MyDataset("data/" + dataset + "/train", vocab, tokenizer, encode_length = point_size)
+data_tests = loadr.MyDataset("data/" + dataset + "/test", vocab, tokenizer, encode_length = point_size)
+#data_valid = loadr.MyDataset("data/" + dataset + "/valid", vocab, tokenizer, encode_length = point_size)
 
 train_loader = DataLoader(data_train, batch_size = batch_size, shuffle = True)
 tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = True)
-
-#import IPython ; IPython.embed() ; exit(1)
+#valid_loader = DataLoader(data_valid, batch_size = batch_size, shuffle = True)
 
 #-----------------------------------------------------------# 
 
 model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
-#model.load_state_dict(torch.load("models/model_biquad_e1_b64.pt"))
-
+#model.load_state_dict(torch.load("models/model_snips_e50_b16.pt"))
 model = model.to(device)
 
 #-----------------------------------------------------------#
@@ -293,9 +296,7 @@ scheduler = transformers.get_constant_schedule_with_warmup( # cosine <--> consta
 
 train_bar = tqdm.tqdm(total = EPOCHS * len(train_loader), leave = False, position = 0, desc = "TRAIN")
 tests_bar = tqdm.tqdm(total = EPOCHS * len(tests_loader), leave = False, position = 2, desc = "TESTS")
-
-if not combined and not folded:
-	valid_bar = tqdm.tqdm(total = EPOCHS * len(valid_loader), leave = False, position = 1, desc = "VALID")
+#valid_bar = tqdm.tqdm(total = EPOCHS * len(valid_loader), leave = False, position = 1, desc = "VALID")
 
 MAX_VALID_TOTAL_F1 = -1
 MAX_TESTS_TOTAL_F1 = -1
@@ -320,66 +321,66 @@ for epoch in range(EPOCHS):
 	
 	train_bar.write(f"TRAINING {epoch + 1}/{EPOCHS}: {dataset}")
 	training(model, train_loader, train_bar)
-
 	tests_bar.write(f"VALIDATE {epoch + 1}/{EPOCHS}:")
 	
 	#-----------------------------------------------------------#
 	
-	tests_result = validate(model, tests_loader, tests_bar)
+	tests_result = validate(model, tests_loader, tests_bar, return_inputs = True)
 	
 	tests_tabs_labels, tests_slot_labels = extract_results(tests_result["label_ids"])
 	tests_tabs_predic, tests_slot_predic = extract_results(tests_result["predicted"])
-
+	
 	tests_over_score = compute_metrics( tests_result )
 	tests_tabs_score = compute_metrics({"label_ids": tests_tabs_labels, "predicted": tests_tabs_predic})
 	tests_slot_score = compute_metrics({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
 	
-	MAX_TESTS_TOTAL_PR = max(tests_over_score["P"], MAX_TESTS_TOTAL_PR)
-	MAX_TESTS_TOTAL_RE = max(tests_over_score["R"], MAX_TESTS_TOTAL_RE)
-	MAX_TESTS_TOTAL_F1 = max(tests_over_score["F"], MAX_TESTS_TOTAL_F1)
-	MAX_TESTS_TABLE_F1 = max(tests_tabs_score["F"], MAX_TESTS_TABLE_F1)
-	MAX_TESTS_SLOTS_F1 = max(tests_slot_score["F"], MAX_TESTS_SLOTS_F1)
-
-	for i in range(10):
-		print("labels:", tests_result["label_ids"][i])
-		print("predic:", tests_result["predicted"][i])
-		print("")
+	if tests_over_score["F"] > MAX_TESTS_TOTAL_F1:
+		MAX_TESTS_TOTAL_PR = tests_over_score["P"]
+		MAX_TESTS_TOTAL_RE = tests_over_score["R"]
+		MAX_TESTS_TOTAL_F1 = tests_over_score["F"]
+		MAX_TESTS_TABLE_F1 = tests_tabs_score["F"]
+		MAX_TESTS_SLOTS_F1 = tests_slot_score["F"]
+	
+		write_results(tests_result, name = dataset)
 	
 	tests_bar.write(f"MAX_TESTS_TOTAL_PR: {MAX_TESTS_TOTAL_PR}")
 	tests_bar.write(f"MAX_TESTS_TOTAL_RE: {MAX_TESTS_TOTAL_RE}")
 	tests_bar.write(f"MAX_TESTS_TOTAL_F1: {MAX_TESTS_TOTAL_F1}")
-	tests_bar.write("-----")
+	tests_bar.write(".....")
 	tests_bar.write(f"MAX_TESTS_TABLE_F1: {MAX_TESTS_TABLE_F1}")
 	tests_bar.write(f"MAX_TESTS_SLOTS_F1: {MAX_TESTS_SLOTS_F1}")
-		
+	
 	#-----------------------------------------------------------#
 	
-	if not combined and not folded:
-		valid_result = validate(model, valid_loader, valid_bar)
+	if "valid_loader" not in locals():
+		continue
 		
-		valid_tabs_labels, valid_slot_labels = extract_results(valid_result["label_ids"])
-		valid_tabs_predic, valid_slot_predic = extract_results(valid_result["predicted"])
-
-		valid_over_score = compute_metrics( valid_result )
-		valid_tabs_score = compute_metrics({"label_ids": valid_tabs_labels, "predicted": valid_tabs_predic})
-		valid_slot_score = compute_metrics({"label_ids": valid_slot_labels, "predicted": valid_slot_predic})
-
-		MAX_VALID_TOTAL_PR = max(valid_over_score["P"], MAX_VALID_TOTAL_PR)
-		MAX_VALID_TOTAL_RE = max(valid_over_score["R"], MAX_VALID_TOTAL_RE)
-		MAX_VALID_TOTAL_F1 = max(valid_over_score["F"], MAX_VALID_TOTAL_F1)
-		MAX_VALID_TABLE_F1 = max(valid_tabs_score["F"], MAX_VALID_TABLE_F1)
-		MAX_VALID_SLOTS_F1 = max(valid_slot_score["F"], MAX_VALID_SLOTS_F1)
+	valid_result = validate(model, valid_loader, valid_bar)
 		
-		tests_bar.write("")
-	
-		tests_bar.write(f"MAX_VALID_TOTAL_PR: {MAX_VALID_TOTAL_PR}")
-		tests_bar.write(f"MAX_VALID_TOTAL_RE: {MAX_VALID_TOTAL_RE}")
-		tests_bar.write(f"MAX_VALID_TOTAL_F1: {MAX_VALID_TOTAL_F1}")
-		tests_bar.write("-----")
-		tests_bar.write(f"MAX_VALID_TABLE_F1: {MAX_VALID_TABLE_F1}")
-		tests_bar.write(f"MAX_VALID_SLOTS_F1: {MAX_VALID_SLOTS_F1}")
+	valid_tabs_labels, valid_slot_labels = extract_results(valid_result["label_ids"])
+	valid_tabs_predic, valid_slot_predic = extract_results(valid_result["predicted"])
 
-	tests_bar.write("|" + ">----<" * 4 + "|")
+	valid_over_score = compute_metrics( valid_result )
+	valid_tabs_score = compute_metrics({"label_ids": valid_tabs_labels, "predicted": valid_tabs_predic})
+	valid_slot_score = compute_metrics({"label_ids": valid_slot_labels, "predicted": valid_slot_predic})
+
+	if valid_over_score["F"] > MAX_VALID_TOTAL_F1:
+		MAX_VALID_TOTAL_PR = valid_over_score["P"]
+		MAX_VALID_TOTAL_RE = valid_over_score["R"]
+		MAX_VALID_TOTAL_F1 = valid_over_score["F"]
+		MAX_VALID_TABLE_F1 = valid_tabs_score["F"]
+		MAX_VALID_SLOTS_F1 = valid_slot_score["F"]
+
+	tests_bar.write("")
+
+	tests_bar.write(f"MAX_VALID_TOTAL_PR: {MAX_VALID_TOTAL_PR}")
+	tests_bar.write(f"MAX_VALID_TOTAL_RE: {MAX_VALID_TOTAL_RE}")
+	tests_bar.write(f"MAX_VALID_TOTAL_F1: {MAX_VALID_TOTAL_F1}")
+	tests_bar.write(".....")
+	tests_bar.write(f"MAX_VALID_TABLE_F1: {MAX_VALID_TABLE_F1}")
+	tests_bar.write(f"MAX_VALID_SLOTS_F1: {MAX_VALID_SLOTS_F1}")
+
+	tests_bar.write("o" + "-----" * 6 + "o")
 
 	#-----------------------------------------------------------#
 

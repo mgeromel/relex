@@ -142,18 +142,22 @@ def compute(predic, labels):
 
 #-----------------------------------------------------------#
 
-def linearize(table_dict):
+
+def linearize(element):
 	
-	if type(table_dict) is str:
-		return table_dict
+	if type(element) is str:
+		return element
 	
-	result = ""
+	if type(element) is dict:
+		result = ""
 	
-	for key in sorted(table_dict.keys()):
-		#result = result + key + " : "
-		result = result + str(table_dict[key]) + " ; "
+		for key in sorted(element.keys()):
+			result = result + key + " : "
+			result = result + str(element[key]) + " ; "
 		
-	return result
+		return result
+	
+	return "NONE"
 
 #-----------------------------------------------------------#
 
@@ -168,6 +172,7 @@ def compute_metrics(pred):
 	precis = []
 	
 	for pre, lab in zip(predic, labels):
+		
 		pre = [linearize(x) for x in pre]
 		lab = [linearize(x) for x in lab]
 		
