@@ -37,20 +37,24 @@ def build_model_input(batch, tokenizer = None, decode_length = 64, encode_length
 #-----------------------------------------------------------#
 
 class MyDataset(torch.utils.data.Dataset):
-	def __init__(self, file_name, vocab, tokenizer, decode_length = 64, encode_length = 256):
+	def __init__(self, file_name, vocab, tokenizer, decode_length = 64, encode_length = 256, strip = False):
 		
 		data_sent = read_file(file_name + ".sent")
 		data_tups = read_file(file_name + ".tup" )
 		
 		# REMOVE PUNCTIUATION
-		translator = str.maketrans('', '', string.punctuation)
-		
-		for i, sent in enumerate(data_sent):
-			data_sent[i] = sent.translate(translator)
+		if strip:
+			for i, sent in enumerate(data_sent):
+				temp = data_sent[i]
+
+				for sym in string.punctuation:
+					temp = temp.replace(sym, " ")
+
+				data_sent[i] = " ".join(temp.split())
 		
 		print(file_name)
 		
-		data_tups = [ extract(rel, sent, vocab, tokenizer) for sent, rel in zip(data_sent, data_tups) ]
+		data_tups = [ extract(rel, sent, vocab, tokenizer, strip = strip) for sent, rel in zip(data_sent, data_tups) ]
 		
 		self.data = { "phrases" : data_sent , "targets" : data_tups }
 		self.data = build_model_input(

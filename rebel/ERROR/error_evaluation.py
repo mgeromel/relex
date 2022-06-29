@@ -1,10 +1,13 @@
 import ast
 
-file_name = "ATIS_results.txt"
+file_name = "ATIS_BART_wrong_TOKENIZER.txt"
 
 inputs = []
 labels = []
 predic = []
+
+TABLE_ID_KEY = "TABLE_ID"
+
 
 with open(file_name) as file:
 	
@@ -21,11 +24,27 @@ with open(file_name) as file:
 		if "LABELS" in line:
 			line = line.replace("LABELS :: ", "")
 			line = ast.literal_eval(line)
+			
+			for key in line.keys():
+				if type(line[key]) is list:
+					line[key] = line[key][-1]
+					
+			if line == {}:
+				line = {TABLE_ID_KEY : "DEFAULT"}
+				
 			labels.append(line)
 			
 		if "PREDIC" in line:
 			line = line.replace("PREDIC :: ", "")
 			line = ast.literal_eval(line)
+			
+			for key in line.keys():
+				if type(line[key]) is list:
+					line[key] = line[key][-1]
+					
+			if line == {}:
+				line = {TABLE_ID_KEY : "DEFAULT"}
+				
 			predic.append(line)
 		#-------------------------#
 	
@@ -62,6 +81,11 @@ with open(file_name) as file:
 		for key in labels_keys:
 			if key not in predic_keys:
 				missing = missing + 1
+				
+				print( labels_keys )
+				print( predic_keys )
+				print( "\n" )
+				
 		MISSING_KEYS = MISSING_KEYS + int(missing > 0)
 		MISSING_KEYS_TOTAL = MISSING_KEYS_TOTAL + missing
 		KEYS_TOTAL = KEYS_TOTAL + len(labels_keys) - 1
@@ -70,7 +94,7 @@ with open(file_name) as file:
 		noexist = 0
 		for key in predic_keys:
 			if key not in labels_keys:
-				missing = missing + 1
+				noexist = noexist + 1
 		NOEXIST_KEYS = NOEXIST_KEYS + int(noexist > 0)
 		NOEXIST_KEYS_TOTAL = NOEXIST_KEYS_TOTAL + noexist
 		
@@ -78,8 +102,10 @@ with open(file_name) as file:
 		partial = 0
 		for key in predic_keys:
 			for yek in labels_keys:
-				if key != yek and (key in yek or yek in key):
-					 partial = partial + 1
+				if key != yek and (yek in key or key in yek):
+					partial = partial + 1
+					#print(f"key: {key}, yek: {yek}")
+					
 		PARTIAL_KEYS = PARTIAL_KEYS + int(partial > 0)
 		PARTIAL_KEYS_TOTAL = PARTIAL_KEYS_TOTAL + partial
 		
@@ -104,7 +130,7 @@ with open(file_name) as file:
 		# NOEXIST SLOT
 		noexist = 0
 		for key in predic_keys:
-			if key != "TABLE_ID" and pred[key] not in text:
+			if key != TABLE_ID_KEY and pred[key] not in text:
 				noexist = noexist + 1
 		
 		if noexist > 0:
@@ -117,7 +143,7 @@ with open(file_name) as file:
 		NOEXIST_SLOT_TOTAL = NOEXIST_SLOT_TOTAL + noexist
 		
 		# NOEXIST TYPE
-		if pred["TABLE_ID"] != labl["TABLE_ID"]:
+		if pred[TABLE_ID_KEY] != labl[TABLE_ID_KEY]:
 			NOEXIST_TYPE += 1
 	
 	print("\n\nDONE DONE DONE\n\n")

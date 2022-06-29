@@ -1,12 +1,7 @@
-from transformers import BertGenerationConfig
-
-from transformers import BartTokenizerFast
 from transformers import BartForConditionalGeneration
+from decoder import CustomBartDecoder
 
-import torch
-
-from encoder import CustomAlbertModel
-from decoder import CustomBertGenerationDecoder
+import torch, copy
 
 ##################################################
 
@@ -20,37 +15,39 @@ class TestModel(torch.nn.Module):
 		self.smap, self.mask = gramm.build_mask()
 		self.mask = torch.tensor(self.mask)
 		
+		# Output Size
 		self.gramm_size = gramm.size() + 1
 		self.relat_size = len(vocab)
 		self.point_size = point_size
-		
 		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
 		
-		self.encoder = CustomAlbertModel.from_pretrained(
-			"albert-base-v1",
-			add_pooling_layer = False,
-		)
+		# Loading Model
+		self.b_model = BartForConditionalGeneration.from_pretrained("facebook/bart-large")
 		
-		self.decoder = CustomBertGenerationDecoder(
-			BertGenerationConfig(
-				vocab_size = self.vocab_size,
-				add_cross_attention = True,
-				is_decoder = True, 
-				use_cache = False,
-				hidden_size = 768,
-				num_hidden_layers = 8,
-				num_attention_heads = 12,
-				intermediate_size = 2048
-			)
-		)
+		# Configuring Encoder
+		self.encoder = self.b_model.get_encoder()
+		self.encoder.gradient_checkpointing = True # CHECK?
 		
-		#self.decoder.bert.encoder.gradient_checkpointing = True
+		# Freezing Encoder-Layers
+		frozen = 0
+		for layer in self.encoder.layers[ : frozen]:
+			for param in layer.parameters():
+				param.requires_grad = False
 		
-		self.gramm_head = torch.nn.Linear(        self.vocab_size,     self.gramm_size)
-		self.relat_head = torch.nn.Linear(        self.vocab_size,     self.relat_size)
-		self.point_head = torch.nn.Linear(  768 + self.point_size, 2 * self.point_size)
+		# Configuring Decoder
+		decoder_config = copy.deepcopy(self.encoder.config)
+		decoder_config.vocab_size = self.vocab_size
+		decoder_config.gradient_checkpointing = True
+		self.decoder = CustomBartDecoder( decoder_config )
 		
-		self.dropout_logits = torch.nn.Dropout(0.15)
+		# Hidden-State Dimension
+		self.d_model = self.decoder.config.d_model
+		
+		# FUNCTION HEADS
+		self.gramm_head = torch.nn.Linear(                       self.d_model, self.gramm_size)
+		self.relat_head = torch.nn.Linear(                       self.d_model, self.relat_size)
+		self.point_lead = torch.nn.Linear( self.d_model + 1 * self.point_size, self.point_size)
+		self.point_read = torch.nn.Linear( self.d_model + 2 * self.point_size, self.point_size)
 	
 	def __init__backup(self, gramm = None, vocab = None, point_size = 256):
 		super(TestModel, self).__init__()
@@ -65,7 +62,7 @@ class TestModel(torch.nn.Module):
 		self.point_size = point_size
 		
 		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
-	
+		
 		self.encoder = CustomAlbertModel.from_pretrained(
 			"albert-base-v1",
 			add_pooling_layer = False,
@@ -117,10 +114,10 @@ class TestModel(torch.nn.Module):
 			p_logits = shifted_logits[:,:, bound_b :-bound_c].reshape(-1, self.point_size)
 			q_logits = shifted_logits[:,:,-bound_c :        ].reshape(-1, self.point_size)
 			
-			g_loss = loss_func(g_logits, g_labels) * 0.25
-			r_loss = loss_func(r_logits, r_labels) * 0.24
-			p_loss = loss_func(p_logits, p_labels) * 0.25
-			q_loss = loss_func(q_logits, q_labels) * 0.25
+			g_loss = loss_func(g_logits, g_labels) * 2/6
+			r_loss = loss_func(r_logits, r_labels) * 2/6
+			p_loss = loss_func(p_logits, p_labels) * 1/6
+			q_loss = loss_func(q_logits, q_labels) * 1/6
 			
 			loss = g_loss + r_loss + p_loss + q_loss
 			
@@ -152,19 +149,74 @@ class TestModel(torch.nn.Module):
 			return_dict = True
 		)
 		
-		logits = self.dropout_logits(decoder_outputs["logits"])
+		# X. batch_size x num_attention_heads x decoder_sequence_length x encoder_seqence_length
+		last_cross_attentions = decoder_outputs.cross_attentions[-1]
+		decoder_hidden_states = decoder_outputs.hidden_states[-1]
+		last_cross_attentions = last_cross_attentions.sum(dim = 1)
+		
+		# 3. FUNCTION HEAD: GRAMM / RELAT
+		gramm_logits = self.gramm_head(decoder_hidden_states)
+		relat_logits = self.relat_head(decoder_hidden_states)
+		
+		# 4. POINTER-NETWORK: LEFT
+		point_values_l = torch.cat([last_cross_attentions, decoder_hidden_states], dim = -1)
+		point_logits_l = self.point_lead(point_values_l)
+		
+		# 5. POINTER-NETWORK: RIGHT
+		point_values_r = torch.cat([last_cross_attentions, decoder_hidden_states, point_logits_l], dim = -1)
+		point_logits_r = self.point_read(point_values_r)
+		
+		# 6. PREDICTION: LOGITS / LOSS
+		logits = torch.cat([gramm_logits, relat_logits, point_logits_l, point_logits_r], dim = -1)
+		loss = self.compute_loss(logits, labels)
+		
+		return {
+			"loss": loss,
+			"logits": logits
+		}
+	
+	def forward_backup(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None):
+		
+		# 1. ENCODER
+		if encoder_outputs is None:
+			encoder_outputs = self.encoder(
+				input_ids = input_ids,
+				attention_mask = attention_mask,
+				output_hidden_states = True,
+				return_dict = True,
+			)
+		
+		encoder_hidden_states = encoder_outputs[0]
+		
+		# 2. DECODER
+		decoder_outputs = self.decoder(
+			input_ids = decoder_input_ids,
+			attention_mask = decoder_attention_mask,
+			encoder_hidden_states = encoder_hidden_states,
+			encoder_attention_mask = attention_mask,
+			output_hidden_states = True,
+			output_attentions = True,
+			return_dict = True
+		)
+		
+		#logits = self.dropout_logits(decoder_outputs["logits"])
+		#logits = decoder_outputs.hidden_states[-1]
 		
 		# CROSS_ATTENTIONS: batch_size x num_attention_heads x decoder_sequence_length x encoder_seqence_length
-		last_cross_attentions = decoder_outputs["cross_attentions"][-1]
-		decoder_hidden_states = decoder_outputs["hidden_states"][-1]
+		# last_cross_attentions = decoder_outputs["cross_attentions"][-1]
+		# decoder_hidden_states = decoder_outputs["hidden_states"][-1]
+		last_cross_attentions = decoder_outputs.cross_attentions[-1]
+		decoder_hidden_states = decoder_outputs.hidden_states[-1]
 		last_cross_attentions = last_cross_attentions.sum(dim = 1) # Single Attention Head?
 		
 		# 3. FUNCTION HEAD: GRAMM / RELAT
-		gramm_logits = self.gramm_head(logits)
-		relat_logits = self.relat_head(logits)
+		gramm_logits = self.gramm_head(decoder_hidden_states)
+		relat_logits = self.relat_head(decoder_hidden_states)
 		
 		# 4. FUNCTION HEAD: POINTER-NETWORK
 		point_values = torch.cat([last_cross_attentions, decoder_hidden_states], dim = -1)
+		
+		
 		point_logits = self.point_head(point_values)
 		
 		# 4. PREDICTION: LOGITS / LOSS
@@ -175,7 +227,6 @@ class TestModel(torch.nn.Module):
 			"loss": loss,
 			"logits": logits
 		}
-	
 	##################################################
 	
 	def generate(self, input_ids = None, max_length = 64, **kwargs):

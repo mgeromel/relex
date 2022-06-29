@@ -17,9 +17,7 @@ def read_file(filename):
 
 ##################################################
 
-def extract(labels, sentence, vocab, tokenizer):
-	
-	translator = str.maketrans('', '', string.punctuation)
+def extract(labels, sentence, vocab, tokenizer, strip = False):
 	
 	result = []
 	
@@ -44,7 +42,12 @@ def extract(labels, sentence, vocab, tokenizer):
 			tokens = tokens[-1].split(" ^^ ")
 			
 			for token in tokens:
-				token = token.translate(translator)
+				# REMOVE PUNCTUATION
+				if strip:
+					for sym in string.punctuation:
+						token = token.replace(sym, " ")
+					token = " ".join(token.split())
+				
 				result.append( (6, -100) + tuple(find(token, sentence, tokenizer)) )
 			
 			result.append( (7, -100, -100, -100) )
@@ -81,51 +84,32 @@ def extract_results(results):
 ##################################################
 
 def find(word, sent, tokenizer, offset = 0):
-	pad = tokenizer.pad_token
-	
 	sent = sent.lower()
 	word = word.lower()
 	
-	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
-	s_tokens = tokenizer(sent, add_special_tokens = False).input_ids
-	
-	word = tokenizer.decode(w_tokens)
-	sent = tokenizer.decode(s_tokens)
-	
-	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
-	
-	sent = sent.replace(word, f" {pad} {word} {pad} ", 1) 
-	
 	s_tokens = tokenizer(sent, add_special_tokens = True).input_ids
+	w_tokens = tokenizer(word, add_special_tokens = True).input_ids
+	
+	word = tokenizer.decode(w_tokens[1:-1])
+	
+	#------------------------------#
+	length = len(s_tokens)
+	
+	for w_len in range(length):
+		for w_pos in range(length - w_len):
+			
+			span = tokenizer.decode(s_tokens[w_pos : w_pos + w_len])
+			
+			if word == span.strip():
+				return (w_pos, w_pos + w_len)
+	
+	print("\nMATCHING ERROR\n")
+	
+	import IPython ; IPython.embed() ; exit(1)
 	
 	#------------------------------#
 	
-	l_bound = 0
-	r_bound = len(s_tokens)
-	
-	#------------------------------#
-	
-	# LEFT BOUND 
-	for idx in range(r_bound):
-		if s_tokens[idx] == tokenizer.pad_token_id:
-			l_bound = idx + 1
-			break
-		
-	#------------------------------#
-	
-	# RIGHT BOUND
-	for idx in range(l_bound, len(s_tokens)):
-		if s_tokens[idx] == tokenizer.pad_token_id:
-			r_bound = idx
-			break
-	
-	if s_tokens[l_bound : r_bound] != w_tokens:
-		print("Matching Error.")
-		import IPython ; IPython.embed() ; exit(1)
-	
-	#------------------------------#
-	
-	return (l_bound - 1, r_bound - 1)
+	return (0, 1)
 
 ##################################################
 
@@ -142,7 +126,6 @@ def compute(predic, labels):
 
 #-----------------------------------------------------------#
 
-
 def linearize(element):
 	
 	if type(element) is str:
@@ -152,16 +135,16 @@ def linearize(element):
 		result = ""
 	
 		for key in sorted(element.keys()):
-			result = result + key + " : "
+			#result = result + key + " : "
 			result = result + str(element[key]) + " ; "
 		
 		return result
 	
-	return "NONE"
+	return str(element)
 
 #-----------------------------------------------------------#
 
-def compute_metrics(pred):
+def compute_metrics(pred, debug = False):
 	
 	labels = pred["label_ids"]
 	predic = pred["predicted"]
