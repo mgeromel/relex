@@ -82,25 +82,31 @@ def extract_results(results):
 	return all_table_id, all_entities
 
 ##################################################
+words = []
+
 
 def find(word, sent, tokenizer, offset = 0):
+	
+	global words
+	
 	sent = sent.lower()
 	word = word.lower()
 	
 	s_tokens = tokenizer(sent, add_special_tokens = True).input_ids
-	w_tokens = tokenizer(word, add_special_tokens = True).input_ids
+	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
 	
-	word = tokenizer.decode(w_tokens[1:-1])
+	word = tokenizer.decode(w_tokens).strip(string.punctuation)
 	
 	#------------------------------#
 	length = len(s_tokens)
 	
-	for w_len in range(length):
+	for w_len in range(1, length):
 		for w_pos in range(length - w_len):
 			
 			span = tokenizer.decode(s_tokens[w_pos : w_pos + w_len])
+			span = span.strip(string.punctuation).strip()
 			
-			if word == span.strip():
+			if word == span:
 				return (w_pos, w_pos + w_len)
 	
 	print("\nMATCHING ERROR\n")

@@ -22,12 +22,12 @@ def build_model_input(batch, tokenizer = None, decode_length = 64, encode_length
 	
 	keys = ["input_ids", "attention_mask", "decoder_attention_mask", "labels"]
 	
-	batch[keys[0]] = torch.LongTensor(encoder_inputs.input_ids)
-	batch[keys[1]] = torch.CharTensor(encoder_inputs.attention_mask)
-	batch[keys[2]] = torch.ShortTensor(
+	batch[keys[0]] = torch.IntTensor(encoder_inputs.input_ids)
+	batch[keys[1]] = torch.IntTensor(encoder_inputs.attention_mask)
+	batch[keys[2]] = torch.IntTensor(
 		[[ int( tup != (-100,-100,-100,-100) ) for tup in sample ] for sample in decoder_inputs ]
 	)
-	batch[keys[3]] = torch.HalfTensor(decoder_inputs)
+	batch[keys[3]] = torch.IntTensor(decoder_inputs)
 	
 	del batch["phrases"]
 	del batch["targets"]
@@ -45,7 +45,7 @@ class MyDataset(torch.utils.data.Dataset):
 		# REMOVE PUNCTIUATION
 		if strip:
 			for i, sent in enumerate(data_sent):
-				temp = data_sent[i]
+				temp = data_sent[i].lower()
 
 				for sym in string.punctuation:
 					temp = temp.replace(sym, " ")

@@ -10,10 +10,11 @@ point_size = None
 
 tokenizer = None
 bacov = None
+vocab = None
 
 #-----------------------------------------------------------#
 
-def _initialize(g_size, v_size, p_size, vocab, tknzr):
+def _initialize(g_size, v_size, p_size, voc, tknzr):
 	global gramm_size, vocab_size, point_size, bacov, tokenizer
 	
 	if (gramm_size and vocab_size and point_size and bacov and tokenizer) is None:
@@ -22,6 +23,7 @@ def _initialize(g_size, v_size, p_size, vocab, tknzr):
 		point_size = p_size
 		
 		tokenizer = tknzr
+		vocab = voc
 		bacov = { i : s for s, i in vocab.items() }
 
 #-----------------------------------------------------------#
@@ -37,7 +39,7 @@ def validate(
 	vocab = None,
 	return_inputs = False
 ):
-		
+	
 	#------------------------------------------------------#
 	
 	_initialize(g_size, v_size, p_size, vocab, tokenizer)
@@ -120,13 +122,13 @@ def reduce(tokens, logits):
 		torch.argmax(logits[ -2*point_size : - point_size ]).item(),
 		torch.argmax(logits[   -point_size :              ]).item()
 	)
-	P = tokenizer.decode(tokens[P[0] : P[1]].tolist(), skip_special_tokens = True).strip()
+	PP = tokenizer.decode(tokens[P[0] : P[1]].tolist(), skip_special_tokens = True).strip()
 	
-	return (G, V, P)
+	return (G, V, PP, P)
 
 #-----------------------------------------------------------#
 
-def translate(input_ids, batch):
+def translate(input_ids, batch, flag = False):
 	
 	result = []
 	
@@ -137,7 +139,10 @@ def translate(input_ids, batch):
 		curr_entry = "DEFAULT"
 		
 		for logits in output:
-			G, V, P = reduce(tokens, logits)
+			G, V, P, I = reduce(tokens, logits)
+			
+			if flag:
+				print(f"G: {G}, V: {bacov[V]}, P: {P}, I: {I}")
 			
 			# STATE 2
 			if G == 2:

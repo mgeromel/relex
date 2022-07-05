@@ -6,7 +6,7 @@ from valid import validate
 from utils import *
 from model import *
 
-from transformers import AdamW, get_scheduler, AlbertTokenizerFast
+from transformers import AdamW, get_scheduler, AlbertTokenizerFast, BartTokenizerFast
 from torch.utils.data import DataLoader
 
 #-----------------------------------------------------------#
@@ -27,7 +27,7 @@ set_seed(1001)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
-#tokenizer = BartTokenizer.from_pretrained("facebook/bart-base")
+#tokenizer = BartTokenizerFast.from_pretrained("facebook/bart-base")
 
 #-----------------------------------------------------------#
 
@@ -47,19 +47,19 @@ def write_results(batch, name = "DEFAULT"):
 
 #-----------------------------------------------------------#
 
-dataset = "ATIS" # point_size = 55, batch_size = 24
+dataset = "ATIS" # point_size = 70, decode_length = 34, batch_size = 24
 dataset = "NYT24" # point_size = 225, batch_size = 64
 dataset = "NYT29" # point_size = 270, batch_size = 64
-dataset = "ADE" # point_size = 115, batch_size = 16, lr = 5e-5
+dataset = "ADE" # point_size = 115, decode_length = 74, batch_size = 16, lr = 5e-5
 dataset = "RAMS/filtered_level_1" # point_size = 512, batch_size = 24
 dataset = "MAVEN" # point_size = 340, batch_size = 24
 dataset = "CoNLL04" # point_size = 145, batch_size = 4/8
 dataset = "ADE/folds" # point_size = 115, batch_size = 16, lr = 5e-5
-dataset = "SNIPS" # point_size = 40, batch_size = 24
+dataset = "SNIPS" # point_size = 50, decode_length = 25, batch_size = 24
 dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 # USE THE FOLLOWING:
-dataset = "ATIS"
+dataset = "SNIPS"
 
 gramm = gramm.GRAMMAR("gramm.txt")
 vocab = read_file("data/" + dataset + "/vocabulary.txt")
@@ -67,19 +67,21 @@ vocab = dict(zip(vocab, range(len(vocab))))
 
 gramm_size = gramm.size() + 1
 vocab_size = len(vocab)
-point_size = 55
+
+point_size = 50
+decode_length = 30
 
 #-----------------------------------------------------------#
 
-EPOCHS = 100
+EPOCHS = 50
 
 batch_size = 16
 save_model = False
 
 #-----------------------------------------------------------#
 		
-data_train = loadr.MyDataset("data/" + dataset + "/train", vocab, tokenizer, encode_length = point_size, strip = True)
-data_tests = loadr.MyDataset("data/" + dataset + "/test" , vocab, tokenizer, encode_length = point_size, strip = True)
+data_train = loadr.MyDataset("data/" + dataset + "/train", vocab, tokenizer, encode_length = point_size, decode_length = decode_length, strip = False)
+data_tests = loadr.MyDataset("data/" + dataset + "/test" , vocab, tokenizer, encode_length = point_size, decode_length = decode_length, strip = False)
 #data_valid = loadr.MyDataset("data/" + dataset + "/valid", vocab, tokenizer, encode_length = point_size, strip = True)
 
 train_loader = DataLoader(data_train, batch_size = batch_size, shuffle = True)

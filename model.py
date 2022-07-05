@@ -22,7 +22,7 @@ class TestModel(torch.nn.Module):
 		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
 		
 		# Loading Model
-		self.b_model = BartForConditionalGeneration.from_pretrained("facebook/bart-large")
+		self.b_model = BartForConditionalGeneration.from_pretrained("facebook/bart-base")
 		
 		# Configuring Encoder
 		self.encoder = self.b_model.get_encoder()
@@ -48,46 +48,6 @@ class TestModel(torch.nn.Module):
 		self.relat_head = torch.nn.Linear(                       self.d_model, self.relat_size)
 		self.point_lead = torch.nn.Linear( self.d_model + 1 * self.point_size, self.point_size)
 		self.point_read = torch.nn.Linear( self.d_model + 2 * self.point_size, self.point_size)
-	
-	def __init__backup(self, gramm = None, vocab = None, point_size = 256):
-		super(TestModel, self).__init__()
-		
-		# Building Mask from Grammar
-		self.gramm = gramm
-		self.smap, self.mask = gramm.build_mask()
-		self.mask = torch.tensor(self.mask)
-		
-		self.gramm_size = gramm.size() + 1
-		self.relat_size = len(vocab)
-		self.point_size = point_size
-		
-		self.vocab_size = 1 * (self.gramm_size + self.relat_size + 2 * self.point_size)
-		
-		self.encoder = CustomAlbertModel.from_pretrained(
-			"albert-base-v1",
-			add_pooling_layer = False,
-		)
-		
-		self.decoder = CustomBertGenerationDecoder(
-			BertGenerationConfig(
-				vocab_size = self.vocab_size,
-				add_cross_attention = True,
-				is_decoder = True, 
-				use_cache = False,
-				hidden_size = 768,
-				num_hidden_layers = 8,
-				num_attention_heads = 12,
-				intermediate_size = 2048
-			)
-		)
-		
-		#self.decoder.bert.encoder.gradient_checkpointing = True
-		
-		self.gramm_head = torch.nn.Linear(        self.vocab_size,     self.gramm_size)
-		self.relat_head = torch.nn.Linear(        self.vocab_size,     self.relat_size)
-		self.point_head = torch.nn.Linear(  768 + self.point_size, 2 * self.point_size)
-		
-		self.dropout_logits = torch.nn.Dropout(0.15)
 
 	##################################################
 	
@@ -175,58 +135,6 @@ class TestModel(torch.nn.Module):
 			"logits": logits
 		}
 	
-	def forward_backup(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None):
-		
-		# 1. ENCODER
-		if encoder_outputs is None:
-			encoder_outputs = self.encoder(
-				input_ids = input_ids,
-				attention_mask = attention_mask,
-				output_hidden_states = True,
-				return_dict = True,
-			)
-		
-		encoder_hidden_states = encoder_outputs[0]
-		
-		# 2. DECODER
-		decoder_outputs = self.decoder(
-			input_ids = decoder_input_ids,
-			attention_mask = decoder_attention_mask,
-			encoder_hidden_states = encoder_hidden_states,
-			encoder_attention_mask = attention_mask,
-			output_hidden_states = True,
-			output_attentions = True,
-			return_dict = True
-		)
-		
-		#logits = self.dropout_logits(decoder_outputs["logits"])
-		#logits = decoder_outputs.hidden_states[-1]
-		
-		# CROSS_ATTENTIONS: batch_size x num_attention_heads x decoder_sequence_length x encoder_seqence_length
-		# last_cross_attentions = decoder_outputs["cross_attentions"][-1]
-		# decoder_hidden_states = decoder_outputs["hidden_states"][-1]
-		last_cross_attentions = decoder_outputs.cross_attentions[-1]
-		decoder_hidden_states = decoder_outputs.hidden_states[-1]
-		last_cross_attentions = last_cross_attentions.sum(dim = 1) # Single Attention Head?
-		
-		# 3. FUNCTION HEAD: GRAMM / RELAT
-		gramm_logits = self.gramm_head(decoder_hidden_states)
-		relat_logits = self.relat_head(decoder_hidden_states)
-		
-		# 4. FUNCTION HEAD: POINTER-NETWORK
-		point_values = torch.cat([last_cross_attentions, decoder_hidden_states], dim = -1)
-		
-		
-		point_logits = self.point_head(point_values)
-		
-		# 4. PREDICTION: LOGITS / LOSS
-		logits = torch.cat([gramm_logits, relat_logits, point_logits], dim = -1)
-		loss = self.compute_loss(logits, labels)
-		
-		return {
-			"loss": loss,
-			"logits": logits
-		}
 	##################################################
 	
 	def generate(self, input_ids = None, max_length = 64, **kwargs):
@@ -348,3 +256,5 @@ class TestModel(torch.nn.Module):
 		##################################################
 		
 		return decoder_input_ids
+
+	##################################################
