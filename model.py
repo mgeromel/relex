@@ -389,7 +389,7 @@ class TestModel(torch.nn.Module):
 						best_scores, best_tokens = torch.topk(best_scores.view(-1), num_beams, dim = 0)
 
 						# BEAM-INDEX / NEXT-TOKEN
-						beam_number = torch.div(best_tokens, self.relat_size, rounding_mode "floor")
+						beam_number = torch.div(best_tokens, self.relat_size, rounding_mode = "floor")
 						best_tokens = best_tokens % self.relat_size
 
 						# RE-ORDERING OF BEAMS 
