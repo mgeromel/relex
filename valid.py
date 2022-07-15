@@ -37,7 +37,9 @@ def validate(
 	v_size = None,
 	p_size = None,
 	vocab = None,
-	return_inputs = False
+	return_inputs = False,
+	beam_search = False,
+	num_beams = 1,
 ):
 	
 	#------------------------------------------------------#
@@ -58,11 +60,18 @@ def validate(
 		).float()
 
 		with torch.no_grad():
-			output = model.generate(
-				input_ids = batch["input_ids"].to(device),
-				max_length = 64
-			).to("cpu")
-		
+			if not beam_search:
+				output = model.generate(
+					input_ids = batch["input_ids"].to(device),
+					max_length = 64
+				).to("cpu")
+			else:
+				output = model.beam_search(
+					input_ids = batch["input_ids"].to(device),
+					max_length = 64,
+					num_beams = num_beams,
+				).to("cpu")
+
 		labels.extend(translate(batch["input_ids"], batch["decoder_input_ids"]))
 		predic.extend(translate(batch["input_ids"], output))
 		

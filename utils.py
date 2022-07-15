@@ -124,9 +124,6 @@ def compute(predic, labels):
 	
 	if (len(predic) == 0):
 		return 1, 0
-	
-	if len(labels) == 0:
-		import IPython ; IPython.embed() ; exit(1)
 
 	precis = len(result) / len(predic)
 	recall = len(result) / len(labels)

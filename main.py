@@ -47,7 +47,7 @@ def write_results(batch, name = "DEFAULT"):
 
 #-----------------------------------------------------------#
 
-dataset = "ATIS" # point_size = 70, decode_length = 34, batch_size = 24
+dataset = "ATIS" # point_size = 70, decode_length = 34, batch_size = 24, lr = 9.5e-5
 dataset = "NYT24" # point_size = 225, batch_size = 64
 dataset = "NYT29" # point_size = 270, batch_size = 64
 dataset = "ADE" # point_size = 115, decode_length = 74, batch_size = 16, lr = 5e-5
@@ -55,7 +55,7 @@ dataset = "RAMS/filtered_level_1" # point_size = 512, batch_size = 24
 dataset = "MAVEN" # point_size = 340, batch_size = 24
 dataset = "CoNLL04" # point_size = 145, batch_size = 4/8
 dataset = "ADE/folds" # point_size = 115, batch_size = 16, lr = 5e-5
-dataset = "SNIPS" # point_size = 50, decode_length = 25, batch_size = 24
+dataset = "SNIPS" # point_size = 50, decode_length = 25, batch_size = 24, lr = 9.0e-5
 dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 # USE THE FOLLOWING:
@@ -73,11 +73,14 @@ decode_length = 34
 
 #-----------------------------------------------------------#
 
-EPOCHS = 2
+EPOCHS = 50
 
 batch_size = 32
 save_model = False
-skip_first = 1
+skip_first = 0
+grid_search = False
+beam_search = False
+num_beams = 4
 
 #-----------------------------------------------------------#
 		
@@ -107,11 +110,13 @@ while True:
 	if current_lr > maximal_lr:
 		break
 
+	current_lr = 9.5e-5
+
 	print("LEARNING-RATE:", current_lr)
 	
 	model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
 	model = model.to(device)
-	#model.load_state_dict(torch.load("models/model_snips_e50_b16.pt"))
+	model.load_state_dict(torch.load("models/model_ATIS_e75_b32.pt"))
 
 	#-----------------------------------------------------------#
 
@@ -147,7 +152,7 @@ while True:
 	################################################################################
 		
 	for epoch in range(EPOCHS):
-		
+
 		#-----------------------------------------------------------#
 		
 		train_bar.write(f"TRAINING {epoch + 1}/{EPOCHS}: {dataset}")
@@ -178,7 +183,9 @@ while True:
 			v_size = vocab_size,
 			p_size = point_size,
 			vocab = vocab,
-			return_inputs = True
+			return_inputs = True,
+			beam_search = beam_search,
+			num_beams = num_beams,
 		)
 		
 		tests_tabs_labels, tests_slot_labels = extract_results(tests_result["label_ids"])
@@ -198,7 +205,7 @@ while True:
 			if save_model:
 				torch.save(model.state_dict(), f"models/model_{dataset}_e{EPOCHS}_b{batch_size}.pt")
 
-				with open("models/model_{dataset}_e{EPOCHS}_b{batch_size}.log", "w") as file:
+				with open(f"models/model_{dataset}_e{EPOCHS}_b{batch_size}.log", "w") as file:
 					file.write(f"EPOCH: {epoch}/{EPOCHS}\n")
 					file.write(f"MAX_TESTS_TOTAL_PR: {MAX_TESTS_TOTAL_PR}\n")
 					file.write(f"MAX_TESTS_TOTAL_RE: {MAX_TESTS_TOTAL_RE}\n")
@@ -263,6 +270,9 @@ while True:
 		best_lr = current_lr
 		
 	################################################################################
+
+	if not grid_search:
+		break
 
 	#if save_model:
 	#	torch.save(model.state_dict(), "models/model_snips_e50_b16.pt")
