@@ -279,6 +279,7 @@ class TestModel(torch.nn.Module):
 		# SYNCHRONIZED G_LOGITS --> "BATCH_SIZE" 
 		undone = torch.ones(batch_beam_size, device=device)  # GENERATED SEQUENCES (FLAG)
 		strings = [ "[BOS] #_RELS_#" ] * batch_beam_size # batch_size <--> batch_beam_size
+		counter = [ 1 ] * batch_beam_size
 		
 		# MASK FOR G_LOGITS
 		self.mask = self.mask.to(device)
@@ -334,11 +335,6 @@ class TestModel(torch.nn.Module):
 			p_logits = decoder_outputs["logits"][:, -1,-2*self.point_size :                  ].detach()
 
 			#------------------------------------------------#
-			# "AVERAGE VALUES": 'G_LOGITS'
-			# REMOVED #
-			# g_logits = torch.sum(g_logits.view(batch_size, num_beams, self.gramm_size), dim = 1) / num_beams
-
-			#------------------------------------------------#
 			# GRAMMAR MASKING: 'G_LOGITS'
 
 			for idx, sequence in enumerate(strings):
@@ -358,28 +354,37 @@ class TestModel(torch.nn.Module):
 					strings[idx] = strings[idx].replace(state, production[1], 1)
 
 			#------------------------------------------------#
-			# CLEANUP / UPSCALE / CLONING:
-			# REMOVED #
-			# g_logits = F.one_hot(torch.argmax(g_logits, dim = -1), self.gramm_size)
-			# g_logits = g_logits.repeat(1, num_beams)
-
-			#------------------------------------------------#
-			# BEAM-SEARCH: 'r_logits'
-
-			# shape = (batch_size, num_beams, vocab_size)
-			# g_logits = g_logits.view(batch_size * num_beams, self.gramm_size)
-			# r_logits = r_logits.view(batch_size * num_beams, self.relat_size)
-			# p_logits = p_logits.view(batch_size * num_beams, self.point_size * 2)
-
-			# FOR: decoder_input_ids += (g_logits + r_logits + p_logits)
-			# decoder_input_ids = decoder_input_ids.view(batch_size, num_beams, length + 1, self.vocab_size)
-
-
+			
+			# NEXT TOKEN SCORES
 			next_token_scores = F.log_softmax(r_logits, dim = -1)
+			
+			# ONLY CONSIDER "TOKEN"
+			for idx, string in enumerate(strings):
+				if "TOKEN" in string:
+					counter[idx] = counter[idx] + 1
+				else:
+					next_token_scores[idx] = 0
+			
+			# ADD & NORMALIZE SCORES
 			best_token_scores = next_token_scores + beam_scores[:, None].expand_as(next_token_scores)
-
-			best_token_scores, best_tokens = None
-
+			norm_token_scores = best_token_scores / torch.tensor(counter)[:, None].expand_as(best_token_scores)
+			
+			# FIND BEST BEAMS PER SAMPLE
+			norm_token_scores = norm_token_scores.view(batch_size, num_beams * self.relat_size)
+			
+			best_scores, best_tokens = torch.topk(norm_token_scores, num_beams, dim = -1)
+			beam_number = torch.div(best_tokens, self.relat_size, rounding_mode = "floor")
+			best_tokens = best_tokens % self.relat_size
+			
+			import IPython ; IPython.embed() ; exit(1)
+			
+			# SHUFFLE LOGITS
+			# SHUFFLE UNDONE
+			# SHUFFLE STRINGS
+			# SHUFFLE COUNTER
+			# SHUFFLE BEAM_SCORES
+			# SHUFFLE DECODER INPUT IDS
+			
 			# FOR EACH SAMPLE:		
 			for idx in range(batch_beam_size): # batch_size <--> batch_beam_size
 				if undone[idx]:

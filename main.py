@@ -75,11 +75,11 @@ decode_length = 34
 
 EPOCHS = 50
 
-batch_size = 32
+batch_size = 8
 save_model = False
 skip_first = 0
 grid_search = False
-beam_search = False
+beam_search = True
 num_beams = 4
 
 #-----------------------------------------------------------#
@@ -116,7 +116,7 @@ while True:
 	
 	model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
 	model = model.to(device)
-	model.load_state_dict(torch.load("models/model_ATIS_e75_b32.pt"))
+	#model.load_state_dict(torch.load("models/model_ATIS_e75_b32.pt"))
 
 	#-----------------------------------------------------------#
 
@@ -156,17 +156,19 @@ while True:
 		#-----------------------------------------------------------#
 		
 		train_bar.write(f"TRAINING {epoch + 1}/{EPOCHS}: {dataset}")
-		training(
-			model = model,
-			dataloader = train_loader,
-			tqdm_bar = train_bar,
-			optimizer = optimizer,
-			scheduler = scheduler,
-			ampscaler = ampscaler,
-			g_size = gramm_size,
-			v_size = vocab_size,
-			p_size = point_size,
-		)
+		
+		if 1 == 0:
+			training(
+				model = model,
+				dataloader = train_loader,
+				tqdm_bar = train_bar,
+				optimizer = optimizer,
+				scheduler = scheduler,
+				ampscaler = ampscaler,
+				g_size = gramm_size,
+				v_size = vocab_size,
+				p_size = point_size,
+			)
 		
 		#-----------------------------------------------------------#
 		
