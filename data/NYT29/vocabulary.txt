@@ -27,3 +27,4 @@
 /people/deceased_person/place_of_burial
 /people/place_of_interment/interred_here
 /business/company_advisor/companies_advised
+DEFAULT

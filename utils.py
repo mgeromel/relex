@@ -1,4 +1,4 @@
-import string
+import string, re
 
 from transformers import AlbertTokenizerFast
 from collections import Counter
@@ -82,40 +82,58 @@ def extract_results(results):
 	return all_table_id, all_entities
 
 ##################################################
-words = []
 
+def clean(text, tokenizer):
+	tkns = tokenizer(text, add_special_tokens = False).input_ids
+	text = tokenizer.decode( tkns, skip_special_tokens = True)
 
-def find(word, sent, tokenizer, offset = 0):
-	
-	global words
-	
-	sent = sent.lower()
-	word = word.lower()
-	
-	s_tokens = tokenizer(sent, add_special_tokens = True).input_ids
-	w_tokens = tokenizer(word, add_special_tokens = False).input_ids
-	
-	word = tokenizer.decode(w_tokens).strip(string.punctuation)
-	
+	return text # " ".join(text.split())
+
+def find(word, sent, tokenizer):
+	sent = clean(sent, tokenizer)
+	word = clean(word, tokenizer)
+
+	tokenization = tokenizer(sent, return_offsets_mapping = True, add_special_tokens = True)	
+	sents_tokens = tokenization.input_ids
+
+	offset_mapping = tokenization["offset_mapping"]
+
 	#------------------------------#
-	length = len(s_tokens)
-	
-	for w_len in range(1, length):
-		for w_pos in range(length - w_len):
-			
-			span = tokenizer.decode(s_tokens[w_pos : w_pos + w_len])
-			span = span.strip(string.punctuation).strip()
-			
-			if word == span:
-				return (w_pos, w_pos + w_len)
-	
-	print("\nMATCHING ERROR\n")
-	
-	import IPython ; IPython.embed() ; exit(1)
+
+	bounds = r'(\s|\b|^|$|[!\"#$%&\'()*+,-./:;<=>?@\[\]^_`{|}~])'
+	search = re.search(bounds + re.escape(word) + bounds, sent)
+		
+	matched = search.group()
+	l_bound = search.span()[0] + matched.find(word)
+	r_bound = l_bound + len(word)
 	
 	#------------------------------#
 	
-	return (0, 1)
+	l_index = len(offset_mapping) - 2
+	r_index = 0
+
+	# FIND L_BOUND
+	for index, offset in enumerate(offset_mapping):
+		if l_bound < offset[0]: 
+			l_index = index - 1
+			break
+
+	# R_INDEX
+	for index, offset in reversed(list(enumerate(offset_mapping[:-1]))):
+		if r_bound >= offset[1]:
+			r_index = index
+			break
+	#------------------------------#
+	
+	found = tokenizer.decode(sents_tokens[l_index: r_index + 1], skip_special_tokens = True)
+
+	if found.strip() != word:
+		print("\nMATCHING ERROR\n")
+		import IPython ; IPython.embed() ; exit(1)
+	
+	return(l_index, r_index + 1)
+
+	#------------------------------#
 
 ##################################################
 
@@ -141,7 +159,7 @@ def linearize(element):
 		result = ""
 	
 		for key in sorted(element.keys()):
-			#result = result + key + " : "
+			result = result + key + " : "
 			result = result + str(element[key]) + " ; "
 		
 		return result

@@ -42,18 +42,8 @@ class MyDataset(torch.utils.data.Dataset):
 		data_sent = read_file(file_name + ".sent")
 		data_tups = read_file(file_name + ".tup" )
 		
-		# REMOVE PUNCTIUATION
-		if strip:
-			for i, sent in enumerate(data_sent):
-				temp = data_sent[i].lower()
+		print("> BUILDING DATA:", file_name)
 
-				for sym in string.punctuation:
-					temp = temp.replace(sym, " ")
-
-				data_sent[i] = " ".join(temp.split())
-		
-		print(file_name)
-		
 		data_tups = [ extract(rel, sent, vocab, tokenizer, strip = strip) for sent, rel in zip(data_sent, data_tups) ]
 		
 		self.data = { "phrases" : data_sent , "targets" : data_tups }

@@ -279,7 +279,7 @@ class TestModel(torch.nn.Module):
 		# SYNCHRONIZED G_LOGITS --> "BATCH_SIZE" 
 		undone = torch.ones(batch_beam_size, device=device)  # GENERATED SEQUENCES (FLAG)
 		strings = [ "[BOS] #_RELS_#" ] * batch_beam_size # batch_size <--> batch_beam_size
-		counter = [ 1 ] * batch_beam_size
+		counter = torch.tensor([ 1 ] * batch_beam_size, device = device)
 		
 		# MASK FOR G_LOGITS
 		self.mask = self.mask.to(device)
@@ -342,9 +342,6 @@ class TestModel(torch.nn.Module):
 					l_bound = sequence.find("#_")
 					r_bound = sequence.find("_#") + 2
 
-					if l_bound == -1: # DONE / ERROR
-						continue
-
 					state = sequence[l_bound : r_bound]
 
 					g_logits[idx][1:] = g_logits[idx][1:] + self.mask[self.smap[state]]
@@ -354,101 +351,120 @@ class TestModel(torch.nn.Module):
 					strings[idx] = strings[idx].replace(state, production[1], 1)
 
 			#------------------------------------------------#
-			
+			# CLEANING G_LOGITS
+			g_logits = F.one_hot(torch.argmax(g_logits, dim = -1), self.gramm_size)
+
+			# CLEANING P_LOGITS
+			l_index, r_index = p_logits.split(self.point_size, dim = -1)
+			l_index = F.one_hot(torch.argmax(l_index, dim = -1), self.point_size)
+			r_index = F.one_hot(torch.argmax(r_index, dim = -1), self.point_size)
+			p_logits = torch.cat([l_index, r_index], dim = -1)
+
+			#------------------------------------------------#
 			# NEXT TOKEN SCORES
 			next_token_scores = F.log_softmax(r_logits, dim = -1)
 			
-			# ONLY CONSIDER "TOKEN"
-			for idx, string in enumerate(strings):
-				if "TOKEN" in string:
+			# ONLY CONSIDER "TOKEN"-SEQUENCES
+			for idx in range(batch_beam_size):
+				if "TOKEN" in strings[idx]:
 					counter[idx] = counter[idx] + 1
 				else:
 					next_token_scores[idx] = 0
 			
 			# ADD & NORMALIZE SCORES
 			best_token_scores = next_token_scores + beam_scores[:, None].expand_as(next_token_scores)
-			norm_token_scores = best_token_scores / torch.tensor(counter)[:, None].expand_as(best_token_scores)
+			norm_token_scores = best_token_scores / counter[:, None].expand_as(best_token_scores)
 			
-			# FIND BEST BEAMS PER SAMPLE
+			# RESHAPE
+			best_token_scores = best_token_scores.view(batch_size, num_beams * self.relat_size)
 			norm_token_scores = norm_token_scores.view(batch_size, num_beams * self.relat_size)
 			
+			# BEST NORM_SCORES & INDICES
 			best_scores, best_tokens = torch.topk(norm_token_scores, num_beams, dim = -1)
 			beam_number = torch.div(best_tokens, self.relat_size, rounding_mode = "floor")
+			
+			# RETRIEVE UN-NORMALIZES SCORES
+			orig_best_scores = torch.clone(best_scores)
+
+			for idx in range(batch_size):
+				orig_best_scores[idx] = best_token_scores[idx, best_tokens[idx]]
+
 			best_tokens = best_tokens % self.relat_size
+			best_tokens = best_tokens.view(-1)
 			
-			import IPython ; IPython.embed() ; exit(1)
+			#------------------------------------------------#
+			# RESHAPE FOR SHUFFLING
+			g_logits = g_logits.view(batch_size, num_beams, self.gramm_size)
+			r_logits = r_logits.view(batch_size, num_beams, self.relat_size)
+			p_logits = p_logits.view(batch_size, num_beams, self.point_size * 2)
 			
-			# SHUFFLE LOGITS
-			# SHUFFLE UNDONE
-			# SHUFFLE STRINGS
-			# SHUFFLE COUNTER
-			# SHUFFLE BEAM_SCORES
-			# SHUFFLE DECODER INPUT IDS
+			undone = undone.view(batch_size, num_beams)
+			counter = counter.view(batch_size, num_beams)
+
+			beam_scores = beam_scores.view(batch_size, num_beams)
+
+			decoder_input_ids = decoder_input_ids.view(batch_size, num_beams, length + 1, self.vocab_size)
+			decoder_attention_mask = decoder_attention_mask.view(batch_size, num_beams, length + 1)
+			#------------------------------------------------#
+			# SHUFFLE BEAMS
+			#---#
+			new_strings = [] #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			for s_index in range(batch_size):
+				for b_index in range(num_beams):
+					offset = s_index * num_beams
+					item = strings[offset + beam_number[s_index, b_index].item()]
+					new_strings.append(item)
+			strings = new_strings
+			#---# 
 			
+			for batch_index in range(batch_size):
+				shuffles = beam_number[batch_index]
+
+				# SHUFFLE LOGITS
+				g_logits[batch_index] = g_logits[batch_index][shuffles]
+				r_logits[batch_index] = r_logits[batch_index][shuffles]
+				p_logits[batch_index] = p_logits[batch_index][shuffles]
+				
+				# SHUFFLE BOOKKEEPING
+				counter[batch_index] = counter[batch_index][shuffles]
+				undone[batch_index] = undone[batch_index][shuffles]
+
+				# SHUFFLE PREV-SCORES
+				beam_scores[batch_index] = beam_scores[batch_index][shuffles] + orig_best_scores[batch_index]
+
+				# SHUFFLE DECODER-INPUTS
+				decoder_input_ids[batch_index] = decoder_input_ids[batch_index][shuffles]
+				decoder_attention_mask[batch_index] = decoder_attention_mask[batch_index][shuffles]
+
+			#------------------------------------------------#
+			# RESHAPE FOR COMPUTING
+			g_logits = g_logits.view(batch_size * num_beams, self.gramm_size)
+			r_logits = r_logits.view(batch_size * num_beams, self.relat_size)
+			p_logits = p_logits.view(batch_size * num_beams, self.point_size * 2)
+			
+			undone = undone.view(batch_size * num_beams)
+			counter = counter.view(batch_size * num_beams)
+
+			beam_scores = beam_scores.view(batch_size * num_beams)
+
+			#------------------------------------------------#
 			# FOR EACH SAMPLE:		
 			for idx in range(batch_beam_size): # batch_size <--> batch_beam_size
 				if undone[idx]:
 					undone[idx] = "[EOS]" not in strings[idx]
 
 					if "TOKEN" not in strings[idx] and "POINT" not in strings[idx]:
-						#------------------------------------#
-						# STRUCTURE-STEP
 						r_logits[idx] = 0
 						p_logits[idx] = 0
-						#------------------------------------#
 
 					if "TOKEN" in strings[idx]:
-						#------------------------------------#
-
-						########################
-						# CRITICAL AREA BEGINS #
-						########################
-
-						# CURRENT SCORES
-						next_scores = F.log_softmax(r_logits[idx], dim = -1)
-
-						# TOP-K: SCORES / TOKENS
-						best_scores = next_scores + beam_scores[idx, :, None].expand_as(next_scores)
-						best_scores, best_tokens = torch.topk(best_scores.view(-1), num_beams, dim = 0)
-
-						# BEAM-INDEX / NEXT-TOKEN
-						beam_number = torch.div(best_tokens, self.relat_size, rounding_mode = "floor")
-						best_tokens = best_tokens % self.relat_size
-
-						# RE-ORDERING OF BEAMS 
-						decoder_input_ids[idx] = decoder_input_ids[idx, beam_number]
-
-						# UPDATE BEAM SCORES
-						beam_scores[idx] = best_scores
-
-						# UPDATE DECODER_INPUT_IDS
-						r_logits[idx] = F.one_hot(best_tokens, self.relat_size)
+						r_logits[idx] = F.one_hot(best_tokens[idx], self.relat_size)
 						p_logits[idx] = 0
-
-						########################
-						#  CRITICAL AREA ENDS  #
-						########################
-
-						# CLEANUP
 						strings[idx] = strings[idx].replace("TOKEN", "token")
-						#------------------------------------#
 
 					if "POINT" in strings[idx]:
-						#------------------------------------#
-						# SLICE P_LOGITS IN HALF
-						l_index, r_index = p_logits[idx].split(self.point_size, dim = -1)
-						
-						# L_INDEX / R_INDEX
-						l_index = F.one_hot(torch.argmax(l_index, dim = -1), self.point_size)
-						r_index = F.one_hot(torch.argmax(r_index, dim = -1), self.point_size)
-
-						# UPDATE DECODER_INPUT_IDS
-						p_logits[idx] = torch.cat([l_index, r_index], dim = -1)
 						r_logits[idx] = 0
-
-	 					# CLEANUP
 						strings[idx] = strings[idx].replace("POINT", "point")
-						#------------------------------------#
 				else:
 					# BATCH_INPUT_IDS: PADDING
 					g_logits[idx] = F.one_hot(torch.tensor(0), self.gramm_size)
@@ -458,12 +474,12 @@ class TestModel(torch.nn.Module):
 			#------------------------------------------------#
 			# DECODER_INPUT_IDS
 			next_decoder_input_ids = torch.cat([g_logits, r_logits, p_logits], dim = -1)
-			decoder_input_ids = torch.cat([decoder_input_ids, next_decoder_input_ids[:, :, None]], dim = 2)
-			# decoder_input_ids = decoder_input_ids.view(batch_beam_size, length + 2, self.vocab_size)
+			decoder_input_ids = decoder_input_ids.view(batch_beam_size, length + 1, self.vocab_size)
+			decoder_input_ids = torch.cat([decoder_input_ids, next_decoder_input_ids[:, None]], dim = 1)
 
 			# DECODER_ATTENTION_MASK
-			next_decoder_attention = undone # undone.view(batch_size, 1).repeat(1, num_beams)
-			# next_decoder_attention = next_decoder_attention.view(batch_size * num_beams, 1)
+			next_decoder_attention = undone.view(batch_size * num_beams, 1)
+			decoder_attention_mask = decoder_attention_mask.view(batch_beam_size, length + 1)
 			decoder_attention_mask = torch.cat([decoder_attention_mask, next_decoder_attention], dim = -1)
 			#------------------------------------------------#
 			# EARLY STOPPING?

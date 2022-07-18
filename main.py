@@ -6,7 +6,7 @@ from valid import validate
 from utils import *
 from model import *
 
-from transformers import AdamW, get_scheduler, AlbertTokenizerFast, BartTokenizerFast
+from transformers import AdamW, get_scheduler, AlbertTokenizerFast
 from torch.utils.data import DataLoader
 
 #-----------------------------------------------------------#
@@ -19,21 +19,11 @@ def set_seed(num):
 	torch.backends.cudnn.deterministic = True
 	
 	numpy.random.seed(num)
-	
-set_seed(1001)
-	
-#-----------------------------------------------------------#
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
-#tokenizer = BartTokenizerFast.from_pretrained("facebook/bart-base")
 
 #-----------------------------------------------------------#
 
 def write_results(batch, name = "DEFAULT"):
-	
-	with open(f"{name}_results.txt", "w") as file:
+	with open(name, "w") as file:
 		for inputs, labels, predic in zip(batch["inputs"], batch["label_ids"], batch["predicted"]):
 			file.write("INPUTS :: " + inputs + "\n")
 			file.write("LABELS :: " + str(labels)[1:-1] + "\n")
@@ -44,6 +34,12 @@ def write_results(batch, name = "DEFAULT"):
 				file.write("PREDIC :: {'TABLE_ID' : 'DEFAULT'}\n")
 						   
 			file.write("\n")
+
+#-----------------------------------------------------------#
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
+#tokenizer = BartTokenizerFast.from_pretrained("facebook/bart-base")
 
 #-----------------------------------------------------------#
 
@@ -58,7 +54,8 @@ dataset = "ADE/folds" # point_size = 115, batch_size = 16, lr = 5e-5
 dataset = "SNIPS" # point_size = 50, decode_length = 25, batch_size = 24, lr = 9.0e-5
 dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
-# USE THE FOLLOWING:
+#-----------------------------------------------------------#
+
 dataset = "ATIS"
 
 gramm = gramm.GRAMMAR("gramm.txt")
@@ -68,19 +65,19 @@ vocab = dict(zip(vocab, range(len(vocab))))
 gramm_size = gramm.size() + 1
 vocab_size = len(vocab)
 
-point_size = 70
-decode_length = 34
-
 #-----------------------------------------------------------#
+# TRAINING PARAMETERS
 
-EPOCHS = 50
+point_size = 75
+decode_length = 40
 
-batch_size = 8
-save_model = False
-skip_first = 0
-grid_search = False
-beam_search = True
-num_beams = 4
+EPOCHS = 3
+
+batch_size = 32
+skip_first = 0 # ignores evaluation of 'skip_first' epochs
+save_model = False # saves best model
+beam_search = False
+num_beams = 1
 
 #-----------------------------------------------------------#
 		
@@ -94,39 +91,42 @@ tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = True)
 
 #-----------------------------------------------------------# 
 
+grid_steps = 5
+
 minimal_lr = 1e-5
-increments = 5e-6
 maximal_lr = 1e-4
-current_lr = minimal_lr - increments
 
 best_f1 = 0
 best_lr = 0
 
-while True:
-	set_seed(1)
-
-	current_lr = current_lr + increments
-
-	if current_lr > maximal_lr:
-		break
-
-	current_lr = 9.5e-5
-
-	print("LEARNING-RATE:", current_lr)
+for grid_step in range(grid_steps):
 	
+	# SET SEED & LEARNING RATE
+	set_seed(1)
+	
+	current_lr = minimal_lr + (grid_step/grid_steps) * (maximal_lr - minimal_lr)
+
+	print("\n\n")
+	print(f"#--------------#--------------#")
+	print(f"> NEW GRID STEP: {grid_step}/{grid_steps}")
+	print(f"> LEARNING-RATE: {current_lr} [{minimal_lr}, {maximal_lr}]")
+	print(f"> CURRENT SCORE: F1 = {best_f1}, LR = {best_lr}")
+	print(f"#--------------#--------------#\n")
+
+	#-----------------------------------------------------------#
+
+	# INITIALIZE MODEL
 	model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
 	model = model.to(device)
-	#model.load_state_dict(torch.load("models/model_ATIS_e75_b32.pt"))
+
+	# LOAD SAVED MODEL
+	# model.load_state_dict(torch.load("models/model_ATIS_e75_b32.pt"))
 
 	#-----------------------------------------------------------#
 
 	optimizer = torch.optim.AdamW(model.parameters(), lr = current_lr)
 	ampscaler = torch.cuda.amp.GradScaler()
-	scheduler = transformers.get_constant_schedule( # cosine <--> constant ; _with_warmup
-		optimizer = optimizer,
-		#num_warmup_steps = 0.05 * EPOCHS * len(train_loader),
-		#num_training_steps = EPOCHS * len(train_loader)
-	)
+	scheduler = transformers.get_constant_schedule(optimizer = optimizer)
 
 	#-----------------------------------------------------------#
 
@@ -149,7 +149,7 @@ while True:
 	MAX_VALID_TABLE_F1 = -1
 	MAX_TESTS_TABLE_F1 = -1
 
-	################################################################################
+	#################################################################
 		
 	for epoch in range(EPOCHS):
 
@@ -157,18 +157,17 @@ while True:
 		
 		train_bar.write(f"TRAINING {epoch + 1}/{EPOCHS}: {dataset}")
 		
-		if 1 == 0:
-			training(
-				model = model,
-				dataloader = train_loader,
-				tqdm_bar = train_bar,
-				optimizer = optimizer,
-				scheduler = scheduler,
-				ampscaler = ampscaler,
-				g_size = gramm_size,
-				v_size = vocab_size,
-				p_size = point_size,
-			)
+		training(
+			model = model,
+			dataloader = train_loader,
+			tqdm_bar = train_bar,
+			optimizer = optimizer,
+			scheduler = scheduler,
+			ampscaler = ampscaler,
+			g_size = gramm_size,
+			v_size = vocab_size,
+			p_size = point_size,
+		)
 		
 		#-----------------------------------------------------------#
 		
@@ -190,6 +189,9 @@ while True:
 			num_beams = num_beams,
 		)
 		
+		#-----------------------------------------------------------#
+		# TESTING 
+
 		tests_tabs_labels, tests_slot_labels = extract_results(tests_result["label_ids"])
 		tests_tabs_predic, tests_slot_predic = extract_results(tests_result["predicted"])
 		
@@ -215,7 +217,7 @@ while True:
 					file.write(f"MAX_TESTS_TABLE_F1: {MAX_TESTS_TABLE_F1}\n")
 					file.write(f"MAX_TESTS_SLOTS_F1: {MAX_TESTS_SLOTS_F1}\n")
 		
-			write_results(tests_result, name = dataset)
+			write_results(tests_result, name = f"logs/TESTS_{dataset}_E{EPOCHS}_B{batch_size}_L{current_lr}.log")
 		
 		tests_bar.write(f"MAX_TESTS_TOTAL_PR: {MAX_TESTS_TOTAL_PR}")
 		tests_bar.write(f"MAX_TESTS_TOTAL_RE: {MAX_TESTS_TOTAL_RE}")
@@ -225,7 +227,8 @@ while True:
 		tests_bar.write(f"MAX_TESTS_SLOTS_F1: {MAX_TESTS_SLOTS_F1}")
 		
 		#-----------------------------------------------------------#
-		
+		# VALIDATION
+
 		if "valid_loader" not in locals():
 			continue
 
@@ -238,6 +241,9 @@ while True:
 			v_size = vocab_size,
 			p_size = point_size,
 			vocab = vocab,
+			return_inputs = True,
+			beam_search = beam_search,
+			num_beams = num_beams,
 		)
 		
 		valid_tabs_labels, valid_slot_labels = extract_results(valid_result["label_ids"])
@@ -254,6 +260,8 @@ while True:
 			MAX_VALID_TABLE_F1 = valid_tabs_score["F"]
 			MAX_VALID_SLOTS_F1 = valid_slot_score["F"]
 
+			write_results(tests_result, name = f"logs/VALID_{dataset}_E{EPOCHS}_B{batch_size}_L{current_lr}.log")
+		
 		tests_bar.write("")
 
 		tests_bar.write(f"MAX_VALID_TOTAL_PR: {MAX_VALID_TOTAL_PR}")
@@ -271,14 +279,13 @@ while True:
 		best_f1 = MAX_TESTS_TOTAL_F1
 		best_lr = current_lr
 		
-	################################################################################
+	#################################################################
 
-	if not grid_search:
-		break
-
-	#if save_model:
-	#	torch.save(model.state_dict(), "models/model_snips_e50_b16.pt")
-
-with open("lr_grid_{dataset}_e{EPOCHS}_b{batch_size}.log", "w") as file:
-	file.write(f"Best F-Score: {best_f1}\n")
-	file.write(f"Best Learning-Rate: {best_lr}\n")
+# WRITE FINAL REPORT
+with open(f"logs/REPORT_{dataset}_E{EPOCHS}_B{batch_size}.log", "w") as file:
+	file.write(f"MINIMAL LR: {minimal_lr}")
+	file.write(f"MAXIMAL LR: {minimal_lr}")
+	file.write(f"GRID STEPS: {grid_steps}")
+	file.write( "--------------------" )
+	file.write(f"BEST SCORE: {best_f1}")
+	file.write(f"LEARN RATE: {best_lr}")

@@ -895,7 +895,7 @@ city == castle ;; timeRange == 17:43 ;; GetWeather
 object_name == the universe maker ;; rating_value == zero ;; RateBook
 condition_description == humidity ;; current_location == current place ;; spatial_relation == near ;; GetWeather
 city == delhi ;; party_size_number == three ;; restaurant_type == restaurant ;; state == arkansas ;; BookRestaurant
-country == åland ;; timeRange == 4 seconds from now ;; GetWeather
+country == aland ;; timeRange == 4 seconds from now ;; GetWeather
 current_location == here ;; GetWeather
 artist == yoshiki ;; playlist == 35 soul classics 1970 to 1975 ;; AddToPlaylist
 city == mccracken ;; condition_description == cloud ;; state == az ;; timeRange == today ;; GetWeather
@@ -913,7 +913,7 @@ artist == michael cretu ;; playlist == beach vibes ;; playlist_owner == my ;; Ad
 music_item == ballad ;; year == 1997 ;; PlayMusic
 object_name == the earth is a sinful song ;; SearchCreativeWork
 music_item == artist ;; playlist == metal party ;; AddToPlaylist
-country == åland ;; GetWeather
+country == aland ;; GetWeather
 object_part_of_series_type == series ;; object_select == this ;; rating_unit == stars ;; rating_value == 3 ;; RateBook
 location_name == mjr theatres ;; movie_name == the rum diary ;; timeRange == meal ;; SearchScreeningEvent
 entity_name == paloma negra ;; playlist == funky jams ;; playlist_owner == my ;; AddToPlaylist
@@ -8887,7 +8887,7 @@ movie_type == movies ;; spatial_relation == in the neighbourhood ;; SearchScreen
 object_name == blood tables ;; rating_unit == points ;; rating_value == 2 ;; RateBook
 party_size_number == 2 ;; restaurant_type == food court ;; sort == highly rated ;; timeRange == jul 4th ;; BookRestaurant
 movie_name == that night in rio ;; object_location_type == movie house ;; spatial_relation == closest ;; SearchScreeningEvent
-condition_temperature == colder ;; country == åland ;; GetWeather
+condition_temperature == colder ;; country == aland ;; GetWeather
 object_name == a city sleeps ;; object_type == television show ;; SearchCreativeWork
 city == alexander ;; state == sd ;; GetWeather
 object_name == may we borrow your husband ;; rating_value == zero ;; RateBook
@@ -9228,7 +9228,7 @@ facility == smoking room ;; restaurant_type == restaurant ;; state == al ;; Book
 cuisine == romagna ;; party_size_description == my parents and i ;; restaurant_type == brasserie ;; state == north dakota ;; BookRestaurant
 track == casino boogie ;; PlayMusic
 object_name == fear of a black hat ;; object_type == movie ;; SearchCreativeWork
-movie_name == 楽園追放 -expelled from paradise- ;; SearchScreeningEvent
+movie_name == -expelled from paradise- ;; SearchScreeningEvent
 city == whitewood ;; state == rhode island ;; timeRange == three ;; GetWeather
 artist == muireann nic amhlaoibh ;; music_item == song ;; sort == most popular ;; PlayMusic
 party_size_number == five ;; timeRange == five and a half months from now ;; BookRestaurant
@@ -12744,7 +12744,7 @@ object_part_of_series_type == series ;; object_select == current ;; rating_unit 
 condition_temperature == hot ;; current_location == current location ;; timeRange == this week ;; GetWeather
 restaurant_type == fast food ;; sort == highly rated ;; BookRestaurant
 restaurant_type == bar ;; served_dish == surf and turf ;; timeRange == in one minute ;; BookRestaurant
-country == åland ;; spatial_relation == far ;; BookRestaurant
+country == aland ;; spatial_relation == far ;; BookRestaurant
 party_size_number == 10 ;; restaurant_type == brasserie ;; sort == highly rated ;; state == kentucky ;; BookRestaurant
 location_name == mann theatres ;; object_type == movie schedule ;; SearchScreeningEvent
 entity_name == ik tara ;; playlist == pure seduction ;; AddToPlaylist

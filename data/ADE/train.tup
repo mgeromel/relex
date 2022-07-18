@@ -2647,7 +2647,7 @@ Spontaneous hemothorax ;; LMWH ;; adverse_effect
 severe hypocalcaemia ;; Zoledronic acid ;; adverse_effect
 augmentation ;; levodopa ;; adverse_effect || augmentation ;; levodopa ;; adverse_effect
 fever ;; Amifostine ;; adverse_effect
-mortality rate <3 ;; IL-2 ;; adverse_effect
+mortality rate <3% ;; IL-2 ;; adverse_effect
 Falling backward ;; bupropion ;; adverse_effect
 Angioimmunoblastic lymphadenopathy with dysproteinemia ;; doxycycline ;; adverse_effect
 Lichen planus ;; hepatitis B vaccination ;; adverse_effect
