@@ -55,23 +55,25 @@ dataset = "SNIPS" # point_size = 50, decode_length = 25, batch_size = 24, lr = 9
 dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 #-----------------------------------------------------------#
+# SELECT DATASET
+dataset = "ADE"
 
-dataset = "ATIS"
-
+# READ GRAMMAR / VOCABULARY
 gramm = gramm.GRAMMAR("gramm.txt")
 vocab = read_file("data/" + dataset + "/vocabulary.txt")
 vocab = dict(zip(vocab, range(len(vocab))))
 
+# SET MODEL-PARAMETERS
 gramm_size = gramm.size() + 1
 vocab_size = len(vocab)
 
 #-----------------------------------------------------------#
 # TRAINING PARAMETERS
 
-point_size = 75
-decode_length = 40
+point_size = 256
+decode_length = 64
 
-EPOCHS = 3
+EPOCHS = 1
 
 batch_size = 32
 skip_first = 0 # ignores evaluation of 'skip_first' epochs
@@ -80,18 +82,23 @@ beam_search = False
 num_beams = 1
 
 #-----------------------------------------------------------#
-		
-data_train = loadr.MyDataset("data/" + dataset + "/train", vocab, tokenizer, encode_length = point_size, decode_length = decode_length, strip = False)
-data_tests = loadr.MyDataset("data/" + dataset + "/test" , vocab, tokenizer, encode_length = point_size, decode_length = decode_length, strip = False)
+# LOAD: TRAIN- / TESTS- / VALID-DATA
+
+data_train = loadr.MyDataset("data/" + dataset + "/train", vocab, tokenizer, encode_length = point_size, decode_length = decode_length)
+data_tests = loadr.MyDataset("data/" + dataset + "/test" , vocab, tokenizer, encode_length = point_size, decode_length = decode_length)
 #data_valid = loadr.MyDataset("data/" + dataset + "/valid", vocab, tokenizer, encode_length = point_size, strip = True)
 
 train_loader = DataLoader(data_train, batch_size = batch_size, shuffle = True)
-tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = True)
+tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = False)
 #valid_loader = DataLoader(data_valid, batch_size = batch_size, shuffle = True)
 
-#-----------------------------------------------------------# 
+print("SUCCESS!")
+exit(1)
 
-grid_steps = 5
+#-----------------------------------------------------------# 
+# SWEEP PARAMETERS
+
+grid_steps = 1
 
 minimal_lr = 1e-5
 maximal_lr = 1e-4
@@ -106,12 +113,12 @@ for grid_step in range(grid_steps):
 	
 	current_lr = minimal_lr + (grid_step/grid_steps) * (maximal_lr - minimal_lr)
 
-	print("\n\n")
-	print(f"#--------------#--------------#")
-	print(f"> NEW GRID STEP: {grid_step}/{grid_steps}")
+	print("\n\n" * int(grid_steps > 0))
+	print(f"#--------------#--------------#--------------#")
+	print(f"> NEW GRID STEP: {grid_step + 1}/{grid_steps}")
 	print(f"> LEARNING-RATE: {current_lr} [{minimal_lr}, {maximal_lr}]")
 	print(f"> CURRENT SCORE: F1 = {best_f1}, LR = {best_lr}")
-	print(f"#--------------#--------------#\n")
+	print(f"#--------------#--------------#--------------#\n")
 
 	#-----------------------------------------------------------#
 
@@ -283,9 +290,9 @@ for grid_step in range(grid_steps):
 
 # WRITE FINAL REPORT
 with open(f"logs/REPORT_{dataset}_E{EPOCHS}_B{batch_size}.log", "w") as file:
-	file.write(f"MINIMAL LR: {minimal_lr}")
-	file.write(f"MAXIMAL LR: {minimal_lr}")
-	file.write(f"GRID STEPS: {grid_steps}")
-	file.write( "--------------------" )
-	file.write(f"BEST SCORE: {best_f1}")
-	file.write(f"LEARN RATE: {best_lr}")
+	file.write(f"MINIMAL LR: {minimal_lr}\n")
+	file.write(f"MAXIMAL LR: {minimal_lr}\n")
+	file.write(f"GRID STEPS: {grid_steps}\n")
+	file.write( "--------------------\n" )
+	file.write(f"BEST SCORE: {best_f1}\n")
+	file.write(f"LEARN RATE: {best_lr}\n")

@@ -9,6 +9,7 @@ def crop_list(vector, size, item):
 	 return vector[:size] + [item] * (size - len(vector))
 	
 def build_model_input(batch, tokenizer = None, decode_length = 64, encode_length = 256):
+
 	encoder_inputs = tokenizer(
 		batch["phrases"],
 		padding = "max_length",
@@ -37,14 +38,14 @@ def build_model_input(batch, tokenizer = None, decode_length = 64, encode_length
 #-----------------------------------------------------------#
 
 class MyDataset(torch.utils.data.Dataset):
-	def __init__(self, file_name, vocab, tokenizer, decode_length = 64, encode_length = 256, strip = False):
-		
-		data_sent = read_file(file_name + ".sent")
-		data_tups = read_file(file_name + ".tup" )
+	def __init__(self, file_name, vocab, tokenizer, decode_length = 64, encode_length = 256):
 		
 		print("> BUILDING DATA:", file_name)
 
-		data_tups = [ extract(rel, sent, vocab, tokenizer, strip = strip) for sent, rel in zip(data_sent, data_tups) ]
+		data_sent = read_file(file_name + ".sent")
+		data_sent = [ clean(sent, tokenizer) for sent in data_sent ]
+		data_tups = read_file(file_name + ".tup" )
+		data_tups = [ extract(rel, sent, vocab, tokenizer) for sent, rel in zip(data_sent, data_tups) ]
 		
 		self.data = { "phrases" : data_sent , "targets" : data_tups }
 		self.data = build_model_input(

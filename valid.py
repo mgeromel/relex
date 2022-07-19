@@ -74,7 +74,7 @@ def validate(
 
 		labels.extend(translate(batch["input_ids"], batch["decoder_input_ids"]))
 		predic.extend(translate(batch["input_ids"], output))
-		
+
 		if return_inputs:
 			for sequence in batch["input_ids"]:
 				text = tokenizer.decode(sequence, skip_special_tokens = True)
@@ -203,7 +203,7 @@ def translate(input_ids, batch, flag = False):
 			
 			if not dirty and "TABLE_ID" in table_dict:
 				temp_result.append(table_dict)
-		
+
 		final_result.append(temp_result)
 		
 	return final_result

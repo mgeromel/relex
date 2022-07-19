@@ -17,7 +17,7 @@ def read_file(filename):
 
 ##################################################
 
-def extract(labels, sentence, vocab, tokenizer, strip = False):
+def extract(labels, sentence, vocab, tokenizer):
 	
 	result = []
 	
@@ -42,12 +42,6 @@ def extract(labels, sentence, vocab, tokenizer, strip = False):
 			tokens = tokens[-1].split(" ^^ ")
 			
 			for token in tokens:
-				# REMOVE PUNCTUATION
-				if strip:
-					for sym in string.punctuation:
-						token = token.replace(sym, " ")
-					token = " ".join(token.split())
-				
 				result.append( (6, -100) + tuple(find(token, sentence, tokenizer)) )
 			
 			result.append( (7, -100, -100, -100) )
@@ -87,28 +81,26 @@ def clean(text, tokenizer):
 	tkns = tokenizer(text, add_special_tokens = False).input_ids
 	text = tokenizer.decode( tkns, skip_special_tokens = True)
 
-	return text # " ".join(text.split())
+	return " ".join(text.split())
 
 def find(word, sent, tokenizer):
-	sent = clean(sent, tokenizer)
 	word = clean(word, tokenizer)
-
+	
 	tokenization = tokenizer(sent, return_offsets_mapping = True, add_special_tokens = True)	
 	sents_tokens = tokenization.input_ids
 
 	offset_mapping = tokenization["offset_mapping"]
 
 	#------------------------------#
-
+	# FIND 'WORD' in 'SENT' via REGEX
 	bounds = r'(\s|\b|^|$|[!\"#$%&\'()*+,-./:;<=>?@\[\]^_`{|}~])'
 	search = re.search(bounds + re.escape(word) + bounds, sent)
-		
+
 	matched = search.group()
 	l_bound = search.span()[0] + matched.find(word)
 	r_bound = l_bound + len(word)
-	
 	#------------------------------#
-	
+	# FIND 'WORD'-TOKENS
 	l_index = len(offset_mapping) - 2
 	r_index = 0
 
@@ -118,17 +110,18 @@ def find(word, sent, tokenizer):
 			l_index = index - 1
 			break
 
-	# R_INDEX
+	# FIND R_INDEX
 	for index, offset in reversed(list(enumerate(offset_mapping[:-1]))):
 		if r_bound >= offset[1]:
 			r_index = index
 			break
 	#------------------------------#
+	# 'WORD' vs TOKENS 
 	
 	found = tokenizer.decode(sents_tokens[l_index: r_index + 1], skip_special_tokens = True)
 
 	if found.strip() != word:
-		print("\nMATCHING ERROR\n")
+		print("\n > MATCHING ERROR < \n")
 		import IPython ; IPython.embed() ; exit(1)
 	
 	return(l_index, r_index + 1)
@@ -140,8 +133,15 @@ def find(word, sent, tokenizer):
 def compute(predic, labels):
 	result = list((Counter(predic) & Counter(labels)).elements())
 	
-	if (len(predic) == 0):
+	if len(predic) == 0:
 		return 1, 0
+
+	if len(labels) == 0:
+		print(predic)
+	
+		import IPython ; IPython.embed() ; exit(1)
+
+		return 0, 1
 
 	precis = len(result) / len(predic)
 	recall = len(result) / len(labels)
@@ -182,7 +182,7 @@ def compute_metrics(pred, debug = False):
 		
 		pre = [linearize(x) for x in pre]
 		lab = [linearize(x) for x in lab]
-		
+
 		p, r = compute(pre, lab)
 		
 		recall.append(r)
