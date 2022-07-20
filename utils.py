@@ -83,24 +83,23 @@ def clean(text, tokenizer):
 
 	return " ".join(text.split())
 
-def find(word, sent, tokenizer):
-	word = clean(word, tokenizer)
-	
-	tokenization = tokenizer(sent, return_offsets_mapping = True, add_special_tokens = True)	
-	sents_tokens = tokenization.input_ids
+#------------------------------------------------#
 
-	offset_mapping = tokenization["offset_mapping"]
-
-	#------------------------------#
-	# FIND 'WORD' in 'SENT' via REGEX
+def find_word(word, sent):
 	bounds = r'(\s|\b|^|$|[!\"#$%&\'()*+,-./:;<=>?@\[\]^_`{|}~])'
 	search = re.search(bounds + re.escape(word) + bounds, sent)
 
 	matched = search.group()
+	
+	# CHECK & FIX ERROR
 	l_bound = search.span()[0] + matched.find(word)
 	r_bound = l_bound + len(word)
-	#------------------------------#
-	# FIND 'WORD'-TOKENS
+
+	return l_bound, r_bound
+
+#------------------------------------------------#
+
+def find_tokens(l_bound, r_bound, offset_mapping):
 	l_index = len(offset_mapping) - 2
 	r_index = 0
 
@@ -115,9 +114,29 @@ def find(word, sent, tokenizer):
 		if r_bound >= offset[1]:
 			r_index = index
 			break
+
+	return l_index, r_index
+
+#------------------------------------------------#
+
+def find(word, sent, tokenizer):
 	#------------------------------#
-	# 'WORD' vs TOKENS 
+
+	word = clean(word, tokenizer)
 	
+	tokenization = tokenizer(sent, return_offsets_mapping = True, add_special_tokens = True)	
+	sents_tokens = tokenization.input_ids
+
+	offset_mapping = tokenization["offset_mapping"]
+
+	#------------------------------#
+	# FIND 'WORD' in 'SENT' via REGEX	
+	l_bound, r_bound = find_word(word, sent)
+
+	# FIND 'WORD'-TOKENS
+	l_index, r_index = find_tokens(l_bound, r_bound, offset_mapping)
+	
+	# 'WORD' vs TOKENS 
 	found = tokenizer.decode(sents_tokens[l_index: r_index + 1], skip_special_tokens = True)
 
 	if found.strip() != word:
@@ -148,7 +167,7 @@ def compute(predic, labels):
 
 	return precis, recall
 
-#-----------------------------------------------------------#
+#------------------------------------------------#
 
 def linearize(element):
 	
@@ -166,7 +185,7 @@ def linearize(element):
 	
 	return str(element)
 
-#-----------------------------------------------------------#
+#------------------------------------------------#
 
 def compute_metrics(pred, debug = False):
 	

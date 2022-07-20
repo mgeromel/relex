@@ -21,77 +21,27 @@ class REBEL(torch.nn.Module):
 		
 		BartEncoder.forward = custom_encoder_forward
 		BartDecoder.forward = custom_decoder_forward
-		
-		if self.__load_model:
-			# 0. TOKENIZER
-			self.tokenizer = tokenizer
-			self.basemodel = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
-			self.basemodel.resize_token_embeddings(len(tokenizer))
-			
-			# 1. ENCODER
-			self.encoder = self.basemodel.model.encoder
-			self.encoder.gradient_checkpointing = True
-			
-			# 1.5 FREEZE LAYERS 0..5 
-			for layer in self.encoder.layers[:12]:
-				for param in layer.parameters():
-					param.requires_grad = False
-				
-			# 2. DECODER
-			self.decoder = self.basemodel.model.decoder
-			self.decoder.resize_token_embeddings(len(tokenizer))
-			self.decoder.gradient_checkpointing = True
-			self.decoder.config.use_cache = False
-			
-		else:
-			# 0. BASEMODEL
-			self.tokenizer = tokenizer
-			self.basemodel = BartForConditionalGeneration(
-				BartConfig(
-					vocab_size = len(tokenizer),
-					encoder_layers = 6,
-					decoder_layers = 6,
-					use_cache = False,
-				)
-			)
-
-			# 1. ENCODER
-			self.encoder = self.basemodel.model.encoder
-			self.encoder.gradient_checkpointing = True
-
-			# 2. DECODER
-			self.decoder = self.basemodel.model.decoder
-			self.decoder.gradient_checkpointing = True
-		
-	def __init__backup(self, tokenizer):
-		super(REBEL, self).__init__()
-		
+	
 		# 0. TOKENIZER
 		self.tokenizer = tokenizer
+		self.basemodel = BartForConditionalGeneration.from_pretrained('facebook/bart-base')
+		self.basemodel.resize_token_embeddings(len(tokenizer))
 		
 		# 1. ENCODER
-		self.encoder = AlbertModel.from_pretrained(
-			"albert-base-v1",
-			add_pooling_layer = False,
-		)
+		self.encoder = self.basemodel.model.encoder
+		self.encoder.gradient_checkpointing = True
 		
-		self.encoder.resize_token_embeddings(len(tokenizer))
-		
+		# 1.5 FREEZE LAYERS 0..5 
+		frozen_layers = 0
+		for layer in self.encoder.layers[:frozen_layers]:
+			for param in layer.parameters():
+				param.requires_grad = False
+			
 		# 2. DECODER
-		self.decoder = BertGenerationDecoder(
-			BertGenerationConfig(
-				vocab_size = len(tokenizer),
-				add_cross_attention = True,
-				is_decoder = True, 
-				use_cache = False,
-				hidden_size = 768,
-				num_hidden_layers = 8,
-				num_attention_heads = 12,
-				intermediate_size = 2048
-			)
-		)
-		
-		self.decoder.bert.encoder.gradient_checkpointing = True
+		self.decoder = self.basemodel.model.decoder
+		self.decoder.resize_token_embeddings(len(tokenizer))
+		self.decoder.gradient_checkpointing = True
+		self.decoder.config.use_cache = False
 		
 	#--------------------------------------------#
 	
@@ -125,39 +75,6 @@ class REBEL(torch.nn.Module):
 		)
 		
 		logits = output.logits
-		loss = self.compute_loss(logits, labels)
-			
-		return {
-			"loss": loss,
-			"logits": logits
-		}
-	
-	def forward_backup(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None):
-		
-		# 1. ENCODER
-		if encoder_outputs is None:
-			encoder_outputs = self.encoder(
-				input_ids = input_ids,
-				attention_mask = attention_mask,
-				output_hidden_states = True,
-				return_dict = True,
-			)
-		
-		encoder_hidden_states = encoder_outputs[0]
-		
-		# 2. DECODER
-		decoder_outputs = self.decoder(
-			input_ids = decoder_input_ids.long(),
-			attention_mask = decoder_attention_mask,
-			encoder_hidden_states = encoder_hidden_states,
-			encoder_attention_mask = attention_mask,
-			#labels = labels,
-			output_hidden_states = False,
-			output_attentions = False,
-			return_dict = True
-		)
-		
-		logits = decoder_outputs["logits"]
 		loss = self.compute_loss(logits, labels)
 			
 		return {

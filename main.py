@@ -56,7 +56,7 @@ dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 #-----------------------------------------------------------#
 # SELECT DATASET
-dataset = "ADE"
+dataset = "CoNLL04"
 
 # READ GRAMMAR / VOCABULARY
 gramm = gramm.GRAMMAR("gramm.txt")
@@ -70,8 +70,8 @@ vocab_size = len(vocab)
 #-----------------------------------------------------------#
 # TRAINING PARAMETERS
 
-point_size = 256
-decode_length = 64
+point_size = 145
+decode_length = 35
 
 EPOCHS = 1
 
@@ -92,28 +92,27 @@ train_loader = DataLoader(data_train, batch_size = batch_size, shuffle = True)
 tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = False)
 #valid_loader = DataLoader(data_valid, batch_size = batch_size, shuffle = True)
 
-print("SUCCESS!")
-exit(1)
-
 #-----------------------------------------------------------# 
 # SWEEP PARAMETERS
-
-grid_steps = 1
 
 minimal_lr = 1e-5
 maximal_lr = 1e-4
 
+increments = 0.5 * minimal_lr
+
+grid_steps = int((maximal_lr - minimal_lr) / increments) + 1
+
 best_f1 = 0
-best_lr = 0
+best_lr = minimal_lr
 
 for grid_step in range(grid_steps):
 	
 	# SET SEED & LEARNING RATE
 	set_seed(1)
-	
-	current_lr = minimal_lr + (grid_step/grid_steps) * (maximal_lr - minimal_lr)
 
-	print("\n\n" * int(grid_steps > 0))
+	current_lr = minimal_lr + grid_step * increments
+
+	print("\n\n\n" * int(grid_step > 0))
 	print(f"#--------------#--------------#--------------#")
 	print(f"> NEW GRID STEP: {grid_step + 1}/{grid_steps}")
 	print(f"> LEARNING-RATE: {current_lr} [{minimal_lr}, {maximal_lr}]")
@@ -121,7 +120,7 @@ for grid_step in range(grid_steps):
 	print(f"#--------------#--------------#--------------#\n")
 
 	#-----------------------------------------------------------#
-
+   
 	# INITIALIZE MODEL
 	model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
 	model = model.to(device)

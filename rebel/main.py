@@ -31,9 +31,9 @@ def set_seed(num):
 	
 	numpy.random.seed(num)
 	
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+set_seed(1)
 
-set_seed(1001)
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 #------------------------------------------------#
 
@@ -45,26 +45,27 @@ set_seed(1001)
 # dloader = ATISLoader() 		# encode_len =  60, decode_len = 32, batch_size = 16, learning_rate = 5e-5
 # dloader = SNIPSLoader() 		# encode_len =  45, decode_len = 48, batch_size = 16, learning_rate = 5e-5
 
-dloader = SNIPSLoader()
+dloader = ATISLoader()
 dreader = SEQReader(dloader)
 
-#tokenizer = AlbertTokenizer.from_pretrained("albert-base-v1")
-tokenizer = BartTokenizer.from_pretrained("facebook/bart-large")
+tokenizer = AlbertTokenizer.from_pretrained("albert-base-v1")
+#tokenizer = BartTokenizer.from_pretrained("facebook/bart-base")
 tokenizer.add_tokens(dloader.tokens(), special_tokens = True)
 
-num_epochs = 10
+num_epochs = 2
 round_skip = 0 # \in [0, ..., num_epochs - 1]
+current_lr = 5e-5
 
 batch_size = 1
-encode_len = 60
-decode_len = 48
+encode_len = 64
+decode_len = 32
 
-num_sample = 2
+num_sample = 10
 
 #------------------------------------------------#
 
-data_train = dloader.load("../data/SNIPS/", "train")
-data_tests = dloader.load("../data/SNIPS/", "test")
+data_train = dloader.load("../data/ATIS/", "train")
+data_tests = dloader.load("../data/ATIS/", "test")
 #data_valid = dloader.load("../data/ADE/", "valid")
 
 data_train = CustomDataset(data_train, tokenizer, encode_len = encode_len, decode_len = decode_len)
@@ -80,12 +81,9 @@ tests_loader = torch.utils.data.DataLoader(data_tests, batch_size = batch_size, 
 model = REBEL(tokenizer)
 model.to(device)
 
-optimizer = torch.optim.AdamW(model.parameters(), lr = 5e-5)
+optimizer = torch.optim.AdamW(model.parameters(), lr = current_lr)
 ampscaler = torch.cuda.amp.GradScaler()
-scheduler = transformers.get_constant_schedule_with_warmup(
-	optimizer = optimizer,
-	num_warmup_steps = 0.1 * num_epochs * len(train_loader)
-)
+scheduler = transformers.get_constant_schedule(optimizer = optimizer)
 
 train_bar = tqdm.tqdm(total = num_epochs * len(train_loader), leave = False, position = 0, desc = "TRAIN")
 tests_bar = tqdm.tqdm(total = num_epochs * len(tests_loader), leave = False, position = 1, desc = "TESTS")
@@ -129,7 +127,7 @@ for epoch in range(num_epochs):
 	
 	#-----------------------------------------------------------#
 
-	if epoch < round_skip:
+	if epoch + 1 < round_skip:
 		continue
 
 	tests_bar.write(f"VALIDATE {epoch + 1}/{num_epochs}:")
@@ -150,7 +148,7 @@ for epoch in range(num_epochs):
 		MAX_TESTS_TOTAL_RE = tests_score["R"]
 		MAX_TESTS_TOTAL_F1 = tests_score["F"]
 		
-		write_results(tests_result, name = dloader.name())
+		write_results(tests_result, name = f"logs/TESTS_{dloader.name()}_E{num_epochs}_B{batch_size}_L{current_lr}.log")
 		
 	for i in range(num_sample):
 		print("labels:", tests_result["labels"][i])
@@ -190,5 +188,3 @@ for epoch in range(num_epochs):
 	tests_bar.write("o" + "-----" * 6 + "o")
 	
 	#-----------------------------------------------------------#
-
-import IPython ; IPython.embed() ; exit(1)
