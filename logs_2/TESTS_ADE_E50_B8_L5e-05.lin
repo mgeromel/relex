@@ -1,0 +1,852 @@
+INPUTS :: conversely, diffuse interstitial pulmonary fibrosis should be considered in the differential diagnosis of patients receiving methotrexate who develop bilateral pulmonary infiltrates seen on chest roentgenograms.
+LABELS :: {'head': 'diffuse interstitial pulmonary fibrosis', 'tail': 'methotrexate'}, {'head': 'bilateral pulmonary infiltrates', 'tail': 'methotrexate'}
+PREDIC :: {'head': 'bilateral pulmonary infiltrates', 'tail': 'methotrexate'}, {'head': 'diffuse interstitial pulmonary infiltrates', 'tail': 'methotrexate'}
+
+INPUTS :: disulfiram-induced fulminant hepatic failure in an active duty soldier.
+LABELS :: {'head': 'fulminant hepatic failure', 'tail': 'disulfiram'}
+PREDIC :: {'head': 'fulminant hepatic failure', 'tail': 'disulfiram'}
+
+INPUTS :: we report a case of acne fulminans occurring during treatment with 13-cis-retinoic acid for cystic acne.
+LABELS :: {'head': 'acne fulminans', 'tail': '13-cis-retinoic acid'}
+PREDIC :: {'head': 'acne fulminans', 'tail': '13-cis-retinoic acid'}
+
+INPUTS :: acute pancreatitis associated with danazol treatment for endometriosis.
+LABELS :: {'head': 'acute pancreatitis', 'tail': 'danazol'}
+PREDIC :: {'head': 'acute pancreatitis', 'tail': 'danazol'}
+
+INPUTS :: our cases constitute the most severe cases of benzarone hepatotoxicity reported so far, and comprise the first cases of (sub)fulminant hepatitis and cirrhosis related to benzarone.
+LABELS :: {'head': '(sub)fulminant hepatitis', 'tail': 'benzarone'}, {'head': 'cirrhosis', 'tail': 'benzarone'}, {'head': 'hepatotoxicity', 'tail': 'benzarone'}
+PREDIC :: {'head': 'severe', 'tail': 'benzarone'}, {'head': 'cirrhosis', 'tail': 'benzarone'}, {'head': 'hepatotoxicity', 'tail': 'benzarone'}
+
+INPUTS :: the spectrum of nitrofurantoin lung injury continues to widen.
+LABELS :: {'head': 'lung injury', 'tail': 'nitrofurantoin'}
+PREDIC :: {'head': 'nitrofurantoin lung injury', 'tail': 'nitrofurantoin'}
+
+INPUTS :: clinical and morphological features of gold neuropathy.
+LABELS :: {'head': 'neuropathy', 'tail': 'gold'}
+PREDIC :: {'head': 'gold neuropathy', 'tail': 'gold'}
+
+INPUTS :: the currently available clinical and neuropharmacologic data suggest that carbamazepine may be an antagonist of dopamine and that this property is responsible for the production of dystonia.
+LABELS :: {'head': 'dystonia', 'tail': 'carbamazepine'}
+PREDIC :: {'head': 'dystonia', 'tail': 'carbamazepine'}
+
+INPUTS :: we report a case of codeine intoxication in the neonate, in which the drug was prescribed for cough control during an emergency department visit.
+LABELS :: {'head': 'codeine intoxication', 'tail': 'codeine'}
+PREDIC :: {'head': 'codeine intoxication', 'tail': 'codeine'}
+
+INPUTS :: pneumonitis, bilateral pleural effusions, echocardiographic evidence of cardiac tamponade, and positive autoantibodies developed in a 43-year-old man, who was receiving long-term sulfasalazine therapy for chronic ulcerative colitis.
+LABELS :: {'head': 'pneumonitis', 'tail': 'sulfasalazine'}, {'head': 'bilateral pleural effusions', 'tail': 'sulfasalazine'}, {'head': 'positive autoantibodies', 'tail': 'sulfasalazine'}, {'head': 'cardiac tamponade', 'tail': 'sulfasalazine'}
+PREDIC :: {'head': 'pneumonitis', 'tail': 'sulfasalazine'}, {'head': 'bilateral pleural effusions', 'tail': 'sulfasalazine'}, {'head': 'pneumonitis', 'tail': 'sulfasalazine'}
+
+INPUTS :: purpose: we evaluated the in vitro hemodialysis ratio and subsequent toxicity and pharmacokinetics of ifosfamide in an anephric patient with wilms' tumor.
+LABELS :: {'head': 'ifosfamide', 'tail': 'toxicity'}
+PREDIC :: {'head': 'toxicity', 'tail': 'ifosfamide'}
+
+INPUTS :: syndrome of inappropriate antidiuretic hormone associated with vinorelbine therapy.
+LABELS :: {'head': 'syndrome of inappropriate antidiuretic hormone', 'tail': 'vinorelbine'}
+PREDIC :: {'head': 'syndrome of inappropriate antidiuretic hormone', 'tail': 'vinorelbine'}
+
+INPUTS :: after discontinuation of danazol the diabetes completely resolved.
+LABELS :: {'head': 'diabetes', 'tail': 'danazol'}
+PREDIC :: {'head': 'diabetes', 'tail': 'danazol'}
+
+INPUTS :: ulcerative proctitis in juvenile systemic lupus erythematosus after ibuprofen treatment.
+LABELS :: {'head': 'ulcerative proctitis', 'tail': 'ibuprofen'}
+PREDIC :: {'head': 'ulcerative proctitis', 'tail': 'ibuprofen'}
+
+INPUTS :: malignant mixed mullerian tumor of the uterus in a patient taking raloxifene.
+LABELS :: {'head': 'malignant mixed mullerian tumor of the uterus', 'tail': 'raloxifene'}
+PREDIC :: {'head': 'malignant mixed mullerian tumor of the uterus', 'tail': 'raloxifene'}
+
+INPUTS :: a 7-year-old boy developed a severe unilateral grand mal seizure at the age of 5 years (phenobarbitone therapy); 1.5 years later valproate (2-propylpentanoic acid, vpa) was added to the therapy.
+LABELS :: {'head': 'severe unilateral grand mal seizure', 'tail': '2-propylpentanoic acid'}, {'head': 'severe unilateral grand mal seizure', 'tail': 'phenobarbitone'}, {'head': 'severe unilateral grand mal seizure', 'tail': 'valproate'}, {'head': 'severe unilateral grand mal seizure', 'tail': 'vpa'}
+PREDIC :: {'head': 'severe unilateral grand mal seizure', 'tail': '5-propylpentanoic acid'}, {'head': 'severe unilateral grand mal seizure', 'tail': 'vpa'}
+
+INPUTS :: we herein report this rare case of acute onset of nephrotic syndrome during interferon-alpha retreatment.
+LABELS :: {'head': 'nephrotic syndrome', 'tail': 'interferon-alpha'}
+PREDIC :: {'head': 'nephrotic syndrome', 'tail': 'interferon-alpha'}
+
+INPUTS :: we report a case of severe avp three weeks following the administration of infliximab for the treatment of crohn's disease (cd).
+LABELS :: {'head': 'severe avp', 'tail': 'infliximab'}
+PREDIC :: {'head': 'severe avp', 'tail': 'infliximab'}
+
+INPUTS :: in this case, interferon alpha induced polymyositis and cardiomyopathy is diagnosed in a 33-yr-old male patient with history of chronic hepatitis b.
+LABELS :: {'head': 'polymyositis', 'tail': 'interferon alpha'}, {'head': 'cardiomyopathy', 'tail': 'interferon alpha'}
+PREDIC :: {'head': 'polymyositis', 'tail': 'interferon alpha'}, {'head': 'cardiomyopathy', 'tail': 'interferon alpha'}
+
+INPUTS :: progressive hypoxemia mandated endotracheal intubation 1 week after rituximab administration and led to death 4 weeks after admission.
+LABELS :: {'head': 'progressive hypoxemia', 'tail': 'rituximab'}
+PREDIC :: {'head': 'progressive hypoxemia mandated endotracheal intubation', 'tail': 'rituximab'}
+
+INPUTS :: we report one case of non-hodgkin lymphoma in a patient, with a 30-year history of rheumatoid arthritis, taking low dose methotrexate weekly over a 10-month period.
+LABELS :: {'head': 'non-hodgkin lymphoma', 'tail': 'methotrexate'}
+PREDIC :: {'head': 'non-hodgkin lymphoma', 'tail': 'methotrexate'}
+
+INPUTS :: aims: to present a case of piloerection after replacing fluvoxamine maleate with milnacipran hydrochloride, and to analyse this effect based on receptor occupancy theory.
+LABELS :: {'head': 'piloerection', 'tail': 'fluvoxamine maleate'}, {'head': 'piloerection', 'tail': 'milnacipran hydrochloride'}
+PREDIC :: {'head': 'piloerection', 'tail': 'fluvoxamine maleate'}, {'head': 'piloerection', 'tail': 'milnacipran hydrochloride'}
+
+INPUTS :: cutaneous rashes and eruptions can be caused by many medications, including carbamazepine.
+LABELS :: {'head': 'cutaneous rashes', 'tail': 'carbamazepine'}, {'head': 'eruptions', 'tail': 'carbamazepine'}
+PREDIC :: {'head': 'eruptions', 'tail': 'carbamazepine'}, {'head': 'cutaneous rashes', 'tail': 'carbamazepine'}
+
+INPUTS :: conclusion: hypersensitivity reaction should be considered in patients who develop recurrent eosinophilia and deterioration of pulmonary function following the use of tobramycin by inhalation or by intravenous administration.
+LABELS :: {'head': 'deterioration of pulmonary function', 'tail': 'tobramycin'}, {'head': 'recurrent eosinophilia', 'tail': 'tobramycin'}
+PREDIC :: {'head': 'hypersensitivity reaction', 'tail': 'tobramycin'}, {'head': 'deterioration of pulmonary function', 'tail': 'tobramycin'}
+
+INPUTS :: a teenage girl with crescentic glomerulonephritis had antineutrophil cytoplasmic antibody (anca) detected after she had received propylthiouracil (ptu) for hyperthyroidism without cutaneous vasculitis.
+LABELS :: {'head': 'antineutrophil cytoplasmic antibody', 'tail': 'propylthiouracil'}, {'head': 'antineutrophil cytoplasmic antibody', 'tail': 'ptu'}
+PREDIC :: {'head': 'antineutrophil cytoplasmic antibody (anca) detected', 'tail': 'propylthiouracil'}, {'head': 'antineutrophil cytoplasmic antibody (anca) detected', 'tail': 'ptu'}, {'head': 'crescentic glomerulonephritis', 'tail': 'propylthiouracil'}, {'head': 'crescentic glomerulonephritis', 'tail': 'ptu'}
+
+INPUTS :: i report a 35-year-old woman with occult coronary artery disease who experienced cardiac arrest within minutes after receiving a first-time dose of subcutaneous sumatriptan for migraine.
+LABELS :: {'head': 'cardiac arrest', 'tail': 'sumatriptan'}
+PREDIC :: {'head': 'cardiac arrest', 'tail': 'migraine'}, {'head': 'cardiac arrest', 'tail': 'sumatriptan'}
+
+INPUTS :: valvular heart disease in a patient taking benfluorex.
+LABELS :: {'head': 'valvular heart disease', 'tail': 'benfluorex'}
+PREDIC :: {'head': 'valvular heart disease', 'tail': 'benfluorex'}
+
+INPUTS :: conclusions: life-threatening adrenal suppression, requiring hydrocortisone supplementation and intensive therapy, was observed and successfully treated in a newborn, whose mother had received high-dose methylprednisolone in late pregnancy.
+LABELS :: {'head': 'adrenal suppression', 'tail': 'methylprednisolone'}
+PREDIC :: {'head': 'adrenal suppression', 'tail': 'methylprednisolone'}
+
+INPUTS :: we observed transient panhypogammaglobulinaemia in a patient with neuropsychiatric sle after treatment with prednisolone and cyclophosphamide.
+LABELS :: {'head': 'panhypogammaglobulinaemia', 'tail': 'cyclophosphamide'}, {'head': 'panhypogammaglobulinaemia', 'tail': 'prednisolone'}
+PREDIC :: {'head': 'transient panhypogammaglobulinaemia', 'tail': 'cyclophosphamide'}, {'head': 'transient panhypogammaglobulinaemia', 'tail': 'prednisolone'}
+
+INPUTS :: erythropoietin is beneficial in mitomycin-induced hemolytic-uremic syndrome.
+LABELS :: {'head': 'hemolytic-uremic syndrome', 'tail': 'mitomycin'}
+PREDIC :: {'head': 'hemolytic-uremic syndrome', 'tail': 'mitomycin'}
+
+INPUTS :: we report two adults who received gabapentin (gbp) and subsequently developed behavioural side effects.
+LABELS :: {'head': 'behavioural side effects', 'tail': 'gabapentin'}, {'head': 'behavioural side effects', 'tail': 'gbp'}
+PREDIC :: {'head': 'behavioural side effects', 'tail': 'gabapentin'}
+
+INPUTS :: drug-induced eosinophilia is a non-dose-dependent side effect of clozapine.
+LABELS :: {'head': 'eosinophilia', 'tail': 'clozapine'}
+PREDIC :: {'head': 'eosinophilia', 'tail': 'clozapine'}
+
+INPUTS :: rhabdomyolysis has been recognized as a complication of tocolytic therapy with ritodrine hydrochloride.
+LABELS :: {'head': 'rhabdomyolysis', 'tail': 'ritodrine hydrochloride'}
+PREDIC :: {'head': 'rhabdomyolysis', 'tail': 'ritodrine hydrochloride'}
+
+INPUTS :: a 61-year-old man with early diffuse cutaneous scleroderma with myositis and progressive interstitial pneumonia developed generalized erythema with high fever 3 weeks after taking sulfamethoxazole/trimethoprim.
+LABELS :: {'head': 'generalized erythema', 'tail': 'sulfamethoxazole'}, {'head': 'generalized erythema', 'tail': 'trimethoprim'}
+PREDIC :: {'head': 'fever', 'tail': 'sulfamethoxazole'}, {'head': 'fever', 'tail': 'trimethoprim'}, {'head': 'generalized erythema', 'tail': 'sulfamethoxazole'}, {'head': 'generalized erythema', 'tail': 'trimethoprim'}, {'head': 'high fever', 'tail': 'sulfamethoxazole'}, {'head': 'high fever', 'tail': 'trimethoprim'}
+
+INPUTS :: we reviewed the literature in an attempt to characterize the pattern and predictors of tmp/smx-induced aseptic meningitis.
+LABELS :: {'head': 'aseptic meningitis', 'tail': 'smx'}, {'head': 'aseptic meningitis', 'tail': 'tmp'}
+PREDIC :: {'head': 'aseptic meningitis', 'tail': 'tmp'}
+
+INPUTS :: we report the first case, to our knowledge, of rituximab-related autoimmune hemolytic anemia.
+LABELS :: {'head': 'autoimmune hemolytic anemia', 'tail': 'rituximab'}
+PREDIC :: {'head': 'autoimmune hemolytic anemia', 'tail': 'rituximab'}
+
+INPUTS :: the possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy.
+LABELS :: {'head': 'rash', 'tail': 'phenytoin'}, {'head': 'hypersensitivity reactions', 'tail': 'phenytoin'}, {'head': 'lymphadenopathy', 'tail': 'phenytoin'}, {'head': 'fever', 'tail': 'phenytoin'}
+PREDIC :: {'head': 'hepatitis', 'tail': 'phenytoin'}, {'head': 'fever', 'tail': 'phenytoin'}, {'head': 'rash', 'tail': 'phenytoin'}, {'head': 'lymphadenopathy', 'tail': 'phenytoin'}, {'head': 'phenytoin hypersensitivity reactions', 'tail': 'phenytoin'}
+
+INPUTS :: does acyclovir increase serum lithium levels?
+LABELS :: {'head': 'increase serum lithium levels', 'tail': 'acyclovir'}
+PREDIC :: {'head': 'increase serum lithium levels', 'tail': 'acyclovir'}, {'head': 'increase serum lithium levels', 'tail': 'lithium'}
+
+INPUTS :: introduction of etanercept was also clinically effective but followed by development of severe heart failure.
+LABELS :: {'head': 'severe heart failure', 'tail': 'etanercept'}
+PREDIC :: {'head': 'severe heart failure', 'tail': 'etanercept'}
+
+INPUTS :: objective: to describe a case of severe skin necrosis resulting from peripheral intravenous administration of low-dose vasopressin in a patient with catecholamine-resistant septic shock.
+LABELS :: {'head': 'skin necrosis', 'tail': 'vasopressin'}
+PREDIC :: {'head': 'severe skin necrosis', 'tail': 'vasopressin'}
+
+INPUTS :: alprazolam withdrawal delirium unresponsive to diazepam: case report.
+LABELS :: {'head': 'delirium', 'tail': 'alprazolam'}
+PREDIC :: {'head': 'alprazolam withdrawal delirium', 'tail': 'diazepam'}
+
+INPUTS :: focal renal cortical necrosis associated with zomepirac.
+LABELS :: {'head': 'focal renal cortical necrosis', 'tail': 'zomepirac'}
+PREDIC :: {'head': 'focal renal cortical necrosis', 'tail': 'zomepirac'}
+
+INPUTS :: this report describes a case of paradoxical, intravenous valproic acid-induced seizure exacerbation in a child with juvenile absence epilepsy, documented by video-electroencephalography.
+LABELS :: {'head': 'seizure exacerbation', 'tail': 'paradoxical'}, {'head': 'seizure exacerbation', 'tail': 'valproic acid'}
+PREDIC :: {'head': 'seizure exacerbation', 'tail': 'valproic acid'}
+
+INPUTS :: prolongation of the qt interval observed in a japanese patient with vivax malaria following treatment with halofantrine.
+LABELS :: {'head': 'prolongation of the qt interval', 'tail': 'halofantrine'}
+PREDIC :: {'head': 'prolongation of the qt interval', 'tail': 'halofantrine'}
+
+INPUTS :: a case of toxic hepatitis caused by combination therapy with methotrexate and etretinate in the treatment of severe psoriasis is presented in a 47-year-old woman.
+LABELS :: {'head': 'toxic hepatitis', 'tail': 'etretinate'}, {'head': 'toxic hepatitis', 'tail': 'methotrexate'}
+PREDIC :: {'head': 'toxic hepatitis', 'tail': 'etretinate'}, {'head': 'toxic hepatitis', 'tail': 'methotrexate'}
+
+INPUTS :: relapse in the external auditory canal of acute promyelocytic leukemia after treatment with all-trans retinoic acid.
+LABELS :: {'head': 'relapse in the external auditory canal of acute promyelocytic leukemia', 'tail': 'all-trans retinoic acid'}
+PREDIC :: {'head': 'acute promyelocytic leukemia', 'tail': 'all-trans retinoic acid'}
+
+INPUTS :: the bleeding resolved on discontinuation of apv.
+LABELS :: {'head': 'bleeding', 'tail': 'apv'}
+PREDIC :: {'head': 'bleeding', 'tail': 'discontinuation'}
+
+INPUTS :: anhedonic ejaculation with desipramine.
+LABELS :: {'head': 'anhedonic ejaculation', 'tail': 'desipramine'}
+PREDIC :: {'head': 'anhedonic ejaculation', 'tail': 'desipramine'}
+
+INPUTS :: a 52-year-old black woman on phenytoin therapy for post-traumatic epilepsy developed transient hemiparesis contralateral to the injury.
+LABELS :: {'head': 'transient hemiparesis', 'tail': 'phenytoin'}
+PREDIC :: {'head': 'transient hemiparesis contralateral', 'tail': 'phenytoin'}
+
+INPUTS :: anastrozole-associated sclerosing glomerulonephritis in a patient with breast cancer.
+LABELS :: {'head': 'sclerosing glomerulonephritis', 'tail': 'anastrozole'}
+PREDIC :: {'head': 'sclerosing glomerulonephritis', 'tail': 'anastrozole'}
+
+INPUTS :: visceral herpesvirus infections in leukemic patients receiving cytarabine.
+LABELS :: {'head': 'visceral herpesvirus infections', 'tail': 'cytarabine'}
+PREDIC :: {'head': 'visceral herpesvirus infections', 'tail': 'cytarabine'}
+
+INPUTS :: docetaxel induced meibomian duct inflammation and blockage is the likely cause of this presentation in a patient with no history of eyelid masses in the past.
+LABELS :: {'head': 'meibomian duct inflammation and blockage', 'tail': 'docetaxel'}
+PREDIC :: {'head': 'meibomian duct inflammation and blockage', 'tail': 'docetaxel'}
+
+INPUTS :: however, the occurrence and management of akathisia induced by fluvoxamine have not been described.
+LABELS :: {'head': 'akathisia', 'tail': 'fluvoxamine'}
+PREDIC :: {'head': 'akathisia', 'tail': 'fluvoxamine'}
+
+INPUTS :: a child in whom a phenobarbital hypersensitivity drug reaction developed which consisted of fever, a pruritic desquamating erythrodermic rash, alopecia, icterus, protein-losing enteropathy, myositis, and nephritis, is described.
+LABELS :: {'head': 'nephritis', 'tail': 'phenobarbital'}, {'head': 'protein-losing enteropathy', 'tail': 'phenobarbital'}, {'head': 'a pruritic desquamating erythrodermic rash', 'tail': 'phenobarbital'}, {'head': 'fever', 'tail': 'phenobarbital'}, {'head': 'icterus', 'tail': 'phenobarbital'}, {'head': 'hypersensitivity', 'tail': 'phenobarbital'}, {'head': 'myositis', 'tail': 'phenobarbital'}
+PREDIC :: {'head': 'fever', 'tail': 'phenobarbital'}, {'head': 'nausea', 'tail': 'phenobarbital'}, {'head': 'rash', 'tail': 'phenobarbital'}, {'head': 'protein-losing enteropathy', 'tail': 'phenobarbital'}, {'head': 'nephritis', 'tail': 'phenobarbital'}, {'head': 'myositis', 'tail': 'phenobarbital'}
+
+INPUTS :: the disease predisposes to severe vincristine neurotoxicity.
+LABELS :: {'head': 'vincristine neurotoxicity', 'tail': 'vincristine'}
+PREDIC :: {'head': 'neurotoxicity', 'tail': 'vincristine'}
+
+INPUTS :: we present the case of a patient who had undergone cholecystectomy previously, but in whom morphine given in the emergency department precipitated pain consistent with biliary colic; the pain resolved promptly after administration of naloxone.
+LABELS :: {'head': 'biliary colic', 'tail': 'morphine'}, {'head': 'pain', 'tail': 'morphine'}
+PREDIC :: {'head': 'cholecystectomy previously', 'tail': 'naloxone'}
+
+INPUTS :: fatal toxic epidermal necrolysis related to lamotrigine administration.
+LABELS :: {'head': 'fatal toxic epidermal necrolysis', 'tail': 'lamotrigine'}
+PREDIC :: {'head': 'fatal toxic epidermal necrolysis', 'tail': 'lamotrigine'}
+
+INPUTS :: acute dystonic reaction with low-dose pimozide.
+LABELS :: {'head': 'acute dystonic reaction', 'tail': 'pimozide'}
+PREDIC :: {'head': 'acute dystonic reaction', 'tail': 'pimozide'}
+
+INPUTS :: both colchicine and statin therapy may be associated with myopathy, which usually occurs after several months of therapy.
+LABELS :: {'head': 'myopathy', 'tail': 'colchicine'}, {'head': 'myopathy', 'tail': 'statin'}
+PREDIC :: {'head': 'myopathy', 'tail': 'colchicine'}, {'head': 'myopathy', 'tail': 'statin'}
+
+INPUTS :: conclusion: healthcare professionals should be aware of the possible development of serotonin syndrome as a complication of initiation of fentanyl and other phenylpiperidine opioids in patients treated with ssris.
+LABELS :: {'head': 'serotonin syndrome', 'tail': 'fentanyl'}
+PREDIC :: {'head': 'serotonin syndrome', 'tail': 'fentanyl'}
+
+INPUTS :: we report a case of reversible dka and new-onset dm that developed in a demented patient who was treated with quetiapine for 14 days.
+LABELS :: {'head': 'dm', 'tail': 'quetiapine'}, {'head': 'dka', 'tail': 'quetiapine'}
+PREDIC :: {'head': 'reversible dka', 'tail': 'quetiapine'}, {'head': 'new-onset dm', 'tail': 'quetiapine'}
+
+INPUTS :: initiation of posaconazole led to clinical improvement until the patient's demise from bacteremic vancomycin-resistant enterococcal peritonitis.
+LABELS :: {'head': 'enterococcal peritonitis', 'tail': 'posaconazole'}
+PREDIC :: {'head': 'bacteremic vancomycin-resistant enterococcal peritonitis', 'tail': 'posaconazole'}
+
+INPUTS :: multiple seizures after bupropion overdose in a small child.
+LABELS :: {'head': 'multiple seizures', 'tail': 'bupropion'}
+PREDIC :: {'head': 'multiple seizures', 'tail': 'bupropion'}
+
+INPUTS :: this is the first report of a catatonic syndrome occurring in a patient receiving disulfiram treatment.
+LABELS :: {'head': 'catatonic syndrome', 'tail': 'disulfiram'}
+PREDIC :: {'head': 'catatonic syndrome', 'tail': 'disulfiram'}
+
+INPUTS :: extra caution should be taken in using octreotide or its long-acting analog in patients otherwise predisposed to intrahepatic bile stasis.
+LABELS :: {'head': 'intrahepatic bile stasis', 'tail': 'octreotide'}
+PREDIC :: {'head': 'intrahepatic bile stasis', 'tail': 'octreotide'}
+
+INPUTS :: results: the estimated number of accutane prescriptions for reproductive-aged women has more than doubled in the past 10 years; it is the most widely used teratogenic drug in the united states, with approximately 2.5 per 1,000 reproductive-aged women exposed to accutane in 1999.
+LABELS :: {'head': 'teratogenic', 'tail': 'accutane'}
+PREDIC :: {'head': 'teratogenic drug', 'tail': 'accutane'}
+
+INPUTS :: a 55-yr-old man developed prolonged jaundice and sicca complex after a course of thiabendazole therapy.
+LABELS :: {'head': 'sicca complex', 'tail': 'thiabendazole'}, {'head': 'prolonged jaundice', 'tail': 'thiabendazole'}
+PREDIC :: {'head': 'prolonged jaundice', 'tail': 'thiabendazole'}, {'head': 'sicca complex', 'tail': 'thiabendazole'}
+
+INPUTS :: acute coronary syndromes complicating the first infusion of rituximab.
+LABELS :: {'head': 'acute coronary syndromes', 'tail': 'rituximab'}
+PREDIC :: {'head': 'acute coronary syndromes', 'tail': 'rituximab'}
+
+INPUTS :: risperidone withdrawal-related respiratory dyskinesia: a case diagnosed by spirography and fibroscopy.
+LABELS :: {'head': 'respiratory dyskinesia', 'tail': 'risperidone'}
+PREDIC :: {'head': 'respiratory dyskinesia', 'tail': 'risperidone'}, {'head': 'spirography', 'tail': 'risperidone'}
+
+INPUTS :: anaphylaxis to calcitonin.
+LABELS :: {'head': 'anaphylaxis', 'tail': 'calcitonin'}
+PREDIC :: {'head': 'anaphylaxis', 'tail': 'calcitonin'}
+
+INPUTS :: mequitazine seemed to play a part similar to chlorpromazine, and absence of mequitazine-induced photosensitivity may be due to a relatively low dosage of the drug.
+LABELS :: {'head': 'photosensitivity', 'tail': 'mequitazine'}
+PREDIC :: {'head': 'photosensitivity', 'tail': 'mequitazine'}, {'head': 'absence of mequitazine', 'tail': 'mequitazine'}
+
+INPUTS :: a 75-year-old man developed bilateral lower leg edema 6 months after switching from troglitazone to pioglitazone.
+LABELS :: {'head': 'bilateral lower leg edema', 'tail': 'pioglitazone'}
+PREDIC :: {'head': 'bilateral lower leg edema', 'tail': 'pioglitazone'}
+
+INPUTS :: vancomycin is the most frequently implicated drug, but other agents have been reported to cause labd.
+LABELS :: {'head': 'labd', 'tail': 'vancomycin'}
+PREDIC :: {'head': 'labd', 'tail': 'vancomycin'}
+
+INPUTS :: there is a dose-effect relationship between doxorubicin and the incidence of symptomatic cardiac failure.
+LABELS :: {'head': 'symptomatic cardiac failure', 'tail': 'doxorubicin'}
+PREDIC :: {'head': 'cardiac failure', 'tail': 'doxorubicin'}
+
+INPUTS :: we suggest discontinuing gemcitabine if radiation recall is observed.
+LABELS :: {'head': 'radiation recall', 'tail': 'gemcitabine'}
+PREDIC :: {'head': 'radiation recall', 'tail': 'gemcitabine'}
+
+INPUTS :: conclusion: squamous metaplasia in these cases appears to be a consequence of progestin therapy.
+LABELS :: {'head': 'squamous metaplasia', 'tail': 'progestin'}
+PREDIC :: {'head': 'squamous metaplasia', 'tail': 'progestin'}
+
+INPUTS :: when sasp was changed to 5-aminosalicylic acid (5-asa), his skin eruptions were resolved, however, he developed weakness and atrophy in his right arm as well as progressive worsening of the dysesthesia in his legs and gait disturbance.
+LABELS :: {'head': 'atrophy', 'tail': '5-aminosalicylic acid'}, {'head': 'atrophy', 'tail': '5-asa'}, {'head': 'gait disturbance', 'tail': '5-aminosalicylic acid'}, {'head': 'gait disturbance', 'tail': '5-asa'}, {'head': 'worsening of the dysesthesia', 'tail': '5-aminosalicylic acid'}, {'head': 'worsening of the dysesthesia', 'tail': '5-asa'}, {'head': 'weakness', 'tail': '5-aminosalicylic acid'}, {'head': 'weakness', 'tail': '5-asa'}
+PREDIC :: {'head': 'weakness', 'tail': '5-aminosalicylic acid'}, {'head': 'weakness', 'tail': '5-asa'}, {'head': 'right arm', 'tail': '5-aminosalicylic acid'}, {'head': 'right arm', 'tail': '5-asa'}, {'head': 'gait disturbance', 'tail': '5-aminosalicylic acid'}, {'head': 'gait disturbance', 'tail': '5-asa'}, {'head': 'weakness', 'tail': '5-aminosalicylic acid'}
+
+INPUTS :: although isradipine has been associated with hepatocellular injury, there are no reports of fulminant liver failure with this agent, and our patient had been treated for 2 years without signs of toxicity.
+LABELS :: {'head': 'hepatocellular injury', 'tail': 'isradipine'}
+PREDIC :: {'head': 'toxicity', 'tail': 'isradipine'}, {'head': 'hepatocellular injury', 'tail': 'isradipine'}
+
+INPUTS :: the dose-limiting toxicity of kw-2149 is pulmonary toxicity.
+LABELS :: {'head': 'pulmonary toxicity', 'tail': 'kw-2149'}
+PREDIC :: {'head': 'pulmonary toxicity', 'tail': 'pen-2'}
+
+INPUTS :: fulminant hepatitis associated with disulfiram.
+LABELS :: {'head': 'fulminant hepatitis', 'tail': 'disulfiram'}
+PREDIC :: {'head': 'fulminant hepatitis', 'tail': 'disulfiram'}
+
+INPUTS :: we report the case of a 21-year-old female patient with dapsone hypersensitivity syndrome.
+LABELS :: {'head': 'hypersensitivity syndrome', 'tail': 'dapsone'}
+PREDIC :: {'head': 'hypersensitivity syndrome', 'tail': 'dapsone'}
+
+INPUTS :: since the bronchospasm was relieved with discontinuation of propranolol and supportive bronchodilator therapy, the bronchospasm was believed to be caused by propranolol.
+LABELS :: {'head': 'bronchospasm', 'tail': 'propranolol'}
+PREDIC :: {'head': 'bronchospasm', 'tail': 'propranolol'}, {'head': 'bronchospasm', 'tail': 'propranolol'}
+
+INPUTS :: our patient was a 72-year-old man with advanced parkinson's disease (pd) who received levodopa and anti-cholinergic drugs and whose head had become almost completely bald.
+LABELS :: {'head': 'completely bald', 'tail': 'levodopa'}
+PREDIC :: {'head': 'anti-cholinergic drugs', 'tail': 'levodopa'}
+
+INPUTS :: here, we report a case of angio-oedema associated with vrc therapy.
+LABELS :: {'head': 'angio-oedema', 'tail': 'vrc'}
+PREDIC :: {'head': 'angio-oedema', 'tail': 'vrc'}
+
+INPUTS :: however, there remain questions concerning whether these drugs, especially methimazole (mmi), may be associated with aplasia cutis congenita (acc) and how best to avoid impairment of fetal thyroid function during their use.
+LABELS :: {'head': 'acc', 'tail': 'methimazole'}, {'head': 'acc', 'tail': 'mmi'}, {'head': 'aplasia cutis congenita', 'tail': 'methimazole'}, {'head': 'aplasia cutis congenita', 'tail': 'mmi'}
+PREDIC :: {'head': 'fetal thyroid function', 'tail': 'methimazole'}
+
+INPUTS :: moreover, these findings suggest that the incidence of boop following rituximab therapy may be higher than has been previously appreciated.
+LABELS :: {'head': 'boop', 'tail': 'rituximab'}
+PREDIC :: {'head': 'boop', 'tail': 'rituximab'}
+
+INPUTS :: a patient presented with a painful, oedematous, cyanosed hand having injected a solution of diamorphine and methylphenidate into his radial artery.
+LABELS :: {'head': 'painful, oedematous, cyanosed hand', 'tail': 'diamorphine'}, {'head': 'painful, oedematous, cyanosed hand', 'tail': 'methylphenidate'}
+PREDIC :: {'head': 'oedematous', 'tail': 'diamorphine'}, {'head': 'oedematous', 'tail': 'methylphenidate'}
+
+INPUTS :: we report a case of a women in whom a malignant mixed mesodermal tumor was diagnosed while she was taking raloxifene, which is also a selective estrogen receptor modulator.
+LABELS :: {'head': 'malignant mixed mesodermal tumor', 'tail': 'raloxifene'}
+PREDIC :: {'head': 'malignant mixed mesodermal tumor', 'tail': 'raloxifene'}
+
+INPUTS :: we report two patients with anhedonic ejaculation (ejaculation without orgasm) associated with initiation of treatment with desipramine.
+LABELS :: {'head': 'ejaculation without orgasm', 'tail': 'desipramine'}, {'head': 'anhedonic ejaculation', 'tail': 'desipramine'}
+PREDIC :: {'head': 'ulation', 'tail': 'desipramine'}
+
+INPUTS :: minocycline as a cause of drug-induced autoimmune hepatitis.
+LABELS :: {'head': 'autoimmune hepatitis', 'tail': 'minocycline'}
+PREDIC :: {'head': 'autoimmune hepatitis', 'tail': 'minocycline'}
+
+INPUTS :: ritonavir acted as a cyp3a4 inhibitor, diminishing carbamazepine metabolism and provoking an increase in serum levels and clinical toxicity.
+LABELS :: {'head': 'increase in serum levels', 'tail': 'ritonavir'}, {'head': 'diminishing carbamazepine metabolism', 'tail': 'ritonavir'}, {'head': 'clinical toxicity', 'tail': 'ritonavir'}
+PREDIC :: {'head': 'increase in serum levels', 'tail': 'carbamazepine'}, {'head': 'increase in serum levels', 'tail': 'ritonavir'}, {'head': 'clinical toxicity', 'tail': 'carbamazepine'}, {'head': 'clinical toxicity', 'tail': 'ritonavir'}
+
+INPUTS :: agranulocytosis and granulocytopenia associated with quetiapine.
+LABELS :: {'head': 'agranulocytosis', 'tail': 'quetiapine'}, {'head': 'granulocytopenia', 'tail': 'quetiapine'}
+PREDIC :: {'head': 'granulocytopenia', 'tail': 'quetiapine'}, {'head': 'agranulocytosis', 'tail': 'quetiapine'}
+
+INPUTS :: cimetidine is a rare cause of drug-induced fever.
+LABELS :: {'head': 'fever', 'tail': 'cimetidine'}
+PREDIC :: {'head': 'fever', 'tail': 'cimetidine'}
+
+INPUTS :: initial treatment with heparin was substituted with thrombolysis, which resulted in clinical improvement and dissolution of right heart thrombus but was followed by fatal intracerebral haemorrhage.
+LABELS :: {'head': 'fatal intracerebral haemorrhage', 'tail': 'heparin'}
+PREDIC :: {'head': 'fatal intracerebral haemorrhage', 'tail': 'heparin'}
+
+INPUTS :: hypo-oestrogenic and anabolic/androgenic side-effects of danazol are well known by the gynaecologist and some of them are present in  50% of patients being treated for endometriosis.
+LABELS :: {'head': 'hypo-oestrogenic and anabolic/androgenic side-effects', 'tail': 'danazol'}
+PREDIC :: {'head': 'hypo-oestrogenic', 'tail': 'danazol'}
+
+INPUTS :: quetiapine-induced myoclonus.
+LABELS :: {'head': 'myoclonus', 'tail': 'quetiapine'}
+PREDIC :: {'head': 'myoclonus', 'tail': 'quetiapine'}
+
+INPUTS :: in this report, we describe a fatal gemcitabine-induced pulmonary toxicity in a patient with gallbladder metastatic adenocarcinoma.
+LABELS :: {'head': 'pulmonary toxicity', 'tail': 'gemcitabine'}
+PREDIC :: {'head': 'pulmonary toxicity', 'tail': 'gemcitabine'}
+
+INPUTS :: pneumonitis is emerging as one of the most unpredictable and potentially serious, adverse effects of treatment with mtx.
+LABELS :: {'head': 'pneumonitis', 'tail': 'mtx'}
+PREDIC :: {'head': 'pneumonitis', 'tail': 'mtx'}
+
+INPUTS :: paraplegia following prophylactic intrathecal cytosine arabinoside (ara-c) is described in a patient with acute myelogenous leukemia in remission who received doses of 100 mg/m2/d for 5 consecutive days.
+LABELS :: {'head': 'paraplegia', 'tail': 'ara-c'}, {'head': 'paraplegia', 'tail': 'cytosine arabinoside'}
+PREDIC :: {'head': 'paraplegia', 'tail': 'ara-c'}, {'head': 'paraplegia', 'tail': 'cytosine arabinoside'}
+
+INPUTS :: we report the case of a patient with increased cerebral cortical excitability following intoxication with flupirtine, a centrally acting analgesic and antispastic drug.
+LABELS :: {'head': 'increased cerebral cortical excitability', 'tail': 'flupirtine'}
+PREDIC :: {'head': 'increased cerebral cortical excitability', 'tail': 'flupirtine'}, {'head': 'centrally obstruct analgesic', 'tail': 'flupirtine'}
+
+INPUTS :: conclusions: anastrozole may be the causative factor in patients with sclerosing glomerulonephritis.
+LABELS :: {'head': 'sclerosing glomerulonephritis', 'tail': 'anastrozole'}
+PREDIC :: {'head': 'sclerosing glomerulonephritis', 'tail': 'anastrozole'}
+
+INPUTS :: the following is a report of 2 cases of rifampicin-induced renal insufficiency.
+LABELS :: {'head': 'renal insufficiency', 'tail': 'rifampicin'}
+PREDIC :: {'head': 'renal insufficiency', 'tail': 'rifampicin'}
+
+INPUTS :: conclusions: this case report showed that the clinical appearance of hashimoto's disease after ifn-alpha therapy for chronic c hepatitis in our patient was associated with a specific genetic predisposition (dr5) for this pathology.
+LABELS :: {'head': "hashimoto's disease", 'tail': 'ifn-alpha'}
+PREDIC :: {'head': "hashimoto's disease", 'tail': 'ifn-alpha'}
+
+INPUTS :: baclofen withdrawal: a cause of prolonged fever in the intensive care unit.
+LABELS :: {'head': 'fever', 'tail': 'baclofen'}
+PREDIC :: {'head': 'prolonged fever', 'tail': 'baclofen'}, {'head': 'prolonged fever', 'tail': 'baclofen'}
+
+INPUTS :: naproxen-associated sudden sensorineural hearing loss.
+LABELS :: {'head': 'sudden sensorineural hearing loss', 'tail': 'naproxen'}
+PREDIC :: {'head': 'sudden sensorineural hearing loss', 'tail': 'naproxen'}
+
+INPUTS :: interferon-induced psychosis as a "psychiatric contraindication" to hepatitis c treatment: a review and case-based discussion.
+LABELS :: {'head': 'psychosis', 'tail': 'interferon'}
+PREDIC :: {'head': 'psychosis', 'tail': 'interferon'}
+
+INPUTS :: a 53-year-old male, without any prior history of psychosis, developed schizophrenia 4 days after starting low-dose bromocriptine therapy for a macroprolactinoma.
+LABELS :: {'head': 'schizophrenia', 'tail': 'bromocriptine'}
+PREDIC :: {'head': 'schizophrenia', 'tail': 'bromocriptine'}
+
+INPUTS :: thrombo-embolic complication after streptokinase therapy of pulmonary emboli.
+LABELS :: {'head': 'thrombo-embolic complication', 'tail': 'streptokinase'}
+PREDIC :: {'head': 'thrombo-embolic complication', 'tail': 'streptokinase'}
+
+INPUTS :: we describe a case of ege manifested as an allergy to gemfibrozil.
+LABELS :: {'head': 'ege', 'tail': 'gemfibrozil'}
+PREDIC :: {'head': 'allergy', 'tail': 'gemfibrozil'}
+
+INPUTS :: when thrombosis develops during heparin treatment, it is important to suspect hitts and to assay for the associated antibodies, regardless of the actual platelet count.
+LABELS :: {'head': 'thrombosis', 'tail': 'heparin'}
+PREDIC :: {'head': 'thrombosis', 'tail': 'heparin'}
+
+INPUTS :: in both patients the rippling phenomena worsened with pyridostigmine treatment but markedly improved after immunosuppression with azathioprine.
+LABELS :: {'head': 'rippling phenomena worsened', 'tail': 'pyridostigmine'}
+PREDIC :: {'head': 'immunosuppression', 'tail': 'azathioprine'}
+
+INPUTS :: we report a child with yolk sac tumor who developed localized pigmentation after the first course of chemotherapy regimen that included cisplatin, etoposide and bleomycin.
+LABELS :: {'head': 'localized pigmentation', 'tail': 'bleomycin'}, {'head': 'localized pigmentation', 'tail': 'cisplatin'}, {'head': 'localized pigmentation', 'tail': 'etoposide'}
+PREDIC :: {'head': 'localized pigmentation', 'tail': 'bleomycin'}, {'head': 'localized pigmentation', 'tail': 'cisplatin'}, {'head': 'localized pigmentation', 'tail': 'etoposide'}
+
+INPUTS :: the authors report 2 cases of renal damage associated with lithium carbonate treatment.
+LABELS :: {'head': 'renal damage', 'tail': 'lithium carbonate'}
+PREDIC :: {'head': 'renal damage', 'tail': 'lithium carbonate'}
+
+INPUTS :: four cases of fat embolism are described in infants receiving prolonged intravenous infusion of fat (intralipid 20%).
+LABELS :: {'head': 'fat embolism', 'tail': 'intralipid'}
+PREDIC :: {'head': 'fat embolism', 'tail': 'mitralipid 20%'}
+
+INPUTS :: although myelosuppression is mild, immunosuppression and superinfection are potential hazards of treatment with dcf.
+LABELS :: {'head': 'immunosuppression', 'tail': 'dcf'}, {'head': 'superinfection', 'tail': 'dcf'}
+PREDIC :: {'head': 'myelosuppression', 'tail': 'dcf'}, {'head': 'immunosuppression', 'tail': 'dcf'}, {'head': 'myelosuppression', 'tail': 'dcf'}
+
+INPUTS :: angioedema, a rare side effect of carbamazepine, involves vascular leakage in dermis and subcutis mediated by immunoglobulin e and/or bradykinins.
+LABELS :: {'head': 'angioedema', 'tail': 'carbamazepine'}
+PREDIC :: {'head': 'angioedema', 'tail': 'carbamazepine'}, {'head': 'subcutis mediated', 'tail': 'carbamazepine'}
+
+INPUTS :: rebound hyperglycemia following overdosing of insulin in cats with diabetes mellitus.
+LABELS :: {'head': 'hyperglycemia', 'tail': 'insulin'}
+PREDIC :: {'head': 'rebound hyperglycemia', 'tail': 'insulin'}
+
+INPUTS :: nitrofurantoin-induced lung disease: two cases demonstrating resolution of apparently irreversible ct abnormalities.
+LABELS :: {'head': 'lung disease', 'tail': 'nitrofurantoin'}
+PREDIC :: {'head': 'lung disease', 'tail': 'nitrofurantoin'}, {'head': 'irreversible ct abnormalities', 'tail': 'nitrofurantoin'}
+
+INPUTS :: reye syndrome (rs) is believed to occur infrequently among children receiving long-term aspirin therapy.
+LABELS :: {'head': 'reye syndrome', 'tail': 'aspirin'}, {'head': 'rs', 'tail': 'aspirin'}
+PREDIC :: {'head': 'reye syndrome', 'tail': 'aspirin'}
+
+INPUTS :: a third patient experienced disabling neurotoxicity in the extremity of a prior ulnar nerve and tendon transposition after receiving paclitaxel.
+LABELS :: {'head': 'disabling neurotoxicity', 'tail': 'paclitaxel'}
+PREDIC :: {'head': 'neurotoxicity', 'tail': 'paclitaxel'}, {'head': 'disabling neurotoxicity', 'tail': 'paclitaxel'}
+
+INPUTS :: amoxapine-induced cognitive impairment in two patients.
+LABELS :: {'head': 'cognitive impairment', 'tail': 'amoxapine'}
+PREDIC :: {'head': 'cognitive impairment', 'tail': 'amoxapine'}
+
+INPUTS :: piloerection induced by replacing fluvoxamine with milnacipran.
+LABELS :: {'head': 'piloerection', 'tail': 'fluvoxamine'}, {'head': 'piloerection', 'tail': 'milnacipran'}
+PREDIC :: {'head': 'piloerection', 'tail': 'fluvoxamine'}, {'head': 'piloerection', 'tail': 'milnacipran'}
+
+INPUTS :: severe c. difficile colitis occurred in 2 patients (6.1%) after receiving cisplatin-based combination chemotherapy for ovarian malignancies.
+LABELS :: {'head': 'c. difficile colitis', 'tail': 'cisplatin'}
+PREDIC :: {'head': 'severe c. difficile colitis', 'tail': 'cisplatin'}
+
+INPUTS :: uveitis associated with rifabutin therapy: a clinical alert.
+LABELS :: {'head': 'uveitis', 'tail': 'rifabutin'}
+PREDIC :: {'head': 'uveitis', 'tail': 'rifabutin'}
+
+INPUTS :: we report a case of vitiligo that occurred during the second month of interferon alpha 2a therapy for chronic active hepatitis c.
+LABELS :: {'head': 'vitiligo', 'tail': 'interferon alpha 2a'}
+PREDIC :: {'head': 'vitiligo', 'tail': 'interferon alpha 2a'}
+
+INPUTS :: this report presents a potential case of risperidone-induced tardive dyskinesia.
+LABELS :: {'head': 'tardive dyskinesia', 'tail': 'risperidone'}
+PREDIC :: {'head': 'tardive dyskinesia', 'tail': 'risperidone'}
+
+INPUTS :: clinicians should be aware of the signs and symptoms of neurotoxicity during treatment, as well as predisposing factors that put patients receiving methotrexate at risk for neurotoxic effects.
+LABELS :: {'head': 'neurotoxicity', 'tail': 'methotrexate'}
+PREDIC :: {'head': 'neurotoxicity', 'tail': 'methotrexate'}, {'head': 'symptoms of neurotoxic effects', 'tail': 'methotrexate'}
+
+INPUTS :: severe corneal toxicity after topical fluoroquinolone therapy: report of two cases.
+LABELS :: {'head': 'severe corneal toxicity', 'tail': 'fluoroquinolone'}
+PREDIC :: {'head': 'severe corneal toxicity', 'tail': 'fluoroquinolone'}
+
+INPUTS :: schneiderian first-rank symptoms associated with fluvoxamine treatment: a case report.
+LABELS :: {'head': 'schneiderian first-rank symptoms', 'tail': 'fluvoxamine'}
+PREDIC :: {'head': 'schneiderian first-rank symptoms', 'tail': 'fluvoxamine'}
+
+INPUTS :: case presentation: three cases of leishmania infantum leishmaniasis in corticosteroid (cs)-treated patients are reported: an isolated lingual leishmaniasis in a farmer treated with cs for asthma, a severe visceral leishmaniasis associated with cutaneous lesions in a woman with myasthenia gravis, and a visceral involvement after cutaneous leishmaniasis in a man receiving cs.
+LABELS :: {'head': 'cutaneous leishmaniasis', 'tail': 'cs'}, {'head': 'leishmania infantum leishmaniasis', 'tail': 'corticosteroid'}, {'head': 'leishmania infantum leishmaniasis', 'tail': 'cs'}, {'head': 'lingual leishmaniasis', 'tail': 'corticosteroid'}, {'head': 'lingual leishmaniasis', 'tail': 'cs'}
+PREDIC :: {'head': 'cutaneous lesions', 'tail': 'cs'}
+
+INPUTS :: four patients who manifested symptoms of the antiepileptic drug (aed) hypersensitivity syndrome during therapy with carbamazepine are reported.
+LABELS :: {'head': 'hypersensitivity syndrome', 'tail': 'carbamazepine'}
+PREDIC :: {'head': 'hypersensitivity syndrome', 'tail': 'carbamazepine'}
+
+INPUTS :: nifedipine may induce, or aggravate, pre-existing, gastro-oesophageal reflux.
+LABELS :: {'head': 'gastro-oesophageal reflux', 'tail': 'nifedipine'}
+PREDIC :: {'head': 'nifedipine', 'tail': 'nifedipine'}, {'head': 'gastro-oesophageal reflux', 'tail': 'nifedipine'}
+
+INPUTS :: discussion: the occurrence of priapism in our patient was related to zuclopenthixol.
+LABELS :: {'head': 'priapism', 'tail': 'zuclopenthixol'}
+PREDIC :: {'head': 'priapism', 'tail': 'zuclopenthixol'}
+
+INPUTS :: three patients, in whom tumour overkill by cytotoxic treatment, including high dose methotrexate with folinic acid rescue, resulted in the 'phosphate shower syndrome' (hyper-uricaemia, hyperkalaemia and hyperphosphataemia with hypocalcaemia and tetany, with metabolic acidosis and acute renal impairment) are described.
+LABELS :: {'head': 'hypocalcaemia', 'tail': 'folinic acid'}, {'head': 'hypocalcaemia', 'tail': 'methotrexate'}, {'head': 'phosphate shower syndrome', 'tail': 'folinic acid'}, {'head': 'phosphate shower syndrome', 'tail': 'methotrexate'}, {'head': 'tetany', 'tail': 'folinic acid'}, {'head': 'tetany', 'tail': 'methotrexate'}, {'head': 'hyperkalaemia', 'tail': 'folinic acid'}, {'head': 'hyperkalaemia', 'tail': 'methotrexate'}, {'head': 'hyperphosphataemia', 'tail': 'folinic acid'}, {'head': 'hyperphosphataemia', 'tail': 'methotrexate'}
+PREDIC :: {'head': 'metabolic acidosis', 'tail': 'methotrexate'}, {'head': 'hyperphosphataemia', 'tail': 'methotrexate'}, {'head': 'tetany', 'tail': 'methotrexate'}, {'head': 'hyperkalaemia', 'tail': 'methotrexate'}
+
+INPUTS :: fatal interstitial pneumonitis associated with docetaxel administration in a patient with hormone-refractory prostate cancer.
+LABELS :: {'head': 'fatal interstitial pneumonitis', 'tail': 'docetaxel'}
+PREDIC :: {'head': 'fatal interstitial pneumonitis', 'tail': 'docetaxel'}
+
+INPUTS :: severe diffuse interstitial pneumonitis induced by carmustine (bcnu).
+LABELS :: {'head': 'severe diffuse interstitial pneumonitis', 'tail': 'bcnu'}, {'head': 'severe diffuse interstitial pneumonitis', 'tail': 'carmustine'}
+PREDIC :: {'head': 'severe diffuse interstitial pneumonitis', 'tail': 'carmustine'}, {'head': 'severe diffuse interstitial pneumonitis', 'tail': 'bcnu'}, {'head': 'severe diffuse interstitial pneumonitis', 'tail': 'carmustine'}
+
+INPUTS :: protamine-induced fatal anaphylaxis.
+LABELS :: {'head': 'fatal anaphylaxis', 'tail': 'protamine'}
+PREDIC :: {'head': 'fatal anaphylaxis', 'tail': 'protamine'}
+
+INPUTS :: we report a case of exfoliative dermatitis clearly linked to intravenous and intraperitoneal administration of tobramycin.
+LABELS :: {'head': 'exfoliative dermatitis', 'tail': 'tobramycin'}
+PREDIC :: {'head': 'exfoliative dermatitis', 'tail': 'tobramycin'}
+
+INPUTS :: clearance rates of cerivastatin metabolites in a patient with cerivastatin-induced rhabdomyolysis.
+LABELS :: {'head': 'rhabdomyolysis', 'tail': 'cerivastatin'}
+PREDIC :: {'head': 'rhabdomyolysis', 'tail': 'cerivastatin'}
+
+INPUTS :: the patient developed grade 3 capecitabine-induced headache.
+LABELS :: {'head': 'headache', 'tail': 'capecitabine'}
+PREDIC :: {'head': 'headache', 'tail': 'capecitabine'}
+
+INPUTS :: persisent ocular hypertension following intravitreal ranibizumab.
+LABELS :: {'head': 'persisent ocular hypertension', 'tail': 'ranibizumab'}
+PREDIC :: {'head': 'persisent ocular hypertension', 'tail': 'ranibizumab'}
+
+INPUTS :: dipyrone-induced granulocytopenia: a case for awareness.
+LABELS :: {'head': 'granulocytopenia', 'tail': 'dipyrone'}
+PREDIC :: {'head': 'granulocytopenia', 'tail': 'dipyrone'}
+
+INPUTS :: conclusion: the administration of tissue plasminogen activator was responsible for the large extent of hemorrhage and should be considered in the differential diagnosis of hemorrhagic choroidal detachment.
+LABELS :: {'head': 'hemorrhagic choroidal detachment', 'tail': 'tissue plasminogen activator'}, {'head': 'hemorrhage', 'tail': 'tissue plasminogen activator'}
+PREDIC :: {'head': 'hemorrhagic choroidal detachment', 'tail': 'tissue plasminogen activator'}
+
+INPUTS :: reversible sclerotic changes of lumbar spine and femur due to long-term oral isotretinoin therapy.
+LABELS :: {'head': 'sclerotic changes of lumbar spine and femur', 'tail': 'isotretinoin'}
+PREDIC :: {'head': 'reversible sclerotic changes', 'tail': 'isotretinoin'}, {'head': 'femur', 'tail': 'isotretinoin'}
+
+INPUTS :: common adverse events (frequency 10%) of lacosamide doses up to 600 mg/day include nonspecific central nervous system effects (e.g., dizziness, ataxia, diplopia, and somnolence).
+LABELS :: {'head': 'ataxia', 'tail': 'lacosamide'}, {'head': 'somnolence', 'tail': 'lacosamide'}, {'head': 'diplopia', 'tail': 'lacosamide'}, {'head': 'dizziness', 'tail': 'lacosamide'}
+PREDIC :: {'head': 'dizziness', 'tail': 'lacosamide'}, {'head': 'fever', 'tail': 'lacosamide'}, {'head': 'nausea', 'tail': 'lacosamide'}, {'head': 'somnolence', 'tail': 'lacosamide'}, {'head': 'dizziness', 'tail': 'lacosamide'}, {'head': 'ataxia', 'tail': 'lacosamide'}, {'head': 'nausea', 'tail': 'lacosamide'}
+
+INPUTS :: niacin maculopathy.
+LABELS :: {'head': 'maculopathy', 'tail': 'niacin'}
+PREDIC :: {'head': 'maculopathy', 'tail': 'niacin'}
+
+INPUTS :: a 25-year-old man with a history of mid-borderline (bb) hansen's disease developing a reversal reaction after starting dapsone and rifampin therapy is presented.
+LABELS :: {'head': 'reversal reaction', 'tail': 'dapsone'}, {'head': 'reversal reaction', 'tail': 'rifampin'}
+PREDIC :: {'head': 'reversal reaction', 'tail': 'dapsone'}, {'head': 'reversal reaction', 'tail': 'rifampin'}
+
+INPUTS :: cyclosporine is a potent inhibitor of simvastatin metabolism, and may therefore facilitate simvastatin-induced rhabdomyolysis.
+LABELS :: {'head': 'rhabdomyolysis', 'tail': 'cyclosporine'}, {'head': 'rhabdomyolysis', 'tail': 'simvastatin'}
+PREDIC :: {'head': 'rhabdomyolysis', 'tail': 'cyclosporine'}, {'head': 'rhabdomyolysis', 'tail': 'simvastatin'}
+
+INPUTS :: a 64-year-old man presented with proteinuria during postoperative interferon (ifn)-beta therapy against malignant melanoma.
+LABELS :: {'head': 'proteinuria', 'tail': 'interferon (ifn)-beta'}
+PREDIC :: {'head': 'proteinuria', 'tail': 'ifn'}, {'head': 'proteinuria', 'tail': 'interferon'}
+
+INPUTS :: cases: "a" was an 8-year-old boy with attention deficit and chronic tic disorder who developed obsessive-compulsive symptoms within 2 weeks of starting risperidone.
+LABELS :: {'head': 'obsessive-compulsive symptoms', 'tail': 'risperidone'}
+PREDIC :: {'head': 'obsessive-compulsive symptoms', 'tail': 'risperidone'}
+
+INPUTS :: levofloxacin-induced toxic epidermal necrolysis in an elderly patient.
+LABELS :: {'head': 'toxic epidermal necrolysis', 'tail': 'levofloxacin'}
+PREDIC :: {'head': 'toxic epidermal necrolysis', 'tail': 'levofloxacin'}
+
+INPUTS :: on the other hand, aspirin may have promoted the enlargement of spontaneous hemorrhage from meningioma.
+LABELS :: {'head': 'enlargement of spontaneous hemorrhage', 'tail': 'aspirin'}
+PREDIC :: {'head': 'spontaneous hemorrhage', 'tail': 'aspirin'}
+
+INPUTS :: we report an allogeneic bone marrow transplant recipient who developed cmv infection refractory to sequential therapy with ganciclovir, foscarnet, and cidofovir.
+LABELS :: {'head': 'cmv infection', 'tail': 'cidofovir'}, {'head': 'cmv infection', 'tail': 'foscarnet'}, {'head': 'cmv infection', 'tail': 'ganciclovir'}
+PREDIC :: {'head': 'cmv infection refractory to sequential', 'tail': 'ganciclovir'}, {'head': 'cmv infection refractory to sequential', 'tail': 'foscarnet'}, {'head': 'cmv infection refractory to sequential', 'tail': 'ganciclovir'}
+
+INPUTS :: results: the patient, a 27-year-old married japanese woman with borderline personality disorder, developed an increased libido with the administration of fluvoxamine.
+LABELS :: {'head': 'increased libido', 'tail': 'fluvoxamine'}
+PREDIC :: {'head': 'increased libido', 'tail': 'fluvoxamine'}
+
+INPUTS :: two cases of widespread cutaneous vasculitis are described in association with diltiazem, a recently introduced calcium antagonist.
+LABELS :: {'head': 'cutaneous vasculitis', 'tail': 'diltiazem'}
+PREDIC :: {'head': 'cutaneous vasculitis', 'tail': 'diltiazem'}
+
+INPUTS :: possible induction of diabetes by treatment of hypertension with indapamide (with four case reports).
+LABELS :: {'head': 'diabetes', 'tail': 'indapamide'}
+PREDIC :: {'head': 'diabetes', 'tail': 'indapamide'}
+
+INPUTS :: to our knowledge, this is the first report of significant hypotension associated with intravenous valproate in the treatment of status epilepticus in the pediatric population.
+LABELS :: {'head': 'hypotension', 'tail': 'valproate'}
+PREDIC :: {'head': 'hypotension', 'tail': 'valproate'}
+
+INPUTS :: combining methylephedrine and chinese herbal drugs might carry a risk of stroke.
+LABELS :: {'head': 'stroke', 'tail': 'methylephedrine'}
+PREDIC :: {'head': 'stroke', 'tail': 'methylephedrine'}
+
+INPUTS :: background: to describe the occurrence of ocular hypertension in four patients following injection of ranibizumab intravitreally.
+LABELS :: {'head': 'ocular hypertension', 'tail': 'ranibizumab'}
+PREDIC :: {'head': 'ocular hypertension', 'tail': 'ranibizumab'}
+
+INPUTS :: acute renal failure following intravenous immunoglobulin therapy in a hiv-infected patient.
+LABELS :: {'head': 'acute renal failure', 'tail': 'immunoglobulin'}
+PREDIC :: {'head': 'acute renal failure', 'tail': 'immunoglobulin'}
+
+INPUTS :: the exacerbation of psoriasis was accompanied by a massive induction of lesional type i interferon activity, detected by mxa expression after imiquimod therapy.
+LABELS :: {'head': 'exacerbation of psoriasis', 'tail': 'imiquimod'}
+PREDIC :: {'head': 'lesional type i interferon activity', 'tail': 'imiquimod'}
+
+INPUTS :: our patient developed both nephrogenic diabetes insipidus and renal tubular acidosis with a temporal pattern that demonstrated a link between foscarnet therapy and these abnormalities.
+LABELS :: {'head': 'nephrogenic diabetes insipidus', 'tail': 'foscarnet'}, {'head': 'renal tubular acidosis', 'tail': 'foscarnet'}
+PREDIC :: {'head': 'renal tubular acidosis', 'tail': 'foscarnet'}, {'head': 'nephrogenic diabetes insipidus', 'tail': 'foscarnet'}
+
+INPUTS :: this paper reports a case of fatal perhexiline maleate liver injury.
+LABELS :: {'head': 'fatal perhexiline maleate liver injury', 'tail': 'perhexiline maleate'}
+PREDIC :: {'head': 'fatal perhexiline maleate liver injury', 'tail': 'fatal perhexiline maleate liver injury'}
+
+INPUTS :: objective: to report a case of phenolphthalein-induced toxic epidermal necrolysis (ten) in a patient maintained on several other medications more commonly known to be associated with ten.
+LABELS :: {'head': 'toxic epidermal necrolysis', 'tail': 'phenolphthalein'}, {'head': 'ten', 'tail': 'phenolphthalein'}
+PREDIC :: {'head': 'toxic epidermal necrolysis', 'tail': 'phenolphthalein'}, {'head': 'ten', 'tail': 'phenolphthalein'}
+
+INPUTS :: the ocular motor disturbances are probably an expression of regional 5-fu neurotoxicity primarily affecting the brain stem.
+LABELS :: {'head': 'ocular motor disturbances', 'tail': '5-fu'}, {'head': 'neurotoxicity', 'tail': '5-fu'}
+PREDIC :: {'head': 'neurotoxicity', 'tail': '5-fu'}, {'head': 'ocular motor disturbances', 'tail': '5-fu'}
+
+INPUTS :: after administration of oxybutynin concomitantly with an increase in the dose of dantrolene, she presented the clinical symptoms and laboratory finding of carbamazepine intoxication.
+LABELS :: {'head': 'carbamazepine intoxication', 'tail': 'carbamazepine'}, {'head': 'carbamazepine intoxication', 'tail': 'dantrolene'}, {'head': 'carbamazepine intoxication', 'tail': 'oxybutynin'}
+PREDIC :: {'head': 'increase', 'tail': 'carbamazepine'}, {'head': 'increase', 'tail': 'oxybutynin'}, {'head': 'carbamazepine intoxication', 'tail': 'carbamazepine'}, {'head': 'carbamazepine intoxication', 'tail': 'oxybutynin'}
+
+INPUTS :: development of nephrotic syndrome in a patient with acute myeloblastic leukemia after treatment with macrophage-colony-stimulating factor.
+LABELS :: {'head': 'nephrotic syndrome', 'tail': 'macrophage-colony-stimulating factor'}
+PREDIC :: {'head': 'nephrotic syndrome', 'tail': 'macrophage-colony-stimulating factor'}
+
+INPUTS :: we report the first case of polymorphic ventricular tachycardia with normal qt interval associated with the oral use of levofloxacin in the absence of other etiologies known to cause these arrhythmias.
+LABELS :: {'head': 'polymorphic ventricular tachycardia', 'tail': 'levofloxacin'}
+PREDIC :: {'head': 'polymorphic ventricular tachycardia', 'tail': 'levofloxacin'}
+
+INPUTS :: zidovudine use in pregnancy: a report on 104 cases and the occurrence of birth defects.
+LABELS :: {'head': 'birth defects', 'tail': 'zidovudine'}
+PREDIC :: {'head': 'birth defects', 'tail': 'zidovudine'}
+
+INPUTS :: possible mechanisms for damage to the urothelium by ketamine are suggested.
+LABELS :: {'head': 'damage to the urothelium', 'tail': 'ketamine'}
+PREDIC :: {'head': 'damage to the urothelium', 'tail': 'ketamine'}
+
+INPUTS :: severe raynaud's phenomenon with yohimbine therapy for erectile dysfunction.
+LABELS :: {'head': "severe raynaud's phenomenon", 'tail': 'yohimbine'}
+PREDIC :: {'head': "severe raynaud's phenomenon", 'tail': 'yohimbine'}
+
+INPUTS :: sustained-release procainamide-induced reversible granulocytopenia after myocardial infarction.
+LABELS :: {'head': 'reversible granulocytopenia', 'tail': 'procainamide'}
+PREDIC :: {'head': 'reversible granulocytopenia', 'tail': 'procainamide'}
+
+INPUTS :: native arterial thrombosis, though recognized as a severe complication of thrombin injection, has not been well described in the literature.
+LABELS :: {'head': 'arterial thrombosis', 'tail': 'thrombin'}
+PREDIC :: {'head': 'arterial thrombosis', 'tail': 'thrombin'}
+
+INPUTS :: dental and gingival pain as side effects of niacin therapy.
+LABELS :: {'head': 'dental and gingival pain', 'tail': 'niacin'}
+PREDIC :: {'head': 'dental and gingival pain', 'tail': 'niacin'}
+
+INPUTS :: one of these was clofazimine, an aniline aposafranine derivative known to produce a ceroid-like pigment in the tissues of patients treated with this drug or lepromatous leprosy.
+LABELS :: {'head': 'ceroid-like pigment', 'tail': 'clofazimine'}
+PREDIC :: {'head': 'ceroid-like pigment', 'tail': 'clofazimine'}
+
+INPUTS :: symptomatic hypoglycemia secondary to a glipizide-trimethoprim/sulfamethoxazole drug interaction.
+LABELS :: {'head': 'symptomatic hypoglycemia', 'tail': 'glipizide'}, {'head': 'symptomatic hypoglycemia', 'tail': 'sulfamethoxazole'}, {'head': 'symptomatic hypoglycemia', 'tail': 'trimethoprim'}
+PREDIC :: {'head': 'symptomatic hypoglycemia', 'tail': 'glipizide-trimethoprim'}
+
+INPUTS :: acute isoniazid neurotoxicity in an urban hospital.
+LABELS :: {'head': 'neurotoxicity', 'tail': 'isoniazid'}
+PREDIC :: {'head': 'neurotoxicity', 'tail': 'isoniazid'}
+
+INPUTS :: case 3: a 29-year-old female alcoholic complained of general fatigue and a slight fever after 1.5 years of abstinence with cyanamide treatment.
+LABELS :: {'head': 'fever', 'tail': 'cyanamide'}, {'head': 'fatigue', 'tail': 'cyanamide'}
+PREDIC :: {'head': 'general fatigue', 'tail': 'cyanamide'}, {'head': 'slight fever', 'tail': 'cyanamide'}
+
+INPUTS :: we report the first case of chlorambucil-induced dress syndrome in a 70-year-old man recently diagnosed with chronic lymphocytic leukaemia.
+LABELS :: {'head': 'dress syndrome', 'tail': 'chlorambucil'}
+PREDIC :: {'head': 'dress syndrome', 'tail': 'chlorambucil'}
+
+INPUTS :: the use of cyclosporin has been associated with the development of cholelithiasis in transplant recipients.
+LABELS :: {'head': 'cholelithiasis', 'tail': 'cyclosporin'}
+PREDIC :: {'head': 'cholelithiasis', 'tail': 'cyclosporin'}
+
+INPUTS :: the patient received only the ophthalmic sulfonamide, and it was used for one day, but he developed stevens-johnson syndrome.
+LABELS :: {'head': 'stevens-johnson syndrome', 'tail': 'sulfonamide'}
+PREDIC :: {'head': 'stevens-johnson syndrome', 'tail': 'sulfonamide'}
+
+INPUTS :: interestingly, the use of carboplatin (cbdca) and vds in the subsequent treatment course was well tolerated indicating that the siadh was most likely to have been induced by administration of cddp.
+LABELS :: {'head': 'siadh', 'tail': 'cddp'}
+PREDIC :: {'head': 'siadh', 'tail': 'carboplatin'}, {'head': 'siadh', 'tail': 'cbdca'}
+
+INPUTS :: we report here a rare case of pleuropericarditis due to methotrexate.
+LABELS :: {'head': 'pleuropericarditis', 'tail': 'methotrexate'}
+PREDIC :: {'head': 'pleuropericarditis', 'tail': 'methotrexate'}
+
+INPUTS :: isotretinoin, a drug used for the treatment of acne, has been shown to have teratogenic effects.
+LABELS :: {'head': 'teratogenic effects', 'tail': 'isotretinoin'}
+PREDIC :: {'head': 'teratogenic effects', 'tail': 'isotretinoin'}
+
+INPUTS :: up to four percent of patients treated with imatinib may develop hepatotoxicity, which usually resolves with discontinuation of the drug.
+LABELS :: {'head': 'hepatotoxicity', 'tail': 'imatinib'}
+PREDIC :: {'head': 'hepatotoxicity', 'tail': 'imatinib'}
+
+INPUTS :: two children, 1 with idiopathic nephrotic syndrome and 1 with endo-extracapillary glomerulonephritis, presented an episode of seizures and transient blindness at different times after i.v. pulse methylprednisolone (ivpmp) treatment.
+LABELS :: {'head': 'seizures', 'tail': 'methylprednisolone'}, {'head': 'transient blindness', 'tail': 'methylprednisolone'}
+PREDIC :: {'head': 'transient blindness at different times', 'tail': 'methylprednisolone'}, {'head': 'seizures', 'tail': 'methylprednisolone'}
+
+INPUTS :: relief by naloxone of morphine-induced spasm of the sphincter of oddi in a post-cholecystectomy patient.
+LABELS :: {'head': 'spasm', 'tail': 'morphine'}
+PREDIC :: {'head': 'spasm of the sphincter of oddi', 'tail': 'morphine'}
+
+INPUTS :: we report the case of a patient who developed polyserositis (pericardial effusion, pleural effusion, and pericarditis) after being started on clozapine, and whose symptoms remitted upon discontinuation of clozapine.
+LABELS :: {'head': 'pericarditis', 'tail': 'clozapine'}, {'head': 'polyserositis', 'tail': 'clozapine'}, {'head': 'pleural effusion', 'tail': 'clozapine'}, {'head': 'pericardial effusion', 'tail': 'clozapine'}
+PREDIC :: {'head': 'polyserositis', 'tail': 'clozapine'}, {'head': 'pericarditis', 'tail': 'clozapine'}, {'head': 'pleural effusion', 'tail': 'clozapine'}, {'head': 'polyserositis', 'tail': 'clozapine'}
+
+INPUTS :: the patient experienced hallucinations, agitation, vomiting, tachycardia and seizures after ingestion of 1050 (48 mg/kg) of extended-release bupropion.
+LABELS :: {'head': 'hallucinations', 'tail': 'bupropion'}, {'head': 'tachycardia', 'tail': 'bupropion'}, {'head': 'vomiting', 'tail': 'bupropion'}, {'head': 'seizures', 'tail': 'bupropion'}, {'head': 'agitation', 'tail': 'bupropion'}
+PREDIC :: {'head': 'tachycardia', 'tail': 'bupropion'}, {'head': 'agitation', 'tail': 'bupropion'}, {'head': 'hallucinations', 'tail': 'bupropion'}, {'head': 'seizures', 'tail': 'bupropion'}
+
+INPUTS :: atrial fibrillation following methylprednisolone pulse therapy.
+LABELS :: {'head': 'atrial fibrillation', 'tail': 'methylprednisolone'}
+PREDIC :: {'head': 'atrial fibrillation', 'tail': 'methylprednisolone'}
+
+INPUTS :: we describe a detailed case of fulminant hepatitis induced by nevirapine (viramune) and treated by liver transplantation.
+LABELS :: {'head': 'fulminant hepatitis', 'tail': 'nevirapine'}, {'head': 'fulminant hepatitis', 'tail': 'viramune'}
+PREDIC :: {'head': 'fulminant hepatitis', 'tail': 'nevirapine'}
+
+INPUTS :: because nephrotic syndrome may be induced by ifn therapy, the ifn was stopped.
+LABELS :: {'head': 'nephrotic syndrome', 'tail': 'ifn'}
+PREDIC :: {'head': 'nephrotic syndrome', 'tail': 'ifn'}
+
+INPUTS :: didanosine also has a potential for inducing seizures.
+LABELS :: {'head': 'seizures', 'tail': 'didanosine'}
+PREDIC :: {'head': 'seizures', 'tail': 'didanosine'}
+
+INPUTS :: due to discomfort, diplopia and lagophthalmos, the haematoma necessitated suspension of warfarin therapy and a surgical evacuation.
+LABELS :: {'head': 'diplopia', 'tail': 'warfarin'}, {'head': 'discomfort', 'tail': 'warfarin'}, {'head': 'haematoma', 'tail': 'warfarin'}, {'head': 'lagophthalmos', 'tail': 'warfarin'}
+PREDIC :: {'head': 'discomfort, diplopia', 'tail': 'warfarin'}, {'head': 'haematoma', 'tail': 'warfarin'}
+
+INPUTS :: recently, some studies have also reported association between patients with juvenile rheumatoid arthritis (jra) treated with methotrexate (mtx) and malignant lymphoma developing.
+LABELS :: {'head': 'malignant lymphoma', 'tail': 'methotrexate'}, {'head': 'malignant lymphoma', 'tail': 'mtx'}
+PREDIC :: {'head': 'malignant lymphoma', 'tail': 'methotrexate'}, {'head': 'malignant lymphoma', 'tail': 'mtx'}, {'head': 'jra', 'tail': 'methotrexate'}, {'head': 'jra', 'tail': 'mtx'}
+
+INPUTS :: this progressed to tracheal compression with stridor after he had taken some aspirin for relief of the neck pain.
+LABELS :: {'head': 'tracheal compression', 'tail': 'aspirin'}
+PREDIC :: {'head': 'stridor', 'tail': 'aspirin'}
+
+INPUTS :: first case of ivermectin-induced severe hepatitis.
+LABELS :: {'head': 'severe hepatitis', 'tail': 'ivermectin'}
+PREDIC :: {'head': 'severe hepatitis', 'tail': 'ivermectin'}
+
+INPUTS :: we describe a premenopausal woman who, while having tamoxifen due to a diagnosis of in situ ductal carcinoma, developed endometriosis requiring surgery.
+LABELS :: {'head': 'endometriosis', 'tail': 'tamoxifen'}
+PREDIC :: {'head': 'endometriosis', 'tail': 'tamoxifen'}, {'head': 'endometriosis', 'tail': 'tamoxifen'}
+
+INPUTS :: cerebrovascular complications of l-asparaginase therapy in children with leukemia: aphasia and other neuropsychological deficits.
+LABELS :: {'head': 'cerebrovascular complications', 'tail': 'l-asparaginase'}, {'head': 'neuropsychological deficits', 'tail': 'l-asparaginase'}, {'head': 'aphasia', 'tail': 'l-asparaginase'}
+PREDIC :: {'head': 'cerebrovascular complications', 'tail': 'l-asparaginase'}, {'head': 'neuropsychological deficits', 'tail': 'l-asparaginase'}
+
+INPUTS :: this report suggests that anemia can occur due to mmf, in particular when it is given with prednisone, a side effect well documented in the transplantation literature when the triple combination of mmf, cyclosporine and prednisone is used.
+LABELS :: {'head': 'anemia', 'tail': 'cyclosporine'}, {'head': 'anemia', 'tail': 'mmf'}, {'head': 'anemia', 'tail': 'prednisone'}
+PREDIC :: {'head': 'anemia', 'tail': 'cyclosporine'}, {'head': 'anemia', 'tail': 'prednisone'}
+
+INPUTS :: iatrogenic cushing syndrome after epidural triamcinolone injections in an hiv type 1-infected patient receiving therapy with ritonavir-lopinavir.
+LABELS :: {'head': 'iatrogenic cushing syndrome', 'tail': 'triamcinolone'}
+PREDIC :: {'head': 'iatrogenic cushing syndrome', 'tail': 'ritonavir'}, {'head': 'iatrogenic cushing syndrome', 'tail': 'triamcinolone'}
+
+INPUTS :: itraconazole-related increased vincristine neurotoxicity: case report and review of literature.
+LABELS :: {'head': 'vincristine neurotoxicity', 'tail': 'itraconazole'}, {'head': 'vincristine neurotoxicity', 'tail': 'vincristine'}
+PREDIC :: {'head': 'neurotoxicity', 'tail': 'itraconazole'}, {'head': 'neurotoxicity', 'tail': 'vincristine'}
+
+INPUTS :: we present two cases in which both patients suffered with cls, which we believe was caused following administration of granulocyte colony-stimulating factor, to our knowledge not described in the intensive care patient previously.
+LABELS :: {'head': 'cls', 'tail': 'granulocyte colony-stimulating factor'}
+PREDIC :: {'head': 'cls', 'tail': 'granulocyte colony-stimulating factor'}
+
+INPUTS :: nitrofurantoin-induced acute liver damage in pregnancy.
+LABELS :: {'head': 'acute liver damage', 'tail': 'nitrofurantoin'}
+PREDIC :: {'head': 'acute liver damage', 'tail': 'nitrofurantoin'}
+
+INPUTS :: despite administration of phenytoin and lorazepam, the seizures persisted and occurred only during amphotercin b administration.
+LABELS :: {'head': 'seizures', 'tail': 'amphotercin b'}
+PREDIC :: {'head': 'seizures', 'tail': 'phenytoin'}, {'head': 'seizures', 'tail': 'lorazepam'}
+
+INPUTS :: life-threatening hyperkalemia induced by arginine.
+LABELS :: {'head': 'hyperkalemia', 'tail': 'arginine'}
+PREDIC :: {'head': 'hyperkalemia', 'tail': 'arginine'}
+
+INPUTS :: phenobarbital hepatotoxicity in an 8-month-old infant.
+LABELS :: {'head': 'hepatotoxicity', 'tail': 'phenobarbital'}
+PREDIC :: {'head': 'hepatotoxicity', 'tail': 'phenobarbital'}
+
+INPUTS :: comeoscleral perforation after pterygium excision and intraoperative mitomycin c.
+LABELS :: {'head': 'comeoscleral perforation', 'tail': 'mitomycin c'}
+PREDIC :: {'head': 'comeoscleral perforation', 'tail': 'pterygium'}, {'head': 'mitomycin c', 'tail': 'pterygium'}
+
+INPUTS :: pellagra encephalopathy among tuberculous patients: its relation to isoniazid therapy.
+LABELS :: {'head': 'pellagra encephalopathy', 'tail': 'isoniazid'}
+PREDIC :: {'head': 'pellagra encephalopathy', 'tail': 'isoniazid'}
+
+INPUTS :: a high dose of cotrimoxazole induced hyperkalaemia with the elevation of serum creatinine and blood urea, and increased urinary n-acetyl glucosaminase after several days of the drug administration in these patients; one patient became unconscious.
+LABELS :: {'head': 'elevation of serum creatinine and blood urea', 'tail': 'cotrimoxazole'}, {'head': 'increased urinary n-acetyl glucosaminase', 'tail': 'cotrimoxazole'}, {'head': 'hyperkalaemia', 'tail': 'cotrimoxazole'}, {'head': 'one patient became unconscious', 'tail': 'cotrimoxazole'}
+PREDIC :: {'head': 'hyperkalaemia', 'tail': 'cotrimoxazole'}
+
+INPUTS :: five personal observations of an acute amnestic episode in younger individuals after intake of clioquinol are described together with three observations from the medical literature.
+LABELS :: {'head': 'acute amnestic episode', 'tail': 'clioquinol'}
+PREDIC :: {'head': 'acute amnestic episode', 'tail': 'clioquinol'}
+
+INPUTS :: results: a 44-year-old man taking naproxen for chronic low back pain and a 20-year-old woman on oxaprozin for rheumatoid arthritis presented with tense bullae and cutaneous fragility on the face and the back of the hands.
+LABELS :: {'head': 'tense bullae', 'tail': 'naproxen'}, {'head': 'tense bullae', 'tail': 'oxaprozin'}, {'head': 'cutaneous fragility', 'tail': 'naproxen'}, {'head': 'cutaneous fragility', 'tail': 'oxaprozin'}
+PREDIC :: {'head': 'cutaneous fragility', 'tail': 'naproxen'}
+
+INPUTS :: in this report, a patient who had undergone a renal transplantation as a result of malignant hypertension, and who was on immunosuppressive therapy consisting of cyclosporin, prednisone and azathioprine, developed thrombosis of the central retinal vein 5 years following the transplantation.
+LABELS :: {'head': 'thrombosis', 'tail': 'azathioprine'}, {'head': 'thrombosis', 'tail': 'cyclosporin'}, {'head': 'thrombosis', 'tail': 'prednisone'}
+PREDIC :: {'head': 'thrombosis of the central retinal vein', 'tail': 'cyclosporin'}, {'head': 'thrombosis of the central retinal vein', 'tail': 'prednisone'}
+
