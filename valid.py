@@ -40,6 +40,7 @@ def validate(
 	return_inputs = False,
 	beam_search = False,
 	num_beams = 1,
+	debug = False,
 ):
 	
 	#------------------------------------------------------#
@@ -63,14 +64,17 @@ def validate(
 			if not beam_search:
 				output = model.generate(
 					input_ids = batch["input_ids"].to(device),
-					max_length = 64
+					max_length = 96
 				).to("cpu")
 			else:
 				output = model.beam_search(
 					input_ids = batch["input_ids"].to(device),
-					max_length = 64,
+					max_length = 96,
 					num_beams = num_beams,
 				).to("cpu")
+
+		if debug:
+			import IPython ; IPython.embed() ; exit(1)
 
 		labels.extend(translate(batch["input_ids"], batch["decoder_input_ids"]))
 		predic.extend(translate(batch["input_ids"], output))

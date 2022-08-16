@@ -1,11 +1,40 @@
 import random
 
+#----------------------------------------------------#
+
+def load_dataset(dataset_name):
+
+	if dataset_name not in ["ADE", "CoNLL04", "NYT24", "ATIS", "SNIPS"]:
+		raise ValueError('config.dataset_name must be in ["ADE", "CoNLL04", "NYT24", "ATIS", "SNIPS"]')
+
+	if dataset_name == "ADE":
+		dataset = ADELoader()
+
+	if dataset_name == "CoNLL04":
+		dataset = CONLL04Loader()
+
+	if dataset_name == "NYT24":
+		dataset = NYT24Loader()
+
+	if dataset_name == "ATIS":
+		dataset = ATISLoader()
+
+	if dataset_name == "SNIPS":
+		dataset = SNIPSLoader()
+
+	return dataset
+
+#----------------------------------------------------#
+
 class SEQReader():
 	
 	#------------------------------------------------#
 	
-	def __init__(self, loader):
-		self.loader = loader
+	def __init__(self, dataloader):
+		if type(dataloader) == str:
+			dataloader = load_dataset(dataloader)
+
+		self.loader = dataloader
 	
 	#------------------------------------------------#
 	

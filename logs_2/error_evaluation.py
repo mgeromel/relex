@@ -1,6 +1,6 @@
 import ast
 
-file_name = "ATIS_BART_wrong_TOKENIZER.txt"
+file_name = "TESTS_SNIPS_E100_B32_L8e-05.log2"
 
 inputs = []
 labels = []
@@ -28,13 +28,16 @@ with open(file_name) as file:
 			for key in line.keys():
 				if type(line[key]) is list:
 					line[key] = line[key][-1]
-					
+				
 			if line == {}:
 				line = {TABLE_ID_KEY : "DEFAULT"}
 				
 			labels.append(line)
 			
 		if "PREDIC" in line:
+			if "{" not in line:
+				line = line + " {}"
+			
 			line = line.replace("PREDIC :: ", "")
 			line = ast.literal_eval(line)
 			

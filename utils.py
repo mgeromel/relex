@@ -17,6 +17,21 @@ def read_file(filename):
 
 ##################################################
 
+def write_results(batch, name = "DEFAULT"):
+	with open(name, "w") as file:
+		for inputs, labels, predic in zip(batch["inputs"], batch["label_ids"], batch["predicted"]):
+			file.write("INPUTS :: " + inputs + "\n")
+			file.write("LABELS :: " + str(labels)[1:-1] + "\n")
+			
+			if len(predic) > 0:
+				file.write("PREDIC :: " + str(predic)[1:-1] + "\n")
+			else:
+				file.write("PREDIC :: {'TABLE_ID' : 'DEFAULT'}\n")
+						   
+			file.write("\n")
+
+##################################################
+
 def extract(labels, sentence, vocab, tokenizer):
 	
 	result = []
@@ -57,11 +72,13 @@ def extract(labels, sentence, vocab, tokenizer):
 def extract_results(results):
 	all_entities = []
 	all_table_id = []
+	all_argument = []
 	
 	for table_dicts in results:
 		
 		slot_labels = []
 		tabs_labels = []
+		args_labels = []
 		
 		for table_dict in table_dicts:
 			tabs_labels.append(table_dict["TABLE_ID"])
@@ -69,11 +86,13 @@ def extract_results(results):
 			for key in table_dict:
 				if key != "TABLE_ID":
 					slot_labels.extend(table_dict[key])
-		
+					args_labels.extend(key)
+
 		all_entities.append(slot_labels)
 		all_table_id.append(tabs_labels)
+		all_argument.append(args_labels)
 		
-	return all_table_id, all_entities
+	return all_table_id, all_argument, all_entities
 
 ##################################################
 
@@ -140,16 +159,37 @@ def find(word, sent, tokenizer):
 	found = tokenizer.decode(sents_tokens[l_index: r_index + 1], skip_special_tokens = True)
 
 	if found.strip() != word:
-		print("\n > MATCHING ERROR < \n")
-		import IPython ; IPython.embed() ; exit(1)
-	
-	return(l_index, r_index + 1)
+		#import IPython ; IPython.embed() ; exit(1)
+		pass
+		
+	return (l_index, r_index + 1)
 
 	#------------------------------#
 
 ##################################################
 
 def compute(predic, labels):
+	result = list((Counter(predic) & Counter(labels)).elements())
+	
+	if len(predic) == 0:
+		return 0, 0, 0
+
+	if len(labels) == 0:
+		print(predic)
+		
+		import IPython ; IPython.embed() ; exit(1)
+
+		return 0, 0, 0
+
+	tp = len(result)
+	fp = len(predic) - len(result)
+	fn = len(labels) - len(result)
+
+	return tp, fp, fn
+
+#------------------------------------------------#
+
+def compute_old(predic, labels):
 	result = list((Counter(predic) & Counter(labels)).elements())
 	
 	if len(predic) == 0:
@@ -194,6 +234,51 @@ def compute_metrics(pred, debug = False):
 	
 	#------------------------------#
 	
+	total_tp = 0
+	total_fp = 0
+	total_fn = 0
+	
+	for pre, lab in zip(predic, labels):
+		
+		pre = [linearize(x) for x in pre]
+		lab = [linearize(x) for x in lab]
+
+		tp, fp, fn = compute(pre, lab)
+		
+		total_tp += tp
+		total_fp += fp
+		total_fn += fn
+	
+	if tp + fn:
+		recall = 100 * tp / (tp + fn) # sum(recall) / len(recall)
+	else:
+		recall = 0
+
+	if tp + fp:
+		precis = 100 * tp / (tp + fp) # sum(precis) / len(precis)
+	else:
+		precis = 0
+
+	if precis + recall > 0:
+		fscore = (2 * precis * recall) / (precis + recall)
+	else:
+		fscore = 0
+	
+	#------------------------------#
+	
+	return {
+		"R": recall, "P": precis, "F": fscore,
+	}
+
+	#------------------------------------------------#
+
+def compute_metrics_old(pred, debug = False):
+	
+	labels = pred["label_ids"]
+	predic = pred["predicted"]
+	
+	#------------------------------#
+	
 	recall = []
 	precis = []
 	
@@ -202,7 +287,7 @@ def compute_metrics(pred, debug = False):
 		pre = [linearize(x) for x in pre]
 		lab = [linearize(x) for x in lab]
 
-		p, r = compute(pre, lab)
+		p, r = compute_old(pre, lab)
 		
 		recall.append(r)
 		precis.append(p)

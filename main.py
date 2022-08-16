@@ -6,7 +6,7 @@ from valid import validate
 from utils import *
 from model import *
 
-from transformers import AdamW, get_scheduler, AlbertTokenizerFast
+from transformers import AdamW, get_scheduler, AlbertTokenizerFast, AutoTokenizer
 from torch.utils.data import DataLoader
 
 #-----------------------------------------------------------#
@@ -38,8 +38,8 @@ def write_results(batch, name = "DEFAULT"):
 #-----------------------------------------------------------#
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
-#tokenizer = BartTokenizerFast.from_pretrained("facebook/bart-base")
+#tokenizer = AlbertTokenizerFast.from_pretrained("albert-base-v1")
+tokenizer = AutoTokenizer.from_pretrained("albert-base-v1", use_fast = True) # facebook/bart-base
 
 #-----------------------------------------------------------#
 
@@ -56,7 +56,7 @@ dataset = "BiQuAD" # point_size = 100, batch_size = 64
 
 #-----------------------------------------------------------#
 # SELECT DATASET
-dataset = "CoNLL04"
+dataset = "ATIS"
 
 # READ GRAMMAR / VOCABULARY
 gramm = gramm.GRAMMAR("gramm.txt")
@@ -70,13 +70,13 @@ vocab_size = len(vocab)
 #-----------------------------------------------------------#
 # TRAINING PARAMETERS
 
-point_size = 145
-decode_length = 35
+point_size = 100
+decode_length = 42
 
-EPOCHS = 1
+EPOCHS = 60
 
 batch_size = 32
-skip_first = 0 # ignores evaluation of 'skip_first' epochs
+skip_first = 20 # ignores evaluation of 'skip_first' epochs
 save_model = False # saves best model
 beam_search = False
 num_beams = 1
@@ -95,8 +95,8 @@ tests_loader = DataLoader(data_tests, batch_size = batch_size, shuffle = False)
 #-----------------------------------------------------------# 
 # SWEEP PARAMETERS
 
-minimal_lr = 1e-5
-maximal_lr = 1e-4
+minimal_lr = 5e-5
+maximal_lr = 5e-5
 
 increments = 0.5 * minimal_lr
 
@@ -125,12 +125,22 @@ for grid_step in range(grid_steps):
 	model = TestModel(gramm = gramm, vocab = vocab, point_size = point_size)
 	model = model.to(device)
 
+	#clip_value = 10
+	#for p in model.parameters():
+    #	p.register_hook(lambda grad: torch.clamp(grad, -clip_value, clip_value))
+
 	# LOAD SAVED MODEL
 	# model.load_state_dict(torch.load("models/model_ATIS_e75_b32.pt"))
 
 	#-----------------------------------------------------------#
 
-	optimizer = torch.optim.AdamW(model.parameters(), lr = current_lr)
+	optimizer = torch.optim.AdamW(
+		model.parameters(),
+		lr = current_lr,
+		weight_decay = 0.01,
+		betas = [0.9, 0.999],
+		eps = 0.00000001,
+	)
 	ampscaler = torch.cuda.amp.GradScaler()
 	scheduler = transformers.get_constant_schedule(optimizer = optimizer)
 
@@ -154,6 +164,9 @@ for grid_step in range(grid_steps):
 
 	MAX_VALID_TABLE_F1 = -1
 	MAX_TESTS_TABLE_F1 = -1
+
+	MAX_VALID_ARGUM_F1 = -1
+	MAX_TESTS_ARGUM_F1 = -1
 
 	#################################################################
 		
@@ -193,23 +206,26 @@ for grid_step in range(grid_steps):
 			return_inputs = True,
 			beam_search = beam_search,
 			num_beams = num_beams,
+			#debug = (epoch == EPOCHS - 1)
 		)
 		
 		#-----------------------------------------------------------#
 		# TESTING 
 
-		tests_tabs_labels, tests_slot_labels = extract_results(tests_result["label_ids"])
-		tests_tabs_predic, tests_slot_predic = extract_results(tests_result["predicted"])
+		tests_tabs_labels, tests_args_labels, tests_slot_labels = extract_results(tests_result["label_ids"])
+		tests_tabs_predic, tests_args_predic, tests_slot_predic = extract_results(tests_result["predicted"])
 		
-		tests_over_score = compute_metrics( tests_result )
-		tests_tabs_score = compute_metrics({"label_ids": tests_tabs_labels, "predicted": tests_tabs_predic})
-		tests_slot_score = compute_metrics({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
+		tests_over_score = compute_metrics_old( tests_result )
+		tests_tabs_score = compute_metrics_old({"label_ids": tests_tabs_labels, "predicted": tests_tabs_predic})
+		tests_args_score = compute_metrics_old({"label_ids": tests_args_labels, "predicted": tests_args_predic})
+		tests_slot_score = compute_metrics_old({"label_ids": tests_slot_labels, "predicted": tests_slot_predic})
 		
 		if tests_over_score["F"] > MAX_TESTS_TOTAL_F1:
 			MAX_TESTS_TOTAL_PR = tests_over_score["P"]
 			MAX_TESTS_TOTAL_RE = tests_over_score["R"]
 			MAX_TESTS_TOTAL_F1 = tests_over_score["F"]
 			MAX_TESTS_TABLE_F1 = tests_tabs_score["F"]
+			MAX_TESTS_ARGUM_F1 = tests_args_score["F"]
 			MAX_TESTS_SLOTS_F1 = tests_slot_score["F"]
 
 			if save_model:
@@ -221,6 +237,7 @@ for grid_step in range(grid_steps):
 					file.write(f"MAX_TESTS_TOTAL_RE: {MAX_TESTS_TOTAL_RE}\n")
 					file.write(f"MAX_TESTS_TOTAL_F1: {MAX_TESTS_TOTAL_F1}\n")
 					file.write(f"MAX_TESTS_TABLE_F1: {MAX_TESTS_TABLE_F1}\n")
+					file.write(f"MAX_TESTS_ARGUM_F1: {MAX_TESTS_ARGUM_F1}\n")
 					file.write(f"MAX_TESTS_SLOTS_F1: {MAX_TESTS_SLOTS_F1}\n")
 		
 			write_results(tests_result, name = f"logs/TESTS_{dataset}_E{EPOCHS}_B{batch_size}_L{current_lr}.log")
@@ -230,6 +247,7 @@ for grid_step in range(grid_steps):
 		tests_bar.write(f"MAX_TESTS_TOTAL_F1: {MAX_TESTS_TOTAL_F1}")
 		tests_bar.write(".....")
 		tests_bar.write(f"MAX_TESTS_TABLE_F1: {MAX_TESTS_TABLE_F1}")
+		tests_bar.write(f"MAX_TESTS_ARGUM_F1: {MAX_TESTS_ARGUM_F1}")
 		tests_bar.write(f"MAX_TESTS_SLOTS_F1: {MAX_TESTS_SLOTS_F1}")
 		
 		#-----------------------------------------------------------#
@@ -249,7 +267,7 @@ for grid_step in range(grid_steps):
 			vocab = vocab,
 			return_inputs = True,
 			beam_search = beam_search,
-			num_beams = num_beams,
+			num_beams = num_beams
 		)
 		
 		valid_tabs_labels, valid_slot_labels = extract_results(valid_result["label_ids"])
