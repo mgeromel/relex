@@ -1,26 +1,24 @@
-import torch
-
 import pytorch_lightning as pl
 
-from torch.utils.data import DataLoader
-from transformers import DataCollatorForSeq2Seq
+import pyarrow, datasets
 
-from utils import *
-from loadr import *
+from torch.utils.data import DataLoader
 
 from lit_collator import *
+from lit_loadr import *
 
 class LitDataModule(pl.LightningDataModule):
 
     #--------------------------------------------#
 
-    def __init__(self, config, model, tokenizer):
+    def __init__(self, config, model, vocab, tokenizer):
         super().__init__()
         
         #----------------------------------------#
 
         self.config = config
-        self.model = model # ~
+        self.model = model
+        self.vocab = vocab
         self.tokenizer = tokenizer
 
         self.data_collator = LitDataCollator(
@@ -29,32 +27,30 @@ class LitDataModule(pl.LightningDataModule):
 
         #----------------------------------------#
 
-        self.dataloader = MyLoader(config.dataset_name)
+        self.dataloader = MyLoader(
+            self.config.dataset_name,
+            self.vocab,
+            self.tokenizer
+        )
 
         #----------------------------------------#
 
         # TRAIN-DATASET
-        self.train_dataset = build_dataset(
+        self.train_dataset = self.build_dataset(
             self.dataloader.load(config.files_path, "train"),
-            self.tokenizer,
-            encode_length = self.config.encode_length,
-            decode_length = self.config.decode_length
+            encode_length = self.config.encode_length
         )
         
         # VALID-DATASET
-        self.valid_dataset = build_dataset(
+        self.valid_dataset = self.build_dataset(
             self.dataloader.load(config.files_path, "valid"),
-            self.tokenizer,
-            encode_length = self.config.encode_length,
-            decode_length = self.config.decode_length
+            encode_length = self.config.encode_length
         )
 
         # TESTS-DATASET
-        self.tests_dataset = build_dataset(
+        self.tests_dataset = self.build_dataset(
             self.dataloader.load(config.files_path, "test"),
-            self.tokenizer,
-            encode_length = self.config.encode_length,
-            decode_length = self.config.decode_length
+            encode_length = self.config.encode_length
         )
 
     #--------------------------------------------#
@@ -94,3 +90,22 @@ class LitDataModule(pl.LightningDataModule):
         )
 
     #--------------------------------------------#
+
+    def build_dataset(self, data, encode_length = 256):
+
+        encoder_inputs = self.tokenizer(
+            data["phrases"],
+            truncation = True,
+            max_length = encode_length,
+        )
+
+        dataset = {
+            "input_ids": encoder_inputs.input_ids,
+            "attention_mask": encoder_inputs.attention_mask,
+            "labels": data["targets"]
+        }
+        
+        dataset = pyarrow.Table.from_pydict(dataset)
+        dataset = datasets.Dataset(dataset)
+
+        return dataset

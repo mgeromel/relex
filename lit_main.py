@@ -9,6 +9,9 @@ from gramm import *
 from model import *
 from utils import *
 
+from lit_datamodule import *
+from lit_model import *
+
 #------------------------------------------------#
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -33,42 +36,32 @@ def get_grammar(filename):
 
 def main():
 
+	# TODO: build transition matrix in grammar
 	gramm = get_grammar("gramm.txt")
-	vocab = get_special_tokens("data/CoNLL04/vocabulary.txt")
+	vocab = get_special_tokens("data/ADE/vocabulary.txt")
 
 	#--------------------------------------------#
 	# Tokenizer
 
 	tokenizer = AutoTokenizer.from_pretrained(
-		config.model_name,
+		"albert-base-v1", # config.model_name,
 		use_fast = True,
 	)
-	
+
 	#--------------------------------------------#
-	# Model-Config + Model
-	
-	model_config = AutoConfig.from_pretrained(
-		config.model_name,
-		decoder_start_token_id = 0,
-		early_stopping = False,
-		no_repeat_ngram_size = 0,
-		forced_bos_token_id = None,
-	)
+	# Model
 	
 	model = TestModel(
 		gramm = gramm,
 		vocab = vocab,
 		point_size = 256,
-		config = model_config
 	)
-	
-	# model.resize_token_embeddings(len(tokenizer))
 	
 	#--------------------------------------------#
 	# PL-Modules
 
-	#datamodule = LitDataModule(config, model, tokenizer)
-	#lit_module = LitModule(config, model, tokenizer)
+	datamodule = LitDataModule(config, model, vocab, tokenizer)
+	lit_module = LitModule(config, model, tokenizer)
 
 	#--------------------------------------------#
 	# PL-Trainier
@@ -78,12 +71,12 @@ def main():
 		devices = 1,
 		accumulate_grad_batches = 4,
 		gradient_clip_val = 10.0,
-		max_epochs = 10,
+		max_epochs = 30,
 		precision = 16,
 		enable_checkpointing = False
 	)
 	
-	#trainer.fit(lit_module, datamodule = datamodule)
+	trainer.fit(lit_module, datamodule = datamodule)
 
 #------------------------------------------------#
 

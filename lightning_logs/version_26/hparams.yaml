@@ -1,0 +1,15 @@
+model_name: facebook/bart-base
+dataset_name: CoNLL04
+files_path: data/CoNLL04/
+learning_rate: 5.0e-05
+train_batch_size: 8
+valid_batch_size: 16
+tests_batch_size: 16
+encode_length: 256
+decode_length: 128
+dataload_workers: 0
+gradient_clip_value: 10
+gradient_acc_steps: null
+max_steps: 1000
+precision: 16
+amp_level: null

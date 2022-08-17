@@ -1,25 +1,13 @@
-import torch
-
-from utils import *
-
-#-----------------------------------------------------------#
+import re
 
 class MyLoader():
 
-	def __init__(self, name, vocabulary, tokenizer):
-		# self._name = name
-		# self._vmap = vocab
-		# self._tkns = vocab
+	#--------------------------------------------#
 
-		self.name = name
-		self.vocabulary = vocabulary
+	def __init__(self, dataset, vocabulary, tokenizer):
+		self._name = dataset
+		self._vocab = vocabulary
 		self.tokenizer = tokenizer
-
-	def name(self):
-		return self.name
-
-	def vocab(self):
-		return self.vocab
 
 	#--------------------------------------------#
 
@@ -27,7 +15,7 @@ class MyLoader():
 		sentences = []
 		relations = []
 		
-		#--------------------------------------------#
+		#--------------------------------------#
 		
 		with open(path + filename + ".sent") as file:
 			for line in file:
@@ -40,8 +28,8 @@ class MyLoader():
 		sentences = [ self.clean(sent) for sent in sentences ]
 		relations = [ self.parse(sent, rels) for sent, rels in zip(sentences, relations) ]
 
-		#--------------------------------------------#
-		
+		#--------------------------------------#
+
 		return { "phrases" : sentences, "targets" : relations}
 
 	#--------------------------------------------#
@@ -65,7 +53,7 @@ class MyLoader():
 			#----------------------------------#
 
 			table_rows = table.split(" ;; ")
-			table_head = self.vocab[table_rows[-1].strip()]
+			table_head = self._vocab[table_rows[-1].strip()]
 
 			result.append( (3, table_head, -100, -100) )
 			
@@ -80,16 +68,16 @@ class MyLoader():
 					arg_class = table_row.split(" == ")[0].strip()
 					arg_value = table_row.split(" == ")[1].strip()
 					arguments = arg_value.split(" ^^ ")
-					result.append( (4, self.vocab[arg_class], -100, -100) )
+					result.append( (4, self._vocab[arg_class], -100, -100) )
 				else:
 					arguments = table_row.split(" ^^ ")				
-					result.append( (4, self.vocab["DEFAULT"], -100, -100) )
+					result.append( (4, self._vocab["DEFAULT"], -100, -100) )
 				
 				#------------------------------#
 				# ADD COLUMNS
 
 				for argument in arguments:
-					l_index, r_index = self.find(argument, sentence)
+					l_index, r_index = self.find(argument, text)
 					result.append( (6, -100, l_index, r_index) )
 				
 				# ROW DONE
@@ -110,9 +98,51 @@ class MyLoader():
 
 	#--------------------------------------------#
 
-	def find_word(self, word, sent):
+	def find(self, word, text):
+		
+		#------------------------------#
+
+		word = self.clean(word)
+		
+		#------------------------------#
+		
+		tokenization = self.tokenizer(
+			text,
+			return_offsets_mapping = True,
+			add_special_tokens = True
+		)
+		sents_tokens = tokenization.input_ids
+
+		offset_mapping = tokenization["offset_mapping"]
+
+		#------------------------------#
+
+		# FIND 'WORD' in 'SENT' via REGEX	
+		l_bound, r_bound = self.find_word(word, text)
+
+		# FIND 'WORD'-TOKENS
+		l_index, r_index = self.find_tokens(l_bound, r_bound, offset_mapping)
+		
+		# 'WORD' vs TOKENS 
+		found = self.tokenizer.decode(
+			sents_tokens[l_index: r_index + 1],
+			skip_special_tokens = True
+		)
+
+		#------------------------------#
+
+		if found.strip() != word:
+			pass
+			#print(f"{found} != {word}")
+			
+		return (l_index, r_index + 1)
+
+	#--------------------------------------------#
+	# CHAR-Bounds: 'Word' in 'Text'
+
+	def find_word(self, word, text):
 		bounds = r'(\s|\b|^|$|[!\"#$%&\'()*+,-./:;<=>?@\[\]^_`{|}~])'
-		search = re.search(bounds + re.escape(word) + bounds, sent)
+		search = re.search(bounds + re.escape(word) + bounds, text)
 
 		matched = search.group()
 		
@@ -123,7 +153,8 @@ class MyLoader():
 		return l_bound, r_bound
 
 	#--------------------------------------------#
-
+	# TOKEN-Bounds: 'Word' in 'Text'
+	
 	def find_tokens(self, l_bound, r_bound, offset_mapping):
 		l_index = len(offset_mapping) - 2
 		r_index = 0
@@ -143,103 +174,3 @@ class MyLoader():
 		return l_index, r_index
 
 	#--------------------------------------------#
-
-	# TODO: !!!!
-	def find(self, word, sent):
-		#------------------------------#
-
-		word = self.clean(word)
-		
-		tokenization = self.tokenizer(
-			sent,
-			return_offsets_mapping = True,
-			add_special_tokens = True
-		)
-		sents_tokens = tokenization.input_ids
-
-		offset_mapping = tokenization["offset_mapping"]
-
-		#------------------------------#
-		# FIND 'WORD' in 'SENT' via REGEX	
-		l_bound, r_bound = find_word(word, sent)
-
-		# FIND 'WORD'-TOKENS
-		l_index, r_index = find_tokens(l_bound, r_bound, offset_mapping)
-		
-		# 'WORD' vs TOKENS 
-		found = self.tokenizer.decode(
-			sents_tokens[l_index: r_index + 1],
-			skip_special_tokens = True
-		)
-
-		if found.strip() != word:
-			print("MATCHING ERROR")
-			import IPython ; IPython.embed() ; exit(1)
-			pass
-			
-		return (l_index, r_index + 1)
-
-		#------------------------------#
-
-
-
-class MyDataset(torch.utils.data.Dataset):
-	def __init__(self, file_name, vocab, tokenizer, decode_length = 64, encode_length = 256):
-		
-		print("> BUILDING DATA:", file_name)
-
-		data_sent = read_file(file_name + ".sent")
-		data_sent = [ clean(sent, tokenizer) for sent in data_sent ]
-		data_tups = read_file(file_name + ".tup" )
-		data_tups = [ extract(rel, sent, vocab, tokenizer) for sent, rel in zip(data_sent, data_tups) ]
-		
-		self.data = { "phrases" : data_sent , "targets" : data_tups }
-		self.data = build_model_input(
-			self.data,
-			tokenizer = tokenizer,
-			decode_length = decode_length,
-			encode_length = encode_length
-		)
-		self.size = len(data_tups)
-		
-	def __len__(self):
-		return self.size
-
-	def __getitem__(self, index):
-		item = {}
-		
-		for key in list(self.data.keys()):
-			item[key] = self.data[key][index]
-		
-		return item
-
-
-def crop_list(vector, size, item):
-	 return vector[:size] + [item] * (size - len(vector))
-	
-def build_model_input(batch, tokenizer = None, decode_length = 64, encode_length = 256):
-
-	encoder_inputs = tokenizer(
-		batch["phrases"],
-		padding = "max_length",
-		truncation = True,
-		max_length = encode_length
-	)
-	
-	decoder_inputs = [
-		crop_list(labels, decode_length, (-100,-100,-100,-100)) for labels in batch["targets"]
-	]
-	
-	keys = ["input_ids", "attention_mask", "decoder_attention_mask", "labels"]
-	
-	batch[keys[0]] = torch.IntTensor(encoder_inputs.input_ids)
-	batch[keys[1]] = torch.IntTensor(encoder_inputs.attention_mask)
-	batch[keys[2]] = torch.IntTensor(
-		[[ int( tup != (-100,-100,-100,-100) ) for tup in sample ] for sample in decoder_inputs ]
-	)
-	batch[keys[3]] = torch.IntTensor(decoder_inputs)
-	
-	del batch["phrases"]
-	del batch["targets"]
-	
-	return batch
