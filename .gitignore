@@ -8,6 +8,7 @@ models/
 praktikum/
 results/
 logs/
+lightning_logs/
 
 # logging
 *.log
