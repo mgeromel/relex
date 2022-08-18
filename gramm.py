@@ -1,3 +1,5 @@
+import torch
+
 class GRAMMAR():
 	
 	def __init__(self, file_name):
@@ -10,8 +12,15 @@ class GRAMMAR():
 
 				n = rule[ : i].strip() # Non-Terminal
 				p = rule[i+1:].strip() # Production
+
+				if not p:
+					p = []
+				else:
+					p = p.split(" ")
 				
 				self.G.append((n , p))
+
+		self.smap, _ = self.build_mask()
 
 	def size(self):
 		return len(self.G)
@@ -21,6 +30,12 @@ class GRAMMAR():
 
 	def mask(self, val):
 		return [ 0.0 if n == val else -float("inf") for n, _ in self.G ]
+
+	def get_mask(self, val):
+		mask = [-float("inf")] + [ 0.0 if n == val else -float("inf") for n, _ in self.G ]
+		mask = torch.Tensor(mask)
+
+		return mask
 	
 	def build_mask(self):
 		states = []

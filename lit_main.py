@@ -37,14 +37,14 @@ def get_grammar(filename):
 def main():
 
 	# TODO: build transition matrix in grammar
-	gramm = get_grammar("gramm.txt")
-	vocab = get_special_tokens("data/ADE/vocabulary.txt")
+	gramm = get_grammar("gramm_short.txt")
+	vocab = get_special_tokens("data/CoNLL04/vocabulary.txt")
 
 	#--------------------------------------------#
 	# Tokenizer
 
 	tokenizer = AutoTokenizer.from_pretrained(
-		"albert-base-v1", # config.model_name,
+		config.model_name,
 		use_fast = True,
 	)
 
@@ -67,7 +67,7 @@ def main():
 	# PL-Trainier
 
 	trainer = pl.Trainer(
-		accelerator = "gpu",
+		accelerator = "cpu",
 		devices = 1,
 		accumulate_grad_batches = 4,
 		gradient_clip_val = 10.0,

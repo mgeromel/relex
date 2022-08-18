@@ -118,7 +118,7 @@ class TestModel(torch.nn.Module):
 
 	##################################################
 
-	def forward(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None):
+	def forward(self, input_ids = None, attention_mask = None, encoder_outputs = None, decoder_input_ids = None, decoder_attention_mask = None, labels = None, split_result = False, **kwargs):
 
 		#--------------------------------------#
 		# 1. MODEL FORWARD
@@ -131,7 +131,8 @@ class TestModel(torch.nn.Module):
 			encoder_outputs = encoder_outputs,
 			output_hidden_states = True,
 			output_attentions = True,
-			return_dict = True
+			return_dict = True,
+			**kwargs
 			#labels = labels
 		)
 
@@ -145,7 +146,7 @@ class TestModel(torch.nn.Module):
 		# zero-padding 'last_cross_attentions'
 		shape = last_cross_attentions.shape
 		shape = shape[:2] + (self.point_size - shape[-1] ,)
-		zeros = torch.zeros(shape, device=input_ids.device)
+		zeros = torch.zeros(shape, device=last_cross_attentions.device)
 		
 		# zero-padding 'last_cross_attentions'
 		last_cross_attentions = torch.cat([last_cross_attentions, zeros], dim=-1)
@@ -165,111 +166,23 @@ class TestModel(torch.nn.Module):
 		loss = self.compute_loss(logits, labels)
 		
 		#--------------------------------------#
-		
-		return {"logits": logits, "loss": loss}
+		if split_result:
+			return {
+				"gramm_logits": gramm_logits,
+				"vocab_logits": relat_logits,
+				"point_logits": point_logits,
+				"loss": loss,
+				"past_key_values": decoder_outputs.past_key_values
+			}
+		else:
+			return {
+				"logits": logits,
+				"loss": loss
+			}
 	
 	##################################################
 
-	def generate(
-		self,
-		input_ids,
-		max_length = 256,
-		use_cache = True,
-		**gen_kwargs
-	):
-
-		#----------------------------------------#
-		# VARIABLES
-
-		bos_token_id = self.tokenizer.bos_token_id
-		eos_token_id = self.tokenizer.eos_token_id
-		pad_token_id = self.tokenizer.pad_token_id
-
-		batch_size = input_ids.shape[0]
-
-		#----------------------------------------#
-		# ENCODER: ONCE
-
-		attention_mask = input_ids.ne(pad_token_id).long()
-		encoder_output = self.model.model.encoder(
-			input_ids,
-			attention_mask = attention_mask,
-			return_dict = True
-		)
-		gen_kwargs["encoder_outputs"] = encoder_output
-
-		#----------------------------------------#
-		# DECODER INPUT
-
-		# TODO:
-		decoder_input_ids = torch.full(
-			(batch_size, 1),
-			bos_token_id,
-			dtype = torch.long,
-			device = input_ids.device,
-		)
-
-		#----------------------------------------#
-		# CURRENT "STATE"
-
-		unfinished = input_ids.new(batch_size).fill_(1)
-		
-		#----------------------------------------#
-
-		length = 1
-		past = None
-
-		while length < max_length:
-
-			#------------------------------------#
-			# PREPARE
-
-			# TODO:
-			model_inputs = self.model.prepare_inputs_for_generation(
-				decoder_input_ids,
-				past = past,
-				attention_mask = attention_mask,
-				use_cache = use_cache,
-				**gen_kwargs
-			)
-
-			# FORWARD
-			decoder_outputs = self.model(**model_inputs)
-
-			#------------------------------------#
-			# NEXT TOKENS
-			
-			next_logits = decoder_outputs[0][:, -1, :]
-			next_tokens = torch.argmax(next_logits, dim=-1)
-			next_tokens = next_tokens * unfinished + (pad_token_id) * (1 - unfinished)
-			
-			#------------------------------------#			
-			# INPUT LENGTH + 1
-
-			decoder_input_ids = torch.cat([decoder_input_ids, next_tokens.unsqueeze(-1)], dim=-1)
-			length = length + 1
-			
-			#------------------------------------#
-			# SEQUENCES DONE?
-
-			done = next_tokens == eos_token_id
-			unfinished = unfinished.mul((~done).long())
-			
-			#------------------------------------#
-			# MODEL PAST?
-			
-			if "past_key_values" in decoder_outputs:
-				past = decoder_outputs.past_key_values
-
-			# IF ALL_DONE: BREAK
-			if unfinished.max() == 0:
-				break
-			
-			#------------------------------------#
-
-		return decoder_input_ids
-
-	def generate_2(self, input_ids = None, max_length = 64, **kwargs):
+	def generate(self, input_ids = None, max_length = 64, **kwargs):
 		
 		device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 		

@@ -1,7 +1,7 @@
 model_name: "facebook/bart-base"
 
-dataset_name: "ADE"
-files_path: "data/ADE/"
+dataset_name: "CoNLL04"
+files_path: "data/CoNLL04/"
 
 learning_rate: 5e-5
 
